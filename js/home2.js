@@ -50,10 +50,35 @@
     const next = testimonials.querySelector('[data-testimonial-next]');
     const dots = testimonials.querySelector('[data-testimonial-dots]');
     let testimonialIndex = 0;
+    let autoplayTimer = null;
+
+    const getVisibleCount = () => {
+      const value = parseInt(getComputedStyle(testimonials).getPropertyValue('--testimonial-visible'), 10);
+      return Number.isFinite(value) ? Math.max(1, Math.min(cards.length, value)) : 1;
+    };
+
+    const getMaxIndex = () => Math.max(0, cards.length - getVisibleCount());
+
+    const renderDots = () => {
+      if (!dots) return;
+      dots.innerHTML = '';
+      for (let index = 0; index <= getMaxIndex(); index += 1) {
+        const dot = document.createElement('button');
+        dot.type = 'button';
+        dot.className = 'testimonial-dot';
+        dot.setAttribute('aria-label', 'Bewertungsgruppe ' + (index + 1) + ' anzeigen');
+        dot.addEventListener('click', () => {
+          setTestimonial(index);
+          restartAutoplay();
+        });
+        dots.appendChild(dot);
+      }
+    };
 
     const setTestimonial = (index) => {
       if (!cards.length || !track) return;
-      testimonialIndex = (index + cards.length) % cards.length;
+      const maxIndex = getMaxIndex();
+      testimonialIndex = index > maxIndex ? 0 : index < 0 ? maxIndex : index;
       testimonials.style.setProperty('--testimonial-index', String(testimonialIndex));
       testimonials.style.setProperty('--testimonial-shift', cards[testimonialIndex].offsetLeft + 'px');
       if (dots) {
@@ -64,21 +89,44 @@
       }
     };
 
-    if (dots) {
-      cards.forEach((_, index) => {
-        const dot = document.createElement('button');
-        dot.type = 'button';
-        dot.className = 'testimonial-dot';
-        dot.setAttribute('aria-label', 'Bewertung ' + (index + 1) + ' anzeigen');
-        dot.addEventListener('click', () => setTestimonial(index));
-        dots.appendChild(dot);
-      });
-    }
+    const stopAutoplay = () => {
+      if (!autoplayTimer) return;
+      window.clearInterval(autoplayTimer);
+      autoplayTimer = null;
+    };
 
-    if (prev) prev.addEventListener('click', () => setTestimonial(testimonialIndex - 1));
-    if (next) next.addEventListener('click', () => setTestimonial(testimonialIndex + 1));
-    window.addEventListener('resize', () => setTestimonial(testimonialIndex));
+    const startAutoplay = () => {
+      stopAutoplay();
+      if (cards.length <= getVisibleCount()) return;
+      autoplayTimer = window.setInterval(() => setTestimonial(testimonialIndex + 1), 4600);
+    };
+
+    const restartAutoplay = () => {
+      stopAutoplay();
+      startAutoplay();
+    };
+
+    renderDots();
+
+    if (prev) prev.addEventListener('click', () => {
+      setTestimonial(testimonialIndex - 1);
+      restartAutoplay();
+    });
+    if (next) next.addEventListener('click', () => {
+      setTestimonial(testimonialIndex + 1);
+      restartAutoplay();
+    });
+    testimonials.addEventListener('mouseenter', stopAutoplay);
+    testimonials.addEventListener('mouseleave', startAutoplay);
+    testimonials.addEventListener('focusin', stopAutoplay);
+    testimonials.addEventListener('focusout', startAutoplay);
+    window.addEventListener('resize', () => {
+      renderDots();
+      setTestimonial(testimonialIndex);
+      restartAutoplay();
+    });
     setTestimonial(0);
+    startAutoplay();
   }
 
   document.querySelectorAll('.home2-nav a').forEach((link) => {
