@@ -4,7 +4,7 @@
   const revealItems = Array.from(document.querySelectorAll('[data-reveal]'));
   const compare = document.querySelector('[data-compare]');
   const compareInput = compare ? compare.querySelector('input[type="range"]') : null;
-  const testimonials = document.querySelector('[data-testimonials]');
+  const phoneTestimonials = document.querySelector('[data-testimonial-phone]');
 
   function updateScrollEffects() {
     const max = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
@@ -43,44 +43,38 @@
     setCompare();
   }
 
-  if (testimonials) {
-    const track = testimonials.querySelector('[data-testimonial-track]');
-    const cards = track ? Array.from(track.querySelectorAll('.testimonial-card')) : [];
-    const prev = testimonials.querySelector('[data-testimonial-prev]');
-    const next = testimonials.querySelector('[data-testimonial-next]');
-    const dots = testimonials.querySelector('[data-testimonial-dots]');
+  if (phoneTestimonials) {
+    const track = phoneTestimonials.querySelector('[data-phone-testimonial-track]');
+    const slides = track ? Array.from(track.querySelectorAll('.phone-testimonial-slide')) : [];
+    const prev = phoneTestimonials.querySelector('[data-phone-testimonial-prev]');
+    const next = phoneTestimonials.querySelector('[data-phone-testimonial-next]');
+    const dots = phoneTestimonials.querySelector('[data-phone-testimonial-dots]');
     let testimonialIndex = 0;
     let autoplayTimer = null;
-
-    const getVisibleCount = () => {
-      const value = parseInt(getComputedStyle(testimonials).getPropertyValue('--testimonial-visible'), 10);
-      return Number.isFinite(value) ? Math.max(1, Math.min(cards.length, value)) : 1;
-    };
-
-    const getMaxIndex = () => Math.max(0, cards.length - getVisibleCount());
 
     const renderDots = () => {
       if (!dots) return;
       dots.innerHTML = '';
-      for (let index = 0; index <= getMaxIndex(); index += 1) {
+      slides.forEach((slide, index) => {
         const dot = document.createElement('button');
         dot.type = 'button';
-        dot.className = 'testimonial-dot';
-        dot.setAttribute('aria-label', 'Bewertungsgruppe ' + (index + 1) + ' anzeigen');
+        dot.className = 'phone-testimonial-dot';
+        dot.setAttribute('aria-label', 'Kundenstimme ' + (index + 1) + ' anzeigen');
         dot.addEventListener('click', () => {
           setTestimonial(index);
           restartAutoplay();
         });
         dots.appendChild(dot);
-      }
+      });
     };
 
     const setTestimonial = (index) => {
-      if (!cards.length || !track) return;
-      const maxIndex = getMaxIndex();
-      testimonialIndex = index > maxIndex ? 0 : index < 0 ? maxIndex : index;
-      testimonials.style.setProperty('--testimonial-index', String(testimonialIndex));
-      testimonials.style.setProperty('--testimonial-shift', cards[testimonialIndex].offsetLeft + 'px');
+      if (!slides.length || !track) return;
+      testimonialIndex = (index + slides.length) % slides.length;
+      phoneTestimonials.style.setProperty('--phone-testimonial-index', String(testimonialIndex));
+      slides.forEach((slide, slideIndex) => {
+        slide.setAttribute('aria-hidden', slideIndex === testimonialIndex ? 'false' : 'true');
+      });
       if (dots) {
         dots.querySelectorAll('button').forEach((dot, dotIndex) => {
           dot.classList.toggle('is-active', dotIndex === testimonialIndex);
@@ -97,8 +91,8 @@
 
     const startAutoplay = () => {
       stopAutoplay();
-      if (cards.length <= getVisibleCount()) return;
-      autoplayTimer = window.setInterval(() => setTestimonial(testimonialIndex + 1), 4600);
+      if (slides.length <= 1) return;
+      autoplayTimer = window.setInterval(() => setTestimonial(testimonialIndex + 1), 4300);
     };
 
     const restartAutoplay = () => {
@@ -116,14 +110,19 @@
       setTestimonial(testimonialIndex + 1);
       restartAutoplay();
     });
-    testimonials.addEventListener('mouseenter', stopAutoplay);
-    testimonials.addEventListener('mouseleave', startAutoplay);
-    testimonials.addEventListener('focusin', stopAutoplay);
-    testimonials.addEventListener('focusout', startAutoplay);
+    phoneTestimonials.addEventListener('mouseenter', stopAutoplay);
+    phoneTestimonials.addEventListener('mouseleave', startAutoplay);
+    phoneTestimonials.addEventListener('focusin', stopAutoplay);
+    phoneTestimonials.addEventListener('focusout', startAutoplay);
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) {
+        stopAutoplay();
+      } else {
+        startAutoplay();
+      }
+    });
     window.addEventListener('resize', () => {
-      renderDots();
       setTestimonial(testimonialIndex);
-      restartAutoplay();
     });
     setTestimonial(0);
     startAutoplay();
