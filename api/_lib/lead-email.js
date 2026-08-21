@@ -1,7 +1,17 @@
 // Baut die HTML-E-Mail für eingehende Leads (Kontaktformulare, Quiz, ...).
 // Wird von api/send-lead.js genutzt.
 
-const SITE_URL = 'https://powertech-performance.com';
+// Die eigentliche Domain zeigt möglicherweise noch nicht auf dieses Vercel-
+// Projekt (DNS/Custom-Domain nicht verbunden). Damit das Logo in der Mail
+// trotzdem lädt, wird bevorzugt die von Vercel automatisch gesetzte
+// Deployment-URL verwendet — die funktioniert immer, unabhängig vom DNS-Status
+// der Wunschdomain. Sobald die Domain sauber auf Vercel zeigt, kann man sie
+// hier zusätzlich fest hinterlegen.
+const SITE_URL = process.env.VERCEL_PROJECT_PRODUCTION_URL
+  ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+  : process.env.VERCEL_URL
+    ? `https://${process.env.VERCEL_URL}`
+    : 'https://powertech-performance.com';
 const LOGO_URL = `${SITE_URL}/images/logo-klein.png`;
 
 const FIELD_LABELS = {
@@ -45,13 +55,14 @@ function toTelHref(phone) {
   return `+${digits}`;
 }
 
-function actionButton({ href, bg, color = '#ffffff', label }) {
+function actionButton({ href, bg, color = '#ffffff', border, label }) {
+  const borderStyle = border ? `border:2px solid ${border};` : 'border:2px solid transparent;';
   return `
     <td style="padding:0 6px 12px;" align="center">
       <a href="${href}" target="_blank" rel="noopener"
-         style="display:inline-block;min-width:150px;padding:12px 20px;background-color:${bg};color:${color};
+         style="display:inline-block;min-width:150px;padding:10px 20px;background-color:${bg};color:${color};
                 font-family:'Red Hat Display',Arial,sans-serif;font-size:14px;font-weight:700;
-                text-decoration:none;border-radius:8px;text-align:center;">
+                text-decoration:none;border-radius:8px;text-align:center;${borderStyle}">
         ${label}
       </a>
     </td>`;
@@ -76,8 +87,9 @@ function buildLeadEmailHtml({ fields, formName }) {
   if (email) {
     buttons.push(actionButton({
       href: `mailto:${email}`,
-      bg: '#ffffff',
+      bg: '#F3ECF7',
       color: '#7E3E98',
+      border: '#7E3E98',
       label: '✉️ E-Mail schreiben',
     }));
   }
@@ -136,8 +148,9 @@ function buildLeadEmailHtml({ fields, formName }) {
           <tr>
             <td style="background:linear-gradient(135deg,#6E5283 0%,#5d4570 40%,#8b6fa0 70%,#4c3c5a 100%);
                        padding:28px 24px;text-align:center;">
-              <img src="${LOGO_URL}" alt="Powertech Performance" width="56" height="56"
-                   style="display:block;margin:0 auto 12px;border-radius:8px;">
+              <img src="${LOGO_URL}" alt="Logo" width="56" height="56"
+                   style="display:block;width:56px;height:56px;margin:0 auto 12px;border-radius:8px;
+                          font-family:'Red Hat Display',Arial,sans-serif;font-size:10px;color:#ffffff;">
               <p style="margin:0;font-family:'Red Hat Display',Arial,sans-serif;font-size:20px;font-weight:700;color:#ffffff;">
                 Neue Anfrage über die Website
               </p>
