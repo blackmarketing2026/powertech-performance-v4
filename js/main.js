@@ -172,7 +172,6 @@ function initCookieBanner(stored) {
   const backBtn = banner.querySelector('[data-cookie-back]');
   const selectAllBtn = banner.querySelector('[data-cookie-select-all]');
   const selectNoneBtn = banner.querySelector('[data-cookie-select-none]');
-  const advancedRejectBtn = banner.querySelector('[data-cookie-reject-advanced]');
 
   function showAdvanced(show) {
     if (!simplePanel || !advancedPanel) return;
@@ -205,7 +204,6 @@ function initCookieBanner(stored) {
 
   if (acceptBtn) acceptBtn.addEventListener('click', acceptAll);
   if (rejectBtn) rejectBtn.addEventListener('click', rejectAll);
-  if (advancedRejectBtn) advancedRejectBtn.addEventListener('click', rejectAll);
 
   if (saveBtn) {
     saveBtn.addEventListener('click', () => {
