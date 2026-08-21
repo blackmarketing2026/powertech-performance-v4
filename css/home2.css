@@ -882,7 +882,7 @@ body.home2-page h3 {
 
 .testimonial-visual {
   display: grid;
-  grid-template-rows: 230px auto;
+  grid-template-rows: 370px auto;
   min-width: 0;
   background: var(--night);
 }
@@ -893,7 +893,8 @@ body.home2-page h3 {
   background-image: url("/images/home2-review-portraits.png");
   background-repeat: no-repeat;
   background-size: 500% auto;
-  background-position: 0% 50%;
+  background-position: 0% 0%;
+  background-color: var(--night);
 }
 
 .testimonial-avatar span {
@@ -920,11 +921,11 @@ body.home2-page h3 {
   line-height: 1.35;
 }
 
-.avatar-1 { background-position: 0% 50%; }
-.avatar-2 { background-position: 25% 50%; }
-.avatar-3 { background-position: 50% 50%; }
-.avatar-4 { background-position: 75% 50%; }
-.avatar-5 { background-position: 100% 50%; }
+.avatar-1 { background-position: 0% 0%; }
+.avatar-2 { background-position: 25% 0%; }
+.avatar-3 { background-position: 50% 0%; }
+.avatar-4 { background-position: 75% 0%; }
+.avatar-5 { background-position: 100% 0%; }
 
 .testimonial-copy {
   display: flex;
@@ -1508,11 +1509,11 @@ body.home2-page h3 {
   }
 
   .testimonial-visual {
-    grid-template-rows: 230px auto;
+    grid-template-rows: 410px auto;
   }
 
   .testimonial-avatar {
-    min-height: 230px;
+    min-height: 410px;
   }
 
   .testimonial-copy {
