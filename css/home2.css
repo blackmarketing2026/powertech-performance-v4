@@ -587,7 +587,7 @@ body.home2-page h3 {
   min-height: 210px;
   background-image: url("/images/home2-service-grid.png");
   background-repeat: no-repeat;
-  background-size: 300% 300%;
+  background-size: 300% auto;
 }
 
 .service-1 { background-position: 0% 0%; }
