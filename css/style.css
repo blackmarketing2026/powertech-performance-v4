@@ -404,6 +404,12 @@ p { margin: 0 0 var(--space-2); }
 }
 .contact-info-email-btn { margin-top: var(--space-1); }
 
+/* Nur auf Mobile sichtbar (z. B. Anruf-/WhatsApp-Buttons auf der Danke-Seite) */
+.quick-contact-row-mobile-only { display: none; }
+@media (max-width: 760px) {
+  .quick-contact-row-mobile-only { display: flex; }
+}
+
 /* Rechtsseiten */
 .legal-page h1 { font-size: 2rem; margin-bottom: var(--space-4); }
 .legal-page h2 { font-size: 1.4rem; margin-top: var(--space-5); }
