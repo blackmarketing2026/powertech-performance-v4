@@ -4,35 +4,97 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cookie-Einstellungen – Powertech Performance</title>
+  <meta name="description" content="Verwalten Sie Ihre Cookie-Einwilligung für Powertech Performance: Notwendig, Statistik und Marketing.">
   <meta name="robots" content="noindex">
   <link rel="canonical" href="https://powertech-performance.com/pages/cookie-einstellungen.html">
+  <link rel="icon" href="/images/logo-klein.png" type="image/png">
   <link rel="stylesheet" href="/css/style.css">
+
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+  gtag('consent', 'default', {
+    'analytics_storage': 'denied',
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'wait_for_update': 500
+  });
+  </script>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+  <!-- End Google Tag Manager -->
 </head>
 <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
   <header class="site-header">
     <div class="container header-inner">
-      <a href="/" class="logo">Powertech Performance</a>
+      <a href="/" class="logo"><img src="/images/logo-klein.png" alt="Powertech Performance Logo" width="52" height="52"></a>
     </div>
   </header>
 
   <main>
-    <section class="section">
+    <section class="section legal-page cookie-preferences-page" id="cookie-preferences-page">
       <div class="container">
-        <h1>Cookie-Einstellungen</h1>
-        <p>Detaillierte Consent-Kategorien folgen (Analyse, Marketing, technisch notwendig).</p>
+        <h1 class="align-left">Cookie-Einstellungen</h1>
+        <p>Hier können Sie Ihre Einwilligung zu Cookies und ähnlichen Technologien jederzeit einsehen und ändern. Notwendige Cookies sind für den Betrieb der Website erforderlich und lassen sich nicht deaktivieren. Weitere Informationen finden Sie in unserer <a href="/pages/datenschutz.html">Datenschutzerklärung</a>.</p>
+
+        <div class="cookie-categories">
+          <div class="cookie-category">
+            <label class="cookie-category-toggle">
+              <input type="checkbox" checked disabled>
+              <span>Notwendig</span>
+            </label>
+            <p>Erforderlich für den Betrieb der Website (z. B. Speicherung Ihrer Cookie-Auswahl). Kann nicht deaktiviert werden.</p>
+          </div>
+          <div class="cookie-category">
+            <label class="cookie-category-toggle">
+              <input type="checkbox" id="cookie-page-analytics">
+              <span>Statistik</span>
+            </label>
+            <p>Google Analytics &amp; Microsoft Clarity – helfen uns zu verstehen, wie Besucher die Website nutzen, um sie zu verbessern.</p>
+          </div>
+          <div class="cookie-category">
+            <label class="cookie-category-toggle">
+              <input type="checkbox" id="cookie-page-marketing">
+              <span>Marketing</span>
+            </label>
+            <p>Google Ads Remarketing – zeigt Ihnen interessenbezogene Werbung auf anderen Websites, nachdem Sie unsere Seite besucht haben.</p>
+          </div>
+        </div>
+
+        <div class="cookie-actions">
+          <button type="button" class="btn btn-secondary" id="cookie-page-reject-all">Alle ablehnen</button>
+          <button type="button" class="btn btn-outline" id="cookie-page-save">Auswahl speichern</button>
+          <button type="button" class="btn btn-primary" id="cookie-page-accept-all">Alle akzeptieren</button>
+        </div>
+
+        <p class="cookie-status" id="cookie-page-status" hidden></p>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>&copy; <span id="year"></span> Powertech Performance. Alle Rechte vorbehalten.</p>
+      <p class="footer-copy">© Powertech Performance</p>
+      <img src="/images/logo-klein.png" alt="Powertech Performance Logo" class="footer-logo">
       <nav class="footer-nav">
         <a href="/pages/impressum.html">Impressum</a>
-        <a href="/pages/datenschutz.html">Datenschutz</a>
-        <a href="/pages/agb.html">AGB</a>
+        <a href="/pages/datenschutz.html">Datenschutzerklärung</a>
+        <a href="/pages/cookie-einstellungen.html">Cookie-Einstellungen</a>
         <a href="/pages/seitenuebersicht.html">Seitenübersicht</a>
       </nav>
+    </div>
+    <div class="container">
+      <p class="footer-disclosure">Texte und Bilder auf dieser Website werden teilweise mithilfe von KI-Werkzeugen erstellt bzw. unterstützt.</p>
     </div>
   </footer>
 

@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   initLeadForms();
-  initCookieBanner();
+  initCookieConsent();
 });
 
 // ---------------------------------------------------------
@@ -71,73 +71,170 @@ function setFormStatus(statusEl, state, text) {
 }
 
 // ---------------------------------------------------------
-// Cookie-Consent (Grundgerüst)
-// Consent-Kategorien folgen Google Consent Mode v2.
-// Volle GTM-Integration folgt in einem separaten Schritt.
+// Cookie-Consent (TTDSG/DSGVO, Google Consent Mode v2)
+//
+// Kategorien: "necessary" (immer an), "analytics" (Google Analytics,
+// Microsoft Clarity), "marketing" (Google Ads Remarketing). "Alle
+// ablehnen" und "Alle akzeptieren" sind gleichwertig erreichbar,
+// keine vorausgewählten optionalen Kategorien. Einwilligung wird
+// 12 Monate lokal gespeichert und bei jedem Seitenaufruf geprüft.
 // ---------------------------------------------------------
-function initCookieBanner() {
-  const STORAGE_KEY = 'ptp_cookie_consent';
-  const banner = document.getElementById('cookie-banner');
-  if (!banner) return;
+const COOKIE_CONSENT_KEY = 'ptp_cookie_consent';
+const COOKIE_CONSENT_MAX_AGE_DAYS = 365;
+const CLARITY_PROJECT_ID = 'XXXXXXXXXX'; // TODO: echte Clarity-Projekt-ID eintragen
 
-  const stored = getStoredConsent(STORAGE_KEY);
-  if (!stored) {
-    banner.classList.add('is-visible');
-  }
-
-  const acceptBtn = document.getElementById('cookie-accept-all');
-  const rejectBtn = document.getElementById('cookie-reject-all');
-  const settingsBtn = document.getElementById('cookie-settings');
-
-  if (acceptBtn) {
-    acceptBtn.addEventListener('click', () => {
-      setConsent(STORAGE_KEY, {
-        analytics_storage: 'granted',
-        ad_storage: 'granted',
-        ad_user_data: 'granted',
-        ad_personalization: 'granted',
-      });
-      banner.classList.remove('is-visible');
-    });
-  }
-
-  if (rejectBtn) {
-    rejectBtn.addEventListener('click', () => {
-      setConsent(STORAGE_KEY, {
-        analytics_storage: 'denied',
-        ad_storage: 'denied',
-        ad_user_data: 'denied',
-        ad_personalization: 'denied',
-      });
-      banner.classList.remove('is-visible');
-    });
-  }
-
-  if (settingsBtn) {
-    settingsBtn.addEventListener('click', () => {
-      // TODO: Detaillierte Einstellungen (pro Kategorie) ergänzen
-      console.log('Cookie-Einstellungen öffnen (Grundgerüst).');
-    });
-  }
-}
-
-function getStoredConsent(key) {
+function getStoredConsent() {
   try {
-    const raw = localStorage.getItem(key);
-    return raw ? JSON.parse(raw) : null;
+    const raw = localStorage.getItem(COOKIE_CONSENT_KEY);
+    if (!raw) return null;
+    const data = JSON.parse(raw);
+    if (!data || typeof data.timestamp !== 'number') return null;
+    const ageDays = (Date.now() - data.timestamp) / (1000 * 60 * 60 * 24);
+    if (ageDays > COOKIE_CONSENT_MAX_AGE_DAYS) return null;
+    return data;
   } catch (e) {
     return null;
   }
 }
 
-function setConsent(key, consent) {
+function storeConsent({ analytics, marketing }) {
+  const data = { necessary: true, analytics: !!analytics, marketing: !!marketing, timestamp: Date.now() };
   try {
-    localStorage.setItem(key, JSON.stringify({ ...consent, timestamp: Date.now() }));
+    localStorage.setItem(COOKIE_CONSENT_KEY, JSON.stringify(data));
   } catch (e) {
     // localStorage nicht verfügbar — Consent gilt nur für diese Sitzung
   }
+  return data;
+}
 
+function applyConsent(data) {
   if (typeof window.gtag === 'function') {
-    window.gtag('consent', 'update', consent);
+    window.gtag('consent', 'update', {
+      analytics_storage: data.analytics ? 'granted' : 'denied',
+      ad_storage: data.marketing ? 'granted' : 'denied',
+      ad_user_data: data.marketing ? 'granted' : 'denied',
+      ad_personalization: data.marketing ? 'granted' : 'denied',
+    });
+  }
+  if (data.analytics) loadClarity();
+}
+
+// Microsoft Clarity nutzt kein Google Consent Mode — Script wird
+// deshalb nur bei erteilter Statistik-Einwilligung nachgeladen.
+function loadClarity() {
+  if (window.__clarityLoaded || CLARITY_PROJECT_ID.startsWith('XXX')) return;
+  window.__clarityLoaded = true;
+  (function (c, l, a, r, i, t, y) {
+    c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments); };
+    t = l.createElement(r); t.async = 1; t.src = 'https://www.clarity.ms/tag/' + i;
+    y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+  })(window, document, 'clarity', 'script', CLARITY_PROJECT_ID);
+}
+
+function setCategoryCheckboxes(root, data) {
+  const analyticsBox = root.querySelector('[id$="-analytics"]');
+  const marketingBox = root.querySelector('[id$="-marketing"]');
+  if (analyticsBox) analyticsBox.checked = !!data.analytics;
+  if (marketingBox) marketingBox.checked = !!data.marketing;
+}
+
+function initCookieConsent() {
+  const stored = getStoredConsent();
+  if (stored) applyConsent(stored);
+
+  initCookieBanner(stored);
+  initCookiePreferencesPage(stored);
+}
+
+function setBannerVisible(banner, visible) {
+  banner.classList.toggle('is-visible', visible);
+  // Verhindert, dass sich Cookie-Banner und Sticky-Aktionsleiste (Anrufen/WhatsApp) auf Mobile überlappen
+  document.body.classList.toggle('cookie-banner-open', visible);
+}
+
+function initCookieBanner(stored) {
+  const banner = document.getElementById('cookie-banner');
+  if (!banner) return;
+
+  if (!stored) {
+    setBannerVisible(banner, true);
+  } else {
+    setCategoryCheckboxes(banner, stored);
+  }
+
+  const acceptBtn = banner.querySelector('#cookie-accept-all');
+  const rejectBtn = banner.querySelector('#cookie-reject-all');
+  const saveBtn = banner.querySelector('#cookie-save-selection');
+
+  if (acceptBtn) {
+    acceptBtn.addEventListener('click', () => {
+      setCategoryCheckboxes(banner, { analytics: true, marketing: true });
+      applyConsent(storeConsent({ analytics: true, marketing: true }));
+      setBannerVisible(banner, false);
+    });
+  }
+
+  if (rejectBtn) {
+    rejectBtn.addEventListener('click', () => {
+      setCategoryCheckboxes(banner, { analytics: false, marketing: false });
+      applyConsent(storeConsent({ analytics: false, marketing: false }));
+      setBannerVisible(banner, false);
+    });
+  }
+
+  if (saveBtn) {
+    saveBtn.addEventListener('click', () => {
+      const analytics = banner.querySelector('[id$="-analytics"]').checked;
+      const marketing = banner.querySelector('[id$="-marketing"]').checked;
+      applyConsent(storeConsent({ analytics, marketing }));
+      setBannerVisible(banner, false);
+    });
+  }
+}
+
+// Eigenständige Seite pages/cookie-einstellungen.html: gleiche Kategorien,
+// aber dauerhaft sichtbar statt als Banner — Nutzer können ihre Auswahl
+// jederzeit nachträglich ändern.
+function initCookiePreferencesPage(stored) {
+  const page = document.getElementById('cookie-preferences-page');
+  if (!page) return;
+
+  setCategoryCheckboxes(page, stored || { analytics: false, marketing: false });
+
+  const statusEl = page.querySelector('#cookie-page-status');
+  const saveBtn = page.querySelector('#cookie-page-save');
+  const acceptBtn = page.querySelector('#cookie-page-accept-all');
+  const rejectBtn = page.querySelector('#cookie-page-reject-all');
+
+  function afterSave(data) {
+    applyConsent(data);
+    const banner = document.getElementById('cookie-banner');
+    if (banner) banner.classList.remove('is-visible');
+    if (statusEl) {
+      statusEl.textContent = 'Ihre Auswahl wurde gespeichert.';
+      statusEl.hidden = false;
+    }
+  }
+
+  if (saveBtn) {
+    saveBtn.addEventListener('click', () => {
+      const analytics = page.querySelector('[id$="-analytics"]').checked;
+      const marketing = page.querySelector('[id$="-marketing"]').checked;
+      afterSave(storeConsent({ analytics, marketing }));
+    });
+  }
+
+  if (acceptBtn) {
+    acceptBtn.addEventListener('click', () => {
+      setCategoryCheckboxes(page, { analytics: true, marketing: true });
+      afterSave(storeConsent({ analytics: true, marketing: true }));
+    });
+  }
+
+  if (rejectBtn) {
+    rejectBtn.addEventListener('click', () => {
+      setCategoryCheckboxes(page, { analytics: false, marketing: false });
+      afterSave(storeConsent({ analytics: false, marketing: false }));
+    });
   }
 }

@@ -105,16 +105,60 @@ npm install       # installiert nodemailer für api/send-lead.js
 vercel dev         # lokale Entwicklung inkl. Serverless Functions
 ```
 
+## Cookie-Consent & Tracking (TTDSG/DSGVO)
+
+Der Cookie-Banner (`js/main.js`, Funktionen rund um `initCookieConsent`) ist
+rechtssicher nach TTDSG §25 / DSGVO aufgebaut:
+
+- Drei Kategorien: **Notwendig** (immer an), **Statistik** (Google Analytics,
+  Microsoft Clarity), **Marketing** (Google Ads Remarketing)
+- „Alle ablehnen“ ist genauso leicht erreichbar wie „Alle akzeptieren“, keine
+  vorausgewählten optionalen Kategorien
+- Einwilligung wird 12 Monate in `localStorage` gespeichert und bei jedem
+  Seitenaufruf geprüft; Änderung jederzeit über **/pages/cookie-einstellungen.html**
+  (auch im Footer jeder Seite verlinkt)
+- Technisch über **Google Consent Mode v2**: `gtag('consent','default', ...)`
+  setzt vor dem Laden von GTM alles auf `denied`; erst nach Nutzer-Einwilligung
+  wird per `gtag('consent','update', ...)` freigegeben. Microsoft Clarity nutzt
+  keinen Google-Consent-Mechanismus und wird deshalb erst nach erteilter
+  Statistik-Einwilligung eigenständig nachgeladen (`loadClarity()` in `js/main.js`)
+
+### ⚠️ Platzhalter-IDs eintragen
+
+Es liegen noch keine echten Tracking-IDs vor. Vor Go-live müssen folgende
+Platzhalter ersetzt werden:
+
+| Platzhalter | Wo | Ersetzen durch |
+|---|---|---|
+| `GTM-XXXXXXX` | in **jeder** HTML-Datei (Head-Script + noscript-iframe nach `<body>`) sowie in `api/../lib/templates.js` (Konstante `GTM_CONTAINER_ID`) | echte GTM-Container-ID |
+| `XXXXXXXXXX` | `js/main.js`, Konstante `CLARITY_PROJECT_ID` | echte Microsoft-Clarity-Projekt-ID |
+
+Da alle generierten Seiten (Blog, Landingpages) aus `lib/templates.js`
+erzeugt werden, reicht es dort, `GTM_CONTAINER_ID` zu ändern und die
+Generator-Skripte erneut laufen zu lassen — die von Hand gepflegten Seiten
+(`index.html`, `pages/*.html`, `blog/wie-oft-auto-aufbereiten-lassen.html`)
+müssen einzeln angepasst werden (Suche nach `GTM-XXXXXXX`).
+
+GA4 und Google Ads Remarketing werden als Tags *innerhalb* von GTM
+konfiguriert (Google-Tag-Manager-Oberfläche, nicht im Code dieses Repos).
+
+## Schriften (Google Fonts, lokal gehostet)
+
+„Red Hat Display“ und „Caveat“ liegen als `.woff2`-Dateien lokal unter
+`fonts/` und werden über `@font-face` in `css/style.css` eingebunden — es
+findet **keine Verbindung zu Google** beim Seitenaufruf statt (siehe
+Datenschutzerklärung, Abschnitt 6).
+
 ## Status
 
-Startseite inhaltlich fertig, Formularversand angebunden. Es fehlen noch:
+Startseite inhaltlich fertig, Formularversand angebunden, Cookie-Consent
+rechtssicher umgesetzt. Es fehlen noch:
 
-- Rechtstexte (Impressum, Datenschutz, AGB) mit echten Inhalten
-- Vollständige GTM-/Consent-Mode-Integration (Skill `cookie-consent-gtm`)
-- Ggf. weitere Unterseiten (z. B. Chiptuning, wie auf der Originaldomain vorhanden)
+- Echte Tracking-IDs (siehe oben)
+- GA4-/Ads-Tags innerhalb des GTM-Containers konfigurieren
+- Ggf. weitere Unterseiten, die auf der Originaldomain hinzukommen
 
 ## Offene nächste Schritte
 
-- Rechtstexte ausfüllen
-- GTM/Consent Mode v2 vollständig verkabeln (Skill `cookie-consent-gtm`)
+- Echte GTM-/Clarity-IDs eintragen (siehe Tabelle oben)
 - Weitere Formulare/Quiz nach obigem Muster mit `/api/send-lead` verbinden

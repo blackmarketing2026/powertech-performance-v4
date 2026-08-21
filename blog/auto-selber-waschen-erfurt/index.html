@@ -7,12 +7,32 @@
   <meta name="description" content="Entdecke SB-Waschanlagen in Erfurt, um dein Auto selber zu waschen. Mit Google-Maps-Links">
   <link rel="canonical" href="https://powertech-performance.com/blog/auto-selber-waschen-erfurt/">
   <link rel="icon" href="/images/logo-klein.png" type="image/png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;600;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
+  
   <link rel="stylesheet" href="/css/style.css">
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+  gtag('consent', 'default', {
+    'analytics_storage': 'denied',
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'wait_for_update': 500
+  });
+</script>
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+<!-- End Google Tag Manager -->
 </head>
 <body>
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
   <header class="site-header">
     <div class="container header-inner">
@@ -133,19 +153,50 @@
       <nav class="footer-nav">
         <a href="/pages/impressum.html">Impressum</a>
         <a href="/pages/datenschutz.html">Datenschutzerklärung</a>
+        <a href="/pages/cookie-einstellungen.html">Cookie-Einstellungen</a>
         <a href="/pages/seitenuebersicht.html">Seitenübersicht</a>
       </nav>
     </div>
+    <div class="container">
+      <p class="footer-disclosure">Texte und Bilder auf dieser Website werden teilweise mithilfe von KI-Werkzeugen erstellt bzw. unterstützt.</p>
+    </div>
   </footer>
 
-  <div class="cookie-banner" id="cookie-banner">
+  <div class="cookie-banner" id="cookie-banner" role="dialog" aria-live="polite" aria-label="Cookie-Einstellungen">
     <div class="cookie-banner-inner">
-      <p>Wir nutzen Cookies, um diese Website optimal zu gestalten. Weitere Infos in unserer <a href="/pages/datenschutz.html">Datenschutzerklärung</a>.</p>
+      <div class="cookie-banner-header">
+        <h3>Cookie-Einstellungen</h3>
+        <p>Wir nutzen Cookies und ähnliche Technologien. Notwendige Cookies sind für den Betrieb der Website erforderlich. Mit Ihrer Einwilligung setzen wir zusätzlich Statistik- und Marketing-Cookies ein. Details finden Sie in unserer <a href="/pages/datenschutz.html">Datenschutzerklärung</a>.</p>
+      </div>
+      <div class="cookie-categories">
+        <div class="cookie-category">
+          <label class="cookie-category-toggle">
+            <input type="checkbox" checked disabled>
+            <span>Notwendig</span>
+          </label>
+          <p>Erforderlich für den Betrieb der Website (z. B. Speicherung Ihrer Cookie-Auswahl). Kann nicht deaktiviert werden.</p>
+        </div>
+        <div class="cookie-category">
+          <label class="cookie-category-toggle">
+            <input type="checkbox" id="consent-analytics">
+            <span>Statistik</span>
+          </label>
+          <p>Google Analytics &amp; Microsoft Clarity – helfen uns zu verstehen, wie Besucher die Website nutzen, um sie zu verbessern.</p>
+        </div>
+        <div class="cookie-category">
+          <label class="cookie-category-toggle">
+            <input type="checkbox" id="consent-marketing">
+            <span>Marketing</span>
+          </label>
+          <p>Google Ads Remarketing – zeigt Ihnen interessenbezogene Werbung auf anderen Websites, nachdem Sie unsere Seite besucht haben.</p>
+        </div>
+      </div>
       <div class="cookie-actions">
         <button type="button" class="btn btn-secondary" id="cookie-reject-all">Alle ablehnen</button>
-        <button type="button" class="btn btn-secondary" id="cookie-settings">Einstellungen</button>
+        <button type="button" class="btn btn-outline" id="cookie-save-selection">Auswahl speichern</button>
         <button type="button" class="btn btn-primary" id="cookie-accept-all">Alle akzeptieren</button>
       </div>
+      <p class="cookie-banner-footnote"><a href="/pages/impressum.html">Impressum</a></p>
     </div>
   </div>
 

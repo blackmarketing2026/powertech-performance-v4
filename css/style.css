@@ -2,6 +2,23 @@
    Powertech Performance — Autoaufbereitung Erfurt
    ========================================================= */
 
+/* Lokal gehostete Schriften (kein Verbindungsaufbau zu Google beim
+   Seitenaufruf, siehe Datenschutzerklärung) */
+@font-face {
+  font-family: 'Red Hat Display';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('/fonts/red-hat-display-variable.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Caveat';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/caveat-600.woff2') format('woff2');
+}
+
 :root {
   /* Markenfarben (aus bestehendem Branding übernommen) */
   --color-primary: #7E3E98;        /* CTA / primäre Handlung */
@@ -412,21 +429,72 @@ p { margin: 0 0 var(--space-2); }
   z-index: 1000;
   background: #fff;
   border-top: 1px solid var(--color-border);
-  box-shadow: 0 -2px 12px rgba(0,0,0,0.08);
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.12);
   padding: var(--space-3);
   display: none;
+  max-height: 88vh;
+  overflow-y: auto;
 }
 .cookie-banner.is-visible { display: block; }
-.cookie-banner-inner {
-  max-width: var(--container-width);
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--space-3);
+.cookie-banner-inner { max-width: var(--container-width); margin: 0 auto; }
+.cookie-banner-header h3 { margin: 0 0 var(--space-1); font-size: 1.1rem; }
+.cookie-banner-header p { font-size: 0.85rem; color: var(--color-text-muted); margin: 0 0 var(--space-2); }
+.cookie-banner-footnote { margin: var(--space-1) 0 0; font-size: 0.75rem; }
+.cookie-banner-footnote a { color: var(--color-text-muted); text-decoration: underline; }
+
+.cookie-categories {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-2);
+  margin-bottom: var(--space-2);
 }
+.cookie-category {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: var(--space-2);
+  background: var(--color-bg-alt);
+}
+.cookie-category-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  color: var(--color-brand);
+  cursor: pointer;
+}
+.cookie-category-toggle input[type="checkbox"] { width: 18px; height: 18px; accent-color: var(--color-primary); }
+.cookie-category p { font-size: 0.78rem; color: var(--color-text-muted); margin: 6px 0 0; }
+
 .cookie-actions { display: flex; gap: var(--space-2); flex-wrap: wrap; }
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+}
+.btn-outline:hover { background: var(--color-bg-alt); }
+
+/* Cookie-Einstellungen als eigene Seite */
+.cookie-preferences-page .cookie-categories { grid-template-columns: 1fr; margin-bottom: var(--space-4); }
+.cookie-preferences-page .cookie-category p { font-size: 0.85rem; }
+.cookie-status {
+  margin-top: var(--space-3);
+  font-weight: 600;
+  color: #1e7e34;
+}
+.cookie-status[hidden] { display: none; }
+
+/* KI-Kennzeichnung im Footer */
+.footer-disclosure {
+  margin: var(--space-2) 0 0;
+  font-size: 0.72rem;
+  color: var(--color-brand);
+  opacity: 0.6;
+  text-align: center;
+}
+
+@media (max-width: 760px) {
+  .cookie-categories { grid-template-columns: 1fr; }
+}
 
 /* Mobile */
 @media (max-width: 900px) {
@@ -645,4 +713,44 @@ p { margin: 0 0 var(--space-2); }
 }
 @media (max-width: 600px) {
   .glossary-grid { grid-template-columns: 1fr; }
+}
+
+/* Sticky Mobile-Aktionsleiste (Anrufen / WhatsApp) */
+.sticky-mobile-actions { display: none; }
+
+@media (max-width: 760px) {
+  body.has-sticky-mobile-actions { padding-bottom: 76px; }
+
+  .sticky-mobile-actions {
+    display: flex;
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    z-index: 900;
+    gap: 8px;
+    padding: 10px 12px;
+    padding-bottom: calc(10px + env(safe-area-inset-bottom));
+    background: #fff;
+    border-top: 1px solid var(--color-border);
+    box-shadow: 0 -2px 14px rgba(0,0,0,0.12);
+  }
+  .sticky-mobile-actions .btn {
+    flex: 1;
+    justify-content: center;
+    font-size: 0.9rem;
+    padding: 13px 10px;
+  }
+  /* Solange der Cookie-Banner offen ist, Sticky-Leiste ausblenden (main.js setzt die Klasse) */
+  body.cookie-banner-open .sticky-mobile-actions { display: none; }
+}
+
+/* Mobile-Optimierung Startseite */
+@media (max-width: 760px) {
+  .hero { padding: var(--space-5) 0 var(--space-4); }
+  .hero h1 { font-size: clamp(1.5rem, 7vw, 2rem); }
+  .hero-sub { font-size: 1rem; }
+  .section { padding: var(--space-5) 0; }
+  .why-image { order: -1; }
+  .cta-band-inner { text-align: center; }
+  .about-gallery { gap: var(--space-1); }
+  .signature-block { justify-content: center; text-align: left; }
 }
