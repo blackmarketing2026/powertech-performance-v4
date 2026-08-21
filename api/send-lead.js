@@ -10,6 +10,7 @@
 //   smtp_port       Standard: 465 (SSL)
 
 const nodemailer = require('nodemailer');
+const { buildLeadEmailHtml } = require('./_lib/lead-email');
 
 module.exports = async (req, res) => {
   if (req.method !== 'POST') {
@@ -63,6 +64,7 @@ module.exports = async (req, res) => {
       replyTo: email,
       subject: `Neue Anfrage über die Website – ${formName || 'Formular'}`,
       text: `Formular: ${formName || 'unbekannt'}\n\n${lines}`,
+      html: buildLeadEmailHtml({ fields, formName }),
     });
     res.status(200).json({ ok: true });
   } catch (err) {
