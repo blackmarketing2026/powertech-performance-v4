@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cookie-Einstellungen – Powertech Performance</title>
-  <meta name="description" content="Verwalten Sie Ihre Cookie-Einwilligung für Powertech Performance: Notwendig, Statistik und Marketing.">
+  <meta name="description" content="Verwalten Sie Ihre Cookie-Einwilligung für Powertech Performance: Notwendig, Statistik, Marketing und externe Medien.">
   <meta name="robots" content="noindex">
   <link rel="canonical" href="https://powertech-performance.com/pages/cookie-einstellungen.html">
   <link rel="icon" href="/images/logo-klein.png" type="image/png">
@@ -69,12 +69,19 @@
             </label>
             <p>Google Ads Remarketing – zeigt Ihnen interessenbezogene Werbung auf anderen Websites, nachdem Sie unsere Seite besucht haben.</p>
           </div>
+          <div class="cookie-category">
+            <label class="cookie-category-toggle">
+              <input type="checkbox" id="cookie-page-external">
+              <span>Externe Medien</span>
+            </label>
+            <p>Einbettungen Dritter (z. B. Karten oder Videos), die erst nach Zustimmung geladen werden und dabei Daten an den jeweiligen Anbieter übertragen können.</p>
+          </div>
         </div>
 
         <div class="cookie-actions">
-          <button type="button" class="btn btn-secondary" id="cookie-page-reject-all">Alle ablehnen</button>
           <button type="button" class="btn btn-outline" id="cookie-page-save">Auswahl speichern</button>
           <button type="button" class="btn btn-primary" id="cookie-page-accept-all">Alle akzeptieren</button>
+          <button type="button" class="btn btn-secondary" id="cookie-page-necessary-only">Nur notwendige</button>
         </div>
 
         <p class="cookie-status" id="cookie-page-status" hidden></p>

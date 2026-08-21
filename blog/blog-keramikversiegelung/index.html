@@ -162,28 +162,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </footer>
 
-  <div class="cookie-banner" id="cookie-banner" role="dialog" aria-live="polite" aria-label="Cookie-Einstellungen">
+  <div class="cookie-banner" id="cookie-banner" role="dialog" aria-live="polite" aria-labelledby="cookie-banner-title" aria-describedby="cookie-banner-desc">
     <div class="cookie-banner-inner">
       <div class="cookie-banner-simple" data-cookie-simple>
         <div class="cookie-banner-header">
-          <h3>Cookie-Einstellungen</h3>
-          <p>Wir nutzen Cookies und ähnliche Technologien. Notwendige Cookies sind für den Betrieb der Website erforderlich. Mit Ihrer Einwilligung setzen wir zusätzlich Statistik- und Marketing-Cookies ein. Details finden Sie in unserer <a href="/pages/datenschutz.html">Datenschutzerklärung</a>.</p>
+          <h3 id="cookie-banner-title">Deine Privatsphäre ist uns wichtig</h3>
+          <p id="cookie-banner-desc">Wir verwenden Cookies, um Anfragen zuverlässig zu messen und unsere Website sowie Werbung zu verbessern. Du entscheidest selbst, welche Cookies du erlaubst. Deine Auswahl kannst du jederzeit ändern.</p>
         </div>
         <div class="cookie-actions">
-          <button type="button" class="btn btn-primary" id="cookie-accept-all">Alles erlauben</button>
-          <button type="button" class="btn btn-secondary" id="cookie-necessary-only">Nur die nötigsten</button>
-          <button type="button" class="btn btn-secondary" id="cookie-reject-all">Ablehnen</button>
+          <button type="button" class="btn btn-primary" id="cookie-accept-all">Alle akzeptieren</button>
+          <button type="button" class="btn btn-secondary" id="cookie-necessary-only">Nur notwendige</button>
         </div>
-        <p class="cookie-banner-footnote"><button type="button" class="cookie-advanced-link" data-cookie-advanced-toggle aria-expanded="false" aria-controls="cookie-advanced-panel">Erweiterte Einstellungen</button> &middot; <a href="/pages/impressum.html">Impressum</a></p>
+        <button type="button" class="cookie-advanced-link" data-cookie-advanced-toggle aria-expanded="false" aria-controls="cookie-advanced-panel">Einstellungen</button>
       </div>
       <div class="cookie-banner-advanced" id="cookie-advanced-panel" data-cookie-advanced hidden>
         <div class="cookie-banner-header">
-          <h3>Cookie-Einstellungen anpassen</h3>
-          <p>Wählen Sie aus, welche Kategorien Sie zulassen möchten. Notwendige Cookies bleiben immer aktiv.</p>
-        </div>
-        <div class="cookie-quick-toggle">
-          <button type="button" class="btn btn-outline btn-sm" data-cookie-select-none>Alles aus</button>
-          <button type="button" class="btn btn-outline btn-sm" data-cookie-select-all>Alles an</button>
+          <h3>Cookie-Einstellungen</h3>
+          <p>Wähle aus, welche Kategorien du zulassen möchtest. Notwendige Cookies bleiben immer aktiv.</p>
         </div>
         <div class="cookie-categories">
           <div class="cookie-category">
@@ -207,11 +202,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </label>
             <p>Google Ads Remarketing – zeigt Ihnen interessenbezogene Werbung auf anderen Websites, nachdem Sie unsere Seite besucht haben.</p>
           </div>
+          <div class="cookie-category">
+            <label class="cookie-category-toggle">
+              <input type="checkbox" id="consent-external">
+              <span>Externe Medien</span>
+            </label>
+            <p>Einbettungen Dritter (z. B. Karten oder Videos), die erst nach Zustimmung geladen werden und dabei Daten an den jeweiligen Anbieter übertragen können.</p>
+          </div>
         </div>
         <div class="cookie-actions">
-          <button type="button" class="btn btn-outline" data-cookie-back>Zur&uuml;ck</button>
           <button type="button" class="btn btn-outline" id="cookie-save-selection">Auswahl speichern</button>
+          <button type="button" class="btn btn-primary" id="cookie-settings-accept-all">Alle akzeptieren</button>
+          <button type="button" class="btn btn-secondary" id="cookie-settings-necessary-only">Nur notwendige</button>
         </div>
+        <button type="button" class="cookie-advanced-back" data-cookie-back>Zurück</button>
         <p class="cookie-banner-footnote"><a href="/pages/impressum.html">Impressum</a></p>
       </div>
     </div>

@@ -445,50 +445,72 @@ p { margin: 0 0 var(--space-2); }
 .footer-nav a { font-size: 0.8rem; font-weight: 700; color: rgba(255, 255, 255, 0.64); }
 .footer-nav a:hover { color: #fff; }
 
-/* Cookie-Banner */
+/* Cookie-Banner — hochwertige, schwebende Box unten rechts (Desktop),
+   nahezu volle Breite mit Rand auf Smartphones. Position: fixed, damit
+   sie kein Layout verschiebt (kein CLS). */
 .cookie-banner {
   position: fixed;
-  bottom: 0; left: 0; right: 0;
+  right: 20px;
+  bottom: 20px;
+  left: auto;
   z-index: 1000;
+  width: min(420px, calc(100vw - 40px));
   background: var(--color-surface);
-  border-top: 1px solid var(--color-border);
-  box-shadow: 0 -4px 20px rgba(0,0,0,0.4);
+  border: 1px solid var(--color-border);
+  border-radius: 18px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
   padding: var(--space-3);
   display: none;
-  max-height: 88vh;
+  max-height: calc(100vh - 40px);
   overflow-y: auto;
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.22s ease, transform 0.22s ease;
 }
 .cookie-banner.is-visible { display: block; }
-.cookie-banner-inner { max-width: var(--container-width); margin: 0 auto; }
-.cookie-banner-header h3 { margin: 0 0 var(--space-1); font-size: 1.1rem; }
-.cookie-banner-header p { font-size: 0.85rem; color: var(--color-text-muted); margin: 0 0 var(--space-2); }
-.cookie-banner-footnote { margin: var(--space-1) 0 0; font-size: 0.75rem; }
+.cookie-banner.is-visible.is-shown { opacity: 1; transform: translateY(0); }
+@media (prefers-reduced-motion: reduce) {
+  .cookie-banner { transition: none; }
+}
+.cookie-banner-inner { margin: 0 auto; }
+.cookie-banner-header h3 { margin: 0 0 var(--space-1); font-size: 1.15rem; }
+.cookie-banner-header p { font-size: 0.88rem; line-height: 1.5; color: var(--color-text-muted); margin: 0 0 var(--space-2); }
+.cookie-banner-footnote { margin: var(--space-2) 0 0; font-size: 0.75rem; }
 .cookie-banner-footnote a { color: var(--color-text-muted); text-decoration: underline; }
 
 .cookie-categories {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
   gap: var(--space-2);
-  margin-bottom: var(--space-2);
+  margin-bottom: var(--space-3);
 }
 .cookie-category {
   border: 1px solid var(--color-border);
-  border-radius: var(--radius);
+  border-radius: 12px;
   padding: var(--space-2);
   background: var(--color-bg-alt);
 }
 .cookie-category-toggle {
   display: flex;
   align-items: center;
-  gap: 8px;
+  justify-content: space-between;
+  gap: 12px;
   font-weight: 700;
   color: var(--color-brand);
   cursor: pointer;
 }
-.cookie-category-toggle input[type="checkbox"] { width: 18px; height: 18px; accent-color: var(--color-primary); }
-.cookie-category p { font-size: 0.78rem; color: var(--color-text-muted); margin: 6px 0 0; }
+.cookie-category-toggle input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  accent-color: var(--color-primary);
+  cursor: pointer;
+}
+.cookie-category-toggle input[type="checkbox"]:disabled { cursor: not-allowed; opacity: 0.6; }
+.cookie-category p { font-size: 0.8rem; line-height: 1.5; color: var(--color-text-muted); margin: 6px 0 0; }
 
 .cookie-actions { display: flex; gap: var(--space-2); flex-wrap: wrap; }
+.cookie-actions .btn { flex: 1 1 auto; }
 .btn-outline {
   background: transparent;
   border: 2px solid var(--color-primary);
@@ -498,16 +520,49 @@ p { margin: 0 0 var(--space-2); }
 .btn-sm { padding: 0.5rem 1rem; font-size: 0.82rem; }
 
 .cookie-banner-advanced[hidden] { display: none; }
-.cookie-advanced-link {
+.cookie-advanced-link,
+.cookie-advanced-back {
+  display: inline-block;
+  margin-top: var(--space-2);
   background: none;
   border: none;
-  padding: 0;
+  padding: 4px 2px;
   font: inherit;
+  font-size: 0.85rem;
   color: var(--color-text-muted);
   text-decoration: underline;
   cursor: pointer;
 }
-.cookie-quick-toggle { display: flex; gap: var(--space-2); margin-bottom: var(--space-2); }
+.cookie-advanced-link:hover,
+.cookie-advanced-back:hover,
+.cookie-advanced-link:focus-visible,
+.cookie-advanced-back:focus-visible {
+  color: var(--color-primary);
+}
+
+/* Sichtbarer Fokus für Tastaturbedienung */
+.cookie-banner a:focus-visible,
+.cookie-banner button:focus-visible,
+.cookie-banner input:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Hintergrundscrollen sperren, solange die Cookie-Einstellungen offen sind */
+body.cookie-settings-open { overflow: hidden; }
+
+@media (max-width: 600px) {
+  .cookie-banner {
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    width: auto;
+    max-height: calc(100vh - 20px);
+    padding: var(--space-3) var(--space-2);
+  }
+  .cookie-actions { flex-direction: column; }
+  .cookie-actions .btn { width: 100%; }
+}
 
 /* Cookie-Einstellungen als eigene Seite */
 .cookie-preferences-page .cookie-categories { grid-template-columns: 1fr; margin-bottom: var(--space-4); }
