@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /pages/impressum.html
+Disallow: /pages/datenschutz.html
+Disallow: /pages/agb.html
+Disallow: /pages/cookie-einstellungen.html
+
+Sitemap: https://powertech-performance.com/sitemap.xml
