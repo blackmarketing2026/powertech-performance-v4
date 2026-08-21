@@ -616,3 +616,32 @@ p { margin: 0 0 var(--space-2); }
   .blog-ad-banner .container { flex-direction: column; text-align: center; }
   .blog-ad-banner .btn { width: 100%; }
 }
+
+/* Danke-Seite */
+.thank-you-section { padding: var(--space-6) 0; }
+.thank-you-icon { font-size: 3rem; margin-bottom: var(--space-2); }
+.thank-you-text { font-size: 1.1rem; color: var(--color-text-muted); max-width: 480px; margin: 0 auto var(--space-4); }
+.thank-you-back { margin-top: var(--space-4); font-size: 0.9rem; }
+.thank-you-back a { text-decoration: underline; }
+
+/* Glossar */
+.glossary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-3);
+}
+.glossary-item {
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: var(--space-3);
+}
+.glossary-item h3 { font-size: 1.05rem; margin-bottom: 4px; }
+.glossary-item p { font-size: 0.9rem; color: var(--color-text-muted); margin: 0; }
+
+@media (max-width: 900px) {
+  .glossary-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+  .glossary-grid { grid-template-columns: 1fr; }
+}
