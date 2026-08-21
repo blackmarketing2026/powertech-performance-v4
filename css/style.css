@@ -20,19 +20,19 @@
 }
 
 :root {
-  /* Markenfarben (aus bestehendem Branding übernommen) */
+  /* Markenfarben — abgeleitet vom dunklen Home2-Farbschema */
   --color-primary: #7E3E98;        /* CTA / primäre Handlung */
-  --color-primary-dark: #672f7d;   /* Hover */
-  --color-brand: #6E5283;          /* Markenfläche, Header, Überschriften */
-  --color-brand-light: #DECEE0;    /* dezente Flächen, Verläufe */
+  --color-primary-dark: #682690;   /* Hover */
+  --color-brand: #f6f0f8;          /* Überschriften / Text auf dunklem Grund */
+  --color-brand-light: #decce9;    /* helle Akzentflächen (Chips, Icon-Kreise) */
   --color-accent: #1EA30E;         /* WhatsApp / sekundäre Aktion */
 
-  --color-bg: #ffffff;
-  --color-bg-alt: #F8F5FA;
-  --color-surface: #ffffff;
-  --color-text: #2B2233;
-  --color-text-muted: #6E5283;
-  --color-border: #E7DCEC;
+  --color-bg: #13091c;
+  --color-bg-alt: #1c0e28;
+  --color-surface: #261032;
+  --color-text: #f6f0f8;
+  --color-text-muted: #a993c4;
+  --color-border: rgba(255, 255, 255, 0.14);
 
   --font-base: "Red Hat Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --font-signature: "Caveat", cursive;
@@ -48,8 +48,8 @@
   --radius: 10px;
   --container-width: 1200px;
   --transition: 0.2s ease;
-  --gradient-brand: linear-gradient(135deg, #DECEE0 0%, #c5b8c7 40%, #f0eaf2 70%, #b9aebb 100%);
-  --gradient-dark: linear-gradient(135deg, #6E5283 0%, #5d4570 40%, #8b6fa0 70%, #4c3c5a 100%);
+  --gradient-brand: linear-gradient(135deg, #1c0e28 0%, #13091c 55%, #201429 100%);
+  --gradient-dark: linear-gradient(135deg, #7e3e98 0%, #682690 50%, #3e1656 100%);
 }
 
 /* Reset */
@@ -93,7 +93,8 @@ p { margin: 0 0 var(--space-2); }
   position: sticky;
   top: 0;
   z-index: 100;
-  background: var(--gradient-brand);
+  background: rgba(19, 9, 28, 0.86);
+  backdrop-filter: blur(18px);
   border-bottom: 1px solid var(--color-border);
 }
 .header-inner {
@@ -107,8 +108,8 @@ p { margin: 0 0 var(--space-2); }
 }
 .logo img { border-radius: 8px; }
 .main-nav ul { display: flex; gap: var(--space-4); }
-.main-nav a { font-weight: 500; color: var(--color-brand); }
-.main-nav a:hover { color: var(--color-primary); }
+.main-nav a { font-weight: 700; color: rgba(255, 255, 255, 0.78); }
+.main-nav a:hover { color: #fff; }
 .nav-toggle {
   display: none;
   flex-direction: column;
@@ -135,10 +136,10 @@ p { margin: 0 0 var(--space-2); }
 }
 .btn-primary { background: var(--color-primary); color: #fff; }
 .btn-primary:hover { background: var(--color-primary-dark); }
-.btn-accent { background: var(--color-brand-light); color: var(--color-primary); }
-.btn-accent:hover { background: #fff; }
-.btn-secondary { background: var(--color-brand); color: #fff; }
-.btn-secondary:hover { background: var(--color-primary-dark); }
+.btn-accent { background: var(--color-brand-light); color: #3e1656; }
+.btn-accent:hover { background: #fff; color: #3e1656; }
+.btn-secondary { background: var(--color-primary-dark); color: #fff; }
+.btn-secondary:hover { background: #3e1656; }
 .btn-whatsapp { background: #25D366; color: #fff; }
 .btn-whatsapp:hover { background: #1EBE5A; }
 .btn-lg { padding: 1.1rem 2rem; font-size: 1.05rem; }
@@ -313,7 +314,7 @@ p { margin: 0 0 var(--space-2); }
 /* FAQ */
 .faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 var(--space-4); }
 .faq-item {
-  background: #fff;
+  background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
   padding: var(--space-2) var(--space-3);
@@ -341,7 +342,12 @@ p { margin: 0 0 var(--space-2); }
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
   font: inherit;
-  background: #fff;
+  color: var(--color-text);
+  background: var(--color-surface);
+}
+.form-row input::placeholder,
+.form-row textarea::placeholder {
+  color: var(--color-text-muted);
 }
 .form-row input:focus,
 .form-row textarea:focus {
@@ -422,7 +428,8 @@ p { margin: 0 0 var(--space-2); }
 
 /* Footer */
 .site-footer {
-  background: var(--gradient-brand);
+  background: #08050c;
+  border-top: 1px solid var(--color-border);
   padding: var(--space-4) 0;
 }
 .footer-inner {
@@ -432,19 +439,20 @@ p { margin: 0 0 var(--space-2); }
   align-items: center;
   gap: var(--space-3);
 }
-.footer-copy { margin: 0; font-size: 0.8rem; color: var(--color-brand); opacity: 0.7; }
+.footer-copy { margin: 0; font-size: 0.8rem; color: rgba(255, 255, 255, 0.64); }
 .footer-logo { width: 60px; }
 .footer-nav { display: flex; gap: var(--space-3); flex-wrap: wrap; }
-.footer-nav a { font-size: 0.8rem; color: var(--color-brand); }
+.footer-nav a { font-size: 0.8rem; font-weight: 700; color: rgba(255, 255, 255, 0.64); }
+.footer-nav a:hover { color: #fff; }
 
 /* Cookie-Banner */
 .cookie-banner {
   position: fixed;
   bottom: 0; left: 0; right: 0;
   z-index: 1000;
-  background: #fff;
+  background: var(--color-surface);
   border-top: 1px solid var(--color-border);
-  box-shadow: 0 -4px 20px rgba(0,0,0,0.12);
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.4);
   padding: var(--space-3);
   display: none;
   max-height: 88vh;
@@ -544,11 +552,13 @@ p { margin: 0 0 var(--space-2); }
     position: absolute;
     top: 78px;
     left: 0; right: 0;
-    background: var(--color-brand-light);
+    background: rgba(19, 9, 28, 0.97);
+    backdrop-filter: blur(18px);
     border-bottom: 1px solid var(--color-border);
     padding: var(--space-2) var(--space-3);
   }
   .main-nav.is-open ul { flex-direction: column; gap: var(--space-2); }
+  .main-nav.is-open a { color: rgba(255, 255, 255, 0.85); }
 }
 
 @media (max-width: 600px) {
@@ -575,7 +585,7 @@ p { margin: 0 0 var(--space-2); }
   gap: var(--space-4);
 }
 .blog-card {
-  background: #fff;
+  background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
   overflow: hidden;
@@ -679,7 +689,7 @@ p { margin: 0 0 var(--space-2); }
 /* Sidebar (rechte Spalte, Eigenwerbung) */
 .article-sidebar { position: sticky; top: 96px; display: flex; flex-direction: column; gap: var(--space-3); }
 .promo-card {
-  background: #fff; border: 1px solid var(--color-border); border-radius: var(--radius);
+  background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius);
   padding: var(--space-3); text-align: center;
 }
 .promo-card.promo-dark { background: var(--gradient-dark); border: none; }
@@ -757,9 +767,9 @@ p { margin: 0 0 var(--space-2); }
     gap: 8px;
     padding: 10px 12px;
     padding-bottom: calc(10px + env(safe-area-inset-bottom));
-    background: #fff;
+    background: var(--color-surface);
     border-top: 1px solid var(--color-border);
-    box-shadow: 0 -2px 14px rgba(0,0,0,0.12);
+    box-shadow: 0 -2px 14px rgba(0,0,0,0.4);
   }
   .sticky-mobile-actions .btn {
     flex: 1;
