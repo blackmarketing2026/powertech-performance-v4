@@ -388,9 +388,9 @@ body.home2-page h3 {
 
 .hero-facts {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1px;
-  width: min(850px, 100%);
+  width: min(620px, 100%);
   margin-top: 54px;
   border: 1px solid rgba(222, 204, 233, 0.22);
   border-radius: var(--radius);
@@ -536,14 +536,14 @@ body.home2-page h3 {
 
 .service-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 14px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
 }
 
 .service-tile {
   position: relative;
-  min-height: 305px;
-  padding: 24px;
+  min-height: 100%;
+  padding: 0;
   border: 1px solid var(--dark-line);
   border-radius: var(--radius);
   background: rgba(255, 255, 255, 0.72);
@@ -554,6 +554,7 @@ body.home2-page h3 {
 .service-tile::before {
   content: "";
   position: absolute;
+  z-index: 1;
   inset: 0 0 auto;
   height: 5px;
   background: linear-gradient(90deg, var(--purple), var(--violet));
@@ -571,15 +572,37 @@ body.home2-page h3 {
   height: 44px;
   align-items: center;
   justify-content: center;
-  margin-bottom: 62px;
+  margin: 20px 20px 16px;
   border-radius: var(--radius);
   color: var(--white);
   background: var(--purple);
   font-weight: 900;
 }
 
+.service-media {
+  min-height: 210px;
+  background-image: url("/images/home2-service-grid.png");
+  background-repeat: no-repeat;
+  background-size: 300% 300%;
+}
+
+.service-1 { background-position: 0% 0%; }
+.service-2 { background-position: 50% 0%; }
+.service-3 { background-position: 100% 0%; }
+.service-4 { background-position: 0% 50%; }
+.service-5 { background-position: 50% 50%; }
+.service-6 { background-position: 100% 50%; }
+.service-7 { background-position: 0% 100%; }
+.service-8 { background-position: 50% 100%; }
+.service-9 { background-position: 100% 100%; }
+
+.service-tile h3 {
+  padding: 0 20px;
+}
+
 .service-tile p {
   color: rgba(32, 20, 41, 0.66);
+  padding: 0 20px 22px;
   margin-bottom: 0;
 }
 
@@ -827,6 +850,8 @@ body.home2-page h3 {
 }
 
 .testimonial-window {
+  max-width: 900px;
+  margin-inline: auto;
   overflow: hidden;
 }
 
@@ -840,9 +865,9 @@ body.home2-page h3 {
 
 .testimonial-card {
   display: grid;
-  grid-template-columns: 164px minmax(0, 1fr);
-  flex: 0 0 min(610px, 100%);
-  min-height: 292px;
+  grid-template-columns: 230px minmax(0, 1fr);
+  flex: 0 0 100%;
+  min-height: 330px;
   overflow: hidden;
   border: 1px solid var(--dark-line);
   border-radius: var(--radius);
@@ -850,12 +875,44 @@ body.home2-page h3 {
   box-shadow: 0 20px 60px rgba(62, 22, 86, 0.12);
 }
 
+.testimonial-visual {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  min-width: 0;
+  background: var(--night);
+}
+
 .testimonial-avatar {
+  position: relative;
   min-height: 100%;
   background-image: url("/images/home2-review-portraits.png");
   background-repeat: no-repeat;
   background-size: 500% auto;
   background-position: 0% 50%;
+}
+
+.testimonial-avatar span {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  padding: 5px 8px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: var(--radius);
+  color: var(--white);
+  background: rgba(62, 22, 86, 0.72);
+  font-size: 0.68rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  backdrop-filter: blur(10px);
+}
+
+.testimonial-visual p {
+  margin: 0;
+  padding: 8px 10px 10px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.68rem;
+  font-weight: 750;
+  line-height: 1.35;
 }
 
 .avatar-1 { background-position: 0% 50%; }
@@ -1324,7 +1381,7 @@ body.home2-page h3 {
   }
 
   .testimonial-card {
-    grid-template-columns: 138px minmax(0, 1fr);
+    grid-template-columns: 168px minmax(0, 1fr);
     flex-basis: 100%;
   }
 
@@ -1407,7 +1464,6 @@ body.home2-page h3 {
   }
 
   .hero-facts div,
-  .service-tile,
   .contact-form,
   .steps article {
     padding: 20px;
@@ -1415,10 +1471,23 @@ body.home2-page h3 {
 
   .service-tile {
     min-height: 245px;
+    padding: 0;
   }
 
   .service-tile span {
-    margin-bottom: 42px;
+    margin: 18px 18px 14px;
+  }
+
+  .service-media {
+    min-height: 225px;
+  }
+
+  .service-tile h3 {
+    padding: 0 18px;
+  }
+
+  .service-tile p {
+    padding: 0 18px 20px;
   }
 
   .finish-slider {
@@ -1427,6 +1496,10 @@ body.home2-page h3 {
 
   .testimonial-card {
     grid-template-columns: 1fr;
+    min-height: 0;
+  }
+
+  .testimonial-visual {
     min-height: 0;
   }
 
@@ -1497,6 +1570,18 @@ body.home2-page h3 {
     border-top: 1px solid var(--dark-line);
     background: rgba(255, 255, 255, 0.96);
     box-shadow: 0 -14px 44px rgba(0, 0, 0, 0.18);
+  }
+
+  .sticky-mobile-actions .btn-muted {
+    color: var(--purple-900);
+    border-color: rgba(126, 62, 152, 0.18);
+    background: #ead9f2;
+  }
+
+  .sticky-mobile-actions .btn-primary {
+    color: var(--white);
+    background: #25d366;
+    box-shadow: 0 14px 34px rgba(37, 211, 102, 0.28);
   }
 
   body.cookie-banner-open .sticky-mobile-actions {
