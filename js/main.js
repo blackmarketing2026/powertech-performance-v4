@@ -163,6 +163,7 @@ function initCookieBanner(stored) {
   }
 
   const acceptBtn = banner.querySelector('#cookie-accept-all');
+  const necessaryBtn = banner.querySelector('#cookie-necessary-only');
   const rejectBtn = banner.querySelector('#cookie-reject-all');
   const saveBtn = banner.querySelector('#cookie-save-selection');
 
@@ -203,6 +204,7 @@ function initCookieBanner(stored) {
   }
 
   if (acceptBtn) acceptBtn.addEventListener('click', acceptAll);
+  if (necessaryBtn) necessaryBtn.addEventListener('click', rejectAll);
   if (rejectBtn) rejectBtn.addEventListener('click', rejectAll);
 
   if (saveBtn) {
