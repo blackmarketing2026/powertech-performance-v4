@@ -123,24 +123,22 @@ rechtssicher nach TTDSG §25 / DSGVO aufgebaut:
   keinen Google-Consent-Mechanismus und wird deshalb erst nach erteilter
   Statistik-Einwilligung eigenständig nachgeladen (`loadClarity()` in `js/main.js`)
 
-### ⚠️ Platzhalter-IDs eintragen
+### Status der Tracking-IDs
 
-Es liegen noch keine echten Tracking-IDs vor. Vor Go-live müssen folgende
-Platzhalter ersetzt werden:
-
-| Platzhalter | Wo | Ersetzen durch |
+| ID | Status | Wo |
 |---|---|---|
-| `GTM-XXXXXXX` | in **jeder** HTML-Datei (Head-Script + noscript-iframe nach `<body>`) sowie in `api/../lib/templates.js` (Konstante `GTM_CONTAINER_ID`) | echte GTM-Container-ID |
-| `XXXXXXXXXX` | `js/main.js`, Konstante `CLARITY_PROJECT_ID` | echte Microsoft-Clarity-Projekt-ID |
+| GTM-Container | ✅ eingetragen: **GTM-5PQPZTPC** | in jeder HTML-Datei (Head-Script + noscript-iframe nach `<body>`) |
+| Microsoft Clarity | ⚠️ noch Platzhalter `XXXXXXXXXX` | `js/main.js`, Konstante `CLARITY_PROJECT_ID` |
 
-Da alle generierten Seiten (Blog, Landingpages) aus `lib/templates.js`
-erzeugt werden, reicht es dort, `GTM_CONTAINER_ID` zu ändern und die
-Generator-Skripte erneut laufen zu lassen — die von Hand gepflegten Seiten
-(`index.html`, `pages/*.html`, `blog/wie-oft-auto-aufbereiten-lassen.html`)
-müssen einzeln angepasst werden (Suche nach `GTM-XXXXXXX`).
+Solange `CLARITY_PROJECT_ID` ein Platzhalter ist, wird Clarity nicht geladen
+(auch nicht nach erteilter Statistik-Einwilligung) — das Skript bricht bewusst
+früh ab (`loadClarity()` in `js/main.js`). Sobald eine echte Clarity-Projekt-ID
+vorliegt, dort eintragen.
 
-GA4 und Google Ads Remarketing werden als Tags *innerhalb* von GTM
-konfiguriert (Google-Tag-Manager-Oberfläche, nicht im Code dieses Repos).
+GA4 und Google Ads Remarketing werden als Tags *innerhalb* des GTM-Containers
+`GTM-5PQPZTPC` konfiguriert (Google-Tag-Manager-Oberfläche, nicht im Code
+dieses Repos) — dort jeweils mit Consent-Trigger auf `analytics_storage`
+bzw. `ad_storage` verknüpfen, siehe Skill `cookie-consent-gtm`.
 
 ## Schriften (Google Fonts, lokal gehostet)
 
