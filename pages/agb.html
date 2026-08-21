@@ -67,39 +67,55 @@
 
   <div class="cookie-banner" id="cookie-banner" role="dialog" aria-live="polite" aria-label="Cookie-Einstellungen">
     <div class="cookie-banner-inner">
-      <div class="cookie-banner-header">
-        <h3>Cookie-Einstellungen</h3>
-        <p>Wir nutzen Cookies und ähnliche Technologien. Notwendige Cookies sind für den Betrieb der Website erforderlich. Mit Ihrer Einwilligung setzen wir zusätzlich Statistik- und Marketing-Cookies ein. Details finden Sie in unserer <a href="/pages/datenschutz.html">Datenschutzerklärung</a>.</p>
-      </div>
-      <div class="cookie-categories">
-        <div class="cookie-category">
-          <label class="cookie-category-toggle">
-            <input type="checkbox" checked disabled>
-            <span>Notwendig</span>
-          </label>
-          <p>Erforderlich für den Betrieb der Website (z. B. Speicherung Ihrer Cookie-Auswahl). Kann nicht deaktiviert werden.</p>
+      <div class="cookie-banner-simple" data-cookie-simple>
+        <div class="cookie-banner-header">
+          <h3>Cookie-Einstellungen</h3>
+          <p>Wir nutzen Cookies und ähnliche Technologien. Notwendige Cookies sind für den Betrieb der Website erforderlich. Mit Ihrer Einwilligung setzen wir zusätzlich Statistik- und Marketing-Cookies ein. Details finden Sie in unserer <a href="/pages/datenschutz.html">Datenschutzerklärung</a>.</p>
         </div>
-        <div class="cookie-category">
-          <label class="cookie-category-toggle">
-            <input type="checkbox" id="consent-analytics">
-            <span>Statistik</span>
-          </label>
-          <p>Google Analytics &amp; Microsoft Clarity – helfen uns zu verstehen, wie Besucher die Website nutzen, um sie zu verbessern.</p>
+        <div class="cookie-actions">
+          <button type="button" class="btn btn-primary" id="cookie-accept-all">Alle erlauben</button>
+          <button type="button" class="btn btn-secondary" id="cookie-reject-all">Nur notwendige</button>
         </div>
-        <div class="cookie-category">
-          <label class="cookie-category-toggle">
-            <input type="checkbox" id="consent-marketing">
-            <span>Marketing</span>
-          </label>
-          <p>Google Ads Remarketing – zeigt Ihnen interessenbezogene Werbung auf anderen Websites, nachdem Sie unsere Seite besucht haben.</p>
+        <p class="cookie-banner-footnote"><button type="button" class="cookie-advanced-link" data-cookie-advanced-toggle aria-expanded="false" aria-controls="cookie-advanced-panel">Erweiterte Einstellungen</button> &middot; <a href="/pages/impressum.html">Impressum</a></p>
+      </div>
+      <div class="cookie-banner-advanced" id="cookie-advanced-panel" data-cookie-advanced hidden>
+        <div class="cookie-banner-header">
+          <h3>Cookie-Einstellungen anpassen</h3>
+          <p>Wählen Sie aus, welche Kategorien Sie zulassen möchten. Notwendige Cookies bleiben immer aktiv.</p>
         </div>
+        <div class="cookie-quick-toggle">
+          <button type="button" class="btn btn-outline btn-sm" data-cookie-select-none>Alles aus</button>
+          <button type="button" class="btn btn-outline btn-sm" data-cookie-select-all>Alles an</button>
+        </div>
+        <div class="cookie-categories">
+          <div class="cookie-category">
+            <label class="cookie-category-toggle">
+              <input type="checkbox" checked disabled>
+              <span>Notwendig</span>
+            </label>
+            <p>Erforderlich für den Betrieb der Website (z. B. Speicherung Ihrer Cookie-Auswahl). Kann nicht deaktiviert werden.</p>
+          </div>
+          <div class="cookie-category">
+            <label class="cookie-category-toggle">
+              <input type="checkbox" id="consent-analytics">
+              <span>Statistik</span>
+            </label>
+            <p>Google Analytics &amp; Microsoft Clarity – helfen uns zu verstehen, wie Besucher die Website nutzen, um sie zu verbessern.</p>
+          </div>
+          <div class="cookie-category">
+            <label class="cookie-category-toggle">
+              <input type="checkbox" id="consent-marketing">
+              <span>Marketing</span>
+            </label>
+            <p>Google Ads Remarketing – zeigt Ihnen interessenbezogene Werbung auf anderen Websites, nachdem Sie unsere Seite besucht haben.</p>
+          </div>
+        </div>
+        <div class="cookie-actions">
+          <button type="button" class="btn btn-outline" data-cookie-back>Zur&uuml;ck</button>
+          <button type="button" class="btn btn-outline" id="cookie-save-selection">Auswahl speichern</button>
+        </div>
+        <p class="cookie-banner-footnote"><a href="/pages/impressum.html">Impressum</a></p>
       </div>
-      <div class="cookie-actions">
-        <button type="button" class="btn btn-secondary" id="cookie-reject-all">Alle ablehnen</button>
-        <button type="button" class="btn btn-outline" id="cookie-save-selection">Auswahl speichern</button>
-        <button type="button" class="btn btn-primary" id="cookie-accept-all">Alle akzeptieren</button>
-      </div>
-      <p class="cookie-banner-footnote"><a href="/pages/impressum.html">Impressum</a></p>
     </div>
   </div>
 

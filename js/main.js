@@ -166,6 +166,30 @@ function initCookieBanner(stored) {
   const rejectBtn = banner.querySelector('#cookie-reject-all');
   const saveBtn = banner.querySelector('#cookie-save-selection');
 
+  const simplePanel = banner.querySelector('[data-cookie-simple]');
+  const advancedPanel = banner.querySelector('[data-cookie-advanced]');
+  const advancedToggle = banner.querySelector('[data-cookie-advanced-toggle]');
+  const backBtn = banner.querySelector('[data-cookie-back]');
+  const selectAllBtn = banner.querySelector('[data-cookie-select-all]');
+  const selectNoneBtn = banner.querySelector('[data-cookie-select-none]');
+
+  function showAdvanced(show) {
+    if (!simplePanel || !advancedPanel) return;
+    simplePanel.hidden = show;
+    advancedPanel.hidden = !show;
+    if (advancedToggle) advancedToggle.setAttribute('aria-expanded', String(show));
+  }
+
+  if (advancedToggle) advancedToggle.addEventListener('click', () => showAdvanced(true));
+  if (backBtn) backBtn.addEventListener('click', () => showAdvanced(false));
+
+  if (selectAllBtn) {
+    selectAllBtn.addEventListener('click', () => setCategoryCheckboxes(banner, { analytics: true, marketing: true }));
+  }
+  if (selectNoneBtn) {
+    selectNoneBtn.addEventListener('click', () => setCategoryCheckboxes(banner, { analytics: false, marketing: false }));
+  }
+
   if (acceptBtn) {
     acceptBtn.addEventListener('click', () => {
       setCategoryCheckboxes(banner, { analytics: true, marketing: true });
