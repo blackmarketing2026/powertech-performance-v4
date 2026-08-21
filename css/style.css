@@ -272,7 +272,7 @@ p { margin: 0 0 var(--space-2); }
 .contact-logo { width: 90px; margin: 0 auto var(--space-3); }
 .contact-info h3 { font-size: 1.1rem; }
 .contact-info p { color: var(--color-brand); font-weight: 500; }
-.contact-info a { color: var(--color-primary); font-weight: 700; }
+.contact-info p a { color: var(--color-primary); font-weight: 700; }
 .contact-info .btn { margin-top: var(--space-2); }
 
 /* Cards */
