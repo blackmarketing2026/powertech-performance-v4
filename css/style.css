@@ -339,6 +339,16 @@ p { margin: 0 0 var(--space-2); }
 .form-status[data-state="error"] { color: #b42318; }
 .form-status[data-state="sending"] { color: var(--color-text-muted); }
 
+/* Rechtsseiten */
+.legal-page h1 { font-size: 2rem; margin-bottom: var(--space-4); }
+.legal-page h2 { font-size: 1.4rem; margin-top: var(--space-5); }
+.legal-page h3 { font-size: 1.1rem; margin-top: var(--space-3); }
+.legal-page p { color: var(--color-text); max-width: 760px; }
+.legal-page .legal-list { list-style: disc; padding-left: 1.4rem; max-width: 760px; margin-bottom: var(--space-2); }
+.legal-page .legal-list li { margin-bottom: var(--space-1); }
+.legal-page .legal-source { font-size: 0.8rem; color: var(--color-text-muted); margin-top: var(--space-5); }
+.legal-page a { text-decoration: underline; word-break: break-word; }
+
 /* Footer */
 .site-footer {
   background: var(--gradient-brand);
