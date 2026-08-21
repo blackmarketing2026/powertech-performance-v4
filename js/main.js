@@ -15,18 +15,60 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Kontaktformular (Platzhalter — Backend-Anbindung folgt)
-  const contactForm = document.getElementById('contact-form');
-  if (contactForm) {
-    contactForm.addEventListener('submit', (event) => {
-      event.preventDefault();
-      // TODO: Formular-Backend/Versand anbinden
-      console.log('Formular abgeschickt (Grundgerüst — noch nicht angebunden).');
-    });
-  }
-
+  initLeadForms();
   initCookieBanner();
 });
+
+// ---------------------------------------------------------
+// Lead-Formulare (Kontaktformulare, Quiz-Ergebnisformulare, ...)
+// Jedes Formular mit der Klasse "lead-form" wird automatisch an
+// /api/send-lead angebunden. Ein "data-form-name"-Attribut auf dem
+// <form> markiert im Betreff, welches Formular abgesendet wurde.
+// ---------------------------------------------------------
+function initLeadForms() {
+  const forms = document.querySelectorAll('.lead-form');
+
+  forms.forEach((form) => {
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+
+      const statusEl = form.querySelector('[data-form-status]');
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const formData = new FormData(form);
+      const payload = Object.fromEntries(formData.entries());
+      payload.formName = form.dataset.formName || 'Formular';
+
+      setFormStatus(statusEl, 'sending', 'Wird gesendet…');
+      if (submitBtn) submitBtn.disabled = true;
+
+      try {
+        const response = await fetch('/api/send-lead', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+        const result = await response.json().catch(() => ({}));
+
+        if (!response.ok) {
+          throw new Error(result.error || 'Versand fehlgeschlagen.');
+        }
+
+        setFormStatus(statusEl, 'success', 'Danke! Ihre Anfrage wurde gesendet — wir melden uns zeitnah.');
+        form.reset();
+      } catch (err) {
+        setFormStatus(statusEl, 'error', err.message || 'Versand fehlgeschlagen. Bitte versuchen Sie es später erneut oder rufen Sie uns an.');
+      } finally {
+        if (submitBtn) submitBtn.disabled = false;
+      }
+    });
+  });
+}
+
+function setFormStatus(statusEl, state, text) {
+  if (!statusEl) return;
+  statusEl.textContent = text;
+  statusEl.setAttribute('data-state', state);
+}
 
 // ---------------------------------------------------------
 // Cookie-Consent (Grundgerüst)

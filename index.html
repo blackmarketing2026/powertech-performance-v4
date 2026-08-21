@@ -214,7 +214,11 @@
       <div class="container">
         <div class="contact-grid">
           <div class="contact-form-wrap">
-            <form class="contact-form" id="contact-form" novalidate>
+            <form class="contact-form lead-form" id="contact-form" data-form-name="Kontaktformular Startseite" novalidate>
+              <div class="form-row honeypot" aria-hidden="true">
+                <label for="website">Website</label>
+                <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+              </div>
               <div class="form-row">
                 <label for="name">Dein Vor- und Nachname…</label>
                 <input type="text" id="name" name="name" placeholder="Dein Vor- und Nachname…" required>
@@ -236,6 +240,7 @@
                 <textarea id="message" name="message" rows="5" placeholder="Schreibe hier dein Anliegen..." required></textarea>
               </div>
               <button type="submit" class="btn btn-primary btn-block">Jetzt Anfrage senden →</button>
+              <p class="form-status" data-form-status role="status" aria-live="polite"></p>
             </form>
             <p class="form-note">ℹ️ Anruf erfolgt innerhalb von 24 Stunden (werktags)</p>
           </div>

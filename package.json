@@ -1,0 +1,9 @@
+{
+  "name": "powertech-performance-v4",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Website Powertech Performance – Autoaufbereitung Erfurt",
+  "dependencies": {
+    "nodemailer": "^6.9.14"
+  }
+}

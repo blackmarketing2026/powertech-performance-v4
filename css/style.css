@@ -322,6 +322,22 @@ p { margin: 0 0 var(--space-2); }
   outline: 2px solid var(--color-primary);
   outline-offset: 1px;
 }
+.form-row.honeypot {
+  position: absolute;
+  width: 1px; height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+.form-status {
+  margin: var(--space-2) 0 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: center;
+}
+.form-status[data-state="success"] { color: #1e7e34; }
+.form-status[data-state="error"] { color: #b42318; }
+.form-status[data-state="sending"] { color: var(--color-text-muted); }
 
 /* Footer */
 .site-footer {
