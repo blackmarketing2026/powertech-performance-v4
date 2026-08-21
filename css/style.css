@@ -491,6 +491,7 @@ p { margin: 0 0 var(--space-2); }
 }
 .blog-card:hover { box-shadow: 0 10px 24px rgba(110,82,131,0.16); transform: translateY(-2px); }
 .blog-card img { width: 100%; aspect-ratio: 16/10; object-fit: cover; }
+.blog-card-no-image .blog-card-body { padding-top: var(--space-4); }
 .blog-card-body { padding: var(--space-3); display: flex; flex-direction: column; gap: 8px; flex: 1; }
 .blog-card-category {
   font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.5px;
