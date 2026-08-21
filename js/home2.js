@@ -4,6 +4,7 @@
   const revealItems = Array.from(document.querySelectorAll('[data-reveal]'));
   const compare = document.querySelector('[data-compare]');
   const compareInput = compare ? compare.querySelector('input[type="range"]') : null;
+  const testimonials = document.querySelector('[data-testimonials]');
 
   function updateScrollEffects() {
     const max = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
@@ -40,6 +41,44 @@
 
     compareInput.addEventListener('input', setCompare);
     setCompare();
+  }
+
+  if (testimonials) {
+    const track = testimonials.querySelector('[data-testimonial-track]');
+    const cards = track ? Array.from(track.querySelectorAll('.testimonial-card')) : [];
+    const prev = testimonials.querySelector('[data-testimonial-prev]');
+    const next = testimonials.querySelector('[data-testimonial-next]');
+    const dots = testimonials.querySelector('[data-testimonial-dots]');
+    let testimonialIndex = 0;
+
+    const setTestimonial = (index) => {
+      if (!cards.length || !track) return;
+      testimonialIndex = (index + cards.length) % cards.length;
+      testimonials.style.setProperty('--testimonial-index', String(testimonialIndex));
+      testimonials.style.setProperty('--testimonial-shift', cards[testimonialIndex].offsetLeft + 'px');
+      if (dots) {
+        dots.querySelectorAll('button').forEach((dot, dotIndex) => {
+          dot.classList.toggle('is-active', dotIndex === testimonialIndex);
+          dot.setAttribute('aria-current', dotIndex === testimonialIndex ? 'true' : 'false');
+        });
+      }
+    };
+
+    if (dots) {
+      cards.forEach((_, index) => {
+        const dot = document.createElement('button');
+        dot.type = 'button';
+        dot.className = 'testimonial-dot';
+        dot.setAttribute('aria-label', 'Bewertung ' + (index + 1) + ' anzeigen');
+        dot.addEventListener('click', () => setTestimonial(index));
+        dots.appendChild(dot);
+      });
+    }
+
+    if (prev) prev.addEventListener('click', () => setTestimonial(testimonialIndex - 1));
+    if (next) next.addEventListener('click', () => setTestimonial(testimonialIndex + 1));
+    window.addEventListener('resize', () => setTestimonial(testimonialIndex));
+    setTestimonial(0);
   }
 
   document.querySelectorAll('.home2-nav a').forEach((link) => {
