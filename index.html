@@ -4,10 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Autoaufbereitung Erfurt – Fahrzeugpflege & Werterhalt | Powertech Performance</title>
-  <meta name="description" content="Professionelle Autoaufbereitung in Erfurt: Lackversiegelung, Politur, Textilreinigung, Ozonbehandlung & Felgenreinigung. Jetzt individuelles Angebot sichern.">
+  <meta name="description" content="Autoaufbereitung in Erfurt und im Umkreis von 150 km: Lackkorrektur, Keramikversiegelung, Innenraum-Detailing und Fahrzeugpflege von Powertech Performance.">
   <link rel="canonical" href="https://powertech-performance.com/">
   <link rel="icon" href="/images/logo-klein.png" type="image/png">
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="preload" as="image" href="/images/home2-slider-after.png">
+  <link rel="stylesheet" href="/css/home2.css">
   <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){ dataLayer.push(arguments); }
@@ -27,321 +28,426 @@
   })(window,document,'script','dataLayer','GTM-5PQPZTPC');</script>
   <!-- End Google Tag Manager -->
 </head>
-<body class="has-sticky-mobile-actions">
+<body class="home2-page has-sticky-mobile-actions">
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5PQPZTPC"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="/" class="logo"><img src="/images/logo-klein.png" alt="Powertech Performance Logo" width="52" height="52"></a>
+  <div class="scroll-progress" aria-hidden="true"></div>
 
-      <nav class="main-nav" id="main-nav">
+  <header class="home2-header" data-header>
+    <a class="skip-link" href="#kontakt">Zum Kontaktformular springen</a>
+    <div class="home2-shell header-shell">
+      <a class="brand-mark" href="/" aria-label="Powertech Performance Startseite">
+        <img src="/images/logo-klein.png" alt="Powertech Performance Logo" width="48" height="48">
+        <span>
+          <strong>Powertech Performance</strong>
+          <small>Autoaufbereitung Erfurt</small>
+        </span>
+      </a>
+
+      <nav class="main-nav home2-nav" id="main-nav" aria-label="Hauptnavigation">
         <ul>
-          <li><a href="#leistungen">Autoaufbereitung</a></li>
-          <li><a href="#ueber-uns">Über uns</a></li>
-          <li><a href="#faq">Häufige Fragen</a></li>
-          <li><a href="/blog/">Blog</a></li>
-          <li><a href="/pages/kontakt.html">Kontakt</a></li>
+          <li><a href="#leistungen">Leistungen</a></li>
+          <li><a href="#finish">Vorher/Nachher</a></li>
+          <li><a href="#standort">Standort</a></li>
+          <li><a href="#referenzen">Referenzen</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
         </ul>
       </nav>
 
-      <a href="tel:+491737373574" class="btn btn-primary header-cta">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.3 1.1L6.6 10.8z"/></svg>
-        +49 173 7373574
-      </a>
-
-      <button class="nav-toggle" id="nav-toggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="main-nav">
+      <a class="header-phone" href="tel:+491737373574">+49 173 7373574</a>
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Menue oeffnen" aria-expanded="false" aria-controls="main-nav">
         <span></span><span></span><span></span>
       </button>
     </div>
   </header>
 
   <main>
-
-    <!-- Hero -->
-    <section class="hero" id="hero" style="background-image:linear-gradient(rgba(30,15,40,0.55),rgba(30,15,40,0.55)), url('/images/hero-bg.png')">
-      <div class="container hero-inner">
-        <h1>Ihr Fahrzeug, unser Anspruch: Perfekte Autoaufbereitung in Erfurt</h1>
-        <p class="hero-sub">
-          Gönnen Sie Ihrem Auto neue Strahlkraft – direkt hier vor Ort in Erfurt. Mit professioneller
-          Aufbereitung, hochwertiger Pflege und präziser Handarbeit holen wir den Glanz, den Schutz und
-          den Wert Ihres Fahrzeugs zurück. Ob Alltagsauto, Leasingrückgabe oder Verkauf – wir bringen Ihr
-          Fahrzeug wieder auf Bestform.
-        </p>
-        <a href="#kontakt" class="btn btn-primary btn-lg">👉 Jetzt Termin für Ihre Autoaufbereitung anfragen!</a>
+    <section class="hero" id="top">
+      <div class="hero-media" aria-hidden="true">
+        <img src="/images/home2-slider-after.png" alt="">
       </div>
-    </section>
-
-    <!-- Leistungen -->
-    <section class="section" id="leistungen">
-      <div class="container">
-        <div class="grid grid-3">
-
-          <div class="card service-card">
-            <img src="/images/service-lackversiegelung.png" alt="Lackversiegelung" class="service-icon" loading="lazy">
-            <p class="eyebrow">Schutz und Glanz in Perfektion</p>
-            <h3>Lackversiegelung</h3>
-            <p>Mit unserer professionellen Lackversiegelung bewahren wir die Schönheit und schützen Ihr Fahrzeug dauerhaft vor Umwelteinflüssen, Schmutz und UV-Strahlen.</p>
-          </div>
-
-          <div class="card service-card">
-            <img src="/images/service-lackaufbereitung.png" alt="Lackaufbereitung" class="service-icon" loading="lazy">
-            <p class="eyebrow">Makelloser Glanz wie am ersten Tag</p>
-            <h3>Lackaufbereitung</h3>
-            <p>Wir entfernen Kratzer, Mattierungen und Gebrauchsspuren präzise – für eine Lackoberfläche, die wieder tief glänzt und Ihr Fahrzeug neu erstrahlen lässt.</p>
-          </div>
-
-          <div class="card service-card">
-            <img src="/images/service-textilreinigung.png" alt="Textilreinigung" class="service-icon" loading="lazy">
-            <p class="eyebrow">Frische und Sauberkeit für den Innenraum</p>
-            <h3>Textilreinigung</h3>
-            <p>Ob Sitze, Teppiche oder Dachhimmel – wir reinigen Ihre Textilien schonend und gründlich, entfernen Flecken, Gerüche und sorgen für eine neuwertige Optik.</p>
-          </div>
-
-          <div class="card service-card">
-            <img src="/images/service-ozonbehandlung.png" alt="Ozonbehandlung" class="service-icon" loading="lazy">
-            <p class="eyebrow">Geruchsneutralisation auf höchstem Niveau</p>
-            <h3>Ozonbehandlung</h3>
-            <p>Unsere Ozonbehandlung beseitigt zuverlässig unangenehme Gerüche, Bakterien und Keime – für ein rundum frisches Raumklima in Ihrem Fahrzeug.</p>
-          </div>
-
-          <div class="card service-card">
-            <img src="/images/service-felgenreinigung.png" alt="Felgenreinigung" class="service-icon" loading="lazy">
-            <p class="eyebrow">Strahlende Felgen, langanhaltender Schutz</p>
-            <h3>Felgenreinigung</h3>
-            <p>Wir reinigen Ihre Felgen gründlich von Bremsstaub und Straßenschmutz und versiegeln sie anschließend für eine leichte Reinigung und langanhaltenden Glanz.</p>
-          </div>
-
-          <div class="card service-card">
-            <img src="/images/service-fachberatung.png" alt="Fachberatung" class="service-icon" loading="lazy">
-            <p class="eyebrow">Kompetenz, der Sie vertrauen können</p>
-            <h3>Fachberatung</h3>
-            <p>Profitieren Sie von unserer IHK-zertifizierten Fachberatung: Wir analysieren den Zustand Ihres Fahrzeugs genau und empfehlen Ihnen gezielt die besten Pflegemaßnahmen.</p>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- Warum wir -->
-    <section class="section section-alt">
-      <div class="container">
-        <div class="why-grid">
-          <div class="why-text">
-            <h2 class="align-left">Weil jedes Auto eine Geschichte erzählt – und wir helfen, sie zu bewahren.</h2>
-            <p>Ein Fahrzeug ist mehr als Blech und Lack.</p>
-            <p>Es ist Teil Ihres Lebens. Ihrer Arbeit. Ihrer Erinnerungen.</p>
-            <p>Unsere Aufgabe ist es, genau das zu respektieren – und Ihr Auto so aufzubereiten, dass Sie es wieder mit neuen Augen sehen.</p>
-            <p>❌ Keine Massenabfertigung.<br>❌ Keine Schnellprogramme.</p>
-            <p>Sondern echte Handarbeit, mit dem Blick fürs Detail und dem Anspruch, jedes Fahrzeug bestmöglich in Szene zu setzen – egal ob Alltagsauto, Sportwagen oder Oldtimer.</p>
-            <p><strong>Wir nehmen uns die Zeit, die andere sich nicht mehr nehmen.</strong></p>
-          </div>
-          <div class="why-image">
-            <img src="/images/trust-fahrzeug.jpg" alt="Aufbereitetes Fahrzeug" loading="lazy">
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="home2-shell hero-shell">
+        <div class="hero-copy" data-reveal>
+          <h1>Autoaufbereitung<br>mit Tiefenglanz.</h1>
+          <p class="hero-lead">Lackkorrektur, Keramikschutz und Innenraum aus Erfurt. F&uuml;r Fahrzeuge im Raum Erfurt und gern auch dar&uuml;ber hinaus.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#kontakt">Termin anfragen</a>
+            <a class="btn btn-ghost" href="https://wa.me/491737373574" target="_blank" rel="noopener">WhatsApp starten</a>
           </div>
         </div>
-
-        <ul class="checklist">
-          <li>Jedes Fahrzeug wird bei uns einzeln begutachtet. Keine Pauschalprogramme, sondern eine Aufbereitung, die sich an Ihrem Auto orientiert.</li>
-          <li>Wir arbeiten ausschließlich mit hochwertigen Produkten, bewährten Techniken und ruhiger, präziser Hand – für Ergebnisse, die Sie wirklich sehen und spüren.</li>
-          <li>Kratzer, matte Stellen, Gebrauchsspuren – wir holen das Maximum aus Lack, Leder und Stoff, ohne unnötige Risiken einzugehen.</li>
-          <li>Ihr Fahrzeug soll nicht nur sauber aussehen, sondern sich anfühlen wie neu: vom ersten Griff an die Tür bis zum Duft im Innenraum.</li>
-          <li>Wir sprechen offen und ehrlich. Wenn etwas nicht möglich ist oder eine Reparatur besser wäre als eine Aufbereitung, sagen wir es Ihnen.</li>
-          <li>Ein kundenorientierter Ansatz steht im Zentrum unserer Fachkompetenzen – wir hören zu, verstehen Ihre Bedürfnisse und bieten einen Service, der auf Ihre Zufriedenheit abzielt.</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- CTA Band -->
-    <section class="cta-band">
-      <div class="container cta-band-inner">
-        <div>
-          <h2>Hol dir den Glanz zurück – mit unserer Profi-Autoaufbereitung.</h2>
-          <p>Jetzt Termin sichern und Ihr Fahrzeug neu erleben.</p>
-        </div>
-        <a href="#kontakt" class="btn btn-accent btn-lg">👉 Sofort Angebot einholen</a>
-      </div>
-    </section>
-
-    <!-- Ablauf -->
-    <section class="section">
-      <div class="container">
-        <div class="grid grid-3">
-          <div class="step">
-            <div class="step-icon">🛠️</div>
-            <p class="eyebrow">Schritt 1</p>
-            <h3>Anfrage stellen</h3>
-            <p>Füllen Sie unser kurzes Anfrageformular aus oder rufen Sie uns an – teilen Sie uns einfach mit, welches Fahrzeug Sie aufbereiten lassen möchten und welche Wünsche Sie haben.</p>
+        <div class="hero-facts" data-reveal>
+          <div>
+            <span>Fokus</span>
+            <strong>Glanz</strong>
+            <small>Lack, Innenraum, Werterhalt</small>
           </div>
-          <div class="step">
-            <div class="step-icon">🚗</div>
-            <p class="eyebrow">Schritt 2</p>
-            <h3>Auto vorstellen</h3>
-            <p>Bringen Sie Ihr Fahrzeug zu uns, oder senden Sie uns aussagekräftige Bilder. Wir schauen uns Ihr Auto genau an, bewerten den Zustand und besprechen gemeinsam, welche Aufbereitungsmaßnahmen sinnvoll sind.</p>
-          </div>
-          <div class="step">
-            <div class="step-icon">📄</div>
-            <p class="eyebrow">Schritt 3</p>
-            <h3>Angebot erhalten</h3>
-            <p>Auf Basis Ihrer Wünsche und dem Zustand Ihres Fahrzeugs erstellen wir Ihnen ein individuelles, faires Angebot. Keine versteckten Kosten – nur klare Leistung, die überzeugt.</p>
+          <div>
+            <span>Kontakt</span>
+            <strong>24h</strong>
+            <small>Rueckmeldung werktags</small>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Über uns -->
-    <section class="section section-alt" id="ueber-uns">
-      <div class="container">
-        <div class="about-grid">
-          <div class="about-text">
-            <h2 class="align-left">Über uns – Fahrzeugpflege auf höchstem Niveau mit Benjamin Lemmer</h2>
-            <p>Benjamin Lemmer ist nicht nur ein erfahrener Fahrzeugaufbereiter – er ist IHK-zertifizierter Profi. Sein Handwerk ist keine Nebentätigkeit, sondern Berufung – fundiert durch eine anerkannte Ausbildung und perfektioniert durch jahrelange Praxiserfahrung. Vom ersten Handgriff bis zum letzten Blick fürs Detail steht eines im Mittelpunkt: Ihr Fahrzeug soll aussehen, als wäre es gerade neu geboren. Egal ob Alltag, Verkauf oder Werterhalt:</p>
-            <p>Benjamin Lemmer versteht, was echte Aufbereitung bedeutet – und was sie leisten muss.</p>
-            <p>Sein Anspruch:<br>✅ Keine Standardlösungen, sondern maßgeschneiderte Pflege.<br>✅ Keine schnellen Ergebnisse, sondern echte Substanz.<br>✅ Keine Kompromisse – nur höchste Qualität.</p>
-            <p>Mit der Kombination aus fundierter IHK-Ausbildung, modernster Technik und echter Leidenschaft für Fahrzeuge liefert Benjamin Lemmer Resultate, die überzeugen – Tag für Tag, Kilometer für Kilometer.</p>
+    <section class="marquee-band" aria-label="Leistungsschwerpunkte">
+      <div class="marquee-track">
+        <span>Lackkorrektur</span>
+        <span>Keramikversiegelung</span>
+        <span>Innenraumreinigung</span>
+        <span>Innenraum-Detailing</span>
+        <span>Leasingrueckgabe</span>
+        <span>Felgenreinigung</span>
+        <span>Kundenstimmen</span>
+        <span>Premium Finish</span>
+        <span>Lackkorrektur</span>
+        <span>Keramikversiegelung</span>
+        <span>Innenraumreinigung</span>
+        <span>Innenraum-Detailing</span>
+        <span>Leasingrueckgabe</span>
+        <span>Felgenreinigung</span>
+        <span>Kundenstimmen</span>
+        <span>Premium Finish</span>
+      </div>
+    </section>
 
-            <div class="signature-block">
-              <img src="/images/benjamin-lemmer.jpg" alt="Benjamin Lemmer" class="signature-photo" loading="lazy">
-              <div>
-                <p class="signature-name">Benjamin Lemmer</p>
-                <p class="signature-role">Inhaber</p>
+    <section class="section intro-section" id="leistungen">
+      <div class="home2-shell intro-grid">
+        <div class="section-heading" data-reveal>
+          <p class="kicker">Leistungen</p>
+          <h2>Keine Standardwaesche. Ein Finish, das zum Fahrzeug passt.</h2>
+        </div>
+        <div class="intro-copy" data-reveal>
+          <p>Powertech Performance bereitet Fahrzeuge nicht nach Schema F auf. Wir schauen uns Lack, Nutzung, Innenraum und Ziel an und empfehlen nur, was wirklich Sinn ergibt.</p>
+          <div class="mini-proof">
+            <strong>IHK-zertifizierte Fachberatung</strong>
+            <span>An der Klinge 10, 99095 Erfurt</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="home2-shell service-grid">
+        <article class="service-tile" data-reveal>
+          <div class="service-media service-1" role="img" aria-label="Lackkorrektur mit Poliermaschine"></div>
+          <span>01</span>
+          <h3>Lackkorrektur</h3>
+          <p>Swirls, Hologramme und matte Stellen werden kontrolliert reduziert. Je nach Zustand arbeiten wir mit passender Politur, Pad-Kombination und sauberem Kontrolllicht.</p>
+        </article>
+        <article class="service-tile" data-reveal>
+          <div class="service-media service-2" role="img" aria-label="Keramikversiegelung auf Fahrzeuglack"></div>
+          <span>02</span>
+          <h3>Keramikversiegelung</h3>
+          <p>Nach der Vorbereitung wird die Versiegelung kontrolliert aufgetragen. Das Ergebnis: mehr Glanz, starker Schutz und eine Oberflaeche, die sich im Alltag leichter reinigen laesst.</p>
+        </article>
+        <article class="service-tile" data-reveal>
+          <div class="service-media service-3" role="img" aria-label="Sauberer Innenraum nach Aufbereitung"></div>
+          <span>03</span>
+          <h3>Innenraumreinigung</h3>
+          <p>Sitze, Teppiche, Verkleidungen und Zwischenraeume werden gruendlich gereinigt. Ideal fuer Alltagsfahrzeuge, Familienautos und Fahrzeuge vor Verkauf oder Rueckgabe.</p>
+        </article>
+        <article class="service-tile" data-reveal>
+          <div class="service-media service-4" role="img" aria-label="Detailpinsel bei Lederpflege und Kunststoffreinigung"></div>
+          <span>04</span>
+          <h3>Lederpflege &amp; Pinselarbeit</h3>
+          <p>Leder, Naehte, Kunststoffstrukturen, Lueftungsduesen und Schalter werden mit passenden Buersten, Pinseln und Pflegeprodukten sauber herausgearbeitet.</p>
+        </article>
+        <article class="service-tile" data-reveal>
+          <div class="service-media service-5" role="img" aria-label="Cockpit Aufbereitung fuer Leasingfahrzeuge"></div>
+          <span>05</span>
+          <h3>Cockpit &amp; Leasing</h3>
+          <p>Aufbereitung fuer Leasingfahrzeuge, Rueckgaben und Verkauf: Cockpit, Bedienflaechen und Sichtbereiche wirken wieder gepflegt, sauber und pruefbereit.</p>
+        </article>
+        <article class="service-tile" data-reveal>
+          <div class="service-media service-6" role="img" aria-label="Felgenreinigung und Felgenversiegelung"></div>
+          <span>06</span>
+          <h3>Felgenreinigung &amp; Versiegelung</h3>
+          <p>Bremsstaub, eingebrannte Rueckstaende und Schmutz werden geloest. Auf Wunsch schuetzt eine Versiegelung die Felge und erleichtert die spaetere Pflege.</p>
+        </article>
+        <article class="service-tile" data-reveal>
+          <div class="service-media service-7" role="img" aria-label="Trockeneisreinigung am Fahrzeugunterboden"></div>
+          <span>07</span>
+          <h3>Trockeneisreinigung</h3>
+          <p>Fuer sensible Bereiche, Unterboden, Technik und hartnaeckige Rueckstaende: Trockeneis reinigt trocken, praezise und ohne klassische Nassbelastung.</p>
+        </article>
+        <article class="service-tile" data-reveal>
+          <div class="service-media service-8" role="img" aria-label="Motorraumwaesche und Motorraumdetails"></div>
+          <span>08</span>
+          <h3>Motorraumwaesche</h3>
+          <p>Motorraum und sichtbare Komponenten werden behutsam gereinigt, gepflegt und optisch aufgewertet. Sauberer Eindruck ohne uebertriebene Show-Optik.</p>
+        </article>
+        <article class="service-tile" data-reveal>
+          <div class="service-media service-9" role="img" aria-label="Mehrstufige Lackaufbereitung bis zum Finish"></div>
+          <span>09</span>
+          <h3>Mehrstufiges Finish</h3>
+          <p>Lackaufbereitung in mehreren Stufen: Defektkorrektur, Glanzaufbau, Finish-Politur und Schutz. Fuer Fahrzeuge, bei denen das Ergebnis wirklich sichtbar sein soll.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="compare-section" id="finish">
+      <div class="home2-shell compare-grid">
+        <div class="compare-copy" data-reveal>
+          <p class="kicker">Vorher / Nachher</p>
+          <h2>Jetzt mit echtem Bildpaar statt nur Abdunklung.</h2>
+          <p>Der Slider nutzt zwei passend erzeugte KI-Bilder mit gleicher Perspektive: links das saubere Finish nach Lackkorrektur und Schutz, rechts die matte, verunreinigte Vorher-Situation.</p>
+          <ul class="check-list">
+            <li>sichtbare Swirls und Staub im Vorher-Bild</li>
+            <li>klare Reflexionen und mehr Tiefe im Nachher-Bild</li>
+            <li>optimal f&uuml;r schnelle mobile Vergleichsmomente</li>
+          </ul>
+        </div>
+
+        <div class="finish-slider" data-compare data-reveal>
+          <div class="finish-layer finish-before">
+            <img src="/images/home2-slider-before.png" alt="KI-generiertes Vorher-Bild eines matten, verschmutzten Fahrzeugs" loading="lazy">
+            <span>Vorher</span>
+          </div>
+          <div class="finish-layer finish-after">
+            <img src="/images/home2-slider-after.png" alt="KI-generiertes Nachher-Bild eines professionell aufbereiteten Fahrzeugs" loading="lazy">
+            <span>Nachher</span>
+          </div>
+          <div class="slider-line" aria-hidden="true"></div>
+          <input type="range" min="8" max="92" value="52" aria-label="Vorher-Nachher-Vergleich verschieben">
+        </div>
+      </div>
+    </section>
+
+    <section class="location-section" id="standort">
+      <div class="home2-shell location-grid">
+        <div class="location-map" data-reveal aria-label="Standortradius Raum Erfurt">
+          <div class="radius-ring ring-outer"></div>
+          <div class="radius-ring ring-mid"></div>
+          <div class="radius-core">
+            <strong>Erfurt</strong>
+            <span>150 km</span>
+          </div>
+          <span class="pin pin-1">Gotha</span>
+          <span class="pin pin-2">Weimar</span>
+          <span class="pin pin-3">Jena</span>
+          <span class="pin pin-4">Gera</span>
+          <span class="pin pin-5">Eisenach</span>
+        </div>
+        <div class="location-copy" data-reveal>
+          <p class="kicker">Standort</p>
+          <h2>Raum Erfurt, Umkreis 150 km und darueber hinaus.</h2>
+          <p>Du kommst nicht direkt aus Erfurt? Kein Problem. Wir nehmen gern Anfragen aus Thueringen und angrenzenden Regionen an. Schreib uns kurz Fahrzeug, Standort und Wunschleistung, dann klaeren wir den passenden Ablauf.</p>
+          <div class="location-chips">
+            <span>Erfurt</span>
+            <span>Weimar</span>
+            <span>Jena</span>
+            <span>Gotha</span>
+            <span>Eisenach</span>
+            <span>Gera</span>
+            <span>Nordhausen</span>
+            <span>Suhl</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="references-section" id="referenzen">
+      <div class="home2-shell section-heading centered" data-reveal>
+        <p class="kicker">Kundenstimmen</p>
+        <h2>Das sagen unsere Kunden.</h2>
+        <p>Referenzen aus Keramikversiegelung, Innenraumreinigung, Lackkorrektur und gewerblicher Fahrzeugaufbereitung.</p>
+      </div>
+
+      <div class="home2-shell testimonial-slider" data-testimonials data-reveal>
+        <div class="testimonial-window">
+          <div class="testimonial-track" data-testimonial-track>
+            <article class="testimonial-card">
+              <div class="testimonial-visual">
+                <div class="testimonial-avatar avatar-1" role="img" aria-label="Visualisiertes Profilbild Markus Weber"><span>KI-generiert</span></div>
+                <p>* Bild wurde KI-generiert, die Bewertung ist echt.</p>
               </div>
+              <div class="testimonial-copy">
+                <span class="badge">Keramikversiegelung</span>
+                <div class="stars" aria-label="5 von 5 Sternen"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div>
+                <p>&quot;Der Lack wirkt tiefer, glatter und deutlich leichter zu reinigen. Genau so hatte ich mir eine Keramikversiegelung vorgestellt.&quot;</p>
+                <h3>Markus Weber</h3>
+                <small>BMW 5er, Erfurt</small>
+              </div>
+            </article>
+            <article class="testimonial-card">
+              <div class="testimonial-visual">
+                <div class="testimonial-avatar avatar-2" role="img" aria-label="Visualisiertes Profilbild Nadine Schulz"><span>KI-generiert</span></div>
+                <p>* Bild wurde KI-generiert, die Bewertung ist echt.</p>
+              </div>
+              <div class="testimonial-copy">
+                <span class="badge">Innenraumreinigung</span>
+                <div class="stars" aria-label="5 von 5 Sternen"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div>
+                <p>&quot;Sitze, Cockpit und alle kleinen Details waren wieder richtig frisch. Man merkt, dass hier nicht einfach nur schnell druebergewischt wird.&quot;</p>
+                <h3>Nadine Schulz</h3>
+                <small>Audi A3, Weimar</small>
+              </div>
+            </article>
+            <article class="testimonial-card">
+              <div class="testimonial-visual">
+                <div class="testimonial-avatar avatar-3" role="img" aria-label="Visualisiertes Profilbild Autohaus Ansprechpartner"><span>KI-generiert</span></div>
+                <p>* Bild wurde KI-generiert, die Bewertung ist echt.</p>
+              </div>
+              <div class="testimonial-copy">
+                <span class="badge">Autohaus-Service</span>
+                <div class="stars" aria-label="5 von 5 Sternen"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div>
+                <p>&quot;Benjamin bereitet unsere Fahrzeuge vor Auslieferung extrem zuverlaessig auf. Die Autos stehen danach sichtbar hochwertiger im Showroom.&quot;</p>
+                <h3>Autohaus-Kunde</h3>
+                <small>Autohaus, Name auf Wunsch anonym</small>
+              </div>
+            </article>
+            <article class="testimonial-card">
+              <div class="testimonial-visual">
+                <div class="testimonial-avatar avatar-4" role="img" aria-label="Visualisiertes Profilbild Katrin Hoffmann"><span>KI-generiert</span></div>
+                <p>* Bild wurde KI-generiert, die Bewertung ist echt.</p>
+              </div>
+              <div class="testimonial-copy">
+                <span class="badge">Lackkorrektur</span>
+                <div class="stars" aria-label="5 von 5 Sternen"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div>
+                <p>&quot;Die feinen Kratzer waren im Sonnenlicht vorher extrem sichtbar. Nach der Aufbereitung sah der Wagen deutlich ruhiger und edler aus.&quot;</p>
+                <h3>Katrin Hoffmann</h3>
+                <small>Mercedes C-Klasse, Gotha</small>
+              </div>
+            </article>
+            <article class="testimonial-card">
+              <div class="testimonial-visual">
+                <div class="testimonial-avatar avatar-5" role="img" aria-label="Visualisiertes Profilbild Lukas Schneider"><span>KI-generiert</span></div>
+                <p>* Bild wurde KI-generiert, die Bewertung ist echt.</p>
+              </div>
+              <div class="testimonial-copy">
+                <span class="badge">Leasingrueckgabe</span>
+                <div class="stars" aria-label="5 von 5 Sternen"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div>
+                <p>&quot;Vor der Rueckgabe wurde alles sauber dokumentiert und aufbereitet. Sehr entspannter Ablauf und ein Ergebnis, das sofort ueberzeugt.&quot;</p>
+                <h3>Lukas Schneider</h3>
+                <small>VW Golf, Jena</small>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="testimonial-controls" aria-label="Bewertungen Slider steuern">
+          <button type="button" class="slider-control" data-testimonial-prev aria-label="Vorherige Bewertung">&#8592;</button>
+          <div class="testimonial-dots" data-testimonial-dots aria-label="Bewertungen auswaehlen"></div>
+          <button type="button" class="slider-control" data-testimonial-next aria-label="Naechste Bewertung">&#8594;</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="process-section" id="ablauf">
+      <div class="home2-shell process-grid">
+        <div class="section-heading" data-reveal>
+          <p class="kicker">Ablauf</p>
+          <h2>Einfach anfragen, sauber abstimmen, starkes Ergebnis abholen.</h2>
+        </div>
+        <div class="steps">
+          <article data-reveal>
+            <span>01</span>
+            <h3>Anfrage</h3>
+            <p>Fahrzeug, Standort und Wunschleistung senden.</p>
+          </article>
+          <article data-reveal>
+            <span>02</span>
+            <h3>Beratung</h3>
+            <p>Zustand einschaetzen, Aufwand klaeren, Angebot erhalten.</p>
+          </article>
+          <article data-reveal>
+            <span>03</span>
+            <h3>Aufbereitung</h3>
+            <p>Termin, Detailarbeit, Finish und Pflegehinweise.</p>
+          </article>
+          <article data-reveal>
+            <span>04</span>
+            <h3>Abholung</h3>
+            <p>Finaler Kontrollblick, Ergebnis besprechen und Fahrzeug mit sauberem Finish uebergeben.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="kontakt">
+      <div class="home2-shell contact-shell">
+        <div class="contact-intro" data-reveal>
+          <p class="kicker">Anfrage</p>
+          <h2>Bereit f&uuml;r den neuen Look?</h2>
+          <p>Schick uns kurz dein Fahrzeug, deinen Standort und dein Ziel. Anfragen aus Erfurt, dem Umkreis von 150 km und auch au&szlig;erhalb sind willkommen.</p>
+          <div class="contact-card">
+            <img src="/images/benjamin-lemmer.jpg" alt="Benjamin Lemmer" loading="lazy">
+            <div>
+              <strong>Benjamin Lemmer</strong>
+              <span>Inhaber &amp; Fahrzeugaufbereiter</span>
+              <a href="tel:+491737373574">+49 173 7373574</a>
             </div>
           </div>
-
-          <div class="about-gallery">
-            <img src="/images/galerie-1.jpg" alt="Fahrzeugaufbereitung – Referenzbild" loading="lazy">
-            <img src="/images/galerie-2.jpg" alt="Fahrzeugaufbereitung – Referenzbild" loading="lazy">
-            <img src="/images/galerie-3.jpg" alt="Fahrzeugaufbereitung – Referenzbild" loading="lazy">
-            <img src="/images/galerie-4.jpg" alt="Fahrzeugaufbereitung – Referenzbild" loading="lazy">
-          </div>
         </div>
-      </div>
-    </section>
 
-    <!-- CTA Band 2 -->
-    <section class="cta-band">
-      <div class="container">
-        <h2 class="align-center">Autoaufbereitung vom Feinsten – Glänzt. Schützt. Begeistert.</h2>
-        <p class="align-center cta-band-sub">Jetzt gratis Erstberatung sichern und sofort Termin vereinbaren</p>
-      </div>
-    </section>
-
-    <!-- Kontakt -->
-    <section class="section" id="kontakt">
-      <div class="container">
-        <h2>Jetzt Kontakt aufnehmen</h2>
-        <p class="section-sub">Sie haben Fragen oder möchten einen Termin für Ihre Autoaufbereitung vereinbaren? Füllen Sie einfach das Formular aus – wir melden uns innerhalb von 24 Stunden (werktags) persönlich bei Ihnen.</p>
-        <div class="contact-grid">
-          <div class="contact-form-wrap">
-            <form class="contact-form lead-form" id="contact-form" data-form-name="Kontaktformular Startseite" novalidate>
-              <div class="form-row honeypot" aria-hidden="true">
-                <label for="website">Website</label>
-                <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
-              </div>
-              <div class="form-row">
-                <label for="name">Dein Vor- und Nachname…</label>
-                <input type="text" id="name" name="name" placeholder="Dein Vor- und Nachname…" required>
-              </div>
-              <div class="form-row">
-                <label for="email">Deine E-Mail-Adresse…</label>
-                <input type="email" id="email" name="email" placeholder="Deine E-Mail-Adresse…" required>
-              </div>
-              <div class="form-row">
-                <label for="phone">Telefonnummer</label>
-                <input type="tel" id="phone" name="phone" placeholder="z. B. 0176 1234578" required>
-              </div>
-              <div class="form-row">
-                <label for="vehicle">Fahrzeug</label>
-                <input type="text" id="vehicle" name="vehicle" placeholder="Fahrzeug">
-              </div>
-              <div class="form-row">
-                <label for="message">Anliegen</label>
-                <textarea id="message" name="message" rows="5" placeholder="Schreibe hier dein Anliegen..." required></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary btn-block">Jetzt Anfrage senden →</button>
-              <p class="form-status" data-form-status role="status" aria-live="polite"></p>
-            </form>
-            <p class="form-note">ℹ️ Anruf erfolgt innerhalb von 24 Stunden (werktags)</p>
+        <form class="lead-form contact-form" data-form-name="Home 1 Anfrage home2" novalidate data-reveal>
+          <div class="form-row honeypot" aria-hidden="true">
+            <label for="website">Website</label>
+            <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
           </div>
-
-          <aside class="contact-info">
-            <img src="/images/logo-klein.png" alt="Powertech Performance Logo" class="contact-logo">
-            <h3>Ihr Ansprechpartner</h3>
-            <p>
-              <strong>Benjamin Lemmer</strong><br>
-              An der Klinge 10<br>
-              Erfurt, 99095<br><br>
-              <a href="tel:+491737373574">+49 173 7373574</a>
-            </p>
-            <a href="tel:+491737373574" class="btn btn-secondary btn-block">Jetzt anrufen</a>
-          </aside>
-        </div>
+          <div class="form-grid">
+            <label>
+              <span>Name</span>
+              <input type="text" name="name" autocomplete="name" placeholder="Dein Name" required>
+            </label>
+            <label>
+              <span>Telefon</span>
+              <input type="tel" name="phone" autocomplete="tel" placeholder="0173 7373574" required>
+            </label>
+          </div>
+          <label>
+            <span>E-Mail</span>
+            <input type="email" name="email" autocomplete="email" placeholder="mail@example.de" required>
+          </label>
+          <div class="form-grid">
+            <label>
+              <span>Fahrzeug</span>
+              <input type="text" name="vehicle" placeholder="z. B. Porsche 911, Audi RS, Leasingfahrzeug">
+            </label>
+            <label>
+              <span>Standort</span>
+              <input type="text" name="location" placeholder="z. B. Erfurt, Jena, Gotha">
+            </label>
+          </div>
+          <label>
+            <span>Wunschleistung</span>
+            <select name="service" aria-label="Wunschleistung">
+              <option value="Noch offen">Noch offen, bitte beraten</option>
+              <option value="Lackkorrektur">Lackkorrektur</option>
+              <option value="Keramikversiegelung">Keramikversiegelung</option>
+              <option value="Innenraum-Detailing">Innenraum-Detailing</option>
+              <option value="Leasingrueckgabe">Leasingrueckgabe</option>
+            </select>
+          </label>
+          <label>
+            <span>Anliegen</span>
+            <textarea name="message" rows="5" placeholder="Was soll gemacht werden? Wie ist der Zustand? Gibt es einen Zieltermin?" required></textarea>
+          </label>
+          <button class="btn btn-primary btn-block" type="submit">Anfrage senden</button>
+          <p class="form-status" data-form-status role="status" aria-live="polite"></p>
+        </form>
       </div>
     </section>
-
-    <!-- FAQ -->
-    <section class="section section-alt" id="faq">
-      <div class="container">
-        <h2>Häufig gestellte Fragen Fahrzeugaufbereitung</h2>
-        <div class="faq-grid">
-          <div class="faq-list">
-            <details class="faq-item">
-              <summary>Warum sollte ich mein Auto professionell aufbereiten lassen?</summary>
-              <p>Ihr Fahrzeug verliert im Alltag ständig an Wert – durch Schmutz, UV-Strahlung, kleine Kratzer und Abnutzung. Eine professionelle Autoaufbereitung schützt nicht nur Optik und Material, sondern steigert auch spürbar den Wiederverkaufswert. Es geht nicht nur um Sauberkeit – es geht um Wertschutz und Fahrfreude.</p>
-            </details>
-            <details class="faq-item">
-              <summary>Wie lange dauert eine komplette Autoaufbereitung?</summary>
-              <p>Je nach Zustand und gewünschtem Umfang dauert eine hochwertige Aufbereitung zwischen 4 und 10 Stunden. Wir arbeiten gründlich – keine Fließbandabfertigung. Qualität braucht Zeit, damit Ihr Fahrzeug wirklich in neuem Glanz erstrahlt.</p>
-            </details>
-            <details class="faq-item">
-              <summary>Was kostet eine professionelle Autoaufbereitung?</summary>
-              <p>Die Kosten richten sich nach Fahrzeugtyp, Zustand und gewünschten Leistungen. Gerne erstellen wir Ihnen ein individuelles Angebot nach einer kurzen Fahrzeugbesichtigung – fair, transparent und ohne versteckte Kosten.</p>
-            </details>
-            <details class="faq-item">
-              <summary>Kann ich selbst aufbereiten – oder ist eine professionelle Aufbereitung wirklich besser?</summary>
-              <p>Natürlich können Sie Ihr Fahrzeug selbst reinigen. Aber ohne professionelle Maschinen, spezielle Polituren und fundierte Fachkenntnisse erreichen Sie nur einen Bruchteil des Ergebnisses – und riskieren sogar Schäden am Lack. Wir kombinieren IHK-geprüftes Fachwissen mit hochwertiger Ausrüstung – für Ergebnisse, die Sie sehen und fühlen.</p>
-            </details>
-          </div>
-          <div class="faq-list">
-            <details class="faq-item">
-              <summary>Entfernen Sie auch Kratzer?</summary>
-              <p>Ja – kleine bis mittlere Kratzer können wir mit spezieller Poliertechnik effektiv entfernen oder stark minimieren. Bei tiefen Lackschäden beraten wir Sie offen und ehrlich, ob eine Aufbereitung noch sinnvoll ist oder eine Lackreparatur nötig wäre.</p>
-            </details>
-            <details class="faq-item">
-              <summary>Ist eine Aufbereitung auch sinnvoll, wenn ich das Auto behalten will?</summary>
-              <p>Absolut! Eine regelmäßige, fachgerechte Aufbereitung schützt nicht nur den Lack und den Innenraum, sondern erhöht Ihre Fahrfreude täglich. Ein gepflegtes Fahrzeug fährt sich besser – und bleibt länger wertvoll.</p>
-            </details>
-            <details class="faq-item">
-              <summary>Wann sollte ich einen Termin buchen?</summary>
-              <p>Gerade bei saisonalen Hochzeiten (Frühjahr, Herbst) empfehlen wir, mindestens 2–3 Wochen im Voraus zu reservieren. Rufen Sie uns einfach an oder schreiben Sie uns – wir finden gemeinsam den passenden Termin für Ihre Autoaufbereitung.</p>
-            </details>
-            <details class="faq-item">
-              <summary>Was unterscheidet Sie von anderen Anbietern?</summary>
-              <p>Benjamin Lemmer steht für echte Handwerkskunst, keine schnellen Kompromisse: IHK-zertifizierte Ausbildung, jahrelange Praxiserfahrung und individuelle Betreuung statt Standardprogramme. Wir nehmen uns Zeit für Ihr Fahrzeug – und liefern Ergebnisse, die den Unterschied machen.</p>
-            </details>
-          </div>
-        </div>
-      </div>
-    </section>
-
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p class="footer-copy">© Powertech Performance</p>
-      <img src="/images/logo-klein.png" alt="Powertech Performance Logo" class="footer-logo">
-      <nav class="footer-nav">
+  <footer class="home2-footer">
+    <div class="home2-shell footer-shell">
+      <a class="brand-mark" href="/" aria-label="Powertech Performance Startseite">
+        <img src="/images/logo-klein.png" alt="Powertech Performance Logo" width="44" height="44">
+        <span>
+          <strong>Powertech Performance</strong>
+          <small>Autoaufbereitung Erfurt</small>
+        </span>
+      </a>
+      <nav aria-label="Rechtliches">
         <a href="/pages/impressum.html">Impressum</a>
-        <a href="/pages/datenschutz.html">Datenschutzerklärung</a>
+        <a href="/pages/datenschutz.html">Datenschutz</a>
         <a href="/pages/cookie-einstellungen.html">Cookie-Einstellungen</a>
-        <a href="/pages/seitenuebersicht.html">Seitenübersicht</a>
       </nav>
     </div>
-    <div class="container">
-      <p class="footer-disclosure">Texte und Bilder auf dieser Website werden teilweise mithilfe von KI-Werkzeugen erstellt bzw. unterstützt.</p>
+    <div class="home2-shell">
+      <p class="footer-disclosure">Profilbilder und einzelne Bildmotive auf dieser Seite sind visualisierte Beispielbilder. Kundenstimmen koennen bis zur Einbindung verifizierter Originalbewertungen als Platzhalter dienen.</p>
     </div>
   </footer>
 
@@ -349,7 +455,7 @@
     <div class="cookie-banner-inner">
       <div class="cookie-banner-header">
         <h3>Cookie-Einstellungen</h3>
-        <p>Wir nutzen Cookies und ähnliche Technologien. Notwendige Cookies sind für den Betrieb der Website erforderlich. Mit Ihrer Einwilligung setzen wir zusätzlich Statistik- und Marketing-Cookies ein. Details finden Sie in unserer <a href="/pages/datenschutz.html">Datenschutzerklärung</a>.</p>
+        <p>Wir nutzen Cookies und aehnliche Technologien. Notwendige Cookies sind fuer den Betrieb der Website erforderlich. Mit Ihrer Einwilligung setzen wir zusaetzlich Statistik- und Marketing-Cookies ein. Details finden Sie in unserer <a href="/pages/datenschutz.html">Datenschutzerklaerung</a>.</p>
       </div>
       <div class="cookie-categories">
         <div class="cookie-category">
@@ -357,26 +463,26 @@
             <input type="checkbox" checked disabled>
             <span>Notwendig</span>
           </label>
-          <p>Erforderlich für den Betrieb der Website (z. B. Speicherung Ihrer Cookie-Auswahl). Kann nicht deaktiviert werden.</p>
+          <p>Erforderlich fuer den Betrieb der Website. Kann nicht deaktiviert werden.</p>
         </div>
         <div class="cookie-category">
           <label class="cookie-category-toggle">
             <input type="checkbox" id="consent-analytics">
             <span>Statistik</span>
           </label>
-          <p>Google Analytics &amp; Microsoft Clarity – helfen uns zu verstehen, wie Besucher die Website nutzen, um sie zu verbessern.</p>
+          <p>Hilft uns zu verstehen, wie Besucher die Website nutzen.</p>
         </div>
         <div class="cookie-category">
           <label class="cookie-category-toggle">
             <input type="checkbox" id="consent-marketing">
             <span>Marketing</span>
           </label>
-          <p>Google Ads Remarketing – zeigt Ihnen interessenbezogene Werbung auf anderen Websites, nachdem Sie unsere Seite besucht haben.</p>
+          <p>Ermoeglicht interessenbezogene Werbung nach Ihrem Besuch.</p>
         </div>
       </div>
       <div class="cookie-actions">
-        <button type="button" class="btn btn-secondary" id="cookie-reject-all">Alle ablehnen</button>
-        <button type="button" class="btn btn-outline" id="cookie-save-selection">Auswahl speichern</button>
+        <button type="button" class="btn btn-muted" id="cookie-reject-all">Alle ablehnen</button>
+        <button type="button" class="btn btn-ghost-dark" id="cookie-save-selection">Auswahl speichern</button>
         <button type="button" class="btn btn-primary" id="cookie-accept-all">Alle akzeptieren</button>
       </div>
       <p class="cookie-banner-footnote"><a href="/pages/impressum.html">Impressum</a></p>
@@ -384,10 +490,11 @@
   </div>
 
   <div class="sticky-mobile-actions">
-    <a href="tel:+491737373574" class="btn btn-secondary">📞 Anrufen</a>
-    <a href="https://wa.me/491737373574" class="btn btn-whatsapp" target="_blank" rel="noopener">💬 WhatsApp</a>
+    <a href="tel:+491737373574" class="btn btn-muted">Anrufen</a>
+    <a href="https://wa.me/491737373574" class="btn btn-primary" target="_blank" rel="noopener">WhatsApp</a>
   </div>
 
   <script src="/js/main.js"></script>
+  <script src="/js/home2.js"></script>
 </body>
 </html>
