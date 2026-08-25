@@ -27,10 +27,10 @@ module.exports = async (req, res) => {
   }
 
   const { formName, ...fields } = body;
-  const { name, email, message } = fields;
+  const { name, email, phone, message } = fields;
 
-  if (!name || !email || !message) {
-    res.status(400).json({ error: 'Bitte Name, E-Mail und Nachricht angeben.' });
+  if (!name || !message || (!email && !phone)) {
+    res.status(400).json({ error: 'Bitte Name, Nachricht und mindestens einen Kontaktweg (E-Mail oder Telefon) angeben.' });
     return;
   }
 

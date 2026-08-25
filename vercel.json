@@ -1,0 +1,6 @@
+{
+  "redirects": [
+    { "source": "/landingpage/adblue-deaktivieren", "destination": "/adblue-service", "permanent": true },
+    { "source": "/landingpage/adblue-deaktivieren/(.*)", "destination": "/adblue-service", "permanent": true }
+  ]
+}
