@@ -977,3 +977,487 @@ body.cookie-settings-open { overflow: hidden; }
 @media (max-width: 900px) {
   .radio-option { font-size: 0.88rem; }
 }
+
+/* =========================================================
+   AdBlue-Service Landingpage
+   ========================================================= */
+.btn-icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.adblue-page {
+  --adblue-blue: #1fb6ff;
+  --adblue-blue-dark: #0b5f95;
+  --adblue-green: #24d17e;
+  --adblue-amber: #f8c15c;
+  --adblue-ink: #07111c;
+  background: linear-gradient(180deg, #07111c 0%, var(--color-bg) 36%, var(--color-bg) 100%);
+}
+
+.adblue-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 6rem 0 4.5rem;
+  background:
+    linear-gradient(135deg, rgba(7, 17, 28, 0.96), rgba(19, 9, 28, 0.92) 52%, rgba(10, 37, 54, 0.86)),
+    url('/images/adblue-dashboard-service.png') center right / cover;
+}
+
+.adblue-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(7, 17, 28, 0.96) 0%, rgba(7, 17, 28, 0.82) 45%, rgba(7, 17, 28, 0.2) 100%);
+  pointer-events: none;
+}
+
+.adblue-hero-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(360px, 0.9fr);
+  gap: var(--space-5);
+  align-items: center;
+}
+
+.adblue-hero-copy {
+  text-align: left;
+}
+
+.adblue-hero h1 {
+  max-width: 780px;
+  color: #fff;
+  font-size: 3.05rem;
+  line-height: 1.08;
+  margin-bottom: var(--space-3);
+}
+
+.adblue-hero .hero-sub {
+  max-width: 760px;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: var(--space-3);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.adblue-legal-hint {
+  max-width: 780px;
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid rgba(248, 193, 92, 0.34);
+  border-left: 4px solid var(--adblue-amber);
+  border-radius: 8px;
+  color: #ffe6b7;
+  background: rgba(248, 193, 92, 0.08);
+}
+
+.adblue-hero .hero-actions {
+  justify-content: flex-start;
+  margin-top: var(--space-4);
+}
+
+.adblue-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: var(--space-3);
+}
+
+.adblue-badges span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 0.45rem 0.8rem;
+  border: 1px solid rgba(31, 182, 255, 0.32);
+  border-radius: 999px;
+  color: #d9f4ff;
+  background: rgba(31, 182, 255, 0.1);
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+
+.adblue-hero-media {
+  position: relative;
+}
+
+.adblue-hero-media img {
+  width: 100%;
+  aspect-ratio: 7 / 5;
+  object-fit: cover;
+  object-position: center;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 8px;
+  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.42);
+}
+
+.adblue-status-card {
+  position: absolute;
+  left: -20px;
+  bottom: 24px;
+  width: min(320px, calc(100% - 24px));
+  padding: var(--space-3);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 8px;
+  background: rgba(7, 17, 28, 0.9);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.35);
+}
+
+.adblue-status-card strong {
+  display: block;
+  color: #fff;
+  margin: 8px 0 4px;
+}
+
+.adblue-status-card p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.9rem;
+}
+
+.adblue-logo-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 76px;
+  min-height: 34px;
+  padding: 0.35rem 0.7rem;
+  border: 1px solid rgba(31, 182, 255, 0.42);
+  border-radius: 8px;
+  color: #e6f8ff;
+  background: linear-gradient(135deg, rgba(31, 182, 255, 0.22), rgba(36, 209, 126, 0.12));
+  font-weight: 800;
+  line-height: 1;
+}
+
+.adblue-strip {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: #0b1522;
+}
+
+.adblue-strip-inner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-3);
+  padding-top: var(--space-3);
+  padding-bottom: var(--space-3);
+}
+
+.adblue-strip-inner div {
+  display: grid;
+  grid-template-columns: 34px 1fr;
+  gap: 4px 12px;
+  align-items: center;
+}
+
+.adblue-strip-inner strong,
+.adblue-strip-inner small {
+  grid-column: 2;
+}
+
+.adblue-strip-inner strong {
+  color: #fff;
+  line-height: 1.2;
+}
+
+.adblue-strip-inner small {
+  color: rgba(255, 255, 255, 0.62);
+}
+
+.adblue-droplet {
+  grid-row: 1 / span 2;
+  width: 24px;
+  height: 30px;
+  border-radius: 50% 50% 55% 55%;
+  background: linear-gradient(180deg, var(--adblue-blue), var(--adblue-blue-dark));
+  transform: rotate(45deg);
+  box-shadow: 0 0 22px rgba(31, 182, 255, 0.35);
+}
+
+.adblue-split,
+.adblue-law-grid,
+.adblue-form-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: var(--space-5);
+  align-items: center;
+}
+
+.adblue-lead {
+  color: var(--color-text-muted);
+  font-size: 1.05rem;
+  max-width: 720px;
+}
+
+.adblue-symptom-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-2);
+}
+
+.adblue-symptom-grid li {
+  min-height: 116px;
+  padding: var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  color: var(--color-brand);
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.adblue-symptom-grid span {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--adblue-blue);
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.adblue-service-card {
+  text-align: left;
+  border-radius: 8px;
+  background:
+    linear-gradient(180deg, rgba(31, 182, 255, 0.06), transparent 42%),
+    var(--color-surface);
+}
+
+.adblue-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  margin-bottom: var(--space-2);
+  border-radius: 8px;
+  color: var(--adblue-blue);
+  background: rgba(31, 182, 255, 0.12);
+}
+
+.adblue-icon svg {
+  width: 28px;
+  height: 28px;
+}
+
+.adblue-vehicle-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
+
+.adblue-vehicle-row article {
+  padding: var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: #111b27;
+}
+
+.adblue-vehicle-row h3 {
+  margin-top: var(--space-2);
+}
+
+.adblue-vehicle-row p {
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.adblue-notice-panel {
+  padding: var(--space-4);
+  border: 1px solid rgba(248, 193, 92, 0.36);
+  border-radius: 8px;
+  background: linear-gradient(135deg, rgba(248, 193, 92, 0.12), rgba(31, 182, 255, 0.08));
+}
+
+.adblue-notice-panel strong {
+  display: block;
+  color: #fff;
+  font-size: 1.25rem;
+  margin-bottom: var(--space-2);
+}
+
+.adblue-notice-panel p {
+  color: rgba(255, 255, 255, 0.78);
+  margin: 0;
+}
+
+.adblue-timeline {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
+
+.adblue-timeline .step {
+  min-height: 230px;
+  padding: var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.adblue-about-grid {
+  align-items: center;
+}
+
+.adblue-about-list {
+  margin-top: var(--space-3);
+}
+
+.adblue-about-panel {
+  padding: var(--space-4);
+  border: 1px solid rgba(31, 182, 255, 0.28);
+  border-radius: 8px;
+  background: #0b1522;
+}
+
+.adblue-about-panel img {
+  width: 120px;
+  margin: 0 0 var(--space-3);
+  border-radius: 8px;
+}
+
+.adblue-about-panel strong {
+  display: block;
+  color: #fff;
+  font-size: 1.2rem;
+  margin-bottom: var(--space-2);
+}
+
+.adblue-about-panel ul {
+  display: grid;
+  gap: 10px;
+}
+
+.adblue-about-panel li {
+  position: relative;
+  padding-left: 26px;
+  color: var(--color-brand);
+}
+
+.adblue-about-panel li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--adblue-green);
+}
+
+.adblue-form-grid {
+  align-items: start;
+}
+
+.adblue-form-card {
+  padding: var(--space-4);
+  border: 1px solid rgba(31, 182, 255, 0.24);
+  border-radius: 8px;
+  background: #101926;
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.25);
+}
+
+.adblue-form-card .form-row input,
+.adblue-form-card .form-row textarea {
+  background: #07111c;
+}
+
+.adblue-contact-options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+}
+
+.adblue-contact-options a {
+  display: block;
+  padding: var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.adblue-contact-options strong,
+.adblue-contact-options span {
+  display: block;
+}
+
+.adblue-contact-options strong {
+  color: #fff;
+}
+
+.adblue-contact-options span {
+  color: var(--color-text-muted);
+}
+
+.adblue-faq-list {
+  max-width: 920px;
+  margin: var(--space-4) auto 0;
+}
+
+.adblue-faq-list .faq-item {
+  border-radius: 8px;
+}
+
+@media (max-width: 980px) {
+  .adblue-hero-grid,
+  .adblue-split,
+  .adblue-law-grid,
+  .adblue-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .adblue-hero h1 {
+    font-size: 2.4rem;
+  }
+
+  .adblue-status-card {
+    left: 16px;
+  }
+
+  .adblue-strip-inner,
+  .adblue-timeline,
+  .adblue-vehicle-row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .adblue-hero {
+    padding: var(--space-5) 0 var(--space-4);
+  }
+
+  .adblue-hero h1 {
+    font-size: 2rem;
+  }
+
+  .adblue-hero .hero-actions .btn,
+  .adblue-contact-options a {
+    width: 100%;
+  }
+
+  .adblue-strip-inner,
+  .adblue-symptom-grid,
+  .adblue-timeline,
+  .adblue-vehicle-row,
+  .adblue-contact-options {
+    grid-template-columns: 1fr;
+  }
+
+  .adblue-hero-media img {
+    aspect-ratio: 4 / 3;
+  }
+
+  .adblue-status-card {
+    position: static;
+    width: 100%;
+    margin-top: var(--space-2);
+  }
+
+  .adblue-form-card,
+  .adblue-vehicle-row article,
+  .adblue-notice-panel {
+    padding: var(--space-3);
+  }
+}
