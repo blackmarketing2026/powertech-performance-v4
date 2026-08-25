@@ -320,9 +320,14 @@
             </div>
 
             <div class="form-row">
-              <label for="name">Vorname und Nachname</label>
-              <input type="text" id="name" name="name" placeholder="Vorname und Nachname*" required>
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Name*" required>
               <p class="field-error" role="alert"></p>
+            </div>
+
+            <div class="form-row">
+              <label for="vehicle">Fahrzeug</label>
+              <input type="text" id="vehicle" name="vehicle" placeholder="Fahrzeug">
             </div>
 
             <div class="form-row">
@@ -333,96 +338,13 @@
 
             <div class="form-row">
               <label for="email">E-Mail-Adresse</label>
-              <input type="email" id="email" name="email" placeholder="E-Mail-Adresse">
-            </div>
-
-            <div class="form-row">
-              <label for="hersteller">Fahrzeughersteller</label>
-              <input type="text" id="hersteller" name="hersteller" placeholder="Fahrzeughersteller*" required>
+              <input type="email" id="email" name="email" placeholder="E-Mail-Adresse*" required>
               <p class="field-error" role="alert"></p>
             </div>
 
             <div class="form-row">
-              <label for="modell">Modellbezeichnung</label>
-              <input type="text" id="modell" name="modell" placeholder="Modellbezeichnung*" required>
-              <p class="field-error" role="alert"></p>
-            </div>
-
-            <div class="form-row">
-              <label for="baujahr">Baujahr</label>
-              <input type="text" id="baujahr" name="baujahr" inputmode="numeric" placeholder="Baujahr*, z. B. 2019" required>
-              <p class="field-error" role="alert"></p>
-            </div>
-
-            <div class="form-row">
-              <label for="motorisierung">Motorisierung</label>
-              <input type="text" id="motorisierung" name="motorisierung" placeholder="Motorisierung, z. B. 2.0 TDI">
-            </div>
-
-            <div class="form-row">
-              <label for="km">Kilometerstand</label>
-              <input type="text" id="km" name="km" inputmode="numeric" placeholder="Kilometerstand, z. B. 85.000 km">
-            </div>
-
-            <div class="form-row">
-              <label for="fehlermeldung">Aktuelle AdBlue-Fehlermeldung</label>
-              <textarea id="fehlermeldung" name="fehlermeldung" rows="3" placeholder="Aktuelle AdBlue-Fehlermeldung*" required></textarea>
-              <p class="field-error" role="alert"></p>
-            </div>
-
-            <div class="form-row">
-              <label for="fehlercode">Fehlercode, falls bekannt</label>
-              <input type="text" id="fehlercode" name="fehlercode" placeholder="Fehlercode, falls bekannt">
-            </div>
-
-            <div class="form-row">
-              <label for="reparaturen">Bisherige Reparaturen oder ausgetauschte Bauteile</label>
-              <textarea id="reparaturen" name="reparaturen" rows="3" placeholder="Bisherige Reparaturen oder ausgetauschte Bauteile"></textarea>
-            </div>
-
-            <div class="form-row">
-              <label for="leistung">Gewünschte Leistung</label>
-              <select id="leistung" name="leistung">
-                <option value="">Gewünschte Leistung (optional)</option>
-                <option value="Diagnose und Fehlersuche">Diagnose und Fehlersuche</option>
-                <option value="Reparaturunterstützung">Reparaturunterstützung</option>
-                <option value="Softwareprüfung">Softwareprüfung</option>
-                <option value="Rückrüstung einer vorhandenen Veränderung">Rückrüstung einer vorhandenen Veränderung</option>
-                <option value="Anfrage für zulässige Sonderanwendung">Anfrage für zulässige Sonderanwendung</option>
-                <option value="Sonstige Anfrage">Sonstige Anfrage</option>
-              </select>
-            </div>
-
-            <fieldset class="radio-group" data-required-group="einsatzzweck">
-              <legend>Einsatzzweck des Fahrzeugs*</legend>
-              <label class="radio-option"><input type="radio" name="einsatzzweck" value="Öffentlicher Straßenverkehr"> Das Fahrzeug wird im öffentlichen Straßenverkehr eingesetzt</label>
-              <label class="radio-option"><input type="radio" name="einsatzzweck" value="Ausschließlich Privatgelände"> Das Fahrzeug wird ausschließlich auf Privatgelände eingesetzt</label>
-              <label class="radio-option"><input type="radio" name="einsatzzweck" value="Motorsportfahrzeug ohne Straßenzulassung"> Motorsportfahrzeug ohne Straßenzulassung</label>
-              <label class="radio-option"><input type="radio" name="einsatzzweck" value="Stationäre oder industrielle Anwendung"> Stationäre oder industrielle Anwendung</label>
-              <label class="radio-option"><input type="radio" name="einsatzzweck" value="Prüfstands- oder Entwicklungsfahrzeug"> Prüfstands- oder Entwicklungsfahrzeug</label>
-              <label class="radio-option"><input type="radio" name="einsatzzweck" value="Exportfahrzeug"> Exportfahrzeug</label>
-              <label class="radio-option"><input type="radio" name="einsatzzweck" value="Anderer Einsatzzweck"> Anderer Einsatzzweck</label>
-              <p class="field-error" role="alert"></p>
-            </fieldset>
-
-            <div class="form-row">
-              <label for="message">Freies Nachrichtenfeld</label>
-              <textarea id="message" name="message" rows="4" placeholder="Freies Nachrichtenfeld"></textarea>
-            </div>
-
-            <div class="checkbox-row-wrap">
-              <label class="checkbox-row">
-                <input type="checkbox" name="confirm_use" required>
-                <span>Ich bestätige, dass meine Angaben zum Fahrzeug und zum Einsatzzweck vollständig und korrekt sind. Mir ist bekannt, dass eine Veränderung des Abgasreinigungssystems zum Erlöschen der Betriebserlaubnis führen kann und ein betroffenes Fahrzeug nicht im öffentlichen Straßenverkehr betrieben werden darf.*</span>
-              </label>
-              <p class="field-error" role="alert"></p>
-            </div>
-
-            <div class="checkbox-row-wrap">
-              <label class="checkbox-row">
-                <input type="checkbox" name="privacy" required>
-                <span>Ich habe die <a href="/pages/datenschutz.html" target="_blank" rel="noopener">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Angaben zur Bearbeitung meiner Anfrage zu.*</span>
-              </label>
+              <label for="message">Nachricht</label>
+              <textarea id="message" name="message" rows="5" placeholder="Deine Nachricht: z. B. Fehlermeldung, Baujahr, Einsatzzweck*" required></textarea>
               <p class="field-error" role="alert"></p>
             </div>
 
@@ -656,7 +578,7 @@
 
     function showFieldError(field, message) {
       field.classList.add('is-invalid');
-      var wrap = field.closest('.form-row, .radio-group, .checkbox-row-wrap');
+      var wrap = field.closest('.form-row');
       if (wrap) {
         var msgEl = wrap.querySelector('.field-error');
         if (msgEl) msgEl.textContent = message;
@@ -667,21 +589,13 @@
       clearFieldErrors();
       var firstInvalid = null;
 
-      form.querySelectorAll('input[required], textarea[required], select[required]').forEach(function (field) {
-        var valid = field.type === 'checkbox' ? field.checked : field.value.trim() !== '';
+      form.querySelectorAll('input[required], textarea[required]').forEach(function (field) {
+        var valid = field.value.trim() !== '';
         if (!valid) {
           showFieldError(field, 'Dieses Feld ist erforderlich.');
           if (!firstInvalid) firstInvalid = field;
         }
       });
-
-      var einsatzzweckGroup = form.querySelector('[data-required-group="einsatzzweck"]');
-      if (einsatzzweckGroup && !form.querySelector('input[name="einsatzzweck"]:checked')) {
-        einsatzzweckGroup.classList.add('is-invalid');
-        var groupMsg = einsatzzweckGroup.querySelector('.field-error');
-        if (groupMsg) groupMsg.textContent = 'Bitte gib den Einsatzzweck des Fahrzeugs an.';
-        if (!firstInvalid) firstInvalid = einsatzzweckGroup.querySelector('input');
-      }
 
       if (firstInvalid) {
         firstInvalid.focus();
@@ -703,13 +617,6 @@
 
       if (payload.website) return; // Honeypot ausgelöst — Absenden für Bots stillschweigend beenden
 
-      if (!payload.message || !payload.message.trim()) {
-        payload.message = [
-          'Fehlermeldung: ' + (payload.fehlermeldung || '-'),
-          'Einsatzzweck: ' + (payload.einsatzzweck || '-'),
-          'Gewünschte Leistung: ' + (payload.leistung || '-')
-        ].join('\n');
-      }
       payload.formName = 'AdBlue-Anfrage';
 
       setStatus('sending', 'Wird gesendet…');
