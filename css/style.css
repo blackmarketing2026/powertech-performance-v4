@@ -1264,15 +1264,27 @@ body.cookie-settings-open { overflow: hidden; }
 .adblue-vehicle-row {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-3);
+  gap: var(--space-4);
   margin-top: var(--space-4);
 }
 
-.adblue-vehicle-row article {
-  padding: var(--space-4);
+.adblue-vehicle-card {
+  overflow: hidden;
   border: 1px solid var(--color-border);
   border-radius: 8px;
   background: #111b27;
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.18);
+}
+
+.adblue-vehicle-card img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  background: #07111c;
+}
+
+.adblue-vehicle-card-body {
+  padding: var(--space-3);
 }
 
 .adblue-vehicle-row h3 {
@@ -1281,7 +1293,21 @@ body.cookie-settings-open { overflow: hidden; }
 
 .adblue-vehicle-row p {
   color: var(--color-text-muted);
-  margin: 0;
+}
+
+.adblue-vehicle-card a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  margin-top: var(--space-1);
+  color: #fff;
+  font-weight: 800;
+}
+
+.adblue-vehicle-card a::after {
+  content: "→";
+  margin-left: 8px;
+  color: var(--adblue-blue);
 }
 
 .adblue-notice-panel {
@@ -1483,7 +1509,7 @@ body.cookie-settings-open { overflow: hidden; }
   }
 
   .adblue-form-card,
-  .adblue-vehicle-row article,
+  .adblue-vehicle-card-body,
   .adblue-notice-panel {
     padding: var(--space-3);
   }
