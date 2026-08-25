@@ -1,6 +1,8 @@
 {
   "redirects": [
-    { "source": "/landingpage/adblue-deaktivieren", "destination": "/adblue-service", "permanent": true },
-    { "source": "/landingpage/adblue-deaktivieren/(.*)", "destination": "/adblue-service", "permanent": true }
+    { "source": "/landingpage/adblue-deaktivieren", "destination": "/landingpage/adblue-service", "permanent": true },
+    { "source": "/landingpage/adblue-deaktivieren/(.*)", "destination": "/landingpage/adblue-service", "permanent": true },
+    { "source": "/adblue-service", "destination": "/landingpage/adblue-service", "permanent": true },
+    { "source": "/adblue-service/(.*)", "destination": "/landingpage/adblue-service", "permanent": true }
   ]
 }
