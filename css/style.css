@@ -1273,9 +1273,9 @@ body.cookie-settings-open { overflow: hidden; }
 }
 
 .adblue-vehicle-card {
-  position: relative;
-  display: grid;
-  min-height: 390px;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 8px;
@@ -1284,19 +1284,17 @@ body.cookie-settings-open { overflow: hidden; }
 }
 
 .adblue-vehicle-image {
-  position: absolute;
-  inset: 0;
+  min-height: 190px;
   background-size: cover;
   background-position: center;
-  transform: scale(1.02);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .adblue-vehicle-card-body {
   position: relative;
-  z-index: 1;
-  align-self: end;
+  flex: 1;
   padding: var(--space-3);
-  background: linear-gradient(180deg, transparent, rgba(7, 10, 16, 0.94) 28%, rgba(7, 10, 16, 0.98));
+  background: linear-gradient(180deg, #0b121d 0%, #07111c 100%);
 }
 
 .adblue-vehicle-row h3 {
@@ -1524,10 +1522,11 @@ body.cookie-settings-open { overflow: hidden; }
   }
 
   .adblue-vehicle-card {
-    min-height: 300px;
+    min-height: 0;
   }
 
   .adblue-vehicle-image {
+    min-height: 170px;
     background-position: center;
   }
 }
