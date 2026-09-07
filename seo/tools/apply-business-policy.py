@@ -13,7 +13,7 @@ for name in ['seo-map.csv','url-mapping.csv']:
  rows=read(name)
  for r in rows:
   if retired(r.get('URL',r.get('Export-URL',''))):
-   for k in ['Hauptthema','Optimierungspotenzial','Mögliche Zielseite','Lokale Zuordnung']: 
+   for k in ['Hauptthema','Optimierungspotenzial','Mögliche Zielseite','Lokale Zuordnung']:
     if k in r:r[k]=''
    for k,v in {'Status':'umgesetzt – ausdrücklich entfernt','SEO-Status':'Kein Angebot; nicht wiederherstellen','Indexierungsstatus':'Entfernt; 404 nach Veröffentlichung erwartet','Lokaler Status':'404 (beabsichtigt)','Umgesetzte Maßnahmen':'Seite und Routing auf Nutzeranweisung entfernt; keine Ersatzweiterleitung','Zuordnungstyp':'Historischer Messwert; kein aktuelles Leistungsziel'}.items():
     if k in r:r[k]=v
