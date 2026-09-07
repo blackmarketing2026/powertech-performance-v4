@@ -1,1172 +1,373 @@
 {
-  "checked_at": "2026-09-07T20:20:02.299792+00:00",
-  "scope": "lokal; nicht veröffentlicht",
+  "checked_at": "2026-09-07T20:32:24.716311+00:00",
+  "scope": "local authorized business correction",
   "result": "passed",
   "errors": [],
-  "html_checked": 63,
-  "http_checks": 135,
-  "http_results": [
-    {
-      "path": "/",
-      "status": 200,
-      "end": "http://127.0.0.1:4173/",
-      "chain": []
-    },
-    {
-      "path": "/adblue-deaktivieren-vor-nachteile-wahrheit/?gclid=seo-preview&test=1",
-      "status": 200,
-      "end": "http://127.0.0.1:4173/blog/adblue-deaktivieren-vor-nachteile-wahrheit/?gclid=seo-preview&test=1",
-      "chain": [
-        {
-          "status": 308,
-          "location": "http://127.0.0.1:4173/blog/adblue-deaktivieren-vor-nachteile-wahrheit/?gclid=seo-preview&test=1"
-        }
-      ]
-    },
-    {
-      "path": "/adblue-deaktivieren/",
-      "status": 404,
-      "end": "http://127.0.0.1:4173/adblue-deaktivieren/",
-      "chain": []
-    },
-    {
-      "path": "/adblue-deaktivierung/?gclid=seo-preview&test=1",
-      "status": 200,
-      "end": "http://127.0.0.1:4173/blog/adblue-deaktivierung/?gclid=seo-preview&test=1",
-      "chain": [
-        {
-          "status": 308,
-          "location": "http://127.0.0.1:4173/blog/adblue-deaktivierung/?gclid=seo-preview&test=1"
-        }
-      ]
-    },
+  "html_checked": 58,
+  "authorized_deletions": 5,
+  "http_checks": [
     {
       "path": "/adblue-service",
       "status": 200,
-      "end": "http://127.0.0.1:4173/adblue-service",
-      "chain": []
-    },
-    {
-      "path": "/adblue-service.html",
-      "status": 200,
-      "end": "http://127.0.0.1:4173/adblue-service",
-      "chain": [
-        {
-          "status": 308,
-          "location": "http://127.0.0.1:4173/adblue-service"
-        }
-      ]
+      "expected": 200
     },
     {
       "path": "/ads",
       "status": 200,
-      "end": "http://127.0.0.1:4173/ads",
-      "chain": []
-    },
-    {
-      "path": "/ads.html",
-      "status": 200,
-      "end": "http://127.0.0.1:4173/ads",
-      "chain": [
-        {
-          "status": 308,
-          "location": "http://127.0.0.1:4173/ads"
-        }
-      ]
+      "expected": 200
     },
     {
       "path": "/anfrage-danke",
       "status": 200,
-      "end": "http://127.0.0.1:4173/anfrage-danke",
-      "chain": []
-    },
-    {
-      "path": "/anfrage-danke.html",
-      "status": 200,
-      "end": "http://127.0.0.1:4173/anfrage-danke",
-      "chain": [
-        {
-          "status": 308,
-          "location": "http://127.0.0.1:4173/anfrage-danke"
-        }
-      ]
-    },
-    {
-      "path": "/audi-r8-aufbereitung-erfurt-keramikversiegelung/?gclid=seo-preview&test=1",
-      "status": 200,
-      "end": "http://127.0.0.1:4173/blog/audi-r8-aufbereitung-erfurt-keramikversiegelung/?gclid=seo-preview&test=1",
-      "chain": [
-        {
-          "status": 308,
-          "location": "http://127.0.0.1:4173/blog/audi-r8-aufbereitung-erfurt-keramikversiegelung/?gclid=seo-preview&test=1"
-        }
-      ]
-    },
-    {
-      "path": "/auto-selber-waschen-erfurt/?gclid=seo-preview&test=1",
-      "status": 200,
-      "end": "http://127.0.0.1:4173/blog/auto-selber-waschen-erfurt/?gclid=seo-preview&test=1",
-      "chain": [
-        {
-          "status": 308,
-          "location": "http://127.0.0.1:4173/blog/auto-selber-waschen-erfurt/?gclid=seo-preview&test=1"
-        }
-      ]
-    },
-    {
-      "path": "/blog/",
-      "status": 200,
-      "end": "http://127.0.0.1:4173/blog/",
-      "chain": []
+      "expected": 200
     },
     {
       "path": "/blog/1-step-2-step-oder-lackkorrektur-lackaufbereitung-im-vergleich/",
       "status": 200,
-      "end": "http://127.0.0.1:4173/blog/1-step-2-step-oder-lackkorrektur-lackaufbereitung-im-vergleich/",
-      "chain": []
+      "expected": 200
     },
     {
       "path": "/blog/1-step-politur-erklaert/",
       "status": 200,
-      "end": "http://127.0.0.1:4173/blog/1-step-politur-erklaert/",
-      "chain": []
+      "expected": 200
     },
     {
       "path": "/blog/adblue-deaktivieren-vor-nachteile-wahrheit/",
       "status": 200,
-      "end": "http://127.0.0.1:4173/blog/adblue-deaktivieren-vor-nachteile-wahrheit/",
-      "chain": []
+      "expected": 200
     },
     {
       "path": "/blog/adblue-deaktivierung/",
       "status": 200,
-      "end": "http://127.0.0.1:4173/blog/adblue-deaktivierung/",
-      "chain": []
+      "expected": 200
     },
     {
       "path": "/blog/audi-r8-aufbereitung-erfurt-keramikversiegelung/",
       "status": 200,
-      "end": "http://127.0.0.1:4173/blog/audi-r8-aufbereitung-erfurt-keramikversiegelung/",
-      "chain": []
+      "expected": 200
     },
     {
       "path": "/blog/aufbereiter-vs-detailer-unterschied/",
       "status": 200,
-      "end": "http://127.0.0.1:4173/blog/aufbereiter-vs-detailer-unterschied/",
-      "chain": []
+      "expected": 200
     },
     {
       "path": "/blog/auto-selber-waschen-erfurt/",
       "status": 200,
-      "end": "http://127.0.0.1:4173/blog/auto-selber-waschen-erfurt/",
-      "chain": []
+      "expected": 200
     },
     {
       "path": "/blog/blog-keramikversiegelung/",
       "status": 200,
-      "end": "http://127.0.0.1:4173/blog/blog-keramikversiegelung/",
-      "chain": []
+      "expected": 200
     },
     {
       "path": "/blog/boot-aufbereitung-keramikversiegelung-marine/",
       "status": 200,
-      "end": "http://127.0.0.1:4173/blog/boot-aufbereitung-keramikversiegelung-marine/",
-      "chain": []
-    },
-    {
-      "path": "/blog/chiptuning-raum-erfurt/",
-      "status": 200,
-      "end": "http://127.0.0.1:4173/blog/chiptuning-raum-erfurt/",
-      "chain": []
-    },
-    {
-      "path": "/blog/chiptuning-raumerfurt/",
-      "status": 200,
-      "end": "http://127.0.0.1:4173/blog/chiptuning-raumerfurt/",
-      "chain": []
+      "expected": 200
     },
     {
       "path": "/blog/fahrzeugaufbereitung-erfurt/",
       "status": 200,
-      "end": "http://127.0.0.1:4173/blog/fahrzeugaufbereitung-erfurt/",
-      "chain": []
+      "expected": 200
     },
     {
       "path": "/blog/flugzeugaufbereitung-innenreinigung-erfurt/",
       "status": 200,
-      "end": "http://127.0.0.1:4173/blog/flugzeugaufbereitung-innenreinigung-erfurt/",
-      "chain": []
+      "expected": 200
     },
     {
       "path": "/blog/haltbarkeit-keramikversiegelung-lackschutz/",
       "status": 200,
-      "end": "http://127.0.0.1:4173/blog/haltbarkeit-keramikversiegelung-lackschutz/",
-      "chain": []
-    },
-    {
-      "path": "/blog/harte-und-weiche-autolacke-der-geheime-schlssel-zur-perfekten-lackaufbereitung-2/",
-      "status": 200,
-      "end": "http://127.0.0.1:4173/blog/harte-und-weiche-autolacke-der-geheime-schlssel-zur-perfekten-lackaufbereitung-2/",
-      "chain": []
+      "expected": 200
     },
     {
       "path": "/blog/harte-und-weiche-autolacke-der-geheime-schlssel-zur-perfekten-lackaufbereitung/",
       "status": 200,
-      "end": "http://127.0.0.1:4173/blog/harte-und-weiche-autolacke-der-geheime-schlssel-zur-perfekten-lackaufbereitung/",
-      "chain": []
+      "expected": 200
+    },
+    {
+      "path": "/blog/harte-und-weiche-autolacke-der-geheime-schlssel-zur-perfekten-lackaufbereitung-2/",
+      "status": 200,
+      "expected": 200
     },
     {
       "path": "/blog/harte-weiche-autolacke-lackaufbereitung/",
       "status": 200,
-      "end": "http://127.0.0.1:4173/blog/harte-weiche-autolacke-lackaufbereitung/",
-      "chain": []
+      "expected": 200
+    },
+    {
+      "path": "/blog/",
+      "status": 200,
+      "expected": 200
     },
     {
       "path": "/blog/innenreinigung-auto-in-der-naehe/",
       "status": 200,
-      "end": "http://127.0.0.1:4173/blog/innenreinigung-auto-in-der-naehe/",
-      "chain": []
+      "expected": 200
     },
     {
       "path": "/blog/keramik-fuer-auto-erfurt-vorteile-haltbarkeit/",
       "status": 200,
-      "end": "http://127.0.0.1:4173/blog/keramik-fuer-auto-erfurt-vorteile-haltbarkeit/",
-      "chain": []
+      "expected": 200
     },
     {
       "path": "/blog/keramikversiegelung-erfurt-high-end-lackschutz-powertech-performance/",
       "status": 200,
-      "end": "http://127.0.0.1:4173/blog/keramikversiegelung-erfurt-high-end-lackschutz-powertech-performance/",
-      "chain": []
+      "expected": 200
     },
     {
       "path": "/blog/keramikversiegelung-profi-lackschutz/",
       "status": 200,
-      "end": "http://127.0.0.1:4173/blog/keramikversiegelung-profi-lackschutz/",
-      "chain": []
+      "expected": 200
     },
     {
       "path": "/blog/lackierung-oldtimer-erfurt-lackaufbereitung-keramik/",
       "status": 200,
-      "end": "http://127.0.0.1:4173/blog/lackierung-oldtimer-erfurt-lackaufbereitung-keramik/",
-      "chain": []
+      "expected": 200
     },
     {
       "path": "/blog/lackkorrektur-wofuer-gut-werterhalt/",
       "status": 200,
-      "end": "http://127.0.0.1:4173/blog/lackkorrektur-wofuer-gut-werterhalt/",
-      "chain": []
+      "expected": 200
     },
     {
       "path": "/blog/leasing-rueckgabe-aufbereitung-erfurt/",
       "status": 200,
-      "end": "http://127.0.0.1:4173/blog/leasing-rueckgabe-aufbereitung-erfurt/",
-      "chain": []
+      "expected": 200
     },
     {
       "path": "/blog/leasingauto-aufbereiten/",
       "status": 200,
-      "end": "http://127.0.0.1:4173/blog/leasingauto-aufbereiten/",
-      "chain": []
+      "expected": 200
     },
     {
       "path": "/blog/leasingrueckgabe-checkliste/",
       "status": 200,
-      "end": "http://127.0.0.1:4173/blog/leasingrueckgabe-checkliste/",
-      "chain": []
+      "expected": 200
     },
     {
       "path": "/blog/motorradaufbereitung-keramikversiegelung-experte/",
       "status": 200,
-      "end": "http://127.0.0.1:4173/blog/motorradaufbereitung-keramikversiegelung-experte/",
-      "chain": []
+      "expected": 200
     },
     {
       "path": "/blog/motorwaesche-erfurt-vorteile-kosten/",
       "status": 200,
-      "end": "http://127.0.0.1:4173/blog/motorwaesche-erfurt-vorteile-kosten/",
-      "chain": []
+      "expected": 200
     },
     {
       "path": "/blog/oldtimer-aufbereitung-erfurt-wertschonende-pflege/",
       "status": 200,
-      "end": "http://127.0.0.1:4173/blog/oldtimer-aufbereitung-erfurt-wertschonende-pflege/",
-      "chain": []
+      "expected": 200
     },
     {
       "path": "/blog/porsche-aufbereitung-erfurt-keramikversiegelung-zertifiziert/",
       "status": 200,
-      "end": "http://127.0.0.1:4173/blog/porsche-aufbereitung-erfurt-keramikversiegelung-zertifiziert/",
-      "chain": []
+      "expected": 200
     },
     {
       "path": "/blog/professionelle-cabrioverdeck-impraegnierung-und-reinigung/",
       "status": 200,
-      "end": "http://127.0.0.1:4173/blog/professionelle-cabrioverdeck-impraegnierung-und-reinigung/",
-      "chain": []
+      "expected": 200
     },
     {
       "path": "/blog/professionelle-innenreinigung-auto-in-der-naehe/",
       "status": 200,
-      "end": "http://127.0.0.1:4173/blog/professionelle-innenreinigung-auto-in-der-naehe/",
-      "chain": []
+      "expected": 200
     },
     {
       "path": "/blog/professionelle-keramikversiegelung-erfurt/",
       "status": 200,
-      "end": "http://127.0.0.1:4173/blog/professionelle-keramikversiegelung-erfurt/",
-      "chain": []
+      "expected": 200
     },
     {
       "path": "/blog/profi-keramikversiegelung/",
       "status": 200,
-      "end": "http://127.0.0.1:4173/blog/profi-keramikversiegelung/",
-      "chain": []
-    },
-    {
-      "path": "/blog/softwareoptimierung-dpf-off-erfurt/",
-      "status": 200,
-      "end": "http://127.0.0.1:4173/blog/softwareoptimierung-dpf-off-erfurt/",
-      "chain": []
-    },
-    {
-      "path": "/blog/softwareoptimierung-erfurt/",
-      "status": 200,
-      "end": "http://127.0.0.1:4173/blog/softwareoptimierung-erfurt/",
-      "chain": []
+      "expected": 200
     },
     {
       "path": "/blog/was-kostet-eine-auto-reinigung/",
       "status": 200,
-      "end": "http://127.0.0.1:4173/blog/was-kostet-eine-auto-reinigung/",
-      "chain": []
+      "expected": 200
     },
     {
       "path": "/blog/wie-lange-dauert-adblue-off/",
       "status": 200,
-      "end": "http://127.0.0.1:4173/blog/wie-lange-dauert-adblue-off/",
-      "chain": []
+      "expected": 200
     },
     {
       "path": "/blog/wie-oft-auto-aufbereiten-lassen.html",
       "status": 200,
-      "end": "http://127.0.0.1:4173/blog/wie-oft-auto-aufbereiten-lassen.html",
-      "chain": []
-    },
-    {
-      "path": "/boot-aufbereitung-keramikversiegelung-marine/?gclid=seo-preview&test=1",
-      "status": 200,
-      "end": "http://127.0.0.1:4173/blog/boot-aufbereitung-keramikversiegelung-marine/?gclid=seo-preview&test=1",
-      "chain": [
-        {
-          "status": 308,
-          "location": "http://127.0.0.1:4173/blog/boot-aufbereitung-keramikversiegelung-marine/?gclid=seo-preview&test=1"
-        }
-      ]
-    },
-    {
-      "path": "/chiptuning",
-      "status": 200,
-      "end": "http://127.0.0.1:4173/chiptuning",
-      "chain": []
-    },
-    {
-      "path": "/chiptuning-raum-erfurt/?gclid=seo-preview&test=1",
-      "status": 200,
-      "end": "http://127.0.0.1:4173/blog/chiptuning-raum-erfurt/?gclid=seo-preview&test=1",
-      "chain": [
-        {
-          "status": 308,
-          "location": "http://127.0.0.1:4173/blog/chiptuning-raum-erfurt/?gclid=seo-preview&test=1"
-        }
-      ]
-    },
-    {
-      "path": "/chiptuning.html",
-      "status": 200,
-      "end": "http://127.0.0.1:4173/chiptuning",
-      "chain": [
-        {
-          "status": 308,
-          "location": "http://127.0.0.1:4173/chiptuning"
-        }
-      ]
-    },
-    {
-      "path": "/chiptuning/?gclid=seo-preview&test=1",
-      "status": 200,
-      "end": "http://127.0.0.1:4173/chiptuning?gclid=seo-preview&test=1",
-      "chain": [
-        {
-          "status": 308,
-          "location": "http://127.0.0.1:4173/chiptuning?gclid=seo-preview&test=1"
-        }
-      ]
+      "expected": 200
     },
     {
       "path": "/eisenach",
       "status": 200,
-      "end": "http://127.0.0.1:4173/eisenach",
-      "chain": []
-    },
-    {
-      "path": "/eisenach.html",
-      "status": 200,
-      "end": "http://127.0.0.1:4173/eisenach",
-      "chain": [
-        {
-          "status": 308,
-          "location": "http://127.0.0.1:4173/eisenach"
-        }
-      ]
+      "expected": 200
     },
     {
       "path": "/fahrzeugaufbereitung-aus-erfurt",
       "status": 200,
-      "end": "http://127.0.0.1:4173/fahrzeugaufbereitung-aus-erfurt",
-      "chain": []
-    },
-    {
-      "path": "/fahrzeugaufbereitung-aus-erfurt.html",
-      "status": 200,
-      "end": "http://127.0.0.1:4173/fahrzeugaufbereitung-aus-erfurt",
-      "chain": [
-        {
-          "status": 308,
-          "location": "http://127.0.0.1:4173/fahrzeugaufbereitung-aus-erfurt"
-        }
-      ]
-    },
-    {
-      "path": "/fahrzeugaufbereitung-erfurt/?gclid=seo-preview&test=1",
-      "status": 200,
-      "end": "http://127.0.0.1:4173/blog/fahrzeugaufbereitung-erfurt/?gclid=seo-preview&test=1",
-      "chain": [
-        {
-          "status": 308,
-          "location": "http://127.0.0.1:4173/blog/fahrzeugaufbereitung-erfurt/?gclid=seo-preview&test=1"
-        }
-      ]
+      "expected": 200
     },
     {
       "path": "/gera",
       "status": 200,
-      "end": "http://127.0.0.1:4173/gera",
-      "chain": []
-    },
-    {
-      "path": "/gera.html",
-      "status": 200,
-      "end": "http://127.0.0.1:4173/gera",
-      "chain": [
-        {
-          "status": 308,
-          "location": "http://127.0.0.1:4173/gera"
-        }
-      ]
-    },
-    {
-      "path": "/gera/?gclid=seo-preview&test=1",
-      "status": 200,
-      "end": "http://127.0.0.1:4173/gera?gclid=seo-preview&test=1",
-      "chain": [
-        {
-          "status": 308,
-          "location": "http://127.0.0.1:4173/gera?gclid=seo-preview&test=1"
-        }
-      ]
+      "expected": 200
     },
     {
       "path": "/glosar",
       "status": 200,
-      "end": "http://127.0.0.1:4173/glosar",
-      "chain": []
-    },
-    {
-      "path": "/glosar.html",
-      "status": 200,
-      "end": "http://127.0.0.1:4173/glosar",
-      "chain": [
-        {
-          "status": 308,
-          "location": "http://127.0.0.1:4173/glosar"
-        }
-      ]
+      "expected": 200
     },
     {
       "path": "/googlef244febb7a81d9de.html",
       "status": 200,
-      "end": "http://127.0.0.1:4173/googlef244febb7a81d9de.html",
-      "chain": []
+      "expected": 200
     },
     {
       "path": "/gotha",
       "status": 200,
-      "end": "http://127.0.0.1:4173/gotha",
-      "chain": []
+      "expected": 200
     },
     {
-      "path": "/gotha.html",
+      "path": "/",
       "status": 200,
-      "end": "http://127.0.0.1:4173/gotha",
-      "chain": [
-        {
-          "status": 308,
-          "location": "http://127.0.0.1:4173/gotha"
-        }
-      ]
-    },
-    {
-      "path": "/gotha/?gclid=seo-preview&test=1",
-      "status": 200,
-      "end": "http://127.0.0.1:4173/gotha?gclid=seo-preview&test=1",
-      "chain": [
-        {
-          "status": 308,
-          "location": "http://127.0.0.1:4173/gotha?gclid=seo-preview&test=1"
-        }
-      ]
-    },
-    {
-      "path": "/harte-und-weiche-autolacke-der-geheime-schlssel-zur-perfekten-lackaufbereitung-2/?gclid=seo-preview&test=1",
-      "status": 200,
-      "end": "http://127.0.0.1:4173/blog/harte-und-weiche-autolacke-der-geheime-schlssel-zur-perfekten-lackaufbereitung-2/?gclid=seo-preview&test=1",
-      "chain": [
-        {
-          "status": 308,
-          "location": "http://127.0.0.1:4173/blog/harte-und-weiche-autolacke-der-geheime-schlssel-zur-perfekten-lackaufbereitung-2/?gclid=seo-preview&test=1"
-        }
-      ]
+      "expected": 200
     },
     {
       "path": "/jena",
       "status": 200,
-      "end": "http://127.0.0.1:4173/jena",
-      "chain": []
-    },
-    {
-      "path": "/jena.html",
-      "status": 200,
-      "end": "http://127.0.0.1:4173/jena",
-      "chain": [
-        {
-          "status": 308,
-          "location": "http://127.0.0.1:4173/jena"
-        }
-      ]
-    },
-    {
-      "path": "/keramik-fuer-auto-erfurt-vorteile-haltbarkeit/?gclid=seo-preview&test=1",
-      "status": 200,
-      "end": "http://127.0.0.1:4173/blog/keramik-fuer-auto-erfurt-vorteile-haltbarkeit/?gclid=seo-preview&test=1",
-      "chain": [
-        {
-          "status": 308,
-          "location": "http://127.0.0.1:4173/blog/keramik-fuer-auto-erfurt-vorteile-haltbarkeit/?gclid=seo-preview&test=1"
-        }
-      ]
-    },
-    {
-      "path": "/lackierung-oldtimer-erfurt-lackaufbereitung-keramik/?gclid=seo-preview&test=1",
-      "status": 200,
-      "end": "http://127.0.0.1:4173/blog/lackierung-oldtimer-erfurt-lackaufbereitung-keramik/?gclid=seo-preview&test=1",
-      "chain": [
-        {
-          "status": 308,
-          "location": "http://127.0.0.1:4173/blog/lackierung-oldtimer-erfurt-lackaufbereitung-keramik/?gclid=seo-preview&test=1"
-        }
-      ]
-    },
-    {
-      "path": "/landingpage/adblue-deaktivieren",
-      "status": 200,
-      "end": "http://127.0.0.1:4173/adblue-service",
-      "chain": [
-        {
-          "status": 308,
-          "location": "http://127.0.0.1:4173/adblue-service"
-        }
-      ]
-    },
-    {
-      "path": "/landingpage/adblue-deaktivieren/qa-sample",
-      "status": 200,
-      "end": "http://127.0.0.1:4173/adblue-service",
-      "chain": [
-        {
-          "status": 308,
-          "location": "http://127.0.0.1:4173/adblue-service"
-        }
-      ]
-    },
-    {
-      "path": "/landingpage/adblue-service",
-      "status": 200,
-      "end": "http://127.0.0.1:4173/adblue-service",
-      "chain": [
-        {
-          "status": 308,
-          "location": "http://127.0.0.1:4173/adblue-service"
-        }
-      ]
-    },
-    {
-      "path": "/landingpage/adblue-service/qa-sample",
-      "status": 200,
-      "end": "http://127.0.0.1:4173/adblue-service",
-      "chain": [
-        {
-          "status": 308,
-          "location": "http://127.0.0.1:4173/adblue-service"
-        }
-      ]
-    },
-    {
-      "path": "/landingpage/ads",
-      "status": 200,
-      "end": "http://127.0.0.1:4173/ads",
-      "chain": [
-        {
-          "status": 308,
-          "location": "http://127.0.0.1:4173/ads"
-        }
-      ]
-    },
-    {
-      "path": "/landingpage/ads/qa-sample",
-      "status": 200,
-      "end": "http://127.0.0.1:4173/ads",
-      "chain": [
-        {
-          "status": 308,
-          "location": "http://127.0.0.1:4173/ads"
-        }
-      ]
-    },
-    {
-      "path": "/landingpage/anfrage-danke",
-      "status": 200,
-      "end": "http://127.0.0.1:4173/anfrage-danke",
-      "chain": [
-        {
-          "status": 308,
-          "location": "http://127.0.0.1:4173/anfrage-danke"
-        }
-      ]
-    },
-    {
-      "path": "/landingpage/anfrage-danke/qa-sample",
-      "status": 200,
-      "end": "http://127.0.0.1:4173/anfrage-danke",
-      "chain": [
-        {
-          "status": 308,
-          "location": "http://127.0.0.1:4173/anfrage-danke"
-        }
-      ]
-    },
-    {
-      "path": "/landingpage/chiptuning",
-      "status": 200,
-      "end": "http://127.0.0.1:4173/chiptuning",
-      "chain": [
-        {
-          "status": 308,
-          "location": "http://127.0.0.1:4173/chiptuning"
-        }
-      ]
-    },
-    {
-      "path": "/landingpage/chiptuning/qa-sample",
-      "status": 200,
-      "end": "http://127.0.0.1:4173/chiptuning",
-      "chain": [
-        {
-          "status": 308,
-          "location": "http://127.0.0.1:4173/chiptuning"
-        }
-      ]
-    },
-    {
-      "path": "/landingpage/eisenach",
-      "status": 200,
-      "end": "http://127.0.0.1:4173/eisenach",
-      "chain": [
-        {
-          "status": 308,
-          "location": "http://127.0.0.1:4173/eisenach"
-        }
-      ]
-    },
-    {
-      "path": "/landingpage/eisenach/qa-sample",
-      "status": 200,
-      "end": "http://127.0.0.1:4173/eisenach",
-      "chain": [
-        {
-          "status": 308,
-          "location": "http://127.0.0.1:4173/eisenach"
-        }
-      ]
-    },
-    {
-      "path": "/landingpage/fahrzeugaufbereitung-aus-erfurt",
-      "status": 200,
-      "end": "http://127.0.0.1:4173/fahrzeugaufbereitung-aus-erfurt",
-      "chain": [
-        {
-          "status": 308,
-          "location": "http://127.0.0.1:4173/fahrzeugaufbereitung-aus-erfurt"
-        }
-      ]
-    },
-    {
-      "path": "/landingpage/fahrzeugaufbereitung-aus-erfurt/qa-sample",
-      "status": 200,
-      "end": "http://127.0.0.1:4173/fahrzeugaufbereitung-aus-erfurt",
-      "chain": [
-        {
-          "status": 308,
-          "location": "http://127.0.0.1:4173/fahrzeugaufbereitung-aus-erfurt"
-        }
-      ]
-    },
-    {
-      "path": "/landingpage/gera",
-      "status": 200,
-      "end": "http://127.0.0.1:4173/gera",
-      "chain": [
-        {
-          "status": 308,
-          "location": "http://127.0.0.1:4173/gera"
-        }
-      ]
-    },
-    {
-      "path": "/landingpage/gera/qa-sample",
-      "status": 200,
-      "end": "http://127.0.0.1:4173/gera",
-      "chain": [
-        {
-          "status": 308,
-          "location": "http://127.0.0.1:4173/gera"
-        }
-      ]
-    },
-    {
-      "path": "/landingpage/glosar",
-      "status": 200,
-      "end": "http://127.0.0.1:4173/glosar",
-      "chain": [
-        {
-          "status": 308,
-          "location": "http://127.0.0.1:4173/glosar"
-        }
-      ]
-    },
-    {
-      "path": "/landingpage/glosar/qa-sample",
-      "status": 200,
-      "end": "http://127.0.0.1:4173/glosar",
-      "chain": [
-        {
-          "status": 308,
-          "location": "http://127.0.0.1:4173/glosar"
-        }
-      ]
-    },
-    {
-      "path": "/landingpage/gotha",
-      "status": 200,
-      "end": "http://127.0.0.1:4173/gotha",
-      "chain": [
-        {
-          "status": 308,
-          "location": "http://127.0.0.1:4173/gotha"
-        }
-      ]
-    },
-    {
-      "path": "/landingpage/gotha/qa-sample",
-      "status": 200,
-      "end": "http://127.0.0.1:4173/gotha",
-      "chain": [
-        {
-          "status": 308,
-          "location": "http://127.0.0.1:4173/gotha"
-        }
-      ]
-    },
-    {
-      "path": "/landingpage/jena",
-      "status": 200,
-      "end": "http://127.0.0.1:4173/jena",
-      "chain": [
-        {
-          "status": 308,
-          "location": "http://127.0.0.1:4173/jena"
-        }
-      ]
-    },
-    {
-      "path": "/landingpage/jena/qa-sample",
-      "status": 200,
-      "end": "http://127.0.0.1:4173/jena",
-      "chain": [
-        {
-          "status": 308,
-          "location": "http://127.0.0.1:4173/jena"
-        }
-      ]
-    },
-    {
-      "path": "/landingpage/luxus-aufbereitung",
-      "status": 200,
-      "end": "http://127.0.0.1:4173/luxus-aufbereitung",
-      "chain": [
-        {
-          "status": 308,
-          "location": "http://127.0.0.1:4173/luxus-aufbereitung"
-        }
-      ]
-    },
-    {
-      "path": "/landingpage/luxus-aufbereitung/qa-sample",
-      "status": 200,
-      "end": "http://127.0.0.1:4173/luxus-aufbereitung",
-      "chain": [
-        {
-          "status": 308,
-          "location": "http://127.0.0.1:4173/luxus-aufbereitung"
-        }
-      ]
-    },
-    {
-      "path": "/landingpage/nordhausen",
-      "status": 200,
-      "end": "http://127.0.0.1:4173/nordhausen",
-      "chain": [
-        {
-          "status": 308,
-          "location": "http://127.0.0.1:4173/nordhausen"
-        }
-      ]
-    },
-    {
-      "path": "/landingpage/nordhausen/qa-sample",
-      "status": 200,
-      "end": "http://127.0.0.1:4173/nordhausen",
-      "chain": [
-        {
-          "status": 308,
-          "location": "http://127.0.0.1:4173/nordhausen"
-        }
-      ]
-    },
-    {
-      "path": "/landingpage/online-termin-buchen",
-      "status": 200,
-      "end": "http://127.0.0.1:4173/online-termin-buchen",
-      "chain": [
-        {
-          "status": 308,
-          "location": "http://127.0.0.1:4173/online-termin-buchen"
-        }
-      ]
-    },
-    {
-      "path": "/landingpage/online-termin-buchen/qa-sample",
-      "status": 200,
-      "end": "http://127.0.0.1:4173/online-termin-buchen",
-      "chain": [
-        {
-          "status": 308,
-          "location": "http://127.0.0.1:4173/online-termin-buchen"
-        }
-      ]
-    },
-    {
-      "path": "/landingpage/suhl",
-      "status": 200,
-      "end": "http://127.0.0.1:4173/suhl",
-      "chain": [
-        {
-          "status": 308,
-          "location": "http://127.0.0.1:4173/suhl"
-        }
-      ]
-    },
-    {
-      "path": "/landingpage/suhl/qa-sample",
-      "status": 200,
-      "end": "http://127.0.0.1:4173/suhl",
-      "chain": [
-        {
-          "status": 308,
-          "location": "http://127.0.0.1:4173/suhl"
-        }
-      ]
-    },
-    {
-      "path": "/leasing-rueckgabe-aufbereitung-erfurt/?gclid=seo-preview&test=1",
-      "status": 200,
-      "end": "http://127.0.0.1:4173/blog/leasing-rueckgabe-aufbereitung-erfurt/?gclid=seo-preview&test=1",
-      "chain": [
-        {
-          "status": 308,
-          "location": "http://127.0.0.1:4173/blog/leasing-rueckgabe-aufbereitung-erfurt/?gclid=seo-preview&test=1"
-        }
-      ]
+      "expected": 200
     },
     {
       "path": "/luxus-aufbereitung",
       "status": 200,
-      "end": "http://127.0.0.1:4173/luxus-aufbereitung",
-      "chain": []
-    },
-    {
-      "path": "/luxus-aufbereitung.html",
-      "status": 200,
-      "end": "http://127.0.0.1:4173/luxus-aufbereitung",
-      "chain": [
-        {
-          "status": 308,
-          "location": "http://127.0.0.1:4173/luxus-aufbereitung"
-        }
-      ]
+      "expected": 200
     },
     {
       "path": "/nordhausen",
       "status": 200,
-      "end": "http://127.0.0.1:4173/nordhausen",
-      "chain": []
-    },
-    {
-      "path": "/nordhausen.html",
-      "status": 200,
-      "end": "http://127.0.0.1:4173/nordhausen",
-      "chain": [
-        {
-          "status": 308,
-          "location": "http://127.0.0.1:4173/nordhausen"
-        }
-      ]
-    },
-    {
-      "path": "/nordhausen/?gclid=seo-preview&test=1",
-      "status": 200,
-      "end": "http://127.0.0.1:4173/nordhausen?gclid=seo-preview&test=1",
-      "chain": [
-        {
-          "status": 308,
-          "location": "http://127.0.0.1:4173/nordhausen?gclid=seo-preview&test=1"
-        }
-      ]
-    },
-    {
-      "path": "/oldtimer-aufbereitung-erfurt-wertschonende-pflege/?gclid=seo-preview&test=1",
-      "status": 200,
-      "end": "http://127.0.0.1:4173/blog/oldtimer-aufbereitung-erfurt-wertschonende-pflege/?gclid=seo-preview&test=1",
-      "chain": [
-        {
-          "status": 308,
-          "location": "http://127.0.0.1:4173/blog/oldtimer-aufbereitung-erfurt-wertschonende-pflege/?gclid=seo-preview&test=1"
-        }
-      ]
+      "expected": 200
     },
     {
       "path": "/online-termin-buchen",
       "status": 200,
-      "end": "http://127.0.0.1:4173/online-termin-buchen",
-      "chain": []
-    },
-    {
-      "path": "/online-termin-buchen.html",
-      "status": 200,
-      "end": "http://127.0.0.1:4173/online-termin-buchen",
-      "chain": [
-        {
-          "status": 308,
-          "location": "http://127.0.0.1:4173/online-termin-buchen"
-        }
-      ]
-    },
-    {
-      "path": "/online-termin-buchen/?gclid=seo-preview&test=1",
-      "status": 200,
-      "end": "http://127.0.0.1:4173/online-termin-buchen?gclid=seo-preview&test=1",
-      "chain": [
-        {
-          "status": 308,
-          "location": "http://127.0.0.1:4173/online-termin-buchen?gclid=seo-preview&test=1"
-        }
-      ]
+      "expected": 200
     },
     {
       "path": "/pages/agb.html",
       "status": 200,
-      "end": "http://127.0.0.1:4173/pages/agb.html",
-      "chain": []
+      "expected": 200
     },
     {
       "path": "/pages/cookie-einstellungen.html",
       "status": 200,
-      "end": "http://127.0.0.1:4173/pages/cookie-einstellungen.html",
-      "chain": []
+      "expected": 200
     },
     {
       "path": "/pages/datenschutz.html",
       "status": 200,
-      "end": "http://127.0.0.1:4173/pages/datenschutz.html",
-      "chain": []
+      "expected": 200
     },
     {
       "path": "/pages/impressum.html",
       "status": 200,
-      "end": "http://127.0.0.1:4173/pages/impressum.html",
-      "chain": []
+      "expected": 200
     },
     {
       "path": "/pages/kontakt.html",
       "status": 200,
-      "end": "http://127.0.0.1:4173/pages/kontakt.html",
-      "chain": []
+      "expected": 200
     },
     {
       "path": "/pages/seitenuebersicht.html",
       "status": 200,
-      "end": "http://127.0.0.1:4173/pages/seitenuebersicht.html",
-      "chain": []
-    },
-    {
-      "path": "/professionelle-cabrioverdeck-impraegnierung-und-reinigung/?gclid=seo-preview&test=1",
-      "status": 200,
-      "end": "http://127.0.0.1:4173/blog/professionelle-cabrioverdeck-impraegnierung-und-reinigung/?gclid=seo-preview&test=1",
-      "chain": [
-        {
-          "status": 308,
-          "location": "http://127.0.0.1:4173/blog/professionelle-cabrioverdeck-impraegnierung-und-reinigung/?gclid=seo-preview&test=1"
-        }
-      ]
-    },
-    {
-      "path": "/professionelle-keramikversiegelung-erfurt/?gclid=seo-preview&test=1",
-      "status": 200,
-      "end": "http://127.0.0.1:4173/blog/professionelle-keramikversiegelung-erfurt/?gclid=seo-preview&test=1",
-      "chain": [
-        {
-          "status": 308,
-          "location": "http://127.0.0.1:4173/blog/professionelle-keramikversiegelung-erfurt/?gclid=seo-preview&test=1"
-        }
-      ]
-    },
-    {
-      "path": "/profi-keramikversiegelung/?gclid=seo-preview&test=1",
-      "status": 200,
-      "end": "http://127.0.0.1:4173/blog/profi-keramikversiegelung/?gclid=seo-preview&test=1",
-      "chain": [
-        {
-          "status": 308,
-          "location": "http://127.0.0.1:4173/blog/profi-keramikversiegelung/?gclid=seo-preview&test=1"
-        }
-      ]
-    },
-    {
-      "path": "/robots.txt",
-      "status": 200,
-      "end": "http://127.0.0.1:4173/robots.txt",
-      "chain": []
-    },
-    {
-      "path": "/sitemap.xml",
-      "status": 200,
-      "end": "http://127.0.0.1:4173/sitemap.xml",
-      "chain": []
-    },
-    {
-      "path": "/softwareoptimierung-dpf-off-erfurt/?gclid=seo-preview&test=1",
-      "status": 200,
-      "end": "http://127.0.0.1:4173/blog/softwareoptimierung-dpf-off-erfurt/?gclid=seo-preview&test=1",
-      "chain": [
-        {
-          "status": 308,
-          "location": "http://127.0.0.1:4173/blog/softwareoptimierung-dpf-off-erfurt/?gclid=seo-preview&test=1"
-        }
-      ]
-    },
-    {
-      "path": "/softwareoptimierung-erfurt/?gclid=seo-preview&test=1",
-      "status": 200,
-      "end": "http://127.0.0.1:4173/blog/softwareoptimierung-erfurt/?gclid=seo-preview&test=1",
-      "chain": [
-        {
-          "status": 308,
-          "location": "http://127.0.0.1:4173/blog/softwareoptimierung-erfurt/?gclid=seo-preview&test=1"
-        }
-      ]
+      "expected": 200
     },
     {
       "path": "/suhl",
       "status": 200,
-      "end": "http://127.0.0.1:4173/suhl",
-      "chain": []
-    },
-    {
-      "path": "/suhl.html",
-      "status": 200,
-      "end": "http://127.0.0.1:4173/suhl",
-      "chain": [
-        {
-          "status": 308,
-          "location": "http://127.0.0.1:4173/suhl"
-        }
-      ]
-    },
-    {
-      "path": "/suhl/?gclid=seo-preview&test=1",
-      "status": 200,
-      "end": "http://127.0.0.1:4173/suhl?gclid=seo-preview&test=1",
-      "chain": [
-        {
-          "status": 308,
-          "location": "http://127.0.0.1:4173/suhl?gclid=seo-preview&test=1"
-        }
-      ]
+      "expected": 200
     },
     {
       "path": "/trockeneisreinigung",
       "status": 200,
-      "end": "http://127.0.0.1:4173/trockeneisreinigung",
-      "chain": []
+      "expected": 200
     },
     {
-      "path": "/trockeneisreinigung.html?test=1",
-      "status": 200,
-      "end": "http://127.0.0.1:4173/trockeneisreinigung?test=1",
-      "chain": [
-        {
-          "status": 308,
-          "location": "http://127.0.0.1:4173/trockeneisreinigung?test=1"
-        }
-      ]
+      "path": "/chiptuning",
+      "status": 404,
+      "expected": 404
     },
     {
-      "path": "/trockeneisreinigung/?test=1",
+      "path": "/blog/chiptuning-raum-erfurt/",
+      "status": 404,
+      "expected": 404
+    },
+    {
+      "path": "/blog/chiptuning-raumerfurt/",
+      "status": 404,
+      "expected": 404
+    },
+    {
+      "path": "/blog/softwareoptimierung-erfurt/",
+      "status": 404,
+      "expected": 404
+    },
+    {
+      "path": "/blog/softwareoptimierung-dpf-off-erfurt/",
+      "status": 404,
+      "expected": 404
+    },
+    {
+      "path": "/chiptuning.html",
+      "status": 404,
+      "expected": 404
+    },
+    {
+      "path": "/landingpage/chiptuning",
+      "status": 404,
+      "expected": 404
+    },
+    {
+      "path": "/landingpage/chiptuning/test",
+      "status": 404,
+      "expected": 404
+    },
+    {
+      "path": "/chiptuning-raum-erfurt/",
+      "status": 404,
+      "expected": 404
+    },
+    {
+      "path": "/softwareoptimierung-dpf-off-erfurt/",
+      "status": 404,
+      "expected": 404
+    },
+    {
+      "path": "/chiptuning/",
+      "status": 404,
+      "expected": 404
+    },
+    {
+      "path": "/softwareoptimierung-erfurt/",
+      "status": 404,
+      "expected": 404
+    },
+    {
+      "path": "/sitemap.xml",
       "status": 200,
-      "end": "http://127.0.0.1:4173/trockeneisreinigung?test=1",
-      "chain": [
-        {
-          "status": 308,
-          "location": "http://127.0.0.1:4173/trockeneisreinigung?test=1"
-        }
-      ]
+      "expected": 200
+    },
+    {
+      "path": "/robots.txt",
+      "status": 200,
+      "expected": 200
     }
   ],
-  "protected_original_html": 62,
-  "source_hashes_unchanged": true,
+  "inline_js_parsed": 115,
   "forms_submitted": 0,
-  "external_tracking_in_preview": "blocked by local response CSP, not a production change",
-  "build_lint_test_scripts": {},
-  "inline_js_parsed": 188,
-  "known_open_url": "/adblue-deaktivieren/ (404, decision required)"
+  "functional_baseline": "history/before-chiptuning-removal/functional-baseline.json"
 }

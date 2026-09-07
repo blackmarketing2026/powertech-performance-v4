@@ -1,0 +1,843 @@
+{
+  "adblue-service.html": {
+    "scripts": [
+      "<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){ dataLayer.push(arguments); }\n  gtag('consent', 'default', {\n    'analytics_storage': 'denied',\n    'ad_storage': 'denied',\n    'ad_user_data': 'denied',\n    'ad_personalization': 'denied',\n    'wait_for_update': 500\n  });\n  </script>",
+      "<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\n  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\n  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n  })(window,document,'script','dataLayer','GTM-5PQPZTPC');</script>",
+      "<script src=\"/js/main.js\"></script>",
+      "<script>\n  (function () {\n    window.dataLayer = window.dataLayer || [];\n\n    document.addEventListener('click', function (event) {\n      var telLink = event.target.closest('a[href^=\"tel:\"]');\n      if (telLink) window.dataLayer.push({ event: 'phone_click', link_url: telLink.getAttribute('href') });\n\n      var waLink = event.target.closest('a[href*=\"wa.me\"]');\n      if (waLink) window.dataLayer.push({ event: 'whatsapp_click', link_url: waLink.getAttribute('href') });\n\n      var mainCta = event.target.closest('[data-cta=\"main\"]');\n      if (mainCta) window.dataLayer.push({ event: 'main_cta_click', link_url: mainCta.getAttribute('href') || null });\n    });\n\n    var form = document.getElementById('adblue-form');\n    if (!form) return;\n\n    var statusEl = form.querySelector('[data-form-status]');\n    var submitBtn = form.querySelector('button[type=\"submit\"]');\n    var formStarted = false;\n\n    form.addEventListener('focusin', function () {\n      if (formStarted) return;\n      formStarted = true;\n      window.dataLayer.push({ event: 'form_start' });\n    });\n\n    function setStatus(state, text) {\n      if (!statusEl) return;\n      statusEl.textContent = text;\n      statusEl.setAttribute('data-state', state);\n    }\n\n    function clearFieldErrors() {\n      form.querySelectorAll('.is-invalid').forEach(function (el) { el.classList.remove('is-invalid'); });\n      form.querySelectorAll('.field-error').forEach(function (el) { el.textContent = ''; });\n    }\n\n    function showFieldError(field, message) {\n      field.classList.add('is-invalid');\n      var wrap = field.closest('.form-row');\n      if (wrap) {\n        var msgEl = wrap.querySelector('.field-error');\n        if (msgEl) msgEl.textContent = message;\n      }\n    }\n\n    function validate() {\n      clearFieldErrors();\n      var firstInvalid = null;\n\n      form.querySelectorAll('input[required], textarea[required]').forEach(function (field) {\n        var valid = field.value.trim() !== '';\n        if (!valid) {\n          showFieldError(field, 'Dieses Feld ist erforderlich.');\n          if (!firstInvalid) firstInvalid = field;\n        }\n      });\n\n      if (firstInvalid) {\n        firstInvalid.focus();\n        return false;\n      }\n      return true;\n    }\n\n    form.addEventListener('submit', function (event) {\n      event.preventDefault();\n\n      if (!validate()) {\n        setStatus('error', 'Bitte fülle alle Pflichtfelder aus.');\n        return;\n      }\n\n      var formData = new FormData(form);\n      var payload = Object.fromEntries(formData.entries());\n\n      if (payload.website) return;\n\n      payload.formName = 'AdBlue-Anfrage';\n\n      setStatus('sending', 'Wird gesendet…');\n      if (submitBtn) submitBtn.disabled = true;\n\n      fetch('/api/send-lead', {\n        method: 'POST',\n        headers: { 'Content-Type': 'application/json' },\n        body: JSON.stringify(payload),\n      })\n        .then(function (response) {\n          return response.json().catch(function () { return {}; }).then(function (result) {\n            if (!response.ok) throw new Error(result.error || 'Versand fehlgeschlagen.');\n          });\n        })\n        .then(function () {\n          setStatus('success', 'Vielen Dank für deine Anfrage. Powertech Performance prüft deine Angaben und meldet sich persönlich bei dir.');\n          window.dataLayer.push({ event: 'form_submit' });\n          form.reset();\n        })\n        .catch(function () {\n          setStatus('error', 'Deine Anfrage konnte nicht gesendet werden. Bitte versuche es erneut oder kontaktiere uns direkt per WhatsApp unter +49 173 7373574.');\n        })\n        .finally(function () {\n          if (submitBtn) submitBtn.disabled = false;\n        });\n    });\n  })();\n  </script>"
+    ],
+    "forms": [
+      "<form class=\"contact-form\" id=\"adblue-form\" novalidate=\"\">\n<div aria-hidden=\"true\" class=\"form-row honeypot\">\n<label for=\"website\">Website</label>\n<input autocomplete=\"off\" id=\"website\" name=\"website\" tabindex=\"-1\" type=\"text\"/>\n</div>\n<div class=\"form-row\">\n<label for=\"name\">Name</label>\n<input id=\"name\" name=\"name\" placeholder=\"Name*\" required=\"\" type=\"text\"/>\n<p class=\"field-error\" role=\"alert\"></p>\n</div>\n<div class=\"form-row\">\n<label for=\"vehicle\">Fahrzeug</label>\n<input id=\"vehicle\" name=\"vehicle\" placeholder=\"Fahrzeug, Baujahr, Motorisierung\" type=\"text\"/>\n</div>\n<div class=\"form-row\">\n<label for=\"phone\">Telefonnummer</label>\n<input id=\"phone\" name=\"phone\" placeholder=\"Telefonnummer*\" required=\"\" type=\"tel\"/>\n<p class=\"field-error\" role=\"alert\"></p>\n</div>\n<div class=\"form-row\">\n<label for=\"email\">E-Mail-Adresse</label>\n<input id=\"email\" name=\"email\" placeholder=\"E-Mail-Adresse*\" required=\"\" type=\"email\"/>\n<p class=\"field-error\" role=\"alert\"></p>\n</div>\n<div class=\"form-row\">\n<label for=\"message\">Nachricht</label>\n<textarea id=\"message\" name=\"message\" placeholder=\"Fehlermeldung, Restreichweite, Einsatzzweck*\" required=\"\" rows=\"5\"></textarea>\n<p class=\"field-error\" role=\"alert\"></p>\n</div>\n<button class=\"btn btn-primary btn-block\" type=\"submit\">Fahrzeug unverbindlich prüfen lassen</button>\n<p class=\"form-note\">Mit dem Absenden fragst du eine persönliche Einschätzung an. Bitte keine unnötigen sensiblen Dokumente mitsenden.</p>\n<p aria-live=\"polite\" class=\"form-status\" data-form-status=\"\" role=\"status\"></p>\n</form>"
+    ],
+    "contact": [
+      "<a class=\"btn btn-primary header-cta\" href=\"tel:+491737373574\">\n<svg aria-hidden=\"true\" class=\"btn-icon\" fill=\"none\" viewbox=\"0 0 24 24\"><path d=\"M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.3 1.1L6.6 10.8z\" fill=\"currentColor\"></path></svg>\n        +49 173 7373574\n      </a>",
+      "<a class=\"btn btn-whatsapp btn-lg adblue-mobile-cta\" href=\"https://wa.me/491737373574?text=Hallo%20Powertech%20Performance%2C%20ich%20habe%20eine%20Frage%20zu%20meinem%20AdBlue-System.\" rel=\"noopener\" target=\"_blank\">\n<svg aria-hidden=\"true\" class=\"btn-icon\" fill=\"none\" viewbox=\"0 0 24 24\"><path d=\"M4.5 19.5l1.2-3.8A7.8 7.8 0 1 1 9 18.2l-4.5 1.3z\" stroke=\"currentColor\" stroke-linejoin=\"round\" stroke-width=\"2\"></path><path d=\"M9 9.2c.7 1.8 2 3.1 3.8 3.8l1.3-1\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-width=\"2\"></path></svg>\n              WhatsApp\n            </a>",
+      "<a class=\"btn btn-secondary btn-lg adblue-mobile-cta\" href=\"tel:+491737373574\">\n<svg aria-hidden=\"true\" class=\"btn-icon\" fill=\"none\" viewbox=\"0 0 24 24\"><path d=\"M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.3 1.1L6.6 10.8z\" fill=\"currentColor\"></path></svg>\n              Anrufen\n            </a>",
+      "<a href=\"tel:+491737373574\">\n<strong>Telefon</strong>\n<span>+49 173 7373574</span>\n</a>",
+      "<a href=\"https://wa.me/491737373574?text=Hallo%20Powertech%20Performance%2C%20ich%20habe%20eine%20Frage%20zu%20meinem%20AdBlue-System.\" rel=\"noopener\" target=\"_blank\">\n<strong>WhatsApp</strong>\n<span>Foto der Meldung senden</span>\n</a>",
+      "<a class=\"btn btn-secondary btn-lg\" href=\"tel:+491737373574\">Jetzt +49 173 7373574 anrufen</a>",
+      "<a class=\"btn btn-whatsapp btn-lg\" href=\"https://wa.me/491737373574?text=Hallo%20Powertech%20Performance%2C%20ich%20habe%20eine%20Frage%20zu%20meinem%20AdBlue-System.\" rel=\"noopener\" target=\"_blank\">WhatsApp-Anfrage starten</a>",
+      "<a class=\"btn btn-whatsapp btn-lg\" href=\"https://wa.me/491737373574?text=Hallo%20Powertech%20Performance%2C%20ich%20habe%20eine%20Frage%20zu%20meinem%20AdBlue-System.\" rel=\"noopener\" target=\"_blank\">WhatsApp starten</a>",
+      "<a class=\"btn btn-secondary btn-lg\" href=\"tel:+491737373574\">Direkt anrufen</a>",
+      "<a href=\"tel:+491737373574\" style=\"color:inherit;text-decoration:underline;\">+49 173 7373574</a>",
+      "<a class=\"btn btn-primary\" href=\"tel:+491737373574\">Anrufen</a>",
+      "<a class=\"btn btn-whatsapp\" href=\"https://wa.me/491737373574?text=Hallo%20Powertech%20Performance%2C%20ich%20habe%20eine%20Frage%20zu%20meinem%20AdBlue-System.\" rel=\"noopener\" target=\"_blank\">WhatsApp</a>"
+    ]
+  },
+  "ads.html": {
+    "scripts": [
+      "<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){ dataLayer.push(arguments); }\n  gtag('consent', 'default', {\n    'analytics_storage': 'denied',\n    'ad_storage': 'denied',\n    'ad_user_data': 'denied',\n    'ad_personalization': 'denied',\n    'wait_for_update': 500\n  });\n  </script>",
+      "<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\n  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\n  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n  })(window,document,'script','dataLayer','GTM-5PQPZTPC');</script>",
+      "<script src=\"/js/main.js\"></script>"
+    ],
+    "forms": [
+      "<form class=\"contact-form lead-form\" data-form-name=\"Kontaktformular Startseite\" id=\"contact-form\" novalidate=\"\">\n<div aria-hidden=\"true\" class=\"form-row honeypot\">\n<label for=\"website\">Website</label>\n<input autocomplete=\"off\" id=\"website\" name=\"website\" tabindex=\"-1\" type=\"text\"/>\n</div>\n<div class=\"form-row\">\n<label for=\"name\">Dein Vor- und Nachname…</label>\n<input id=\"name\" name=\"name\" placeholder=\"Dein Vor- und Nachname…\" required=\"\" type=\"text\"/>\n</div>\n<div class=\"form-row\">\n<label for=\"email\">Deine E-Mail-Adresse…</label>\n<input id=\"email\" name=\"email\" placeholder=\"Deine E-Mail-Adresse…\" required=\"\" type=\"email\"/>\n</div>\n<div class=\"form-row\">\n<label for=\"phone\">Telefonnummer</label>\n<input id=\"phone\" name=\"phone\" placeholder=\"z. B. 0176 1234578\" required=\"\" type=\"tel\"/>\n</div>\n<div class=\"form-row\">\n<label for=\"vehicle\">Fahrzeug</label>\n<input id=\"vehicle\" name=\"vehicle\" placeholder=\"Fahrzeug\" type=\"text\"/>\n</div>\n<div class=\"form-row\">\n<label for=\"message\">Anliegen</label>\n<textarea id=\"message\" name=\"message\" placeholder=\"Schreibe hier dein Anliegen...\" required=\"\" rows=\"5\"></textarea>\n</div>\n<button class=\"btn btn-primary btn-block\" type=\"submit\">Jetzt Anfrage senden →</button>\n<p aria-live=\"polite\" class=\"form-status\" data-form-status=\"\" role=\"status\"></p>\n</form>"
+    ],
+    "contact": [
+      "<a class=\"btn btn-primary header-cta\" href=\"tel:+491737373574\">\n<svg aria-hidden=\"true\" fill=\"currentColor\" height=\"16\" viewbox=\"0 0 24 24\" width=\"16\"><path d=\"M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.3 1.1L6.6 10.8z\"></path></svg>\n        +49 173 7373574\n      </a>",
+      "<a href=\"tel:+491737373574\">+49 173 7373574</a>",
+      "<a class=\"btn btn-secondary btn-block\" href=\"tel:+491737373574\">Jetzt anrufen</a>"
+    ]
+  },
+  "anfrage-danke.html": {
+    "scripts": [
+      "<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){ dataLayer.push(arguments); }\n  gtag('consent', 'default', {\n    'analytics_storage': 'denied',\n    'ad_storage': 'denied',\n    'ad_user_data': 'denied',\n    'ad_personalization': 'denied',\n    'wait_for_update': 500\n  });\n</script>",
+      "<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\nj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n})(window,document,'script','dataLayer','GTM-5PQPZTPC');</script>",
+      "<script src=\"/js/main.js\"></script>"
+    ],
+    "forms": [],
+    "contact": [
+      "<a class=\"btn btn-primary header-cta\" href=\"tel:+491737373574\">\n<svg aria-hidden=\"true\" fill=\"currentColor\" height=\"16\" viewbox=\"0 0 24 24\" width=\"16\"><path d=\"M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.3 1.1L6.6 10.8z\"></path></svg>\n        +49 173 7373574\n      </a>",
+      "<a class=\"btn btn-primary btn-lg\" href=\"tel:+491737373574\">📞 Jetzt anrufen</a>",
+      "<a class=\"btn btn-whatsapp btn-lg\" href=\"https://wa.me/491737373574\" rel=\"noopener\" target=\"_blank\">💬 WhatsApp</a>"
+    ]
+  },
+  "chiptuning.html": {
+    "scripts": [
+      "<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){ dataLayer.push(arguments); }\n  gtag('consent', 'default', {\n    'analytics_storage': 'denied',\n    'ad_storage': 'denied',\n    'ad_user_data': 'denied',\n    'ad_personalization': 'denied',\n    'wait_for_update': 500\n  });\n</script>",
+      "<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\nj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n})(window,document,'script','dataLayer','GTM-5PQPZTPC');</script>",
+      "<script src=\"/js/main.js\"></script>"
+    ],
+    "forms": [],
+    "contact": [
+      "<a class=\"btn btn-primary header-cta\" href=\"tel:+491737373574\">\n<svg aria-hidden=\"true\" fill=\"currentColor\" height=\"16\" viewbox=\"0 0 24 24\" width=\"16\"><path d=\"M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.3 1.1L6.6 10.8z\"></path></svg>\n        +49 173 7373574\n      </a>"
+    ]
+  },
+  "eisenach.html": {
+    "scripts": [
+      "<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){ dataLayer.push(arguments); }\n  gtag('consent', 'default', {\n    'analytics_storage': 'denied',\n    'ad_storage': 'denied',\n    'ad_user_data': 'denied',\n    'ad_personalization': 'denied',\n    'wait_for_update': 500\n  });\n  </script>",
+      "<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\n  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\n  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n  })(window,document,'script','dataLayer','GTM-5PQPZTPC');</script>",
+      "<script src=\"/js/main.js\"></script>"
+    ],
+    "forms": [
+      "<form class=\"contact-form lead-form\" data-form-name=\"Kontaktformular Startseite\" id=\"contact-form\" novalidate=\"\">\n<div aria-hidden=\"true\" class=\"form-row honeypot\">\n<label for=\"website\">Website</label>\n<input autocomplete=\"off\" id=\"website\" name=\"website\" tabindex=\"-1\" type=\"text\"/>\n</div>\n<div class=\"form-row\">\n<label for=\"name\">Dein Vor- und Nachname…</label>\n<input id=\"name\" name=\"name\" placeholder=\"Dein Vor- und Nachname…\" required=\"\" type=\"text\"/>\n</div>\n<div class=\"form-row\">\n<label for=\"email\">Deine E-Mail-Adresse…</label>\n<input id=\"email\" name=\"email\" placeholder=\"Deine E-Mail-Adresse…\" required=\"\" type=\"email\"/>\n</div>\n<div class=\"form-row\">\n<label for=\"phone\">Telefonnummer</label>\n<input id=\"phone\" name=\"phone\" placeholder=\"z. B. 0176 1234578\" required=\"\" type=\"tel\"/>\n</div>\n<div class=\"form-row\">\n<label for=\"vehicle\">Fahrzeug</label>\n<input id=\"vehicle\" name=\"vehicle\" placeholder=\"Fahrzeug\" type=\"text\"/>\n</div>\n<div class=\"form-row\">\n<label for=\"message\">Anliegen</label>\n<textarea id=\"message\" name=\"message\" placeholder=\"Schreibe hier dein Anliegen...\" required=\"\" rows=\"5\"></textarea>\n</div>\n<button class=\"btn btn-primary btn-block\" type=\"submit\">Jetzt Anfrage senden →</button>\n<p aria-live=\"polite\" class=\"form-status\" data-form-status=\"\" role=\"status\"></p>\n</form>"
+    ],
+    "contact": [
+      "<a class=\"btn btn-primary header-cta\" href=\"tel:+491737373574\">\n<svg aria-hidden=\"true\" fill=\"currentColor\" height=\"16\" viewbox=\"0 0 24 24\" width=\"16\"><path d=\"M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.3 1.1L6.6 10.8z\"></path></svg>\n        +49 173 7373574\n      </a>",
+      "<a href=\"tel:+491737373574\">+49 173 7373574</a>",
+      "<a class=\"btn btn-secondary btn-block\" href=\"tel:+491737373574\">Jetzt anrufen</a>"
+    ]
+  },
+  "fahrzeugaufbereitung-aus-erfurt.html": {
+    "scripts": [
+      "<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){ dataLayer.push(arguments); }\n  gtag('consent', 'default', {\n    'analytics_storage': 'denied',\n    'ad_storage': 'denied',\n    'ad_user_data': 'denied',\n    'ad_personalization': 'denied',\n    'wait_for_update': 500\n  });\n  </script>",
+      "<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\n  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\n  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n  })(window,document,'script','dataLayer','GTM-5PQPZTPC');</script>",
+      "<script src=\"/js/main.js\"></script>"
+    ],
+    "forms": [
+      "<form class=\"contact-form lead-form\" data-form-name=\"Kontaktformular Startseite\" id=\"contact-form\" novalidate=\"\">\n<div aria-hidden=\"true\" class=\"form-row honeypot\">\n<label for=\"website\">Website</label>\n<input autocomplete=\"off\" id=\"website\" name=\"website\" tabindex=\"-1\" type=\"text\"/>\n</div>\n<div class=\"form-row\">\n<label for=\"name\">Dein Vor- und Nachname…</label>\n<input id=\"name\" name=\"name\" placeholder=\"Dein Vor- und Nachname…\" required=\"\" type=\"text\"/>\n</div>\n<div class=\"form-row\">\n<label for=\"email\">Deine E-Mail-Adresse…</label>\n<input id=\"email\" name=\"email\" placeholder=\"Deine E-Mail-Adresse…\" required=\"\" type=\"email\"/>\n</div>\n<div class=\"form-row\">\n<label for=\"phone\">Telefonnummer</label>\n<input id=\"phone\" name=\"phone\" placeholder=\"z. B. 0176 1234578\" required=\"\" type=\"tel\"/>\n</div>\n<div class=\"form-row\">\n<label for=\"vehicle\">Fahrzeug</label>\n<input id=\"vehicle\" name=\"vehicle\" placeholder=\"Fahrzeug\" type=\"text\"/>\n</div>\n<div class=\"form-row\">\n<label for=\"message\">Anliegen</label>\n<textarea id=\"message\" name=\"message\" placeholder=\"Schreibe hier dein Anliegen...\" required=\"\" rows=\"5\"></textarea>\n</div>\n<button class=\"btn btn-primary btn-block\" type=\"submit\">Jetzt Anfrage senden →</button>\n<p aria-live=\"polite\" class=\"form-status\" data-form-status=\"\" role=\"status\"></p>\n</form>"
+    ],
+    "contact": [
+      "<a class=\"btn btn-primary header-cta\" href=\"tel:+491737373574\">\n<svg aria-hidden=\"true\" fill=\"currentColor\" height=\"16\" viewbox=\"0 0 24 24\" width=\"16\"><path d=\"M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.3 1.1L6.6 10.8z\"></path></svg>\n        +49 173 7373574\n      </a>",
+      "<a href=\"tel:+491737373574\">+49 173 7373574</a>",
+      "<a class=\"btn btn-secondary btn-block\" href=\"tel:+491737373574\">Jetzt anrufen</a>"
+    ]
+  },
+  "gera.html": {
+    "scripts": [
+      "<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){ dataLayer.push(arguments); }\n  gtag('consent', 'default', {\n    'analytics_storage': 'denied',\n    'ad_storage': 'denied',\n    'ad_user_data': 'denied',\n    'ad_personalization': 'denied',\n    'wait_for_update': 500\n  });\n  </script>",
+      "<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\n  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\n  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n  })(window,document,'script','dataLayer','GTM-5PQPZTPC');</script>",
+      "<script src=\"/js/main.js\"></script>"
+    ],
+    "forms": [
+      "<form class=\"contact-form lead-form\" data-form-name=\"Kontaktformular Startseite\" id=\"contact-form\" novalidate=\"\">\n<div aria-hidden=\"true\" class=\"form-row honeypot\">\n<label for=\"website\">Website</label>\n<input autocomplete=\"off\" id=\"website\" name=\"website\" tabindex=\"-1\" type=\"text\"/>\n</div>\n<div class=\"form-row\">\n<label for=\"name\">Dein Vor- und Nachname…</label>\n<input id=\"name\" name=\"name\" placeholder=\"Dein Vor- und Nachname…\" required=\"\" type=\"text\"/>\n</div>\n<div class=\"form-row\">\n<label for=\"email\">Deine E-Mail-Adresse…</label>\n<input id=\"email\" name=\"email\" placeholder=\"Deine E-Mail-Adresse…\" required=\"\" type=\"email\"/>\n</div>\n<div class=\"form-row\">\n<label for=\"phone\">Telefonnummer</label>\n<input id=\"phone\" name=\"phone\" placeholder=\"z. B. 0176 1234578\" required=\"\" type=\"tel\"/>\n</div>\n<div class=\"form-row\">\n<label for=\"vehicle\">Fahrzeug</label>\n<input id=\"vehicle\" name=\"vehicle\" placeholder=\"Fahrzeug\" type=\"text\"/>\n</div>\n<div class=\"form-row\">\n<label for=\"message\">Anliegen</label>\n<textarea id=\"message\" name=\"message\" placeholder=\"Schreibe hier dein Anliegen...\" required=\"\" rows=\"5\"></textarea>\n</div>\n<button class=\"btn btn-primary btn-block\" type=\"submit\">Jetzt Anfrage senden →</button>\n<p aria-live=\"polite\" class=\"form-status\" data-form-status=\"\" role=\"status\"></p>\n</form>"
+    ],
+    "contact": [
+      "<a class=\"btn btn-primary header-cta\" href=\"tel:+491737373574\">\n<svg aria-hidden=\"true\" fill=\"currentColor\" height=\"16\" viewbox=\"0 0 24 24\" width=\"16\"><path d=\"M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.3 1.1L6.6 10.8z\"></path></svg>\n        +49 173 7373574\n      </a>",
+      "<a href=\"tel:+491737373574\">+49 173 7373574</a>",
+      "<a class=\"btn btn-secondary btn-block\" href=\"tel:+491737373574\">Jetzt anrufen</a>"
+    ]
+  },
+  "glosar.html": {
+    "scripts": [
+      "<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){ dataLayer.push(arguments); }\n  gtag('consent', 'default', {\n    'analytics_storage': 'denied',\n    'ad_storage': 'denied',\n    'ad_user_data': 'denied',\n    'ad_personalization': 'denied',\n    'wait_for_update': 500\n  });\n</script>",
+      "<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\nj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n})(window,document,'script','dataLayer','GTM-5PQPZTPC');</script>",
+      "<script src=\"/js/main.js\"></script>"
+    ],
+    "forms": [],
+    "contact": [
+      "<a class=\"btn btn-primary header-cta\" href=\"tel:+491737373574\">\n<svg aria-hidden=\"true\" fill=\"currentColor\" height=\"16\" viewbox=\"0 0 24 24\" width=\"16\"><path d=\"M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.3 1.1L6.6 10.8z\"></path></svg>\n        +49 173 7373574\n      </a>"
+    ]
+  },
+  "googlef244febb7a81d9de.html": {
+    "scripts": [],
+    "forms": [],
+    "contact": []
+  },
+  "gotha.html": {
+    "scripts": [
+      "<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){ dataLayer.push(arguments); }\n  gtag('consent', 'default', {\n    'analytics_storage': 'denied',\n    'ad_storage': 'denied',\n    'ad_user_data': 'denied',\n    'ad_personalization': 'denied',\n    'wait_for_update': 500\n  });\n  </script>",
+      "<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\n  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\n  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n  })(window,document,'script','dataLayer','GTM-5PQPZTPC');</script>",
+      "<script src=\"/js/main.js\"></script>"
+    ],
+    "forms": [
+      "<form class=\"contact-form lead-form\" data-form-name=\"Kontaktformular Startseite\" id=\"contact-form\" novalidate=\"\">\n<div aria-hidden=\"true\" class=\"form-row honeypot\">\n<label for=\"website\">Website</label>\n<input autocomplete=\"off\" id=\"website\" name=\"website\" tabindex=\"-1\" type=\"text\"/>\n</div>\n<div class=\"form-row\">\n<label for=\"name\">Dein Vor- und Nachname…</label>\n<input id=\"name\" name=\"name\" placeholder=\"Dein Vor- und Nachname…\" required=\"\" type=\"text\"/>\n</div>\n<div class=\"form-row\">\n<label for=\"email\">Deine E-Mail-Adresse…</label>\n<input id=\"email\" name=\"email\" placeholder=\"Deine E-Mail-Adresse…\" required=\"\" type=\"email\"/>\n</div>\n<div class=\"form-row\">\n<label for=\"phone\">Telefonnummer</label>\n<input id=\"phone\" name=\"phone\" placeholder=\"z. B. 0176 1234578\" required=\"\" type=\"tel\"/>\n</div>\n<div class=\"form-row\">\n<label for=\"vehicle\">Fahrzeug</label>\n<input id=\"vehicle\" name=\"vehicle\" placeholder=\"Fahrzeug\" type=\"text\"/>\n</div>\n<div class=\"form-row\">\n<label for=\"message\">Anliegen</label>\n<textarea id=\"message\" name=\"message\" placeholder=\"Schreibe hier dein Anliegen...\" required=\"\" rows=\"5\"></textarea>\n</div>\n<button class=\"btn btn-primary btn-block\" type=\"submit\">Jetzt Anfrage senden →</button>\n<p aria-live=\"polite\" class=\"form-status\" data-form-status=\"\" role=\"status\"></p>\n</form>"
+    ],
+    "contact": [
+      "<a class=\"btn btn-primary header-cta\" href=\"tel:+491737373574\">\n<svg aria-hidden=\"true\" fill=\"currentColor\" height=\"16\" viewbox=\"0 0 24 24\" width=\"16\"><path d=\"M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.3 1.1L6.6 10.8z\"></path></svg>\n        +49 173 7373574\n      </a>",
+      "<a href=\"tel:+491737373574\">+49 173 7373574</a>",
+      "<a class=\"btn btn-secondary btn-block\" href=\"tel:+491737373574\">Jetzt anrufen</a>"
+    ]
+  },
+  "index.html": {
+    "scripts": [
+      "<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){ dataLayer.push(arguments); }\n  gtag('consent', 'default', {\n    'analytics_storage': 'denied',\n    'ad_storage': 'denied',\n    'ad_user_data': 'denied',\n    'ad_personalization': 'denied',\n    'wait_for_update': 500\n  });\n  </script>",
+      "<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\n  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\n  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n  })(window,document,'script','dataLayer','GTM-5PQPZTPC');</script>",
+      "<script src=\"/js/main.js\"></script>",
+      "<script src=\"/js/home2.js\"></script>"
+    ],
+    "forms": [
+      "<form class=\"lead-form contact-form\" data-form-name=\"Home 1 Anfrage home2\" data-reveal=\"\" novalidate=\"\">\n<div aria-hidden=\"true\" class=\"form-row honeypot\">\n<label for=\"website\">Website</label>\n<input autocomplete=\"off\" id=\"website\" name=\"website\" tabindex=\"-1\" type=\"text\"/>\n</div>\n<div class=\"form-grid\">\n<label>\n<span>Name</span>\n<input autocomplete=\"name\" name=\"name\" placeholder=\"Dein Name\" required=\"\" type=\"text\"/>\n</label>\n<label>\n<span>Telefon</span>\n<input autocomplete=\"tel\" name=\"phone\" placeholder=\"0173 7373574\" required=\"\" type=\"tel\"/>\n</label>\n</div>\n<label>\n<span>E-Mail</span>\n<input autocomplete=\"email\" name=\"email\" placeholder=\"mail@example.de\" required=\"\" type=\"email\"/>\n</label>\n<div class=\"form-grid\">\n<label>\n<span>Fahrzeug</span>\n<input name=\"vehicle\" placeholder=\"z. B. Porsche 911, Audi RS, Leasingfahrzeug\" type=\"text\"/>\n</label>\n<label>\n<span>Standort</span>\n<input name=\"location\" placeholder=\"z. B. Erfurt, Jena, Gotha\" type=\"text\"/>\n</label>\n</div>\n<label>\n<span>Wunschleistung</span>\n<select aria-label=\"Wunschleistung\" name=\"service\">\n<option value=\"Noch offen\">Noch offen, bitte beraten</option>\n<option value=\"Lackkorrektur\">Lackkorrektur</option>\n<option value=\"Keramikversiegelung\">Keramikversiegelung</option>\n<option value=\"Innenraum-Detailing\">Innenraum-Detailing</option>\n<option value=\"Leasingrueckgabe\">Leasingrückgabe</option>\n</select>\n</label>\n<label>\n<span>Anliegen</span>\n<textarea name=\"message\" placeholder=\"Was soll gemacht werden? Wie ist der Zustand? Gibt es einen Zieltermin?\" required=\"\" rows=\"5\"></textarea>\n</label>\n<button class=\"btn btn-primary btn-block\" type=\"submit\">Anfrage senden</button>\n<p aria-live=\"polite\" class=\"form-status\" data-form-status=\"\" role=\"status\"></p>\n</form>"
+    ],
+    "contact": [
+      "<a class=\"header-phone\" href=\"tel:+491737373574\">+49 173 7373574</a>",
+      "<a class=\"btn btn-ghost\" href=\"https://wa.me/491737373574\" rel=\"noopener\" target=\"_blank\">WhatsApp starten</a>",
+      "<a href=\"tel:+491737373574\">+49 173 7373574</a>",
+      "<a class=\"btn btn-muted\" href=\"tel:+491737373574\">Anrufen</a>",
+      "<a class=\"btn btn-primary\" href=\"https://wa.me/491737373574\" rel=\"noopener\" target=\"_blank\">WhatsApp</a>"
+    ]
+  },
+  "jena.html": {
+    "scripts": [
+      "<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){ dataLayer.push(arguments); }\n  gtag('consent', 'default', {\n    'analytics_storage': 'denied',\n    'ad_storage': 'denied',\n    'ad_user_data': 'denied',\n    'ad_personalization': 'denied',\n    'wait_for_update': 500\n  });\n  </script>",
+      "<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\n  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\n  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n  })(window,document,'script','dataLayer','GTM-5PQPZTPC');</script>",
+      "<script src=\"/js/main.js\"></script>"
+    ],
+    "forms": [
+      "<form class=\"contact-form lead-form\" data-form-name=\"Kontaktformular Startseite\" id=\"contact-form\" novalidate=\"\">\n<div aria-hidden=\"true\" class=\"form-row honeypot\">\n<label for=\"website\">Website</label>\n<input autocomplete=\"off\" id=\"website\" name=\"website\" tabindex=\"-1\" type=\"text\"/>\n</div>\n<div class=\"form-row\">\n<label for=\"name\">Dein Vor- und Nachname…</label>\n<input id=\"name\" name=\"name\" placeholder=\"Dein Vor- und Nachname…\" required=\"\" type=\"text\"/>\n</div>\n<div class=\"form-row\">\n<label for=\"email\">Deine E-Mail-Adresse…</label>\n<input id=\"email\" name=\"email\" placeholder=\"Deine E-Mail-Adresse…\" required=\"\" type=\"email\"/>\n</div>\n<div class=\"form-row\">\n<label for=\"phone\">Telefonnummer</label>\n<input id=\"phone\" name=\"phone\" placeholder=\"z. B. 0176 1234578\" required=\"\" type=\"tel\"/>\n</div>\n<div class=\"form-row\">\n<label for=\"vehicle\">Fahrzeug</label>\n<input id=\"vehicle\" name=\"vehicle\" placeholder=\"Fahrzeug\" type=\"text\"/>\n</div>\n<div class=\"form-row\">\n<label for=\"message\">Anliegen</label>\n<textarea id=\"message\" name=\"message\" placeholder=\"Schreibe hier dein Anliegen...\" required=\"\" rows=\"5\"></textarea>\n</div>\n<button class=\"btn btn-primary btn-block\" type=\"submit\">Jetzt Anfrage senden →</button>\n<p aria-live=\"polite\" class=\"form-status\" data-form-status=\"\" role=\"status\"></p>\n</form>"
+    ],
+    "contact": [
+      "<a class=\"btn btn-primary header-cta\" href=\"tel:+491737373574\">\n<svg aria-hidden=\"true\" fill=\"currentColor\" height=\"16\" viewbox=\"0 0 24 24\" width=\"16\"><path d=\"M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.3 1.1L6.6 10.8z\"></path></svg>\n        +49 173 7373574\n      </a>",
+      "<a href=\"tel:+491737373574\">+49 173 7373574</a>",
+      "<a class=\"btn btn-secondary btn-block\" href=\"tel:+491737373574\">Jetzt anrufen</a>"
+    ]
+  },
+  "luxus-aufbereitung.html": {
+    "scripts": [
+      "<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){ dataLayer.push(arguments); }\n  gtag('consent', 'default', {\n    'analytics_storage': 'denied',\n    'ad_storage': 'denied',\n    'ad_user_data': 'denied',\n    'ad_personalization': 'denied',\n    'wait_for_update': 500\n  });\n  </script>",
+      "<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\n  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\n  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n  })(window,document,'script','dataLayer','GTM-5PQPZTPC');</script>",
+      "<script src=\"/js/main.js\"></script>"
+    ],
+    "forms": [
+      "<form class=\"contact-form lead-form\" data-form-name=\"Kontaktformular Startseite\" id=\"contact-form\" novalidate=\"\">\n<div aria-hidden=\"true\" class=\"form-row honeypot\">\n<label for=\"website\">Website</label>\n<input autocomplete=\"off\" id=\"website\" name=\"website\" tabindex=\"-1\" type=\"text\"/>\n</div>\n<div class=\"form-row\">\n<label for=\"name\">Dein Vor- und Nachname…</label>\n<input id=\"name\" name=\"name\" placeholder=\"Dein Vor- und Nachname…\" required=\"\" type=\"text\"/>\n</div>\n<div class=\"form-row\">\n<label for=\"email\">Deine E-Mail-Adresse…</label>\n<input id=\"email\" name=\"email\" placeholder=\"Deine E-Mail-Adresse…\" required=\"\" type=\"email\"/>\n</div>\n<div class=\"form-row\">\n<label for=\"phone\">Telefonnummer</label>\n<input id=\"phone\" name=\"phone\" placeholder=\"z. B. 0176 1234578\" required=\"\" type=\"tel\"/>\n</div>\n<div class=\"form-row\">\n<label for=\"vehicle\">Fahrzeug</label>\n<input id=\"vehicle\" name=\"vehicle\" placeholder=\"Fahrzeug\" type=\"text\"/>\n</div>\n<div class=\"form-row\">\n<label for=\"message\">Anliegen</label>\n<textarea id=\"message\" name=\"message\" placeholder=\"Schreibe hier dein Anliegen...\" required=\"\" rows=\"5\"></textarea>\n</div>\n<button class=\"btn btn-primary btn-block\" type=\"submit\">Jetzt Anfrage senden →</button>\n<p aria-live=\"polite\" class=\"form-status\" data-form-status=\"\" role=\"status\"></p>\n</form>"
+    ],
+    "contact": [
+      "<a class=\"btn btn-primary header-cta\" href=\"tel:+491737373574\">\n<svg aria-hidden=\"true\" fill=\"currentColor\" height=\"16\" viewbox=\"0 0 24 24\" width=\"16\"><path d=\"M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.3 1.1L6.6 10.8z\"></path></svg>\n        +49 173 7373574\n      </a>",
+      "<a href=\"tel:+491737373574\">+49 173 7373574</a>",
+      "<a class=\"btn btn-secondary btn-block\" href=\"tel:+491737373574\">Jetzt anrufen</a>"
+    ]
+  },
+  "nordhausen.html": {
+    "scripts": [
+      "<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){ dataLayer.push(arguments); }\n  gtag('consent', 'default', {\n    'analytics_storage': 'denied',\n    'ad_storage': 'denied',\n    'ad_user_data': 'denied',\n    'ad_personalization': 'denied',\n    'wait_for_update': 500\n  });\n  </script>",
+      "<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\n  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\n  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n  })(window,document,'script','dataLayer','GTM-5PQPZTPC');</script>",
+      "<script src=\"/js/main.js\"></script>"
+    ],
+    "forms": [
+      "<form class=\"contact-form lead-form\" data-form-name=\"Kontaktformular Startseite\" id=\"contact-form\" novalidate=\"\">\n<div aria-hidden=\"true\" class=\"form-row honeypot\">\n<label for=\"website\">Website</label>\n<input autocomplete=\"off\" id=\"website\" name=\"website\" tabindex=\"-1\" type=\"text\"/>\n</div>\n<div class=\"form-row\">\n<label for=\"name\">Dein Vor- und Nachname…</label>\n<input id=\"name\" name=\"name\" placeholder=\"Dein Vor- und Nachname…\" required=\"\" type=\"text\"/>\n</div>\n<div class=\"form-row\">\n<label for=\"email\">Deine E-Mail-Adresse…</label>\n<input id=\"email\" name=\"email\" placeholder=\"Deine E-Mail-Adresse…\" required=\"\" type=\"email\"/>\n</div>\n<div class=\"form-row\">\n<label for=\"phone\">Telefonnummer</label>\n<input id=\"phone\" name=\"phone\" placeholder=\"z. B. 0176 1234578\" required=\"\" type=\"tel\"/>\n</div>\n<div class=\"form-row\">\n<label for=\"vehicle\">Fahrzeug</label>\n<input id=\"vehicle\" name=\"vehicle\" placeholder=\"Fahrzeug\" type=\"text\"/>\n</div>\n<div class=\"form-row\">\n<label for=\"message\">Anliegen</label>\n<textarea id=\"message\" name=\"message\" placeholder=\"Schreibe hier dein Anliegen...\" required=\"\" rows=\"5\"></textarea>\n</div>\n<button class=\"btn btn-primary btn-block\" type=\"submit\">Jetzt Anfrage senden →</button>\n<p aria-live=\"polite\" class=\"form-status\" data-form-status=\"\" role=\"status\"></p>\n</form>"
+    ],
+    "contact": [
+      "<a class=\"btn btn-primary header-cta\" href=\"tel:+491737373574\">\n<svg aria-hidden=\"true\" fill=\"currentColor\" height=\"16\" viewbox=\"0 0 24 24\" width=\"16\"><path d=\"M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.3 1.1L6.6 10.8z\"></path></svg>\n        +49 173 7373574\n      </a>",
+      "<a href=\"tel:+491737373574\">+49 173 7373574</a>",
+      "<a class=\"btn btn-secondary btn-block\" href=\"tel:+491737373574\">Jetzt anrufen</a>"
+    ]
+  },
+  "online-termin-buchen.html": {
+    "scripts": [
+      "<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){ dataLayer.push(arguments); }\n  gtag('consent', 'default', {\n    'analytics_storage': 'denied',\n    'ad_storage': 'denied',\n    'ad_user_data': 'denied',\n    'ad_personalization': 'denied',\n    'wait_for_update': 500\n  });\n</script>",
+      "<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\nj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n})(window,document,'script','dataLayer','GTM-5PQPZTPC');</script>",
+      "<script src=\"/js/main.js\"></script>"
+    ],
+    "forms": [
+      "<form class=\"contact-form lead-form\" data-form-name=\"Terminanfrage online-termin-buchen\" id=\"contact-form\" novalidate=\"\">\n<div aria-hidden=\"true\" class=\"form-row honeypot\">\n<label for=\"website\">Website</label>\n<input autocomplete=\"off\" id=\"website\" name=\"website\" tabindex=\"-1\" type=\"text\"/>\n</div>\n<div class=\"form-row\">\n<label for=\"name\">Dein Vor- und Nachname…</label>\n<input id=\"name\" name=\"name\" placeholder=\"Dein Vor- und Nachname…\" required=\"\" type=\"text\"/>\n</div>\n<div class=\"form-row\">\n<label for=\"email\">Deine E-Mail-Adresse…</label>\n<input id=\"email\" name=\"email\" placeholder=\"Deine E-Mail-Adresse…\" required=\"\" type=\"email\"/>\n</div>\n<div class=\"form-row\">\n<label for=\"phone\">Telefonnummer</label>\n<input id=\"phone\" name=\"phone\" placeholder=\"z. B. 0176 1234578\" required=\"\" type=\"tel\"/>\n</div>\n<div class=\"form-row\">\n<label for=\"message\">Wunschtermin / Anliegen</label>\n<textarea id=\"message\" name=\"message\" placeholder=\"Wann passt es Ihnen am besten?\" required=\"\" rows=\"5\"></textarea>\n</div>\n<button class=\"btn btn-primary btn-block\" type=\"submit\">Termin anfragen →</button>\n<p aria-live=\"polite\" class=\"form-status\" data-form-status=\"\" role=\"status\"></p>\n</form>"
+    ],
+    "contact": [
+      "<a class=\"btn btn-primary header-cta\" href=\"tel:+491737373574\">\n<svg aria-hidden=\"true\" fill=\"currentColor\" height=\"16\" viewbox=\"0 0 24 24\" width=\"16\"><path d=\"M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.3 1.1L6.6 10.8z\"></path></svg>\n        +49 173 7373574\n      </a>",
+      "<a href=\"tel:+491737373574\">+49 173 7373574</a>",
+      "<a class=\"btn btn-secondary btn-block\" href=\"tel:+491737373574\">📞 Anrufen</a>"
+    ]
+  },
+  "suhl.html": {
+    "scripts": [
+      "<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){ dataLayer.push(arguments); }\n  gtag('consent', 'default', {\n    'analytics_storage': 'denied',\n    'ad_storage': 'denied',\n    'ad_user_data': 'denied',\n    'ad_personalization': 'denied',\n    'wait_for_update': 500\n  });\n  </script>",
+      "<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\n  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\n  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n  })(window,document,'script','dataLayer','GTM-5PQPZTPC');</script>",
+      "<script src=\"/js/main.js\"></script>"
+    ],
+    "forms": [
+      "<form class=\"contact-form lead-form\" data-form-name=\"Kontaktformular Startseite\" id=\"contact-form\" novalidate=\"\">\n<div aria-hidden=\"true\" class=\"form-row honeypot\">\n<label for=\"website\">Website</label>\n<input autocomplete=\"off\" id=\"website\" name=\"website\" tabindex=\"-1\" type=\"text\"/>\n</div>\n<div class=\"form-row\">\n<label for=\"name\">Dein Vor- und Nachname…</label>\n<input id=\"name\" name=\"name\" placeholder=\"Dein Vor- und Nachname…\" required=\"\" type=\"text\"/>\n</div>\n<div class=\"form-row\">\n<label for=\"email\">Deine E-Mail-Adresse…</label>\n<input id=\"email\" name=\"email\" placeholder=\"Deine E-Mail-Adresse…\" required=\"\" type=\"email\"/>\n</div>\n<div class=\"form-row\">\n<label for=\"phone\">Telefonnummer</label>\n<input id=\"phone\" name=\"phone\" placeholder=\"z. B. 0176 1234578\" required=\"\" type=\"tel\"/>\n</div>\n<div class=\"form-row\">\n<label for=\"vehicle\">Fahrzeug</label>\n<input id=\"vehicle\" name=\"vehicle\" placeholder=\"Fahrzeug\" type=\"text\"/>\n</div>\n<div class=\"form-row\">\n<label for=\"message\">Anliegen</label>\n<textarea id=\"message\" name=\"message\" placeholder=\"Schreibe hier dein Anliegen...\" required=\"\" rows=\"5\"></textarea>\n</div>\n<button class=\"btn btn-primary btn-block\" type=\"submit\">Jetzt Anfrage senden →</button>\n<p aria-live=\"polite\" class=\"form-status\" data-form-status=\"\" role=\"status\"></p>\n</form>"
+    ],
+    "contact": [
+      "<a class=\"btn btn-primary header-cta\" href=\"tel:+491737373574\">\n<svg aria-hidden=\"true\" fill=\"currentColor\" height=\"16\" viewbox=\"0 0 24 24\" width=\"16\"><path d=\"M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.3 1.1L6.6 10.8z\"></path></svg>\n        +49 173 7373574\n      </a>",
+      "<a href=\"tel:+491737373574\">+49 173 7373574</a>",
+      "<a class=\"btn btn-secondary btn-block\" href=\"tel:+491737373574\">Jetzt anrufen</a>"
+    ]
+  },
+  "trockeneisreinigung.html": {
+    "scripts": [
+      "<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){ dataLayer.push(arguments); }\n  gtag('consent', 'default', {\n    'analytics_storage': 'denied',\n    'ad_storage': 'denied',\n    'ad_user_data': 'denied',\n    'ad_personalization': 'denied',\n    'wait_for_update': 500\n  });\n</script>",
+      "<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\nj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n})(window,document,'script','dataLayer','GTM-5PQPZTPC');</script>",
+      "<script src=\"/js/main.js\"></script>"
+    ],
+    "forms": [],
+    "contact": [
+      "<a class=\"btn btn-primary header-cta\" href=\"tel:+491737373574\">\n<svg aria-hidden=\"true\" fill=\"currentColor\" height=\"16\" viewbox=\"0 0 24 24\" width=\"16\"><path d=\"M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.3 1.1L6.6 10.8z\"></path></svg>\n        +49 173 7373574\n      </a>",
+      "<a class=\"btn btn-primary\" href=\"tel:+491737373574\">📞 Anrufen</a>",
+      "<a class=\"btn btn-whatsapp\" href=\"https://wa.me/491737373574\" rel=\"noopener\" target=\"_blank\">💬 WhatsApp</a>"
+    ]
+  },
+  "blog/index.html": {
+    "scripts": [
+      "<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){ dataLayer.push(arguments); }\n  gtag('consent', 'default', {\n    'analytics_storage': 'denied',\n    'ad_storage': 'denied',\n    'ad_user_data': 'denied',\n    'ad_personalization': 'denied',\n    'wait_for_update': 500\n  });\n</script>",
+      "<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\nj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n})(window,document,'script','dataLayer','GTM-5PQPZTPC');</script>",
+      "<script src=\"/js/main.js\"></script>"
+    ],
+    "forms": [],
+    "contact": [
+      "<a class=\"btn btn-primary header-cta\" href=\"tel:+491737373574\">\n<svg aria-hidden=\"true\" fill=\"currentColor\" height=\"16\" viewbox=\"0 0 24 24\" width=\"16\"><path d=\"M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.3 1.1L6.6 10.8z\"></path></svg>\n        +49 173 7373574\n      </a>"
+    ]
+  },
+  "blog/wie-oft-auto-aufbereiten-lassen.html": {
+    "scripts": [
+      "<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){ dataLayer.push(arguments); }\n  gtag('consent', 'default', {\n    'analytics_storage': 'denied',\n    'ad_storage': 'denied',\n    'ad_user_data': 'denied',\n    'ad_personalization': 'denied',\n    'wait_for_update': 500\n  });\n  </script>",
+      "<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\n  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\n  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n  })(window,document,'script','dataLayer','GTM-5PQPZTPC');</script>",
+      "<script src=\"/js/main.js\"></script>"
+    ],
+    "forms": [],
+    "contact": [
+      "<a class=\"btn btn-primary header-cta\" href=\"tel:+491737373574\">\n<svg aria-hidden=\"true\" fill=\"currentColor\" height=\"16\" viewbox=\"0 0 24 24\" width=\"16\"><path d=\"M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.3 1.1L6.6 10.8z\"></path></svg>\n        +49 173 7373574\n      </a>",
+      "<a class=\"btn btn-primary\" href=\"tel:+491737373574\">📞 Anrufen</a>",
+      "<a class=\"btn btn-whatsapp\" href=\"https://wa.me/491737373574\" rel=\"noopener\" target=\"_blank\">💬 WhatsApp</a>"
+    ]
+  },
+  "blog/1-step-2-step-oder-lackkorrektur-lackaufbereitung-im-vergleich/index.html": {
+    "scripts": [
+      "<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){ dataLayer.push(arguments); }\n  gtag('consent', 'default', {\n    'analytics_storage': 'denied',\n    'ad_storage': 'denied',\n    'ad_user_data': 'denied',\n    'ad_personalization': 'denied',\n    'wait_for_update': 500\n  });\n</script>",
+      "<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\nj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n})(window,document,'script','dataLayer','GTM-5PQPZTPC');</script>",
+      "<script src=\"/js/main.js\"></script>"
+    ],
+    "forms": [],
+    "contact": [
+      "<a class=\"btn btn-primary header-cta\" href=\"tel:+491737373574\">\n<svg aria-hidden=\"true\" fill=\"currentColor\" height=\"16\" viewbox=\"0 0 24 24\" width=\"16\"><path d=\"M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.3 1.1L6.6 10.8z\"></path></svg>\n        +49 173 7373574\n      </a>",
+      "<a class=\"btn btn-primary\" href=\"tel:+491737373574\">📞 Anrufen</a>",
+      "<a class=\"btn btn-whatsapp\" href=\"https://wa.me/491737373574\" rel=\"noopener\" target=\"_blank\">💬 WhatsApp</a>"
+    ]
+  },
+  "blog/1-step-politur-erklaert/index.html": {
+    "scripts": [
+      "<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){ dataLayer.push(arguments); }\n  gtag('consent', 'default', {\n    'analytics_storage': 'denied',\n    'ad_storage': 'denied',\n    'ad_user_data': 'denied',\n    'ad_personalization': 'denied',\n    'wait_for_update': 500\n  });\n</script>",
+      "<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\nj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n})(window,document,'script','dataLayer','GTM-5PQPZTPC');</script>",
+      "<script src=\"/js/main.js\"></script>"
+    ],
+    "forms": [],
+    "contact": [
+      "<a class=\"btn btn-primary header-cta\" href=\"tel:+491737373574\">\n<svg aria-hidden=\"true\" fill=\"currentColor\" height=\"16\" viewbox=\"0 0 24 24\" width=\"16\"><path d=\"M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.3 1.1L6.6 10.8z\"></path></svg>\n        +49 173 7373574\n      </a>",
+      "<a class=\"btn btn-primary\" href=\"tel:+491737373574\">📞 Anrufen</a>",
+      "<a class=\"btn btn-whatsapp\" href=\"https://wa.me/491737373574\" rel=\"noopener\" target=\"_blank\">💬 WhatsApp</a>"
+    ]
+  },
+  "blog/adblue-deaktivieren-vor-nachteile-wahrheit/index.html": {
+    "scripts": [
+      "<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){ dataLayer.push(arguments); }\n  gtag('consent', 'default', {\n    'analytics_storage': 'denied',\n    'ad_storage': 'denied',\n    'ad_user_data': 'denied',\n    'ad_personalization': 'denied',\n    'wait_for_update': 500\n  });\n</script>",
+      "<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\nj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n})(window,document,'script','dataLayer','GTM-5PQPZTPC');</script>",
+      "<script src=\"/js/main.js\"></script>"
+    ],
+    "forms": [],
+    "contact": [
+      "<a class=\"btn btn-primary header-cta\" href=\"tel:+491737373574\">\n<svg aria-hidden=\"true\" fill=\"currentColor\" height=\"16\" viewbox=\"0 0 24 24\" width=\"16\"><path d=\"M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.3 1.1L6.6 10.8z\"></path></svg>\n        +49 173 7373574\n      </a>",
+      "<a class=\"btn btn-primary\" href=\"tel:+491737373574\">📞 Anrufen</a>",
+      "<a class=\"btn btn-whatsapp\" href=\"https://wa.me/491737373574\" rel=\"noopener\" target=\"_blank\">💬 WhatsApp</a>"
+    ]
+  },
+  "blog/adblue-deaktivierung/index.html": {
+    "scripts": [
+      "<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){ dataLayer.push(arguments); }\n  gtag('consent', 'default', {\n    'analytics_storage': 'denied',\n    'ad_storage': 'denied',\n    'ad_user_data': 'denied',\n    'ad_personalization': 'denied',\n    'wait_for_update': 500\n  });\n</script>",
+      "<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\nj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n})(window,document,'script','dataLayer','GTM-5PQPZTPC');</script>",
+      "<script src=\"/js/main.js\"></script>"
+    ],
+    "forms": [],
+    "contact": [
+      "<a class=\"btn btn-primary header-cta\" href=\"tel:+491737373574\">\n<svg aria-hidden=\"true\" fill=\"currentColor\" height=\"16\" viewbox=\"0 0 24 24\" width=\"16\"><path d=\"M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.3 1.1L6.6 10.8z\"></path></svg>\n        +49 173 7373574\n      </a>",
+      "<a class=\"btn btn-primary\" href=\"tel:+491737373574\">📞 Anrufen</a>",
+      "<a class=\"btn btn-whatsapp\" href=\"https://wa.me/491737373574\" rel=\"noopener\" target=\"_blank\">💬 WhatsApp</a>"
+    ]
+  },
+  "blog/audi-r8-aufbereitung-erfurt-keramikversiegelung/index.html": {
+    "scripts": [
+      "<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){ dataLayer.push(arguments); }\n  gtag('consent', 'default', {\n    'analytics_storage': 'denied',\n    'ad_storage': 'denied',\n    'ad_user_data': 'denied',\n    'ad_personalization': 'denied',\n    'wait_for_update': 500\n  });\n</script>",
+      "<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\nj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n})(window,document,'script','dataLayer','GTM-5PQPZTPC');</script>",
+      "<script src=\"/js/main.js\"></script>"
+    ],
+    "forms": [],
+    "contact": [
+      "<a class=\"btn btn-primary header-cta\" href=\"tel:+491737373574\">\n<svg aria-hidden=\"true\" fill=\"currentColor\" height=\"16\" viewbox=\"0 0 24 24\" width=\"16\"><path d=\"M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.3 1.1L6.6 10.8z\"></path></svg>\n        +49 173 7373574\n      </a>",
+      "<a class=\"btn btn-primary\" href=\"tel:+491737373574\">📞 Anrufen</a>",
+      "<a class=\"btn btn-whatsapp\" href=\"https://wa.me/491737373574\" rel=\"noopener\" target=\"_blank\">💬 WhatsApp</a>"
+    ]
+  },
+  "blog/aufbereiter-vs-detailer-unterschied/index.html": {
+    "scripts": [
+      "<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){ dataLayer.push(arguments); }\n  gtag('consent', 'default', {\n    'analytics_storage': 'denied',\n    'ad_storage': 'denied',\n    'ad_user_data': 'denied',\n    'ad_personalization': 'denied',\n    'wait_for_update': 500\n  });\n</script>",
+      "<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\nj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n})(window,document,'script','dataLayer','GTM-5PQPZTPC');</script>",
+      "<script src=\"/js/main.js\"></script>"
+    ],
+    "forms": [],
+    "contact": [
+      "<a class=\"btn btn-primary header-cta\" href=\"tel:+491737373574\">\n<svg aria-hidden=\"true\" fill=\"currentColor\" height=\"16\" viewbox=\"0 0 24 24\" width=\"16\"><path d=\"M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.3 1.1L6.6 10.8z\"></path></svg>\n        +49 173 7373574\n      </a>",
+      "<a class=\"btn btn-primary\" href=\"tel:+491737373574\">📞 Anrufen</a>",
+      "<a class=\"btn btn-whatsapp\" href=\"https://wa.me/491737373574\" rel=\"noopener\" target=\"_blank\">💬 WhatsApp</a>"
+    ]
+  },
+  "blog/auto-selber-waschen-erfurt/index.html": {
+    "scripts": [
+      "<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){ dataLayer.push(arguments); }\n  gtag('consent', 'default', {\n    'analytics_storage': 'denied',\n    'ad_storage': 'denied',\n    'ad_user_data': 'denied',\n    'ad_personalization': 'denied',\n    'wait_for_update': 500\n  });\n</script>",
+      "<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\nj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n})(window,document,'script','dataLayer','GTM-5PQPZTPC');</script>",
+      "<script src=\"/js/main.js\"></script>"
+    ],
+    "forms": [],
+    "contact": [
+      "<a class=\"btn btn-primary header-cta\" href=\"tel:+491737373574\">\n<svg aria-hidden=\"true\" fill=\"currentColor\" height=\"16\" viewbox=\"0 0 24 24\" width=\"16\"><path d=\"M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.3 1.1L6.6 10.8z\"></path></svg>\n        +49 173 7373574\n      </a>",
+      "<a class=\"btn btn-primary\" href=\"tel:+491737373574\">📞 Anrufen</a>",
+      "<a class=\"btn btn-whatsapp\" href=\"https://wa.me/491737373574\" rel=\"noopener\" target=\"_blank\">💬 WhatsApp</a>"
+    ]
+  },
+  "blog/blog-keramikversiegelung/index.html": {
+    "scripts": [
+      "<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){ dataLayer.push(arguments); }\n  gtag('consent', 'default', {\n    'analytics_storage': 'denied',\n    'ad_storage': 'denied',\n    'ad_user_data': 'denied',\n    'ad_personalization': 'denied',\n    'wait_for_update': 500\n  });\n</script>",
+      "<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\nj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n})(window,document,'script','dataLayer','GTM-5PQPZTPC');</script>",
+      "<script src=\"/js/main.js\"></script>"
+    ],
+    "forms": [],
+    "contact": [
+      "<a class=\"btn btn-primary header-cta\" href=\"tel:+491737373574\">\n<svg aria-hidden=\"true\" fill=\"currentColor\" height=\"16\" viewbox=\"0 0 24 24\" width=\"16\"><path d=\"M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.3 1.1L6.6 10.8z\"></path></svg>\n        +49 173 7373574\n      </a>",
+      "<a class=\"btn btn-primary\" href=\"tel:+491737373574\">📞 Anrufen</a>",
+      "<a class=\"btn btn-whatsapp\" href=\"https://wa.me/491737373574\" rel=\"noopener\" target=\"_blank\">💬 WhatsApp</a>"
+    ]
+  },
+  "blog/boot-aufbereitung-keramikversiegelung-marine/index.html": {
+    "scripts": [
+      "<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){ dataLayer.push(arguments); }\n  gtag('consent', 'default', {\n    'analytics_storage': 'denied',\n    'ad_storage': 'denied',\n    'ad_user_data': 'denied',\n    'ad_personalization': 'denied',\n    'wait_for_update': 500\n  });\n</script>",
+      "<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\nj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n})(window,document,'script','dataLayer','GTM-5PQPZTPC');</script>",
+      "<script src=\"/js/main.js\"></script>"
+    ],
+    "forms": [],
+    "contact": [
+      "<a class=\"btn btn-primary header-cta\" href=\"tel:+491737373574\">\n<svg aria-hidden=\"true\" fill=\"currentColor\" height=\"16\" viewbox=\"0 0 24 24\" width=\"16\"><path d=\"M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.3 1.1L6.6 10.8z\"></path></svg>\n        +49 173 7373574\n      </a>",
+      "<a class=\"btn btn-primary\" href=\"tel:+491737373574\">📞 Anrufen</a>",
+      "<a class=\"btn btn-whatsapp\" href=\"https://wa.me/491737373574\" rel=\"noopener\" target=\"_blank\">💬 WhatsApp</a>"
+    ]
+  },
+  "blog/chiptuning-raum-erfurt/index.html": {
+    "scripts": [
+      "<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){ dataLayer.push(arguments); }\n  gtag('consent', 'default', {\n    'analytics_storage': 'denied',\n    'ad_storage': 'denied',\n    'ad_user_data': 'denied',\n    'ad_personalization': 'denied',\n    'wait_for_update': 500\n  });\n</script>",
+      "<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\nj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n})(window,document,'script','dataLayer','GTM-5PQPZTPC');</script>",
+      "<script src=\"/js/main.js\"></script>"
+    ],
+    "forms": [],
+    "contact": [
+      "<a class=\"btn btn-primary header-cta\" href=\"tel:+491737373574\">\n<svg aria-hidden=\"true\" fill=\"currentColor\" height=\"16\" viewbox=\"0 0 24 24\" width=\"16\"><path d=\"M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.3 1.1L6.6 10.8z\"></path></svg>\n        +49 173 7373574\n      </a>",
+      "<a href=\"tel:+491737373574\">+49 173 7373574</a>",
+      "<a href=\"mailto:info@powertech-performance.com\">info@powertech-performance.com</a>",
+      "<a class=\"btn btn-primary\" href=\"tel:+491737373574\">📞 Anrufen</a>",
+      "<a class=\"btn btn-whatsapp\" href=\"https://wa.me/491737373574\" rel=\"noopener\" target=\"_blank\">💬 WhatsApp</a>"
+    ]
+  },
+  "blog/chiptuning-raumerfurt/index.html": {
+    "scripts": [
+      "<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){ dataLayer.push(arguments); }\n  gtag('consent', 'default', {\n    'analytics_storage': 'denied',\n    'ad_storage': 'denied',\n    'ad_user_data': 'denied',\n    'ad_personalization': 'denied',\n    'wait_for_update': 500\n  });\n</script>",
+      "<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\nj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n})(window,document,'script','dataLayer','GTM-5PQPZTPC');</script>",
+      "<script src=\"/js/main.js\"></script>"
+    ],
+    "forms": [],
+    "contact": [
+      "<a class=\"btn btn-primary header-cta\" href=\"tel:+491737373574\">\n<svg aria-hidden=\"true\" fill=\"currentColor\" height=\"16\" viewbox=\"0 0 24 24\" width=\"16\"><path d=\"M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.3 1.1L6.6 10.8z\"></path></svg>\n        +49 173 7373574\n      </a>",
+      "<a class=\"btn btn-primary\" href=\"tel:+491737373574\">📞 Anrufen</a>",
+      "<a class=\"btn btn-whatsapp\" href=\"https://wa.me/491737373574\" rel=\"noopener\" target=\"_blank\">💬 WhatsApp</a>"
+    ]
+  },
+  "blog/fahrzeugaufbereitung-erfurt/index.html": {
+    "scripts": [
+      "<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){ dataLayer.push(arguments); }\n  gtag('consent', 'default', {\n    'analytics_storage': 'denied',\n    'ad_storage': 'denied',\n    'ad_user_data': 'denied',\n    'ad_personalization': 'denied',\n    'wait_for_update': 500\n  });\n</script>",
+      "<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\nj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n})(window,document,'script','dataLayer','GTM-5PQPZTPC');</script>",
+      "<script src=\"/js/main.js\"></script>"
+    ],
+    "forms": [],
+    "contact": [
+      "<a class=\"btn btn-primary header-cta\" href=\"tel:+491737373574\">\n<svg aria-hidden=\"true\" fill=\"currentColor\" height=\"16\" viewbox=\"0 0 24 24\" width=\"16\"><path d=\"M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.3 1.1L6.6 10.8z\"></path></svg>\n        +49 173 7373574\n      </a>",
+      "<a class=\"btn btn-primary\" href=\"tel:+491737373574\">📞 Anrufen</a>",
+      "<a class=\"btn btn-whatsapp\" href=\"https://wa.me/491737373574\" rel=\"noopener\" target=\"_blank\">💬 WhatsApp</a>"
+    ]
+  },
+  "blog/flugzeugaufbereitung-innenreinigung-erfurt/index.html": {
+    "scripts": [
+      "<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){ dataLayer.push(arguments); }\n  gtag('consent', 'default', {\n    'analytics_storage': 'denied',\n    'ad_storage': 'denied',\n    'ad_user_data': 'denied',\n    'ad_personalization': 'denied',\n    'wait_for_update': 500\n  });\n</script>",
+      "<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\nj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n})(window,document,'script','dataLayer','GTM-5PQPZTPC');</script>",
+      "<script src=\"/js/main.js\"></script>"
+    ],
+    "forms": [],
+    "contact": [
+      "<a class=\"btn btn-primary header-cta\" href=\"tel:+491737373574\">\n<svg aria-hidden=\"true\" fill=\"currentColor\" height=\"16\" viewbox=\"0 0 24 24\" width=\"16\"><path d=\"M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.3 1.1L6.6 10.8z\"></path></svg>\n        +49 173 7373574\n      </a>",
+      "<a href=\"tel:+491737373574\"> 📞 +49 173 7373574 </a>",
+      "<a class=\"btn btn-primary\" href=\"tel:+491737373574\">📞 Anrufen</a>",
+      "<a class=\"btn btn-whatsapp\" href=\"https://wa.me/491737373574\" rel=\"noopener\" target=\"_blank\">💬 WhatsApp</a>"
+    ]
+  },
+  "blog/haltbarkeit-keramikversiegelung-lackschutz/index.html": {
+    "scripts": [
+      "<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){ dataLayer.push(arguments); }\n  gtag('consent', 'default', {\n    'analytics_storage': 'denied',\n    'ad_storage': 'denied',\n    'ad_user_data': 'denied',\n    'ad_personalization': 'denied',\n    'wait_for_update': 500\n  });\n</script>",
+      "<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\nj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n})(window,document,'script','dataLayer','GTM-5PQPZTPC');</script>",
+      "<script src=\"/js/main.js\"></script>"
+    ],
+    "forms": [],
+    "contact": [
+      "<a class=\"btn btn-primary header-cta\" href=\"tel:+491737373574\">\n<svg aria-hidden=\"true\" fill=\"currentColor\" height=\"16\" viewbox=\"0 0 24 24\" width=\"16\"><path d=\"M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.3 1.1L6.6 10.8z\"></path></svg>\n        +49 173 7373574\n      </a>",
+      "<a class=\"btn btn-primary\" href=\"tel:+491737373574\">📞 Anrufen</a>",
+      "<a class=\"btn btn-whatsapp\" href=\"https://wa.me/491737373574\" rel=\"noopener\" target=\"_blank\">💬 WhatsApp</a>"
+    ]
+  },
+  "blog/harte-und-weiche-autolacke-der-geheime-schlssel-zur-perfekten-lackaufbereitung/index.html": {
+    "scripts": [
+      "<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){ dataLayer.push(arguments); }\n  gtag('consent', 'default', {\n    'analytics_storage': 'denied',\n    'ad_storage': 'denied',\n    'ad_user_data': 'denied',\n    'ad_personalization': 'denied',\n    'wait_for_update': 500\n  });\n</script>",
+      "<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\nj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n})(window,document,'script','dataLayer','GTM-5PQPZTPC');</script>",
+      "<script src=\"/js/main.js\"></script>"
+    ],
+    "forms": [],
+    "contact": [
+      "<a class=\"btn btn-primary header-cta\" href=\"tel:+491737373574\">\n<svg aria-hidden=\"true\" fill=\"currentColor\" height=\"16\" viewbox=\"0 0 24 24\" width=\"16\"><path d=\"M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.3 1.1L6.6 10.8z\"></path></svg>\n        +49 173 7373574\n      </a>",
+      "<a class=\"btn btn-primary\" href=\"tel:+491737373574\">📞 Anrufen</a>",
+      "<a class=\"btn btn-whatsapp\" href=\"https://wa.me/491737373574\" rel=\"noopener\" target=\"_blank\">💬 WhatsApp</a>"
+    ]
+  },
+  "blog/harte-und-weiche-autolacke-der-geheime-schlssel-zur-perfekten-lackaufbereitung-2/index.html": {
+    "scripts": [
+      "<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){ dataLayer.push(arguments); }\n  gtag('consent', 'default', {\n    'analytics_storage': 'denied',\n    'ad_storage': 'denied',\n    'ad_user_data': 'denied',\n    'ad_personalization': 'denied',\n    'wait_for_update': 500\n  });\n</script>",
+      "<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\nj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n})(window,document,'script','dataLayer','GTM-5PQPZTPC');</script>",
+      "<script src=\"/js/main.js\"></script>"
+    ],
+    "forms": [],
+    "contact": [
+      "<a class=\"btn btn-primary header-cta\" href=\"tel:+491737373574\">\n<svg aria-hidden=\"true\" fill=\"currentColor\" height=\"16\" viewbox=\"0 0 24 24\" width=\"16\"><path d=\"M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.3 1.1L6.6 10.8z\"></path></svg>\n        +49 173 7373574\n      </a>",
+      "<a class=\"btn btn-primary\" href=\"tel:+491737373574\">📞 Anrufen</a>",
+      "<a class=\"btn btn-whatsapp\" href=\"https://wa.me/491737373574\" rel=\"noopener\" target=\"_blank\">💬 WhatsApp</a>"
+    ]
+  },
+  "blog/harte-weiche-autolacke-lackaufbereitung/index.html": {
+    "scripts": [
+      "<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){ dataLayer.push(arguments); }\n  gtag('consent', 'default', {\n    'analytics_storage': 'denied',\n    'ad_storage': 'denied',\n    'ad_user_data': 'denied',\n    'ad_personalization': 'denied',\n    'wait_for_update': 500\n  });\n</script>",
+      "<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\nj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n})(window,document,'script','dataLayer','GTM-5PQPZTPC');</script>",
+      "<script src=\"/js/main.js\"></script>"
+    ],
+    "forms": [],
+    "contact": [
+      "<a class=\"btn btn-primary header-cta\" href=\"tel:+491737373574\">\n<svg aria-hidden=\"true\" fill=\"currentColor\" height=\"16\" viewbox=\"0 0 24 24\" width=\"16\"><path d=\"M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.3 1.1L6.6 10.8z\"></path></svg>\n        +49 173 7373574\n      </a>",
+      "<a class=\"btn btn-primary\" href=\"tel:+491737373574\">📞 Anrufen</a>",
+      "<a class=\"btn btn-whatsapp\" href=\"https://wa.me/491737373574\" rel=\"noopener\" target=\"_blank\">💬 WhatsApp</a>"
+    ]
+  },
+  "blog/innenreinigung-auto-in-der-naehe/index.html": {
+    "scripts": [
+      "<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){ dataLayer.push(arguments); }\n  gtag('consent', 'default', {\n    'analytics_storage': 'denied',\n    'ad_storage': 'denied',\n    'ad_user_data': 'denied',\n    'ad_personalization': 'denied',\n    'wait_for_update': 500\n  });\n</script>",
+      "<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\nj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n})(window,document,'script','dataLayer','GTM-5PQPZTPC');</script>",
+      "<script src=\"/js/main.js\"></script>"
+    ],
+    "forms": [],
+    "contact": [
+      "<a class=\"btn btn-primary header-cta\" href=\"tel:+491737373574\">\n<svg aria-hidden=\"true\" fill=\"currentColor\" height=\"16\" viewbox=\"0 0 24 24\" width=\"16\"><path d=\"M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.3 1.1L6.6 10.8z\"></path></svg>\n        +49 173 7373574\n      </a>",
+      "<a class=\"btn btn-primary\" href=\"tel:+491737373574\">📞 Anrufen</a>",
+      "<a class=\"btn btn-whatsapp\" href=\"https://wa.me/491737373574\" rel=\"noopener\" target=\"_blank\">💬 WhatsApp</a>"
+    ]
+  },
+  "blog/keramik-fuer-auto-erfurt-vorteile-haltbarkeit/index.html": {
+    "scripts": [
+      "<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){ dataLayer.push(arguments); }\n  gtag('consent', 'default', {\n    'analytics_storage': 'denied',\n    'ad_storage': 'denied',\n    'ad_user_data': 'denied',\n    'ad_personalization': 'denied',\n    'wait_for_update': 500\n  });\n</script>",
+      "<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\nj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n})(window,document,'script','dataLayer','GTM-5PQPZTPC');</script>",
+      "<script src=\"/js/main.js\"></script>"
+    ],
+    "forms": [],
+    "contact": [
+      "<a class=\"btn btn-primary header-cta\" href=\"tel:+491737373574\">\n<svg aria-hidden=\"true\" fill=\"currentColor\" height=\"16\" viewbox=\"0 0 24 24\" width=\"16\"><path d=\"M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.3 1.1L6.6 10.8z\"></path></svg>\n        +49 173 7373574\n      </a>",
+      "<a class=\"btn btn-primary\" href=\"tel:+491737373574\">📞 Anrufen</a>",
+      "<a class=\"btn btn-whatsapp\" href=\"https://wa.me/491737373574\" rel=\"noopener\" target=\"_blank\">💬 WhatsApp</a>"
+    ]
+  },
+  "blog/keramikversiegelung-erfurt-high-end-lackschutz-powertech-performance/index.html": {
+    "scripts": [
+      "<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){ dataLayer.push(arguments); }\n  gtag('consent', 'default', {\n    'analytics_storage': 'denied',\n    'ad_storage': 'denied',\n    'ad_user_data': 'denied',\n    'ad_personalization': 'denied',\n    'wait_for_update': 500\n  });\n</script>",
+      "<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\nj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n})(window,document,'script','dataLayer','GTM-5PQPZTPC');</script>",
+      "<script src=\"/js/main.js\"></script>"
+    ],
+    "forms": [],
+    "contact": [
+      "<a class=\"btn btn-primary header-cta\" href=\"tel:+491737373574\">\n<svg aria-hidden=\"true\" fill=\"currentColor\" height=\"16\" viewbox=\"0 0 24 24\" width=\"16\"><path d=\"M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.3 1.1L6.6 10.8z\"></path></svg>\n        +49 173 7373574\n      </a>",
+      "<a class=\"btn btn-primary\" href=\"tel:+491737373574\">📞 Anrufen</a>",
+      "<a class=\"btn btn-whatsapp\" href=\"https://wa.me/491737373574\" rel=\"noopener\" target=\"_blank\">💬 WhatsApp</a>"
+    ]
+  },
+  "blog/keramikversiegelung-profi-lackschutz/index.html": {
+    "scripts": [
+      "<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){ dataLayer.push(arguments); }\n  gtag('consent', 'default', {\n    'analytics_storage': 'denied',\n    'ad_storage': 'denied',\n    'ad_user_data': 'denied',\n    'ad_personalization': 'denied',\n    'wait_for_update': 500\n  });\n</script>",
+      "<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\nj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n})(window,document,'script','dataLayer','GTM-5PQPZTPC');</script>",
+      "<script src=\"/js/main.js\"></script>"
+    ],
+    "forms": [],
+    "contact": [
+      "<a class=\"btn btn-primary header-cta\" href=\"tel:+491737373574\">\n<svg aria-hidden=\"true\" fill=\"currentColor\" height=\"16\" viewbox=\"0 0 24 24\" width=\"16\"><path d=\"M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.3 1.1L6.6 10.8z\"></path></svg>\n        +49 173 7373574\n      </a>",
+      "<a class=\"btn btn-primary\" href=\"tel:+491737373574\">📞 Anrufen</a>",
+      "<a class=\"btn btn-whatsapp\" href=\"https://wa.me/491737373574\" rel=\"noopener\" target=\"_blank\">💬 WhatsApp</a>"
+    ]
+  },
+  "blog/lackierung-oldtimer-erfurt-lackaufbereitung-keramik/index.html": {
+    "scripts": [
+      "<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){ dataLayer.push(arguments); }\n  gtag('consent', 'default', {\n    'analytics_storage': 'denied',\n    'ad_storage': 'denied',\n    'ad_user_data': 'denied',\n    'ad_personalization': 'denied',\n    'wait_for_update': 500\n  });\n</script>",
+      "<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\nj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n})(window,document,'script','dataLayer','GTM-5PQPZTPC');</script>",
+      "<script src=\"/js/main.js\"></script>"
+    ],
+    "forms": [],
+    "contact": [
+      "<a class=\"btn btn-primary header-cta\" href=\"tel:+491737373574\">\n<svg aria-hidden=\"true\" fill=\"currentColor\" height=\"16\" viewbox=\"0 0 24 24\" width=\"16\"><path d=\"M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.3 1.1L6.6 10.8z\"></path></svg>\n        +49 173 7373574\n      </a>",
+      "<a href=\"tel:+491737373574\">JETZT ANRUFEN: Kostenlosen Besichtigungstermin vereinbaren</a>",
+      "<a class=\"btn btn-primary\" href=\"tel:+491737373574\">📞 Anrufen</a>",
+      "<a class=\"btn btn-whatsapp\" href=\"https://wa.me/491737373574\" rel=\"noopener\" target=\"_blank\">💬 WhatsApp</a>"
+    ]
+  },
+  "blog/lackkorrektur-wofuer-gut-werterhalt/index.html": {
+    "scripts": [
+      "<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){ dataLayer.push(arguments); }\n  gtag('consent', 'default', {\n    'analytics_storage': 'denied',\n    'ad_storage': 'denied',\n    'ad_user_data': 'denied',\n    'ad_personalization': 'denied',\n    'wait_for_update': 500\n  });\n</script>",
+      "<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\nj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n})(window,document,'script','dataLayer','GTM-5PQPZTPC');</script>",
+      "<script src=\"/js/main.js\"></script>"
+    ],
+    "forms": [],
+    "contact": [
+      "<a class=\"btn btn-primary header-cta\" href=\"tel:+491737373574\">\n<svg aria-hidden=\"true\" fill=\"currentColor\" height=\"16\" viewbox=\"0 0 24 24\" width=\"16\"><path d=\"M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.3 1.1L6.6 10.8z\"></path></svg>\n        +49 173 7373574\n      </a>",
+      "<a class=\"btn btn-primary\" href=\"tel:+491737373574\">📞 Anrufen</a>",
+      "<a class=\"btn btn-whatsapp\" href=\"https://wa.me/491737373574\" rel=\"noopener\" target=\"_blank\">💬 WhatsApp</a>"
+    ]
+  },
+  "blog/leasing-rueckgabe-aufbereitung-erfurt/index.html": {
+    "scripts": [
+      "<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){ dataLayer.push(arguments); }\n  gtag('consent', 'default', {\n    'analytics_storage': 'denied',\n    'ad_storage': 'denied',\n    'ad_user_data': 'denied',\n    'ad_personalization': 'denied',\n    'wait_for_update': 500\n  });\n</script>",
+      "<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\nj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n})(window,document,'script','dataLayer','GTM-5PQPZTPC');</script>",
+      "<script src=\"/js/main.js\"></script>"
+    ],
+    "forms": [],
+    "contact": [
+      "<a class=\"btn btn-primary header-cta\" href=\"tel:+491737373574\">\n<svg aria-hidden=\"true\" fill=\"currentColor\" height=\"16\" viewbox=\"0 0 24 24\" width=\"16\"><path d=\"M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.3 1.1L6.6 10.8z\"></path></svg>\n        +49 173 7373574\n      </a>",
+      "<a href=\"tel:+491737373574\">+49 173 7373574</a>",
+      "<a class=\"btn btn-primary\" href=\"tel:+491737373574\">📞 Anrufen</a>",
+      "<a class=\"btn btn-whatsapp\" href=\"https://wa.me/491737373574\" rel=\"noopener\" target=\"_blank\">💬 WhatsApp</a>"
+    ]
+  },
+  "blog/leasingauto-aufbereiten/index.html": {
+    "scripts": [
+      "<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){ dataLayer.push(arguments); }\n  gtag('consent', 'default', {\n    'analytics_storage': 'denied',\n    'ad_storage': 'denied',\n    'ad_user_data': 'denied',\n    'ad_personalization': 'denied',\n    'wait_for_update': 500\n  });\n</script>",
+      "<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\nj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n})(window,document,'script','dataLayer','GTM-5PQPZTPC');</script>",
+      "<script src=\"/js/main.js\"></script>"
+    ],
+    "forms": [],
+    "contact": [
+      "<a class=\"btn btn-primary header-cta\" href=\"tel:+491737373574\">\n<svg aria-hidden=\"true\" fill=\"currentColor\" height=\"16\" viewbox=\"0 0 24 24\" width=\"16\"><path d=\"M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.3 1.1L6.6 10.8z\"></path></svg>\n        +49 173 7373574\n      </a>",
+      "<a class=\"btn btn-primary\" href=\"tel:+491737373574\">📞 Anrufen</a>",
+      "<a class=\"btn btn-whatsapp\" href=\"https://wa.me/491737373574\" rel=\"noopener\" target=\"_blank\">💬 WhatsApp</a>"
+    ]
+  },
+  "blog/leasingrueckgabe-checkliste/index.html": {
+    "scripts": [
+      "<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){ dataLayer.push(arguments); }\n  gtag('consent', 'default', {\n    'analytics_storage': 'denied',\n    'ad_storage': 'denied',\n    'ad_user_data': 'denied',\n    'ad_personalization': 'denied',\n    'wait_for_update': 500\n  });\n</script>",
+      "<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\nj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n})(window,document,'script','dataLayer','GTM-5PQPZTPC');</script>",
+      "<script src=\"/js/main.js\"></script>"
+    ],
+    "forms": [],
+    "contact": [
+      "<a class=\"btn btn-primary header-cta\" href=\"tel:+491737373574\">\n<svg aria-hidden=\"true\" fill=\"currentColor\" height=\"16\" viewbox=\"0 0 24 24\" width=\"16\"><path d=\"M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.3 1.1L6.6 10.8z\"></path></svg>\n        +49 173 7373574\n      </a>",
+      "<a class=\"btn btn-primary\" href=\"tel:+491737373574\">📞 Anrufen</a>",
+      "<a class=\"btn btn-whatsapp\" href=\"https://wa.me/491737373574\" rel=\"noopener\" target=\"_blank\">💬 WhatsApp</a>"
+    ]
+  },
+  "blog/motorradaufbereitung-keramikversiegelung-experte/index.html": {
+    "scripts": [
+      "<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){ dataLayer.push(arguments); }\n  gtag('consent', 'default', {\n    'analytics_storage': 'denied',\n    'ad_storage': 'denied',\n    'ad_user_data': 'denied',\n    'ad_personalization': 'denied',\n    'wait_for_update': 500\n  });\n</script>",
+      "<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\nj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n})(window,document,'script','dataLayer','GTM-5PQPZTPC');</script>",
+      "<script src=\"/js/main.js\"></script>"
+    ],
+    "forms": [],
+    "contact": [
+      "<a class=\"btn btn-primary header-cta\" href=\"tel:+491737373574\">\n<svg aria-hidden=\"true\" fill=\"currentColor\" height=\"16\" viewbox=\"0 0 24 24\" width=\"16\"><path d=\"M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.3 1.1L6.6 10.8z\"></path></svg>\n        +49 173 7373574\n      </a>",
+      "<a class=\"btn btn-primary\" href=\"tel:+491737373574\">📞 Anrufen</a>",
+      "<a class=\"btn btn-whatsapp\" href=\"https://wa.me/491737373574\" rel=\"noopener\" target=\"_blank\">💬 WhatsApp</a>"
+    ]
+  },
+  "blog/motorwaesche-erfurt-vorteile-kosten/index.html": {
+    "scripts": [
+      "<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){ dataLayer.push(arguments); }\n  gtag('consent', 'default', {\n    'analytics_storage': 'denied',\n    'ad_storage': 'denied',\n    'ad_user_data': 'denied',\n    'ad_personalization': 'denied',\n    'wait_for_update': 500\n  });\n</script>",
+      "<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\nj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n})(window,document,'script','dataLayer','GTM-5PQPZTPC');</script>",
+      "<script src=\"/js/main.js\"></script>"
+    ],
+    "forms": [],
+    "contact": [
+      "<a class=\"btn btn-primary header-cta\" href=\"tel:+491737373574\">\n<svg aria-hidden=\"true\" fill=\"currentColor\" height=\"16\" viewbox=\"0 0 24 24\" width=\"16\"><path d=\"M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.3 1.1L6.6 10.8z\"></path></svg>\n        +49 173 7373574\n      </a>",
+      "<a class=\"btn btn-primary\" href=\"tel:+491737373574\">📞 Anrufen</a>",
+      "<a class=\"btn btn-whatsapp\" href=\"https://wa.me/491737373574\" rel=\"noopener\" target=\"_blank\">💬 WhatsApp</a>"
+    ]
+  },
+  "blog/oldtimer-aufbereitung-erfurt-wertschonende-pflege/index.html": {
+    "scripts": [
+      "<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){ dataLayer.push(arguments); }\n  gtag('consent', 'default', {\n    'analytics_storage': 'denied',\n    'ad_storage': 'denied',\n    'ad_user_data': 'denied',\n    'ad_personalization': 'denied',\n    'wait_for_update': 500\n  });\n</script>",
+      "<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\nj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n})(window,document,'script','dataLayer','GTM-5PQPZTPC');</script>",
+      "<script src=\"/js/main.js\"></script>"
+    ],
+    "forms": [],
+    "contact": [
+      "<a class=\"btn btn-primary header-cta\" href=\"tel:+491737373574\">\n<svg aria-hidden=\"true\" fill=\"currentColor\" height=\"16\" viewbox=\"0 0 24 24\" width=\"16\"><path d=\"M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.3 1.1L6.6 10.8z\"></path></svg>\n        +49 173 7373574\n      </a>",
+      "<a class=\"btn btn-primary\" href=\"tel:+491737373574\">📞 Anrufen</a>",
+      "<a class=\"btn btn-whatsapp\" href=\"https://wa.me/491737373574\" rel=\"noopener\" target=\"_blank\">💬 WhatsApp</a>"
+    ]
+  },
+  "blog/porsche-aufbereitung-erfurt-keramikversiegelung-zertifiziert/index.html": {
+    "scripts": [
+      "<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){ dataLayer.push(arguments); }\n  gtag('consent', 'default', {\n    'analytics_storage': 'denied',\n    'ad_storage': 'denied',\n    'ad_user_data': 'denied',\n    'ad_personalization': 'denied',\n    'wait_for_update': 500\n  });\n</script>",
+      "<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\nj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n})(window,document,'script','dataLayer','GTM-5PQPZTPC');</script>",
+      "<script src=\"/js/main.js\"></script>"
+    ],
+    "forms": [],
+    "contact": [
+      "<a class=\"btn btn-primary header-cta\" href=\"tel:+491737373574\">\n<svg aria-hidden=\"true\" fill=\"currentColor\" height=\"16\" viewbox=\"0 0 24 24\" width=\"16\"><path d=\"M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.3 1.1L6.6 10.8z\"></path></svg>\n        +49 173 7373574\n      </a>",
+      "<a class=\"btn btn-primary\" href=\"tel:+491737373574\">📞 Anrufen</a>",
+      "<a class=\"btn btn-whatsapp\" href=\"https://wa.me/491737373574\" rel=\"noopener\" target=\"_blank\">💬 WhatsApp</a>"
+    ]
+  },
+  "blog/professionelle-cabrioverdeck-impraegnierung-und-reinigung/index.html": {
+    "scripts": [
+      "<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){ dataLayer.push(arguments); }\n  gtag('consent', 'default', {\n    'analytics_storage': 'denied',\n    'ad_storage': 'denied',\n    'ad_user_data': 'denied',\n    'ad_personalization': 'denied',\n    'wait_for_update': 500\n  });\n</script>",
+      "<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\nj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n})(window,document,'script','dataLayer','GTM-5PQPZTPC');</script>",
+      "<script src=\"/js/main.js\"></script>"
+    ],
+    "forms": [],
+    "contact": [
+      "<a class=\"btn btn-primary header-cta\" href=\"tel:+491737373574\">\n<svg aria-hidden=\"true\" fill=\"currentColor\" height=\"16\" viewbox=\"0 0 24 24\" width=\"16\"><path d=\"M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.3 1.1L6.6 10.8z\"></path></svg>\n        +49 173 7373574\n      </a>",
+      "<a class=\"btn btn-primary\" href=\"tel:+491737373574\">📞 Anrufen</a>",
+      "<a class=\"btn btn-whatsapp\" href=\"https://wa.me/491737373574\" rel=\"noopener\" target=\"_blank\">💬 WhatsApp</a>"
+    ]
+  },
+  "blog/professionelle-innenreinigung-auto-in-der-naehe/index.html": {
+    "scripts": [
+      "<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){ dataLayer.push(arguments); }\n  gtag('consent', 'default', {\n    'analytics_storage': 'denied',\n    'ad_storage': 'denied',\n    'ad_user_data': 'denied',\n    'ad_personalization': 'denied',\n    'wait_for_update': 500\n  });\n</script>",
+      "<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\nj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n})(window,document,'script','dataLayer','GTM-5PQPZTPC');</script>",
+      "<script src=\"/js/main.js\"></script>"
+    ],
+    "forms": [],
+    "contact": [
+      "<a class=\"btn btn-primary header-cta\" href=\"tel:+491737373574\">\n<svg aria-hidden=\"true\" fill=\"currentColor\" height=\"16\" viewbox=\"0 0 24 24\" width=\"16\"><path d=\"M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.3 1.1L6.6 10.8z\"></path></svg>\n        +49 173 7373574\n      </a>",
+      "<a class=\"btn btn-primary\" href=\"tel:+491737373574\">📞 Anrufen</a>",
+      "<a class=\"btn btn-whatsapp\" href=\"https://wa.me/491737373574\" rel=\"noopener\" target=\"_blank\">💬 WhatsApp</a>"
+    ]
+  },
+  "blog/professionelle-keramikversiegelung-erfurt/index.html": {
+    "scripts": [
+      "<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){ dataLayer.push(arguments); }\n  gtag('consent', 'default', {\n    'analytics_storage': 'denied',\n    'ad_storage': 'denied',\n    'ad_user_data': 'denied',\n    'ad_personalization': 'denied',\n    'wait_for_update': 500\n  });\n</script>",
+      "<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\nj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n})(window,document,'script','dataLayer','GTM-5PQPZTPC');</script>",
+      "<script src=\"/js/main.js\"></script>"
+    ],
+    "forms": [],
+    "contact": [
+      "<a class=\"btn btn-primary header-cta\" href=\"tel:+491737373574\">\n<svg aria-hidden=\"true\" fill=\"currentColor\" height=\"16\" viewbox=\"0 0 24 24\" width=\"16\"><path d=\"M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.3 1.1L6.6 10.8z\"></path></svg>\n        +49 173 7373574\n      </a>",
+      "<a class=\"btn btn-primary\" href=\"tel:+491737373574\">📞 Anrufen</a>",
+      "<a class=\"btn btn-whatsapp\" href=\"https://wa.me/491737373574\" rel=\"noopener\" target=\"_blank\">💬 WhatsApp</a>"
+    ]
+  },
+  "blog/profi-keramikversiegelung/index.html": {
+    "scripts": [
+      "<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){ dataLayer.push(arguments); }\n  gtag('consent', 'default', {\n    'analytics_storage': 'denied',\n    'ad_storage': 'denied',\n    'ad_user_data': 'denied',\n    'ad_personalization': 'denied',\n    'wait_for_update': 500\n  });\n</script>",
+      "<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\nj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n})(window,document,'script','dataLayer','GTM-5PQPZTPC');</script>",
+      "<script src=\"/js/main.js\"></script>"
+    ],
+    "forms": [],
+    "contact": [
+      "<a class=\"btn btn-primary header-cta\" href=\"tel:+491737373574\">\n<svg aria-hidden=\"true\" fill=\"currentColor\" height=\"16\" viewbox=\"0 0 24 24\" width=\"16\"><path d=\"M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.3 1.1L6.6 10.8z\"></path></svg>\n        +49 173 7373574\n      </a>",
+      "<a href=\"mailto:info@powertech-performance.com\">info@powertech-performance.com</a>",
+      "<a class=\"btn btn-primary\" href=\"tel:+491737373574\">📞 Anrufen</a>",
+      "<a class=\"btn btn-whatsapp\" href=\"https://wa.me/491737373574\" rel=\"noopener\" target=\"_blank\">💬 WhatsApp</a>"
+    ]
+  },
+  "blog/softwareoptimierung-dpf-off-erfurt/index.html": {
+    "scripts": [
+      "<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){ dataLayer.push(arguments); }\n  gtag('consent', 'default', {\n    'analytics_storage': 'denied',\n    'ad_storage': 'denied',\n    'ad_user_data': 'denied',\n    'ad_personalization': 'denied',\n    'wait_for_update': 500\n  });\n</script>",
+      "<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\nj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n})(window,document,'script','dataLayer','GTM-5PQPZTPC');</script>",
+      "<script src=\"/js/main.js\"></script>"
+    ],
+    "forms": [],
+    "contact": [
+      "<a class=\"btn btn-primary header-cta\" href=\"tel:+491737373574\">\n<svg aria-hidden=\"true\" fill=\"currentColor\" height=\"16\" viewbox=\"0 0 24 24\" width=\"16\"><path d=\"M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.3 1.1L6.6 10.8z\"></path></svg>\n        +49 173 7373574\n      </a>",
+      "<a class=\"btn btn-primary\" href=\"tel:+491737373574\">📞 Anrufen</a>",
+      "<a class=\"btn btn-whatsapp\" href=\"https://wa.me/491737373574\" rel=\"noopener\" target=\"_blank\">💬 WhatsApp</a>"
+    ]
+  },
+  "blog/softwareoptimierung-erfurt/index.html": {
+    "scripts": [
+      "<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){ dataLayer.push(arguments); }\n  gtag('consent', 'default', {\n    'analytics_storage': 'denied',\n    'ad_storage': 'denied',\n    'ad_user_data': 'denied',\n    'ad_personalization': 'denied',\n    'wait_for_update': 500\n  });\n</script>",
+      "<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\nj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n})(window,document,'script','dataLayer','GTM-5PQPZTPC');</script>",
+      "<script src=\"/js/main.js\"></script>"
+    ],
+    "forms": [],
+    "contact": [
+      "<a class=\"btn btn-primary header-cta\" href=\"tel:+491737373574\">\n<svg aria-hidden=\"true\" fill=\"currentColor\" height=\"16\" viewbox=\"0 0 24 24\" width=\"16\"><path d=\"M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.3 1.1L6.6 10.8z\"></path></svg>\n        +49 173 7373574\n      </a>",
+      "<a class=\"btn btn-primary\" href=\"tel:+491737373574\">📞 Anrufen</a>",
+      "<a class=\"btn btn-whatsapp\" href=\"https://wa.me/491737373574\" rel=\"noopener\" target=\"_blank\">💬 WhatsApp</a>"
+    ]
+  },
+  "blog/was-kostet-eine-auto-reinigung/index.html": {
+    "scripts": [
+      "<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){ dataLayer.push(arguments); }\n  gtag('consent', 'default', {\n    'analytics_storage': 'denied',\n    'ad_storage': 'denied',\n    'ad_user_data': 'denied',\n    'ad_personalization': 'denied',\n    'wait_for_update': 500\n  });\n</script>",
+      "<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\nj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n})(window,document,'script','dataLayer','GTM-5PQPZTPC');</script>",
+      "<script src=\"/js/main.js\"></script>"
+    ],
+    "forms": [],
+    "contact": [
+      "<a class=\"btn btn-primary header-cta\" href=\"tel:+491737373574\">\n<svg aria-hidden=\"true\" fill=\"currentColor\" height=\"16\" viewbox=\"0 0 24 24\" width=\"16\"><path d=\"M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.3 1.1L6.6 10.8z\"></path></svg>\n        +49 173 7373574\n      </a>",
+      "<a class=\"btn btn-primary\" href=\"tel:+491737373574\">📞 Anrufen</a>",
+      "<a class=\"btn btn-whatsapp\" href=\"https://wa.me/491737373574\" rel=\"noopener\" target=\"_blank\">💬 WhatsApp</a>"
+    ]
+  },
+  "blog/wie-lange-dauert-adblue-off/index.html": {
+    "scripts": [
+      "<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){ dataLayer.push(arguments); }\n  gtag('consent', 'default', {\n    'analytics_storage': 'denied',\n    'ad_storage': 'denied',\n    'ad_user_data': 'denied',\n    'ad_personalization': 'denied',\n    'wait_for_update': 500\n  });\n</script>",
+      "<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\nj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n})(window,document,'script','dataLayer','GTM-5PQPZTPC');</script>",
+      "<script src=\"/js/main.js\"></script>"
+    ],
+    "forms": [],
+    "contact": [
+      "<a class=\"btn btn-primary header-cta\" href=\"tel:+491737373574\">\n<svg aria-hidden=\"true\" fill=\"currentColor\" height=\"16\" viewbox=\"0 0 24 24\" width=\"16\"><path d=\"M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.3 1.1L6.6 10.8z\"></path></svg>\n        +49 173 7373574\n      </a>",
+      "<a class=\"btn btn-primary\" href=\"tel:+491737373574\">📞 Anrufen</a>",
+      "<a class=\"btn btn-whatsapp\" href=\"https://wa.me/491737373574\" rel=\"noopener\" target=\"_blank\">💬 WhatsApp</a>"
+    ]
+  },
+  "pages/agb.html": {
+    "scripts": [
+      "<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){ dataLayer.push(arguments); }\n  gtag('consent', 'default', {\n    'analytics_storage': 'denied',\n    'ad_storage': 'denied',\n    'ad_user_data': 'denied',\n    'ad_personalization': 'denied',\n    'wait_for_update': 500\n  });\n  </script>",
+      "<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\n  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\n  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n  })(window,document,'script','dataLayer','GTM-5PQPZTPC');</script>",
+      "<script src=\"/js/main.js\"></script>"
+    ],
+    "forms": [],
+    "contact": []
+  },
+  "pages/cookie-einstellungen.html": {
+    "scripts": [
+      "<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){ dataLayer.push(arguments); }\n  gtag('consent', 'default', {\n    'analytics_storage': 'denied',\n    'ad_storage': 'denied',\n    'ad_user_data': 'denied',\n    'ad_personalization': 'denied',\n    'wait_for_update': 500\n  });\n  </script>",
+      "<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\n  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\n  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n  })(window,document,'script','dataLayer','GTM-5PQPZTPC');</script>",
+      "<script src=\"/js/main.js\"></script>"
+    ],
+    "forms": [],
+    "contact": []
+  },
+  "pages/datenschutz.html": {
+    "scripts": [
+      "<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){ dataLayer.push(arguments); }\n  gtag('consent', 'default', {\n    'analytics_storage': 'denied',\n    'ad_storage': 'denied',\n    'ad_user_data': 'denied',\n    'ad_personalization': 'denied',\n    'wait_for_update': 500\n  });\n  </script>",
+      "<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\n  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\n  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n  })(window,document,'script','dataLayer','GTM-5PQPZTPC');</script>",
+      "<script src=\"/js/main.js\"></script>"
+    ],
+    "forms": [],
+    "contact": [
+      "<a href=\"mailto:info@powertech-performance.com\">info@powertech-performance.com</a>"
+    ]
+  },
+  "pages/impressum.html": {
+    "scripts": [
+      "<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){ dataLayer.push(arguments); }\n  gtag('consent', 'default', {\n    'analytics_storage': 'denied',\n    'ad_storage': 'denied',\n    'ad_user_data': 'denied',\n    'ad_personalization': 'denied',\n    'wait_for_update': 500\n  });\n  </script>",
+      "<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\n  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\n  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n  })(window,document,'script','dataLayer','GTM-5PQPZTPC');</script>",
+      "<script src=\"/js/main.js\"></script>"
+    ],
+    "forms": [],
+    "contact": [
+      "<a href=\"tel:+491737373574\">+49 173 7373574</a>",
+      "<a href=\"mailto:info@powertech-performance.com\">info@powertech-performance.com</a>"
+    ]
+  },
+  "pages/kontakt.html": {
+    "scripts": [
+      "<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){ dataLayer.push(arguments); }\n  gtag('consent', 'default', {\n    'analytics_storage': 'denied',\n    'ad_storage': 'denied',\n    'ad_user_data': 'denied',\n    'ad_personalization': 'denied',\n    'wait_for_update': 500\n  });\n  </script>",
+      "<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\n  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\n  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n  })(window,document,'script','dataLayer','GTM-5PQPZTPC');</script>",
+      "<script src=\"/js/main.js\"></script>"
+    ],
+    "forms": [
+      "<form class=\"contact-form lead-form\" data-form-name=\"Kontaktformular Kontaktseite\" id=\"contact-form\" novalidate=\"\">\n<div aria-hidden=\"true\" class=\"form-row honeypot\">\n<label for=\"website\">Website</label>\n<input autocomplete=\"off\" id=\"website\" name=\"website\" tabindex=\"-1\" type=\"text\"/>\n</div>\n<div class=\"form-row\">\n<label for=\"name\">Dein Vor- und Nachname…</label>\n<input id=\"name\" name=\"name\" placeholder=\"Dein Vor- und Nachname…\" required=\"\" type=\"text\"/>\n</div>\n<div class=\"form-row\">\n<label for=\"email\">Deine E-Mail-Adresse…</label>\n<input id=\"email\" name=\"email\" placeholder=\"Deine E-Mail-Adresse…\" required=\"\" type=\"email\"/>\n</div>\n<div class=\"form-row\">\n<label for=\"phone\">Telefonnummer</label>\n<input id=\"phone\" name=\"phone\" placeholder=\"z. B. 0176 1234578\" required=\"\" type=\"tel\"/>\n</div>\n<div class=\"form-row\">\n<label for=\"vehicle\">Fahrzeug</label>\n<input id=\"vehicle\" name=\"vehicle\" placeholder=\"Fahrzeug\" type=\"text\"/>\n</div>\n<div class=\"form-row\">\n<label for=\"message\">Anliegen</label>\n<textarea id=\"message\" name=\"message\" placeholder=\"Schreibe hier dein Anliegen...\" required=\"\" rows=\"5\"></textarea>\n</div>\n<button class=\"btn btn-primary btn-block\" type=\"submit\">Jetzt Anfrage senden →</button>\n<p aria-live=\"polite\" class=\"form-status\" data-form-status=\"\" role=\"status\"></p>\n</form>"
+    ],
+    "contact": [
+      "<a class=\"btn btn-primary header-cta\" href=\"tel:+491737373574\">\n<svg aria-hidden=\"true\" fill=\"currentColor\" height=\"16\" viewbox=\"0 0 24 24\" width=\"16\"><path d=\"M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.3 1.1L6.6 10.8z\"></path></svg>\n        +49 173 7373574\n      </a>",
+      "<a class=\"btn btn-primary btn-lg\" href=\"tel:+491737373574\">📞 Jetzt anrufen</a>",
+      "<a class=\"btn btn-accent btn-lg\" href=\"mailto:info@powertech-performance.com\">✉️ E-Mail schreiben</a>",
+      "<a href=\"tel:+491737373574\">+49 173 7373574</a>",
+      "<a href=\"mailto:info@powertech-performance.com\">info@powertech-performance.com</a>",
+      "<a class=\"btn btn-secondary btn-block\" href=\"tel:+491737373574\">📞 Anrufen</a>",
+      "<a class=\"btn btn-primary btn-block contact-info-email-btn\" href=\"mailto:info@powertech-performance.com\">✉️ E-Mail schreiben</a>"
+    ]
+  },
+  "pages/seitenuebersicht.html": {
+    "scripts": [
+      "<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){ dataLayer.push(arguments); }\n  gtag('consent', 'default', {\n    'analytics_storage': 'denied',\n    'ad_storage': 'denied',\n    'ad_user_data': 'denied',\n    'ad_personalization': 'denied',\n    'wait_for_update': 500\n  });\n  </script>",
+      "<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\n  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\n  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n  })(window,document,'script','dataLayer','GTM-5PQPZTPC');</script>",
+      "<script src=\"/js/main.js\"></script>"
+    ],
+    "forms": [],
+    "contact": [
+      "<a class=\"btn btn-primary header-cta\" href=\"tel:+491737373574\">\n<svg aria-hidden=\"true\" fill=\"currentColor\" height=\"16\" viewbox=\"0 0 24 24\" width=\"16\"><path d=\"M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.3 1.1L6.6 10.8z\"></path></svg>\n        +49 173 7373574\n      </a>"
+    ]
+  }
+}

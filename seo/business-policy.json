@@ -1,0 +1,69 @@
+{
+  "date": "2026-09-07T20:30:36.497165+00:00",
+  "scope": "Fahrzeugsoftware; Autoaufbereitung bleibt bestehen",
+  "allowed_software_services": [
+    "AdBlue-Deaktivierung",
+    "AGR On-Off"
+  ],
+  "not_offered": [
+    "Chiptuning",
+    "Stage 1/2",
+    "Leistungssteigerung",
+    "allgemeine Kennfeldoptimierung",
+    "DPF-Off"
+  ],
+  "removed_urls": {
+    "/chiptuning": "chiptuning.html",
+    "/blog/chiptuning-raum-erfurt/": "blog/chiptuning-raum-erfurt/index.html",
+    "/blog/chiptuning-raumerfurt/": "blog/chiptuning-raumerfurt/index.html",
+    "/blog/softwareoptimierung-erfurt/": "blog/softwareoptimierung-erfurt/index.html",
+    "/blog/softwareoptimierung-dpf-off-erfurt/": "blog/softwareoptimierung-dpf-off-erfurt/index.html"
+  },
+  "removed_routing_rules": {
+    "redirects": [
+      {
+        "source": "/chiptuning.html",
+        "destination": "/chiptuning",
+        "permanent": true
+      },
+      {
+        "source": "/landingpage/chiptuning",
+        "destination": "/chiptuning",
+        "permanent": true
+      },
+      {
+        "source": "/landingpage/chiptuning/(.*)",
+        "destination": "/chiptuning",
+        "permanent": true
+      },
+      {
+        "source": "/chiptuning-raum-erfurt/",
+        "destination": "/blog/chiptuning-raum-erfurt/",
+        "permanent": true
+      },
+      {
+        "source": "/softwareoptimierung-dpf-off-erfurt/",
+        "destination": "/blog/softwareoptimierung-dpf-off-erfurt/",
+        "permanent": true
+      },
+      {
+        "source": "/chiptuning/",
+        "destination": "/chiptuning",
+        "permanent": true
+      },
+      {
+        "source": "/softwareoptimierung-erfurt/",
+        "destination": "/blog/softwareoptimierung-erfurt/",
+        "permanent": true
+      }
+    ],
+    "rewrites": [
+      {
+        "source": "/chiptuning",
+        "destination": "/chiptuning.html"
+      }
+    ]
+  },
+  "publication": "lokal umgesetzt; noch nicht gepusht",
+  "instruction": "Explizite Nutzeranweisung: alle Chiptuning-Seiten löschen; nicht wieder anlegen oder bewerben."
+}

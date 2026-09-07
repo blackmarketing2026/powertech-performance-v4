@@ -78,6 +78,27 @@
       "status": 308
     },
     {
+      "src": "^/chiptuning\\.html$",
+      "headers": {
+        "Location": "/chiptuning"
+      },
+      "status": 308
+    },
+    {
+      "src": "^/landingpage/chiptuning$",
+      "headers": {
+        "Location": "/chiptuning"
+      },
+      "status": 308
+    },
+    {
+      "src": "^/landingpage/chiptuning(?:/(.*))$",
+      "headers": {
+        "Location": "/chiptuning"
+      },
+      "status": 308
+    },
+    {
       "src": "^/eisenach\\.html$",
       "headers": {
         "Location": "/eisenach"
@@ -302,9 +323,30 @@
       "status": 308
     },
     {
+      "src": "^/chiptuning-raum-erfurt/$",
+      "headers": {
+        "Location": "/blog/chiptuning-raum-erfurt/"
+      },
+      "status": 308
+    },
+    {
+      "src": "^/softwareoptimierung-dpf-off-erfurt/$",
+      "headers": {
+        "Location": "/blog/softwareoptimierung-dpf-off-erfurt/"
+      },
+      "status": 308
+    },
+    {
       "src": "^/adblue-deaktivierung/$",
       "headers": {
         "Location": "/blog/adblue-deaktivierung/"
+      },
+      "status": 308
+    },
+    {
+      "src": "^/chiptuning/$",
+      "headers": {
+        "Location": "/chiptuning"
       },
       "status": 308
     },
@@ -340,6 +382,13 @@
       "src": "^/leasing-rueckgabe-aufbereitung-erfurt/$",
       "headers": {
         "Location": "/blog/leasing-rueckgabe-aufbereitung-erfurt/"
+      },
+      "status": 308
+    },
+    {
+      "src": "^/softwareoptimierung-erfurt/$",
+      "headers": {
+        "Location": "/blog/softwareoptimierung-erfurt/"
       },
       "status": 308
     },
@@ -450,6 +499,11 @@
     {
       "src": "^/anfrage-danke$",
       "dest": "/anfrage-danke.html",
+      "check": true
+    },
+    {
+      "src": "^/chiptuning$",
+      "dest": "/chiptuning.html",
       "check": true
     },
     {

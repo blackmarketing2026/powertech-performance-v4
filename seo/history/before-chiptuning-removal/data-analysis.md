@@ -1,5 +1,3 @@
-Aktuelle Leistungskorrektur: 5 Chiptuning-/Leistungsoptimierungsseiten ausdrücklich entfernt. 57 Inhaltsseiten, 49 Sitemap-Ziele. Historische Angaben unten beschreiben den vorherigen Stand, sofern abweichend. Maßgeblich: business-policy.json und evidence.json.
-
 # Datenanalyse und aktueller Datenstand
 
 Stand: 07.09.2026. Originaldateien unverändert. Website-Optimierung lokal umgesetzt, noch nicht veröffentlicht. Vollständiger Ausgangsbericht: [archivierte Datenanalyse](history/2026-09-07-analysis/data-analysis.md).

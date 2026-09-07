@@ -30,4 +30,4 @@ const server=http.createServer((req,res)=>{
   res.writeHead(200,{'Content-Type':mime[path.extname(filename)],'Cache-Control':'no-store','Content-Security-Policy':"default-src 'self' data:; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-src 'none'; form-action 'none'"});
   res.end(req.method==='HEAD'?undefined:fs.readFileSync(filename));
 });
-server.listen(4173,'127.0.0.1',()=>console.log('Read-only preview http://127.0.0.1:4173; external tracking blocked by preview CSP'));
+server.listen(Number(process.env.PORT || 4173),'127.0.0.1',()=>console.log('Read-only preview http://127.0.0.1:4173; external tracking blocked by preview CSP'));

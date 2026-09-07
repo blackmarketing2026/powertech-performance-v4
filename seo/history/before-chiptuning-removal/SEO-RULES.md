@@ -1,25 +1,21 @@
 # Verbindliche SEO-Grundlage für Powertech Performance
 
-## Verbindliche Leistungskorrektur
-
-Kein Chiptuning, keine Stage-1/2-Leistungssteigerung, keine allgemeine Kennfeldoptimierung. Fahrzeugsoftware ausschließlich AdBlue-Deaktivierung und AGR On-Off; Autoaufbereitung bleibt bestehen. `business-policy.json` hat Vorrang vor historischen Empfehlungen. Die fünf dokumentierten Seiten sind ausdrücklich gelöscht und dürfen nicht wiederhergestellt werden.
-
 Stand: 07.09.2026 nach lokaler Umsetzung, noch nicht veröffentlicht. Diese Regeln gelten für weitere SEO-Arbeiten. Aktuelle Nutzeranweisungen haben Vorrang. Die Ausgangsanalyse bleibt unter `history/2026-09-07-analysis/` erhalten.
 
 ## Bestand und Architektur
 
-Statische HTML-Website mit Vercel-Rewrites, Vanilla-JavaScript und Node-Serverless-Formularversand. Bestand: 57 Inhaltsseiten, darunter 35 Blogartikel und eine Blogübersicht, plus eine Google-Verifizierungsdatei. Primärquellen: echte HTML-Dateien, `vercel.json`, `robots.txt` und `sitemap.xml`. Der alte CSV-Index ist eine Arbeitsannahme und darf HTML-Befunde nicht überschreiben.
+Statische HTML-Website mit Vercel-Rewrites, Vanilla-JavaScript und Node-Serverless-Formularversand. Bestand: 62 Inhaltsseiten, darunter 39 Blogartikel und eine Blogübersicht, plus eine Google-Verifizierungsdatei. Primärquellen: echte HTML-Dateien, `vercel.json`, `robots.txt` und `sitemap.xml`. Der alte CSV-Index ist eine Arbeitsannahme und darf HTML-Befunde nicht überschreiben.
 
 Bestehende Pfadfamilien:
 
 - `/` für die Startseite.
-- Endungslose Root-Pfade wie `/adblue-service`, `/luxus-aufbereitung` und Stadtseiten, über 14 explizite Rewrites auf Root-HTML-Dateien.
+- Endungslose Root-Pfade wie `/adblue-service`, `/chiptuning`, `/luxus-aufbereitung` und Stadtseiten, über 15 explizite Rewrites auf Root-HTML-Dateien.
 - `/blog/<slug>/` für die meisten Artikel mit physischer `index.html`.
 - Historische Ausnahme `/blog/wie-oft-auto-aufbereiten-lassen.html` unverändert erhalten.
 - `/pages/<name>.html` für Kontakt-, Rechts- und Funktionsseiten.
 - Bestehende Schreibweise `/glosar` erhalten. Keine automatische Korrektur in `/glossar`.
 
-Der vorhandene Live-Host ist www. Canonicals, URL-Metadaten, JSON-LD und Sitemap sind lokal auf `https://www.powertech-performance.com` vereinheitlicht. Die Host-Konfiguration blieb unverändert. 23 eindeutige historische URL-Varianten erhalten gezielte Redirects, dazu zwei Varianten der neuen Trockeneis-Seite. Insgesamt 62 Redirects und 14 Rewrites. Keine pauschale Slash-Normalisierung: Root- und Artikelpfade unterscheiden sich. `/adblue-deaktivieren/` bleibt bis zur Zielentscheidung offen. Die Veröffentlichung steht aus.
+Der vorhandene Live-Host ist www. Canonicals, URL-Metadaten, JSON-LD und Sitemap sind lokal auf `https://www.powertech-performance.com` vereinheitlicht. Die Host-Konfiguration blieb unverändert. 23 eindeutige historische URL-Varianten erhalten gezielte Redirects, dazu zwei Varianten der neuen Trockeneis-Seite. Insgesamt 67 Redirects und 15 Rewrites. Keine pauschale Slash-Normalisierung: Root- und Artikelpfade unterscheiden sich. `/adblue-deaktivieren/` bleibt bis zur Zielentscheidung offen. Die Veröffentlichung steht aus.
 
 ## Daten und Keyword-Zuordnung
 
@@ -30,8 +26,8 @@ Ein primäres Ziel pro **Suchintention** festlegen; mehrere unterschiedliche Inf
 | Cluster | Primäres Arbeitsziel | Abgrenzung |
 |---|---|---|
 | Autoaufbereitung Erfurt | `/` | Angebot/Orientierung; `/ads` auf Kampagnenrolle prüfen, Tracking unverändert. |
-| Fahrzeugsoftware | `/adblue-service` | Ausschließlich AdBlue-Deaktivierung und AGR On-Off; kein Chiptuning. |
-| AdBlue / SCR | `/adblue-service` | Bestätigtes Angebot: AdBlue-Deaktivierung und AGR On-Off; Voraussetzungen und bestehende Nutzungshinweise beachten. |
+| Chiptuning | `/chiptuning` | Leistungsanfrage; vorhandene Blogartikel nach eigenen Informationsfragen abgrenzen. |
+| AdBlue / SCR | `/adblue-service` | Tatsächlich belegtes Diagnose-/Reparaturangebot; fachlich abgestimmte Ratgeber separat. |
 | Keramikversiegelung | `/luxus-aufbereitung` | Angebot; Haltbarkeit als eigener Informationsbeitrag. |
 | Innenreinigung | `/blog/innenreinigung-auto-in-der-naehe/` | Vorläufig vorhandene Zielseite; Kostenbeitrag hat eigene Informationsintention. |
 | Lackhärte | `/blog/harte-weiche-autolacke-lackaufbereitung/` | Kanonische Hauptfassung; die zwei langen Slugs bleiben erreichbar und referenzieren diese per Canonical. Google-Auswahl noch nicht bestätigt. |
@@ -100,5 +96,3 @@ CSV-Format: UTF-8 mit BOM, Semikolon, korrekt gequotete Felder. JSON enthält di
 ## Externe Grundlagen
 
 Google beschreibt Canonical-Signale als Hinweise; die endgültige Auswahl liegt bei Google: [Canonicalization](https://developers.google.com/search/docs/crawling-indexing/canonicalization). Eine robots-Sperre kann das Auslesen von noindex verhindern: [Noindex](https://developers.google.com/search/docs/crawling-indexing/block-indexing). Interne Erreichbarkeit und konsistente URLs: [SEO für Entwickler](https://developers.google.com/search/docs/fundamentals/get-started-developers). Abgerufen am 07.09.2026.
-
-Bei vorhandenem `business-policy.json` wendet der Reportgenerator abschließend `apply-business-policy.py` an. Es verwirft alte Chiptuning-Empfehlungen. Aktuelle Prüfung: `python seo/tools/validate.py` delegiert auf die Entfernungskontrolle. Der alte Statusgenerator darf den neuen Stand nicht überschreiben.

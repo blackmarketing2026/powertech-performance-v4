@@ -26,11 +26,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.powertech-performance.com/chiptuning</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://www.powertech-performance.com/gotha</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -91,16 +86,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.powertech-performance.com/blog/softwareoptimierung-erfurt/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.powertech-performance.com/blog/chiptuning-raum-erfurt/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://www.powertech-performance.com/blog/adblue-deaktivierung/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -141,11 +126,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.powertech-performance.com/blog/chiptuning-raumerfurt/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://www.powertech-performance.com/blog/adblue-deaktivieren-vor-nachteile-wahrheit/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -172,11 +152,6 @@
   </url>
   <url>
     <loc>https://www.powertech-performance.com/blog/motorwaesche-erfurt-vorteile-kosten/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.powertech-performance.com/blog/softwareoptimierung-dpf-off-erfurt/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

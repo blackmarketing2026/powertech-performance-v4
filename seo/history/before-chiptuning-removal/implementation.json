@@ -75,6 +75,21 @@
       "Konkrete Information und thematische Inhaltslinks ergänzt",
       "Sichtbare Breadcrumbs und passende BreadcrumbList ergänzt"
     ],
+    "blog/chiptuning-raum-erfurt/index.html": [
+      "Canonical-/Metadaten-Host an das bestehende www-Live-Endziel angepasst",
+      "Defekte Startseiten-Sprunglinks auf vorhandene Ziele korrigiert",
+      "Title, Description und Themenausrichtung gezielt optimiert; H1 präzisiert",
+      "Konkrete Information und thematische Inhaltslinks ergänzt",
+      "Sichtbare Breadcrumbs und passende BreadcrumbList ergänzt"
+    ],
+    "blog/chiptuning-raumerfurt/index.html": [
+      "Canonical-/Metadaten-Host an das bestehende www-Live-Endziel angepasst",
+      "Defekte Startseiten-Sprunglinks auf vorhandene Ziele korrigiert",
+      "Title, Description und Themenausrichtung gezielt optimiert; H1 präzisiert",
+      "Artikelinhalt auf eigenständige, sachliche Nutzerfrage ausgerichtet",
+      "Konkrete Information und thematische Inhaltslinks ergänzt",
+      "Sichtbare Breadcrumbs und passende BreadcrumbList ergänzt"
+    ],
     "blog/fahrzeugaufbereitung-erfurt/index.html": [
       "Canonical-/Metadaten-Host an das bestehende www-Live-Endziel angepasst",
       "Defekte Startseiten-Sprunglinks auf vorhandene Ziele korrigiert",
@@ -238,6 +253,19 @@
       "Konkrete Information und thematische Inhaltslinks ergänzt",
       "Sichtbare Breadcrumbs und passende BreadcrumbList ergänzt"
     ],
+    "blog/softwareoptimierung-dpf-off-erfurt/index.html": [
+      "Canonical-/Metadaten-Host an das bestehende www-Live-Endziel angepasst",
+      "Defekte Startseiten-Sprunglinks auf vorhandene Ziele korrigiert",
+      "Konkrete Information und thematische Inhaltslinks ergänzt",
+      "Sichtbare Breadcrumbs und passende BreadcrumbList ergänzt"
+    ],
+    "blog/softwareoptimierung-erfurt/index.html": [
+      "Canonical-/Metadaten-Host an das bestehende www-Live-Endziel angepasst",
+      "Defekte Startseiten-Sprunglinks auf vorhandene Ziele korrigiert",
+      "Title, Description und Themenausrichtung gezielt optimiert; H1 präzisiert",
+      "Konkrete Information und thematische Inhaltslinks ergänzt",
+      "Sichtbare Breadcrumbs und passende BreadcrumbList ergänzt"
+    ],
     "blog/was-kostet-eine-auto-reinigung/index.html": [
       "Canonical-/Metadaten-Host an das bestehende www-Live-Endziel angepasst",
       "Defekte Startseiten-Sprunglinks auf vorhandene Ziele korrigiert",
@@ -258,6 +286,12 @@
       "Title, Description und Themenausrichtung gezielt optimiert",
       "Konkrete Information und thematische Inhaltslinks ergänzt",
       "Sichtbare Breadcrumbs und passende BreadcrumbList ergänzt"
+    ],
+    "chiptuning.html": [
+      "Canonical-/Metadaten-Host an das bestehende www-Live-Endziel angepasst",
+      "Defekte Startseiten-Sprunglinks auf vorhandene Ziele korrigiert",
+      "Title, Description und Themenausrichtung gezielt optimiert; H1 präzisiert",
+      "Ergänzenden Beratungs-/Clusterabschnitt eingefügt"
     ],
     "eisenach.html": [
       "Canonical-/Metadaten-Host an das bestehende www-Live-Endziel angepasst",
@@ -361,11 +395,18 @@
       "description": "Autoaufbereitung in Erfurt: Lackkorrektur, Keramikversiegelung, Innenraum- und Trockeneisreinigung. Fahrzeug und Wunschleistung anfragen."
     },
     "/adblue-service": {
-      "keyword": "AdBlue-Deaktivierung Erfurt",
+      "keyword": "AdBlue Service Erfurt",
       "intent": "kommerziell / lokal",
-      "cluster": "AdBlue / AGR",
+      "cluster": "AdBlue / SCR / DPF",
       "title": "AdBlue-Service Erfurt – Diagnose & Reparatur",
       "description": "AdBlue-Warnmeldung oder Start-Countdown? Powertech Performance in Erfurt prüft Diagnose, Reparatur und Rückrüstung. Fahrzeugdaten zur Beratung senden."
+    },
+    "/chiptuning": {
+      "keyword": "Chiptuning Erfurt",
+      "intent": "kommerziell / lokal",
+      "cluster": "Chiptuning",
+      "title": "Chiptuning Erfurt – Fahrzeugbezogene Beratung",
+      "description": "Chiptuning und Softwareoptimierung in Erfurt: Möglichkeiten, Fahrzeugzustand und Voraussetzungen besprechen. Modell und Motorisierung zur Beratung senden."
     },
     "/luxus-aufbereitung": {
       "keyword": "Keramikversiegelung Erfurt",
@@ -443,6 +484,27 @@
       "cluster": "Innenraumreinigung",
       "title": "Auto-Innenreinigung: Termin richtig vorbereiten",
       "description": "Was vor einer professionellen Auto-Innenreinigung wichtig ist: persönliche Gegenstände, betroffene Materialien und bekannte Flecken für die Beratung vorbereiten."
+    },
+    "/blog/chiptuning-raumerfurt/": {
+      "keyword": "Chiptuning Beratung Fahrzeugdaten",
+      "intent": "informativ",
+      "cluster": "Chiptuning",
+      "title": "Chiptuning-Beratung: Fahrzeugdaten vorbereiten",
+      "description": "Chiptuning-Beratung vorbereiten: Modell, Motorisierung, Softwarestand und bisherige Umbauten zusammenstellen. Technische und formale Voraussetzungen klären."
+    },
+    "/blog/chiptuning-raum-erfurt/": {
+      "keyword": "Chiptuning Risiken und Voraussetzungen",
+      "intent": "informativ",
+      "cluster": "Chiptuning",
+      "title": "Chiptuning: Leistung, Risiken und Nachweise",
+      "description": "Chiptuning einordnen: Leistungswünsche, Fahrzeugzustand, mögliche Risiken und Nachweise vor einer Softwareänderung besprechen. Beratung in Erfurt finden."
+    },
+    "/blog/softwareoptimierung-erfurt/": {
+      "keyword": "Softwareoptimierung Fahrzeug Beratung",
+      "intent": "informativ",
+      "cluster": "Chiptuning",
+      "title": "Softwareoptimierung: Fragen vor einer Änderung",
+      "description": "Softwareoptimierung am Fahrzeug: Ziel, vorhandene Änderungen und Wartungszustand besprechen. Fragen für die Beratung und zum weiteren Vorgehen in Erfurt."
     },
     "/blog/professionelle-keramikversiegelung-erfurt/": {
       "keyword": "Keramikversiegelung Leistungsumfang",
@@ -580,10 +642,31 @@
       "reason": "404 im Export; identischer Artikelslug bzw. reine Slash-Variante eines vorhandenen Ziels"
     },
     {
+      "source": "/chiptuning-raum-erfurt/",
+      "destination": "/blog/chiptuning-raum-erfurt/",
+      "permanent": true,
+      "impressions": 47,
+      "reason": "404 im Export; identischer Artikelslug bzw. reine Slash-Variante eines vorhandenen Ziels"
+    },
+    {
+      "source": "/softwareoptimierung-dpf-off-erfurt/",
+      "destination": "/blog/softwareoptimierung-dpf-off-erfurt/",
+      "permanent": true,
+      "impressions": 33,
+      "reason": "404 im Export; identischer Artikelslug bzw. reine Slash-Variante eines vorhandenen Ziels"
+    },
+    {
       "source": "/adblue-deaktivierung/",
       "destination": "/blog/adblue-deaktivierung/",
       "permanent": true,
       "impressions": 22,
+      "reason": "404 im Export; identischer Artikelslug bzw. reine Slash-Variante eines vorhandenen Ziels"
+    },
+    {
+      "source": "/chiptuning/",
+      "destination": "/chiptuning",
+      "permanent": true,
+      "impressions": 17,
       "reason": "404 im Export; identischer Artikelslug bzw. reine Slash-Variante eines vorhandenen Ziels"
     },
     {
@@ -617,6 +700,13 @@
     {
       "source": "/leasing-rueckgabe-aufbereitung-erfurt/",
       "destination": "/blog/leasing-rueckgabe-aufbereitung-erfurt/",
+      "permanent": true,
+      "impressions": 3,
+      "reason": "404 im Export; identischer Artikelslug bzw. reine Slash-Variante eines vorhandenen Ziels"
+    },
+    {
+      "source": "/softwareoptimierung-erfurt/",
+      "destination": "/blog/softwareoptimierung-erfurt/",
       "permanent": true,
       "impressions": 3,
       "reason": "404 im Export; identischer Artikelslug bzw. reine Slash-Variante eines vorhandenen Ziels"
@@ -720,6 +810,5 @@
   "decision_needed": {
     "/adblue-deaktivieren/": "Zielwechsel von Deaktivierungsangebot zu Diagnose/Reparatur nicht rein technisch eindeutig; fachliche Zielentscheidung erforderlich.",
     "/ads": "Indexierbarkeit bewusst erhalten; separates Ads-/SEO-Ziel benötigt Kampagnenentscheidung."
-  },
-  "business_policy": "business-policy.json"
+  }
 }

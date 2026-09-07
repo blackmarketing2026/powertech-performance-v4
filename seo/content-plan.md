@@ -1,56 +1,30 @@
-# Content-Plan – Stand nach Umsetzung
+# Aktueller Leistungsumfang und Entfernung von Chiptuning
 
-Stand: 07.09.2026. Änderungen lokal, noch nicht veröffentlicht. Ausführliche ursprüngliche Briefings: [archivierter Content-Plan](history/2026-09-07-analysis/content-plan.md).
+Die aktuelle Nutzeranweisung ersetzt alle früheren Chiptuning-Empfehlungen. Powertech bietet **kein Chiptuning**, keine Stage-1/2-Leistungssteigerung und keine allgemeine Kennfeldoptimierung an. Im Bereich Fahrzeugsoftware sind **AdBlue-Deaktivierung und AGR On-Off** bestätigt. Fahrzeugpflege und Autoaufbereitung bleiben bestehen. DPF-Off wird nicht als Angebot übernommen. Historische Exporte bleiben unverändert und begründen keine Wiederherstellung dieser Angebote.
 
-## Neue Leistungsseite: umgesetzt
+## Umgesetzt
 
-- URL: `/trockeneisreinigung`; Datei: `trockeneisreinigung.html`.
-- Hauptkeyword: Trockeneisreinigung Erfurt, redaktionell abgeleitet; keine gemessene Suchanfrage.
-- Nebenkeywords/Themen: Trockeneisreinigung Fahrzeug, Unterboden, sensible Technikbereiche.
-- Intention: Eignung einer tatsächlich angebotenen Fahrzeugreinigung verstehen und anfragen.
-- Begründung: Leistung bereits auf der Startseite vorhanden; eigenständige Methode und kommerzielle Intention. Keine zusätzliche Unterboden- oder Industrie-Seite.
-- H1: Trockeneisreinigung am Fahrzeug in Erfurt.
-- H2: Trocken reinigen; Unterboden und sensible Bereiche; Vergleich mit Motorraumwäsche; Angaben zur Anfrage; Aufwand und Termin; Anfrage in Erfurt.
-- Interne Eingänge: Startseite, Motorraumwäsche-Ratgeber, Blogübersicht und Seitenübersicht.
-- Ausgänge: Motorraumwäsche, Besichtigungstermin, Kontakt, Leistungsübersicht.
-- CTA: vorhandene Kontaktseite, Telefonnummer und WhatsApp-Komponente; kein neuer Formularmechanismus.
-- Technik: endungslose Route über Rewrite, eindeutiger Title/Description, Self-Canonical auf www, Service-JSON-LD, Sitemap.
-- Keine Annahmen über eingesetzte Geräte, Pauschalpreise, feste Dauer, Bewertungen oder garantierte Materialverträglichkeit. Technische Erklärung durch Herstellerquelle gestützt.
-- Priorität: P2. Status: **umgesetzt**, Veröffentlichung ausstehend. Nachfrage und Indexierung danach prüfen.
+Fünf Seiten einschließlich interner Verweise, Blogkarten, Sitemap-Einträge und zugehöriger Routing-Regeln entfernt:
 
-## Felgenpflege-Ratgeber: nicht umgesetzt
+- `/chiptuning`
+- `/blog/chiptuning-raum-erfurt/`
+- `/blog/chiptuning-raumerfurt/`
+- `/blog/softwareoptimierung-erfurt/`
+- `/blog/softwareoptimierung-dpf-off-erfurt/`
 
-- Geplante URL: `/blog/felgenversiegelung-pflege/`; keine Datei erstellt.
-- Hauptkeyword-Hypothese: Felgenversiegelung pflegen.
-- Intention: Nachpflege einer bereits versiegelten Felge.
-- Grund für Zurückstellung: kein Nachfragebeleg; verwendete Produkte und deren Pflegevorgaben unbekannt. Die ursprüngliche Ideenliste war keine Bestätigung dieser Fakten.
-- Voraussetzung für erneute Bearbeitung: tatsächliche Kundennachfragen oder passende Suchdaten sowie freigegebene Pflegehinweise zu den eingesetzten Produkten.
-- Die zwei vorgesehenen internen Links wurden nicht gesetzt; es gibt keine Links ins Leere.
-- Priorität: P3. Status: **nicht umgesetzt + Begründung**.
+Keine Ersatzweiterleitung auf eine thematisch abweichende Leistung. Die alten URLs sollen nach Veröffentlichung 404 liefern. Startseite, Glossar, Blogkategorien und AdBlue-Service benennen AdBlue/AGR. Metadaten und Angebotsdaten des Service wurden angepasst; vorhandene Hinweise zur Nutzung und Zulässigkeit bleiben erhalten. Formulare, Kontaktwege und ausführbare Skripte auf den verbleibenden Seiten bleiben unverändert.
 
-## Bestehende Inhalte: umgesetzt oder teilweise umgesetzt
+## Aktueller Bestand
 
-| Bereich | Umsetzung | Status / Restpunkt |
-|---|---|---|
-| Startseite | Eindeutige H1 und Metadaten, verlinkte Leistungskacheln, Termin-/Glossarzugänge, transparente KI-Beispielbild-Beschreibung | umgesetzt |
-| AdBlue | Drei Ratgeber nach Risiken/Alternativen, Rückrüstung und Zeitbedarf getrennt; Serviceangebot und Blogteaser abgestimmt | umgesetzt; fachlich vor Veröffentlichung betrieblich mitlesen |
-| Chiptuning | Leistungsseite präzisiert, Beratungsdaten als eigene Frage, Risikokontext und Querverweise | teilweise umgesetzt; restliche allgemeine Textüberschneidung mit Suchdaten beurteilen |
-| Keramik | Leistungsziel gestärkt; Ratgeber-Metadaten nach Fragen differenziert, Pflege-/Leistungslinks ergänzt | teilweise umgesetzt; vorhandene Garantie-/Preisangaben nicht unabhängig verifiziert |
-| Innenraum | Leistungsseite und Terminvorbereitung unterschieden; Kostenfaktoren angebunden | teilweise umgesetzt; Wirkung der Abgrenzung beobachten |
-| Leasing | Checkliste erhalten und ergänzt; Rückgabeberatung und Grenzen der Aufbereitung erklärt | teilweise umgesetzt; keine Zusage zur Vermeidung sämtlicher Nachzahlungen |
-| Eigenwäsche / Pflegeintervall / Motorraum | Konkrete Hinweise, klarere Überschriften und passende Leistungen verknüpft | umgesetzt; vorhandene Betreiber-/Produktspezifika nicht als neu verifiziert ausgegeben |
-| Lackhärte | Zwei identische Varianten kanonisch auf eine Hauptfassung bezogen; alle URLs erhalten | umgesetzt, Google-Verarbeitung offen |
-| Stadtseiten | Standort Erfurt deutlich gemacht, keine erfundenen Niederlassungen; Anfragevorbereitung ergänzt | teilweise umgesetzt, echter weiterer Ortsnutzen benötigt Fakten |
+57 Inhaltsseiten plus eine Verifizierungsdatei, 49 Sitemap-Ziele, 969 interne Link-Vorkommen. Kein kaputtes internes Ziel und kein fehlendes Sprungziel. 38 ursprüngliche Linkvorschläge bleiben umgesetzt, vier sind durch die Leistungsentscheidung hinfällig, zwei Felgenpflege-Vorschläge bleiben zurückgestellt. Die Chiptuning-Gruppe K2 entfällt als aktives Kannibalisierungsthema. Keine bestätigte Ranking-Kannibalisierung mangels Query-URL-Zeitreihen.
 
-## Nicht umgesetzte Erweiterungen
+## Weiteres Vorgehen
 
-Keine Industrie-, Graffiti- oder eigenständigen Teile-Reinigungsseiten. Keine zusätzlichen Stadtseiten, keine generischen weiteren Keramik-/Innenreinigungs-Landingpages. Kein Ausbau bloß wegen Keywordvarianten. Neue Preise, Referenzen und Zertifizierungen wurden nicht erfunden.
+- Chiptuning nicht erneut anlegen, optimieren, verlinken oder in Search Console zur Indexierung anmelden.
+- AdBlue-Deaktivierung und AGR On-Off auf `/adblue-service` bündeln; keine zusätzliche nahezu identische Leistungsseite erforderlich.
+- Nach Veröffentlichung Sitemap erneut lesen lassen; die entfernten URLs aus bisherigen Beobachtungslisten streichen.
+- Beobachten: `/adblue-service`, `/`, `/luxus-aufbereitung`, `/trockeneisreinigung`, `/blog/adblue-deaktivieren-vor-nachteile-wahrheit/`.
+- `/ads`-Indexierung und das separate alte Ziel `/adblue-deaktivieren/` bleiben offen. Die Entfernung von Chiptuning ändert diese Entscheidungen nicht.
+- Keyword-/Klick-/CTR-/Positionsdaten fehlen weiterhin. Historische Impressionen bleiben an ihrer ursprünglichen URL, auch bei bewusst entfernten Seiten.
 
-## Benötigt meine Entscheidung
-
-- Nachfolger für `/adblue-deaktivieren/`: Diagnose-/Reparaturservice oder andere inhaltliche Lösung.
-- Organische Rolle von `/ads`: Indexierbarkeit wurde nicht verändert.
-
-## Erfolgskontrolle
-
-Nach Veröffentlichung HTTP-Endziele, Canonicals, Sitemap und noindex-Seiten prüfen. Anschließend Search-Console-Export mit Datum × Suchanfrage × Seite, Klicks, Impressionen und Positionen nutzen. Die vorhandenen Dateien enthalten weder Positionen noch CTR. Neue Messungen getrennt von den historischen 6.493 Seitenimpressionen führen. Alle aktuellen Einzelzuordnungen stehen in `keyword-map.csv`.
+Vorheriger Umsetzungsstand: `history/before-chiptuning-removal/`. Aktuelle technische Details und Zuordnungen: `evidence.json`, `seo-map.csv`, `keyword-map.csv`, `internal-links.csv`. Status der Veröffentlichung: siehe `business-policy.json`.
