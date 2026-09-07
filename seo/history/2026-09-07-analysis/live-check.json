@@ -1,0 +1,1742 @@
+{
+  "checked_at": "2026-09-07T19:50:40.023538+00:00",
+  "results": [
+    {
+      "url": "https://powertech-performance.com/",
+      "status": 200,
+      "final_url": "https://www.powertech-performance.com/",
+      "chain": [
+        {
+          "url": "https://powertech-performance.com/",
+          "status": 308,
+          "location": "https://www.powertech-performance.com/"
+        }
+      ],
+      "canonical": [
+        "https://powertech-performance.com/"
+      ],
+      "title": "Autoaufbereitung Erfurt – Fahrzeugpflege & Werterhalt | Powertech Performance",
+      "h1": [
+        "Autoaufbereitung mit Tiefenglanz."
+      ],
+      "robots": [],
+      "x_robots": ""
+    },
+    {
+      "url": "https://powertech-performance.com/adblue-service",
+      "status": 200,
+      "final_url": "https://www.powertech-performance.com/adblue-service",
+      "chain": [
+        {
+          "url": "https://powertech-performance.com/adblue-service",
+          "status": 308,
+          "location": "https://www.powertech-performance.com/adblue-service"
+        }
+      ],
+      "canonical": [
+        "https://powertech-performance.com/adblue-service"
+      ],
+      "title": "AdBlue-Service Erfurt | Diagnose, Reparatur & zulässige Lösungen",
+      "h1": [
+        "AdBlue-Fehler schnell klären lassen"
+      ],
+      "robots": [],
+      "x_robots": ""
+    },
+    {
+      "url": "https://powertech-performance.com/ads",
+      "status": 200,
+      "final_url": "https://www.powertech-performance.com/ads",
+      "chain": [
+        {
+          "url": "https://powertech-performance.com/ads",
+          "status": 308,
+          "location": "https://www.powertech-performance.com/ads"
+        }
+      ],
+      "canonical": [
+        "https://powertech-performance.com/ads"
+      ],
+      "title": "Autoaufbereiter in Erfurt | Powertech Performance",
+      "h1": [
+        "Autoaufbereiter in Erfurt"
+      ],
+      "robots": [],
+      "x_robots": ""
+    },
+    {
+      "url": "https://powertech-performance.com/anfrage-danke",
+      "status": 200,
+      "final_url": "https://www.powertech-performance.com/anfrage-danke",
+      "chain": [
+        {
+          "url": "https://powertech-performance.com/anfrage-danke",
+          "status": 308,
+          "location": "https://www.powertech-performance.com/anfrage-danke"
+        }
+      ],
+      "canonical": [
+        "https://powertech-performance.com/anfrage-danke"
+      ],
+      "title": "Vielen Dank für Ihre Anfrage | Powertech Performance",
+      "h1": [
+        "Danke für deine Anfrage!"
+      ],
+      "robots": [
+        "noindex"
+      ],
+      "x_robots": ""
+    },
+    {
+      "url": "https://powertech-performance.com/blog/",
+      "status": 200,
+      "final_url": "https://www.powertech-performance.com/blog/",
+      "chain": [
+        {
+          "url": "https://powertech-performance.com/blog/",
+          "status": 308,
+          "location": "https://www.powertech-performance.com/blog/"
+        }
+      ],
+      "canonical": [
+        "https://powertech-performance.com/blog/"
+      ],
+      "title": "Blog – Autoaufbereitung & Fahrzeugpflege | Powertech Performance",
+      "h1": [
+        "Blog"
+      ],
+      "robots": [],
+      "x_robots": ""
+    },
+    {
+      "url": "https://powertech-performance.com/blog/1-step-2-step-oder-lackkorrektur-lackaufbereitung-im-vergleich/",
+      "status": 200,
+      "final_url": "https://www.powertech-performance.com/blog/1-step-2-step-oder-lackkorrektur-lackaufbereitung-im-vergleich/",
+      "chain": [
+        {
+          "url": "https://powertech-performance.com/blog/1-step-2-step-oder-lackkorrektur-lackaufbereitung-im-vergleich/",
+          "status": 308,
+          "location": "https://www.powertech-performance.com/blog/1-step-2-step-oder-lackkorrektur-lackaufbereitung-im-vergleich/"
+        }
+      ],
+      "canonical": [
+        "https://powertech-performance.com/blog/1-step-2-step-oder-lackkorrektur-lackaufbereitung-im-vergleich/"
+      ],
+      "title": "1-Step, 2-Step oder Lackkorrektur? Lackaufbereitung im Vergleich | Powertech Performance",
+      "h1": [
+        "1-Step, 2-Step oder Lackkorrektur? Lackaufbereitung im Vergleich"
+      ],
+      "robots": [],
+      "x_robots": ""
+    },
+    {
+      "url": "https://powertech-performance.com/blog/1-step-politur-erklaert/",
+      "status": 200,
+      "final_url": "https://www.powertech-performance.com/blog/1-step-politur-erklaert/",
+      "chain": [
+        {
+          "url": "https://powertech-performance.com/blog/1-step-politur-erklaert/",
+          "status": 308,
+          "location": "https://www.powertech-performance.com/blog/1-step-politur-erklaert/"
+        }
+      ],
+      "canonical": [
+        "https://powertech-performance.com/blog/1-step-politur-erklaert/"
+      ],
+      "title": "1-Step Politur erklärt – Glanz für den Autolack | Powertech Performance",
+      "h1": [
+        "1-Step Politur erklärt – Glanz für den Autolack"
+      ],
+      "robots": [],
+      "x_robots": ""
+    },
+    {
+      "url": "https://powertech-performance.com/blog/adblue-deaktivieren-vor-nachteile-wahrheit/",
+      "status": 200,
+      "final_url": "https://www.powertech-performance.com/blog/adblue-deaktivieren-vor-nachteile-wahrheit/",
+      "chain": [
+        {
+          "url": "https://powertech-performance.com/blog/adblue-deaktivieren-vor-nachteile-wahrheit/",
+          "status": 308,
+          "location": "https://www.powertech-performance.com/blog/adblue-deaktivieren-vor-nachteile-wahrheit/"
+        }
+      ],
+      "canonical": [
+        "https://powertech-performance.com/blog/adblue-deaktivieren-vor-nachteile-wahrheit/"
+      ],
+      "title": "Adblue deaktivieren vor und nachteile | Powertech Performance",
+      "h1": [
+        "Adblue deaktivieren vor und nachteile"
+      ],
+      "robots": [],
+      "x_robots": ""
+    },
+    {
+      "url": "https://powertech-performance.com/blog/adblue-deaktivierung/",
+      "status": 200,
+      "final_url": "https://www.powertech-performance.com/blog/adblue-deaktivierung/",
+      "chain": [
+        {
+          "url": "https://powertech-performance.com/blog/adblue-deaktivierung/",
+          "status": 308,
+          "location": "https://www.powertech-performance.com/blog/adblue-deaktivierung/"
+        }
+      ],
+      "canonical": [
+        "https://powertech-performance.com/blog/adblue-deaktivierung/"
+      ],
+      "title": "AdBlue Deaktivierung – professionelle Lösung für Diesel-Fahrzeuge | Powertech Performance",
+      "h1": [
+        "AdBlue Deaktivierung – professionelle Lösung für Diesel-Fahrzeuge"
+      ],
+      "robots": [],
+      "x_robots": ""
+    },
+    {
+      "url": "https://powertech-performance.com/blog/audi-r8-aufbereitung-erfurt-keramikversiegelung/",
+      "status": 200,
+      "final_url": "https://www.powertech-performance.com/blog/audi-r8-aufbereitung-erfurt-keramikversiegelung/",
+      "chain": [
+        {
+          "url": "https://powertech-performance.com/blog/audi-r8-aufbereitung-erfurt-keramikversiegelung/",
+          "status": 308,
+          "location": "https://www.powertech-performance.com/blog/audi-r8-aufbereitung-erfurt-keramikversiegelung/"
+        }
+      ],
+      "canonical": [
+        "https://powertech-performance.com/blog/audi-r8-aufbereitung-erfurt-keramikversiegelung/"
+      ],
+      "title": "Audi R8 Aufbereitung in Erfurt: High-End-Pflege & Werterhalt auf höchstem Niveau | Powertech Performance",
+      "h1": [
+        "Audi R8 Aufbereitung in Erfurt: High-End-Pflege & Werterhalt auf höchstem Niveau"
+      ],
+      "robots": [],
+      "x_robots": ""
+    },
+    {
+      "url": "https://powertech-performance.com/blog/aufbereiter-vs-detailer-unterschied/",
+      "status": 200,
+      "final_url": "https://www.powertech-performance.com/blog/aufbereiter-vs-detailer-unterschied/",
+      "chain": [
+        {
+          "url": "https://powertech-performance.com/blog/aufbereiter-vs-detailer-unterschied/",
+          "status": 308,
+          "location": "https://www.powertech-performance.com/blog/aufbereiter-vs-detailer-unterschied/"
+        }
+      ],
+      "canonical": [
+        "https://powertech-performance.com/blog/aufbereiter-vs-detailer-unterschied/"
+      ],
+      "title": "Aufbereiter vs. Detailer: Wo liegt der wahre Unterschied für Ihr Fahrzeug? | Powertech Performance",
+      "h1": [
+        "Aufbereiter vs. Detailer: Wo liegt der wahre Unterschied für Ihr Fahrzeug?"
+      ],
+      "robots": [],
+      "x_robots": ""
+    },
+    {
+      "url": "https://powertech-performance.com/blog/auto-selber-waschen-erfurt/",
+      "status": 200,
+      "final_url": "https://www.powertech-performance.com/blog/auto-selber-waschen-erfurt/",
+      "chain": [
+        {
+          "url": "https://powertech-performance.com/blog/auto-selber-waschen-erfurt/",
+          "status": 308,
+          "location": "https://www.powertech-performance.com/blog/auto-selber-waschen-erfurt/"
+        }
+      ],
+      "canonical": [
+        "https://powertech-performance.com/blog/auto-selber-waschen-erfurt/"
+      ],
+      "title": "🚗 Auto selber waschen in Erfurt – Hier findest du SB-Waschboxe | Powertech Performance",
+      "h1": [
+        "🚗 Auto selber waschen in Erfurt – Hier findest du SB-Waschboxe"
+      ],
+      "robots": [],
+      "x_robots": ""
+    },
+    {
+      "url": "https://powertech-performance.com/blog/blog-keramikversiegelung/",
+      "status": 200,
+      "final_url": "https://www.powertech-performance.com/blog/blog-keramikversiegelung/",
+      "chain": [
+        {
+          "url": "https://powertech-performance.com/blog/blog-keramikversiegelung/",
+          "status": 308,
+          "location": "https://www.powertech-performance.com/blog/blog-keramikversiegelung/"
+        }
+      ],
+      "canonical": [
+        "https://powertech-performance.com/blog/blog-keramikversiegelung/"
+      ],
+      "title": "Keramikversiegelung fürs Auto: Glanz, Schutz & Werterhalt | Powertech Performance",
+      "h1": [
+        "Keramikversiegelung fürs Auto: Glanz, Schutz & Werterhalt"
+      ],
+      "robots": [],
+      "x_robots": ""
+    },
+    {
+      "url": "https://powertech-performance.com/blog/boot-aufbereitung-keramikversiegelung-marine/",
+      "status": 200,
+      "final_url": "https://www.powertech-performance.com/blog/boot-aufbereitung-keramikversiegelung-marine/",
+      "chain": [
+        {
+          "url": "https://powertech-performance.com/blog/boot-aufbereitung-keramikversiegelung-marine/",
+          "status": 308,
+          "location": "https://www.powertech-performance.com/blog/boot-aufbereitung-keramikversiegelung-marine/"
+        }
+      ],
+      "canonical": [
+        "https://powertech-performance.com/blog/boot-aufbereitung-keramikversiegelung-marine/"
+      ],
+      "title": "Yacht- & Boot-Versiegelung: Maximaler Schutz gegen Salzwasser & Verwitterung | Powertech Performance",
+      "h1": [
+        "Yacht- & Boot-Versiegelung: Maximaler Schutz gegen Salzwasser & Verwitterung"
+      ],
+      "robots": [],
+      "x_robots": ""
+    },
+    {
+      "url": "https://powertech-performance.com/blog/chiptuning-raum-erfurt/",
+      "status": 200,
+      "final_url": "https://www.powertech-performance.com/blog/chiptuning-raum-erfurt/",
+      "chain": [
+        {
+          "url": "https://powertech-performance.com/blog/chiptuning-raum-erfurt/",
+          "status": 308,
+          "location": "https://www.powertech-performance.com/blog/chiptuning-raum-erfurt/"
+        }
+      ],
+      "canonical": [
+        "https://powertech-performance.com/blog/chiptuning-raum-erfurt/"
+      ],
+      "title": "Chiptuning Raum Erfurt – Mehr Leistung und Fahrspaß mit PowerTech Performance | Powertech Performance",
+      "h1": [
+        "Chiptuning Raum Erfurt – Mehr Leistung und Fahrspaß mit PowerTech Performance"
+      ],
+      "robots": [],
+      "x_robots": ""
+    },
+    {
+      "url": "https://powertech-performance.com/blog/chiptuning-raumerfurt/",
+      "status": 200,
+      "final_url": "https://www.powertech-performance.com/blog/chiptuning-raumerfurt/",
+      "chain": [
+        {
+          "url": "https://powertech-performance.com/blog/chiptuning-raumerfurt/",
+          "status": 308,
+          "location": "https://www.powertech-performance.com/blog/chiptuning-raumerfurt/"
+        }
+      ],
+      "canonical": [
+        "https://powertech-performance.com/blog/chiptuning-raumerfurt/"
+      ],
+      "title": "Chiptuning im Raum Erfurt: Entfesseln Sie die wahre Leistung Ihres Fahrzeugs | Powertech Performance",
+      "h1": [
+        "Chiptuning im Raum Erfurt: Entfesseln Sie die wahre Leistung Ihres Fahrzeugs"
+      ],
+      "robots": [],
+      "x_robots": ""
+    },
+    {
+      "url": "https://powertech-performance.com/blog/fahrzeugaufbereitung-erfurt/",
+      "status": 200,
+      "final_url": "https://www.powertech-performance.com/blog/fahrzeugaufbereitung-erfurt/",
+      "chain": [
+        {
+          "url": "https://powertech-performance.com/blog/fahrzeugaufbereitung-erfurt/",
+          "status": 308,
+          "location": "https://www.powertech-performance.com/blog/fahrzeugaufbereitung-erfurt/"
+        }
+      ],
+      "canonical": [
+        "https://powertech-performance.com/blog/fahrzeugaufbereitung-erfurt/"
+      ],
+      "title": "Fahrzeugaufbereitung Erfurt: Glänzendes Auto mit PowerTech Performance | Powertech Performance",
+      "h1": [
+        "Fahrzeugaufbereitung Erfurt: Glänzendes Auto mit PowerTech Performance"
+      ],
+      "robots": [],
+      "x_robots": ""
+    },
+    {
+      "url": "https://powertech-performance.com/blog/flugzeugaufbereitung-innenreinigung-erfurt/",
+      "status": 200,
+      "final_url": "https://www.powertech-performance.com/blog/flugzeugaufbereitung-innenreinigung-erfurt/",
+      "chain": [
+        {
+          "url": "https://powertech-performance.com/blog/flugzeugaufbereitung-innenreinigung-erfurt/",
+          "status": 308,
+          "location": "https://www.powertech-performance.com/blog/flugzeugaufbereitung-innenreinigung-erfurt/"
+        }
+      ],
+      "canonical": [
+        "https://powertech-performance.com/blog/flugzeugaufbereitung-innenreinigung-erfurt/"
+      ],
+      "title": "Flugzeugaufbereitung & Innenreinigung Erfurt | PowerTech Performance | Powertech Performance",
+      "h1": [
+        "Flugzeugaufbereitung & Innenreinigung Erfurt | PowerTech Performance"
+      ],
+      "robots": [],
+      "x_robots": ""
+    },
+    {
+      "url": "https://powertech-performance.com/blog/haltbarkeit-keramikversiegelung-lackschutz/",
+      "status": 200,
+      "final_url": "https://www.powertech-performance.com/blog/haltbarkeit-keramikversiegelung-lackschutz/",
+      "chain": [
+        {
+          "url": "https://powertech-performance.com/blog/haltbarkeit-keramikversiegelung-lackschutz/",
+          "status": 308,
+          "location": "https://www.powertech-performance.com/blog/haltbarkeit-keramikversiegelung-lackschutz/"
+        }
+      ],
+      "canonical": [
+        "https://powertech-performance.com/blog/haltbarkeit-keramikversiegelung-lackschutz/"
+      ],
+      "title": "Haltbarkeit einer Keramikversiegelung: Wie lange hält der Lackschutz wirklich? | Powertech Performance",
+      "h1": [
+        "Haltbarkeit einer Keramikversiegelung: Wie lange hält der Lackschutz wirklich?"
+      ],
+      "robots": [],
+      "x_robots": ""
+    },
+    {
+      "url": "https://powertech-performance.com/blog/harte-und-weiche-autolacke-der-geheime-schlssel-zur-perfekten-lackaufbereitung-2/",
+      "status": 200,
+      "final_url": "https://www.powertech-performance.com/blog/harte-und-weiche-autolacke-der-geheime-schlssel-zur-perfekten-lackaufbereitung-2/",
+      "chain": [
+        {
+          "url": "https://powertech-performance.com/blog/harte-und-weiche-autolacke-der-geheime-schlssel-zur-perfekten-lackaufbereitung-2/",
+          "status": 308,
+          "location": "https://www.powertech-performance.com/blog/harte-und-weiche-autolacke-der-geheime-schlssel-zur-perfekten-lackaufbereitung-2/"
+        }
+      ],
+      "canonical": [
+        "https://powertech-performance.com/blog/harte-und-weiche-autolacke-der-geheime-schlssel-zur-perfekten-lackaufbereitung-2/"
+      ],
+      "title": "Harte und weiche Autolacke: Der geheime Schlüssel zur perfekten Lackaufbereitung | Powertech Performance",
+      "h1": [
+        "Harte und weiche Autolacke: Der geheime Schlüssel zur perfekten Lackaufbereitung"
+      ],
+      "robots": [],
+      "x_robots": ""
+    },
+    {
+      "url": "https://powertech-performance.com/blog/harte-und-weiche-autolacke-der-geheime-schlssel-zur-perfekten-lackaufbereitung/",
+      "status": 200,
+      "final_url": "https://www.powertech-performance.com/blog/harte-und-weiche-autolacke-der-geheime-schlssel-zur-perfekten-lackaufbereitung/",
+      "chain": [
+        {
+          "url": "https://powertech-performance.com/blog/harte-und-weiche-autolacke-der-geheime-schlssel-zur-perfekten-lackaufbereitung/",
+          "status": 308,
+          "location": "https://www.powertech-performance.com/blog/harte-und-weiche-autolacke-der-geheime-schlssel-zur-perfekten-lackaufbereitung/"
+        }
+      ],
+      "canonical": [
+        "https://powertech-performance.com/blog/harte-und-weiche-autolacke-der-geheime-schlssel-zur-perfekten-lackaufbereitung/"
+      ],
+      "title": "Harte und weiche Autolacke: Der geheime Schlüssel zur perfekten Lackaufbereitung | Powertech Performance",
+      "h1": [
+        "Harte und weiche Autolacke: Der geheime Schlüssel zur perfekten Lackaufbereitung"
+      ],
+      "robots": [],
+      "x_robots": ""
+    },
+    {
+      "url": "https://powertech-performance.com/blog/harte-weiche-autolacke-lackaufbereitung/",
+      "status": 200,
+      "final_url": "https://www.powertech-performance.com/blog/harte-weiche-autolacke-lackaufbereitung/",
+      "chain": [
+        {
+          "url": "https://powertech-performance.com/blog/harte-weiche-autolacke-lackaufbereitung/",
+          "status": 308,
+          "location": "https://www.powertech-performance.com/blog/harte-weiche-autolacke-lackaufbereitung/"
+        }
+      ],
+      "canonical": [
+        "https://powertech-performance.com/blog/harte-weiche-autolacke-lackaufbereitung/"
+      ],
+      "title": "Harte und weiche Autolacke: Der geheime Schlüssel zur perfekten Lackaufbereitung | Powertech Performance",
+      "h1": [
+        "Harte und weiche Autolacke: Der geheime Schlüssel zur perfekten Lackaufbereitung"
+      ],
+      "robots": [],
+      "x_robots": ""
+    },
+    {
+      "url": "https://powertech-performance.com/blog/innenreinigung-auto-in-der-naehe/",
+      "status": 200,
+      "final_url": "https://www.powertech-performance.com/blog/innenreinigung-auto-in-der-naehe/",
+      "chain": [
+        {
+          "url": "https://powertech-performance.com/blog/innenreinigung-auto-in-der-naehe/",
+          "status": 308,
+          "location": "https://www.powertech-performance.com/blog/innenreinigung-auto-in-der-naehe/"
+        }
+      ],
+      "canonical": [
+        "https://powertech-performance.com/blog/innenreinigung-auto-in-der-naehe/"
+      ],
+      "title": "Professionelle Innenreinigung Auto in der Nähe bei PowerTech Performance | Powertech Performance",
+      "h1": [
+        "Professionelle Innenreinigung Auto in der Nähe bei PowerTech Performance"
+      ],
+      "robots": [],
+      "x_robots": ""
+    },
+    {
+      "url": "https://powertech-performance.com/blog/keramik-fuer-auto-erfurt-vorteile-haltbarkeit/",
+      "status": 200,
+      "final_url": "https://www.powertech-performance.com/blog/keramik-fuer-auto-erfurt-vorteile-haltbarkeit/",
+      "chain": [
+        {
+          "url": "https://powertech-performance.com/blog/keramik-fuer-auto-erfurt-vorteile-haltbarkeit/",
+          "status": 308,
+          "location": "https://www.powertech-performance.com/blog/keramik-fuer-auto-erfurt-vorteile-haltbarkeit/"
+        }
+      ],
+      "canonical": [
+        "https://powertech-performance.com/blog/keramik-fuer-auto-erfurt-vorteile-haltbarkeit/"
+      ],
+      "title": "Keramik für Auto in Erfurt | Bis 50.000km Schutz & Glanz | Powertech Performance",
+      "h1": [
+        "Keramik für Auto in Erfurt | Bis 50.000km Schutz & Glanz"
+      ],
+      "robots": [],
+      "x_robots": ""
+    },
+    {
+      "url": "https://powertech-performance.com/blog/keramikversiegelung-erfurt-high-end-lackschutz-powertech-performance/",
+      "status": 200,
+      "final_url": "https://www.powertech-performance.com/blog/keramikversiegelung-erfurt-high-end-lackschutz-powertech-performance/",
+      "chain": [
+        {
+          "url": "https://powertech-performance.com/blog/keramikversiegelung-erfurt-high-end-lackschutz-powertech-performance/",
+          "status": 308,
+          "location": "https://www.powertech-performance.com/blog/keramikversiegelung-erfurt-high-end-lackschutz-powertech-performance/"
+        }
+      ],
+      "canonical": [
+        "https://powertech-performance.com/blog/keramikversiegelung-erfurt-high-end-lackschutz-powertech-performance/"
+      ],
+      "title": "Keramikversiegelung in Erfurt: Exklusiver Lackschutz für maximalen Glanz | Powertech Performance",
+      "h1": [
+        "Keramikversiegelung in Erfurt: Exklusiver Lackschutz für maximalen Glanz"
+      ],
+      "robots": [],
+      "x_robots": ""
+    },
+    {
+      "url": "https://powertech-performance.com/blog/keramikversiegelung-profi-lackschutz/",
+      "status": 200,
+      "final_url": "https://www.powertech-performance.com/blog/keramikversiegelung-profi-lackschutz/",
+      "chain": [
+        {
+          "url": "https://powertech-performance.com/blog/keramikversiegelung-profi-lackschutz/",
+          "status": 308,
+          "location": "https://www.powertech-performance.com/blog/keramikversiegelung-profi-lackschutz/"
+        }
+      ],
+      "canonical": [
+        "https://powertech-performance.com/blog/keramikversiegelung-profi-lackschutz/"
+      ],
+      "title": "Keramikversiegelung vom Profi: Warum dein Fahrzeug mehr verdient als nur Standard-Pflege | Powertech Performance",
+      "h1": [
+        "Keramikversiegelung vom Profi: Warum dein Fahrzeug mehr verdient als nur Standard-Pflege"
+      ],
+      "robots": [],
+      "x_robots": ""
+    },
+    {
+      "url": "https://powertech-performance.com/blog/lackierung-oldtimer-erfurt-lackaufbereitung-keramik/",
+      "status": 200,
+      "final_url": "https://www.powertech-performance.com/blog/lackierung-oldtimer-erfurt-lackaufbereitung-keramik/",
+      "chain": [
+        {
+          "url": "https://powertech-performance.com/blog/lackierung-oldtimer-erfurt-lackaufbereitung-keramik/",
+          "status": 308,
+          "location": "https://www.powertech-performance.com/blog/lackierung-oldtimer-erfurt-lackaufbereitung-keramik/"
+        }
+      ],
+      "canonical": [
+        "https://powertech-performance.com/blog/lackierung-oldtimer-erfurt-lackaufbereitung-keramik/"
+      ],
+      "title": "Was Ihr Oldtimer Ihnen verschweigt: Warum eine einfache Politur Ihren Klassiker ruinieren kann | Powertech Performance",
+      "h1": [
+        "Was Ihr Oldtimer Ihnen verschweigt: Warum eine einfache Politur Ihren Klassiker ruinieren kann"
+      ],
+      "robots": [],
+      "x_robots": ""
+    },
+    {
+      "url": "https://powertech-performance.com/blog/lackkorrektur-wofuer-gut-werterhalt/",
+      "status": 200,
+      "final_url": "https://www.powertech-performance.com/blog/lackkorrektur-wofuer-gut-werterhalt/",
+      "chain": [
+        {
+          "url": "https://powertech-performance.com/blog/lackkorrektur-wofuer-gut-werterhalt/",
+          "status": 308,
+          "location": "https://www.powertech-performance.com/blog/lackkorrektur-wofuer-gut-werterhalt/"
+        }
+      ],
+      "canonical": [
+        "https://powertech-performance.com/blog/lackkorrektur-wofuer-gut-werterhalt/"
+      ],
+      "title": "Lackkorrektur: Wofür ist das gut? | PowerTech Performance | Powertech Performance",
+      "h1": [
+        "Lackkorrektur: Wofür ist das gut? | PowerTech Performance"
+      ],
+      "robots": [],
+      "x_robots": ""
+    },
+    {
+      "url": "https://powertech-performance.com/blog/leasing-rueckgabe-aufbereitung-erfurt/",
+      "status": 200,
+      "final_url": "https://www.powertech-performance.com/blog/leasing-rueckgabe-aufbereitung-erfurt/",
+      "chain": [
+        {
+          "url": "https://powertech-performance.com/blog/leasing-rueckgabe-aufbereitung-erfurt/",
+          "status": 308,
+          "location": "https://www.powertech-performance.com/blog/leasing-rueckgabe-aufbereitung-erfurt/"
+        }
+      ],
+      "canonical": [
+        "https://powertech-performance.com/blog/leasing-rueckgabe-aufbereitung-erfurt/"
+      ],
+      "title": "Leasing-Rückgabe: So vermeiden Sie hohe Nachzahlungen | Powertech Performance",
+      "h1": [
+        "Leasing-Rückgabe: So vermeiden Sie hohe Nachzahlungen"
+      ],
+      "robots": [],
+      "x_robots": ""
+    },
+    {
+      "url": "https://powertech-performance.com/blog/leasingauto-aufbereiten/",
+      "status": 200,
+      "final_url": "https://www.powertech-performance.com/blog/leasingauto-aufbereiten/",
+      "chain": [
+        {
+          "url": "https://powertech-performance.com/blog/leasingauto-aufbereiten/",
+          "status": 308,
+          "location": "https://www.powertech-performance.com/blog/leasingauto-aufbereiten/"
+        }
+      ],
+      "canonical": [
+        "https://powertech-performance.com/blog/leasingauto-aufbereiten/"
+      ],
+      "title": "Leasingauto zurückgeben – warum sich eine professionelle Aufbereitung wirklich lohnt | Powertech Performance",
+      "h1": [
+        "Leasingauto zurückgeben – warum sich eine professionelle Aufbereitung wirklich lohnt"
+      ],
+      "robots": [],
+      "x_robots": ""
+    },
+    {
+      "url": "https://powertech-performance.com/blog/leasingrueckgabe-checkliste/",
+      "status": 200,
+      "final_url": "https://www.powertech-performance.com/blog/leasingrueckgabe-checkliste/",
+      "chain": [
+        {
+          "url": "https://powertech-performance.com/blog/leasingrueckgabe-checkliste/",
+          "status": 308,
+          "location": "https://www.powertech-performance.com/blog/leasingrueckgabe-checkliste/"
+        }
+      ],
+      "canonical": [
+        "https://powertech-performance.com/blog/leasingrueckgabe-checkliste/"
+      ],
+      "title": "Leasingrückgabe Checkliste – So vermeiden Sie unnötige Kosten | Powertech Performance",
+      "h1": [
+        "Leasingrückgabe Checkliste – So vermeiden Sie unnötige Kosten"
+      ],
+      "robots": [],
+      "x_robots": ""
+    },
+    {
+      "url": "https://powertech-performance.com/blog/motorradaufbereitung-keramikversiegelung-experte/",
+      "status": 200,
+      "final_url": "https://www.powertech-performance.com/blog/motorradaufbereitung-keramikversiegelung-experte/",
+      "chain": [
+        {
+          "url": "https://powertech-performance.com/blog/motorradaufbereitung-keramikversiegelung-experte/",
+          "status": 308,
+          "location": "https://www.powertech-performance.com/blog/motorradaufbereitung-keramikversiegelung-experte/"
+        }
+      ],
+      "canonical": [
+        "https://powertech-performance.com/blog/motorradaufbereitung-keramikversiegelung-experte/"
+      ],
+      "title": "Motorradaufbereitung & Keramikschutz | Powertech Performance Benjamin | Powertech Performance",
+      "h1": [
+        "Motorradaufbereitung & Keramikschutz | Powertech Performance Benjamin"
+      ],
+      "robots": [],
+      "x_robots": ""
+    },
+    {
+      "url": "https://powertech-performance.com/blog/motorwaesche-erfurt-vorteile-kosten/",
+      "status": 200,
+      "final_url": "https://www.powertech-performance.com/blog/motorwaesche-erfurt-vorteile-kosten/",
+      "chain": [
+        {
+          "url": "https://powertech-performance.com/blog/motorwaesche-erfurt-vorteile-kosten/",
+          "status": 308,
+          "location": "https://www.powertech-performance.com/blog/motorwaesche-erfurt-vorteile-kosten/"
+        }
+      ],
+      "canonical": [
+        "https://powertech-performance.com/blog/motorwaesche-erfurt-vorteile-kosten/"
+      ],
+      "title": "Motorwäsche | Powertech Performance",
+      "h1": [
+        "Motorwäsche"
+      ],
+      "robots": [],
+      "x_robots": ""
+    },
+    {
+      "url": "https://powertech-performance.com/blog/oldtimer-aufbereitung-erfurt-wertschonende-pflege/",
+      "status": 200,
+      "final_url": "https://www.powertech-performance.com/blog/oldtimer-aufbereitung-erfurt-wertschonende-pflege/",
+      "chain": [
+        {
+          "url": "https://powertech-performance.com/blog/oldtimer-aufbereitung-erfurt-wertschonende-pflege/",
+          "status": 308,
+          "location": "https://www.powertech-performance.com/blog/oldtimer-aufbereitung-erfurt-wertschonende-pflege/"
+        }
+      ],
+      "canonical": [
+        "https://powertech-performance.com/blog/oldtimer-aufbereitung-erfurt-wertschonende-pflege/"
+      ],
+      "title": "Oldtimer Aufbereitung Erfurt | Werterhalt & High-End Pflege | Powertech Performance",
+      "h1": [
+        "Oldtimer Aufbereitung Erfurt | Werterhalt & High-End Pflege"
+      ],
+      "robots": [],
+      "x_robots": ""
+    },
+    {
+      "url": "https://powertech-performance.com/blog/porsche-aufbereitung-erfurt-keramikversiegelung-zertifiziert/",
+      "status": 200,
+      "final_url": "https://www.powertech-performance.com/blog/porsche-aufbereitung-erfurt-keramikversiegelung-zertifiziert/",
+      "chain": [
+        {
+          "url": "https://powertech-performance.com/blog/porsche-aufbereitung-erfurt-keramikversiegelung-zertifiziert/",
+          "status": 308,
+          "location": "https://www.powertech-performance.com/blog/porsche-aufbereitung-erfurt-keramikversiegelung-zertifiziert/"
+        }
+      ],
+      "canonical": [
+        "https://powertech-performance.com/blog/porsche-aufbereitung-erfurt-keramikversiegelung-zertifiziert/"
+      ],
+      "title": "Porsche Aufbereitung in Erfurt: Werterhalt & Perfektion für Ihren Sportwagen | Powertech Performance",
+      "h1": [
+        "Porsche Aufbereitung in Erfurt: Werterhalt & Perfektion für Ihren Sportwagen"
+      ],
+      "robots": [],
+      "x_robots": ""
+    },
+    {
+      "url": "https://powertech-performance.com/blog/professionelle-cabrioverdeck-impraegnierung-und-reinigung/",
+      "status": 200,
+      "final_url": "https://www.powertech-performance.com/blog/professionelle-cabrioverdeck-impraegnierung-und-reinigung/",
+      "chain": [
+        {
+          "url": "https://powertech-performance.com/blog/professionelle-cabrioverdeck-impraegnierung-und-reinigung/",
+          "status": 308,
+          "location": "https://www.powertech-performance.com/blog/professionelle-cabrioverdeck-impraegnierung-und-reinigung/"
+        }
+      ],
+      "canonical": [
+        "https://powertech-performance.com/blog/professionelle-cabrioverdeck-impraegnierung-und-reinigung/"
+      ],
+      "title": "Professionelle Cabrioverdeck Imprägnierung & Reinigung | Powertech Performance | Powertech Performance",
+      "h1": [
+        "Professionelle Cabrioverdeck Imprägnierung & Reinigung | Powertech Performance"
+      ],
+      "robots": [],
+      "x_robots": ""
+    },
+    {
+      "url": "https://powertech-performance.com/blog/professionelle-innenreinigung-auto-in-der-naehe/",
+      "status": 200,
+      "final_url": "https://www.powertech-performance.com/blog/professionelle-innenreinigung-auto-in-der-naehe/",
+      "chain": [
+        {
+          "url": "https://powertech-performance.com/blog/professionelle-innenreinigung-auto-in-der-naehe/",
+          "status": 308,
+          "location": "https://www.powertech-performance.com/blog/professionelle-innenreinigung-auto-in-der-naehe/"
+        }
+      ],
+      "canonical": [
+        "https://powertech-performance.com/blog/professionelle-innenreinigung-auto-in-der-naehe/"
+      ],
+      "title": "Professionelle Innenreinigung Auto in der Nähe | Powertech Performance",
+      "h1": [
+        "Professionelle Innenreinigung Auto in der Nähe"
+      ],
+      "robots": [],
+      "x_robots": ""
+    },
+    {
+      "url": "https://powertech-performance.com/blog/professionelle-keramikversiegelung-erfurt/",
+      "status": 200,
+      "final_url": "https://www.powertech-performance.com/blog/professionelle-keramikversiegelung-erfurt/",
+      "chain": [
+        {
+          "url": "https://powertech-performance.com/blog/professionelle-keramikversiegelung-erfurt/",
+          "status": 308,
+          "location": "https://www.powertech-performance.com/blog/professionelle-keramikversiegelung-erfurt/"
+        }
+      ],
+      "canonical": [
+        "https://powertech-performance.com/blog/professionelle-keramikversiegelung-erfurt/"
+      ],
+      "title": "Professionelle Keramikversiegelung – Maximaler Schutz für dein Fahrzeug | Powertech Performance",
+      "h1": [
+        "Professionelle Keramikversiegelung – Maximaler Schutz für dein Fahrzeug"
+      ],
+      "robots": [],
+      "x_robots": ""
+    },
+    {
+      "url": "https://powertech-performance.com/blog/profi-keramikversiegelung/",
+      "status": 200,
+      "final_url": "https://www.powertech-performance.com/blog/profi-keramikversiegelung/",
+      "chain": [
+        {
+          "url": "https://powertech-performance.com/blog/profi-keramikversiegelung/",
+          "status": 308,
+          "location": "https://www.powertech-performance.com/blog/profi-keramikversiegelung/"
+        }
+      ],
+      "canonical": [
+        "https://powertech-performance.com/blog/profi-keramikversiegelung/"
+      ],
+      "title": "Profi Keramikversiegelung – der ultimative Lackschutz für dein Fahrzeug | Powertech Performance",
+      "h1": [
+        "Profi Keramikversiegelung – der ultimative Lackschutz für dein Fahrzeug"
+      ],
+      "robots": [],
+      "x_robots": ""
+    },
+    {
+      "url": "https://powertech-performance.com/blog/softwareoptimierung-dpf-off-erfurt/",
+      "status": 200,
+      "final_url": "https://www.powertech-performance.com/blog/softwareoptimierung-dpf-off-erfurt/",
+      "chain": [
+        {
+          "url": "https://powertech-performance.com/blog/softwareoptimierung-dpf-off-erfurt/",
+          "status": 308,
+          "location": "https://www.powertech-performance.com/blog/softwareoptimierung-dpf-off-erfurt/"
+        }
+      ],
+      "canonical": [
+        "https://powertech-performance.com/blog/softwareoptimierung-dpf-off-erfurt/"
+      ],
+      "title": "Professionelle Softwareoptimierung & DPF-Management | Powertech Performance",
+      "h1": [
+        "Professionelle Softwareoptimierung & DPF-Management"
+      ],
+      "robots": [],
+      "x_robots": ""
+    },
+    {
+      "url": "https://powertech-performance.com/blog/softwareoptimierung-erfurt/",
+      "status": 200,
+      "final_url": "https://www.powertech-performance.com/blog/softwareoptimierung-erfurt/",
+      "chain": [
+        {
+          "url": "https://powertech-performance.com/blog/softwareoptimierung-erfurt/",
+          "status": 308,
+          "location": "https://www.powertech-performance.com/blog/softwareoptimierung-erfurt/"
+        }
+      ],
+      "canonical": [
+        "https://powertech-performance.com/blog/softwareoptimierung-erfurt/"
+      ],
+      "title": "Softwareoptimierung Erfurt: Mehr Leistung und Effizienz für dein Fahrzeug | Powertech Performance",
+      "h1": [
+        "Softwareoptimierung Erfurt: Mehr Leistung und Effizienz für dein Fahrzeug"
+      ],
+      "robots": [],
+      "x_robots": ""
+    },
+    {
+      "url": "https://powertech-performance.com/blog/was-kostet-eine-auto-reinigung/",
+      "status": 200,
+      "final_url": "https://www.powertech-performance.com/blog/was-kostet-eine-auto-reinigung/",
+      "chain": [
+        {
+          "url": "https://powertech-performance.com/blog/was-kostet-eine-auto-reinigung/",
+          "status": 308,
+          "location": "https://www.powertech-performance.com/blog/was-kostet-eine-auto-reinigung/"
+        }
+      ],
+      "canonical": [
+        "https://powertech-performance.com/blog/was-kostet-eine-auto-reinigung/"
+      ],
+      "title": "Was kostet eine Auto Innenreinigung? | Powertech Performance",
+      "h1": [
+        "Was kostet eine Auto Innenreinigung?"
+      ],
+      "robots": [],
+      "x_robots": ""
+    },
+    {
+      "url": "https://powertech-performance.com/blog/wie-lange-dauert-adblue-off/",
+      "status": 200,
+      "final_url": "https://www.powertech-performance.com/blog/wie-lange-dauert-adblue-off/",
+      "chain": [
+        {
+          "url": "https://powertech-performance.com/blog/wie-lange-dauert-adblue-off/",
+          "status": 308,
+          "location": "https://www.powertech-performance.com/blog/wie-lange-dauert-adblue-off/"
+        }
+      ],
+      "canonical": [
+        "https://powertech-performance.com/blog/wie-lange-dauert-adblue-off/"
+      ],
+      "title": "AdBlue Probleme dauerhaft lösen: Ablauf und Dauer der Software-Optimierung | Powertech Performance",
+      "h1": [
+        "AdBlue Probleme dauerhaft lösen: Ablauf und Dauer der Software-Optimierung"
+      ],
+      "robots": [],
+      "x_robots": ""
+    },
+    {
+      "url": "https://powertech-performance.com/blog/wie-oft-auto-aufbereiten-lassen.html",
+      "status": 200,
+      "final_url": "https://www.powertech-performance.com/blog/wie-oft-auto-aufbereiten-lassen.html",
+      "chain": [
+        {
+          "url": "https://powertech-performance.com/blog/wie-oft-auto-aufbereiten-lassen.html",
+          "status": 308,
+          "location": "https://www.powertech-performance.com/blog/wie-oft-auto-aufbereiten-lassen.html"
+        }
+      ],
+      "canonical": [
+        "https://powertech-performance.com/blog/wie-oft-auto-aufbereiten-lassen.html"
+      ],
+      "title": "Wie oft sollte man sein Auto professionell aufbereiten lassen? | Powertech Performance",
+      "h1": [
+        "Wie oft sollte man sein Auto professionell aufbereiten lassen?"
+      ],
+      "robots": [],
+      "x_robots": ""
+    },
+    {
+      "url": "https://powertech-performance.com/chiptuning",
+      "status": 200,
+      "final_url": "https://www.powertech-performance.com/chiptuning",
+      "chain": [
+        {
+          "url": "https://powertech-performance.com/chiptuning",
+          "status": 308,
+          "location": "https://www.powertech-performance.com/chiptuning"
+        }
+      ],
+      "canonical": [
+        "https://powertech-performance.com/chiptuning"
+      ],
+      "title": "Chiptuning & Fahrzeugoptimierung in Erfurt | Powertech Performance",
+      "h1": [
+        "Spüre die verborgene Kraft deines Motors – Chiptuning in Erfurt"
+      ],
+      "robots": [],
+      "x_robots": ""
+    },
+    {
+      "url": "https://powertech-performance.com/eisenach",
+      "status": 200,
+      "final_url": "https://www.powertech-performance.com/eisenach",
+      "chain": [
+        {
+          "url": "https://powertech-performance.com/eisenach",
+          "status": 308,
+          "location": "https://www.powertech-performance.com/eisenach"
+        }
+      ],
+      "canonical": [
+        "https://powertech-performance.com/eisenach"
+      ],
+      "title": "Autoaufbereitung Eisenach – Fahrzeugpflege & Werterhalt | Powertech Performance",
+      "h1": [
+        "Ihr Fahrzeug, unser Anspruch: Perfekte Autoaufbereitung für Eisenach"
+      ],
+      "robots": [],
+      "x_robots": ""
+    },
+    {
+      "url": "https://powertech-performance.com/fahrzeugaufbereitung-aus-erfurt",
+      "status": 200,
+      "final_url": "https://www.powertech-performance.com/fahrzeugaufbereitung-aus-erfurt",
+      "chain": [
+        {
+          "url": "https://powertech-performance.com/fahrzeugaufbereitung-aus-erfurt",
+          "status": 308,
+          "location": "https://www.powertech-performance.com/fahrzeugaufbereitung-aus-erfurt"
+        }
+      ],
+      "canonical": [
+        "https://powertech-performance.com/fahrzeugaufbereitung-aus-erfurt"
+      ],
+      "title": "Fahrzeugaufbereitung aus Erfurt – Fahrzeugpflege & Werterhalt | Powertech Performance",
+      "h1": [
+        "Ihr Fahrzeug, unser Anspruch: Perfekte Autoaufbereitung in Erfurt"
+      ],
+      "robots": [],
+      "x_robots": ""
+    },
+    {
+      "url": "https://powertech-performance.com/gera",
+      "status": 200,
+      "final_url": "https://www.powertech-performance.com/gera",
+      "chain": [
+        {
+          "url": "https://powertech-performance.com/gera",
+          "status": 308,
+          "location": "https://www.powertech-performance.com/gera"
+        }
+      ],
+      "canonical": [
+        "https://powertech-performance.com/gera"
+      ],
+      "title": "Autoaufbereitung Gera – Fahrzeugpflege & Werterhalt | Powertech Performance",
+      "h1": [
+        "Ihr Fahrzeug, unser Anspruch: Perfekte Autoaufbereitung für Gera"
+      ],
+      "robots": [],
+      "x_robots": ""
+    },
+    {
+      "url": "https://powertech-performance.com/glosar",
+      "status": 200,
+      "final_url": "https://www.powertech-performance.com/glosar",
+      "chain": [
+        {
+          "url": "https://powertech-performance.com/glosar",
+          "status": 308,
+          "location": "https://www.powertech-performance.com/glosar"
+        }
+      ],
+      "canonical": [
+        "https://powertech-performance.com/glosar"
+      ],
+      "title": "Glossar – Autoaufbereitung in Erfurt | Powertech Performance",
+      "h1": [
+        "Glossar – Autoaufbereitung in Erfurt"
+      ],
+      "robots": [],
+      "x_robots": ""
+    },
+    {
+      "url": "https://powertech-performance.com/googlef244febb7a81d9de.html",
+      "status": 200,
+      "final_url": "https://www.powertech-performance.com/googlef244febb7a81d9de.html",
+      "chain": [
+        {
+          "url": "https://powertech-performance.com/googlef244febb7a81d9de.html",
+          "status": 308,
+          "location": "https://www.powertech-performance.com/googlef244febb7a81d9de.html"
+        }
+      ],
+      "canonical": [],
+      "title": "",
+      "h1": [],
+      "robots": [],
+      "x_robots": ""
+    },
+    {
+      "url": "https://powertech-performance.com/gotha",
+      "status": 200,
+      "final_url": "https://www.powertech-performance.com/gotha",
+      "chain": [
+        {
+          "url": "https://powertech-performance.com/gotha",
+          "status": 308,
+          "location": "https://www.powertech-performance.com/gotha"
+        }
+      ],
+      "canonical": [
+        "https://powertech-performance.com/gotha"
+      ],
+      "title": "Autoaufbereitung Gotha – Fahrzeugpflege & Werterhalt | Powertech Performance",
+      "h1": [
+        "Ihr Fahrzeug, unser Anspruch: Perfekte Autoaufbereitung für Gotha"
+      ],
+      "robots": [],
+      "x_robots": ""
+    },
+    {
+      "url": "https://powertech-performance.com/jena",
+      "status": 200,
+      "final_url": "https://www.powertech-performance.com/jena",
+      "chain": [
+        {
+          "url": "https://powertech-performance.com/jena",
+          "status": 308,
+          "location": "https://www.powertech-performance.com/jena"
+        }
+      ],
+      "canonical": [
+        "https://powertech-performance.com/jena"
+      ],
+      "title": "Autoaufbereitung Jena – Fahrzeugpflege & Werterhalt | Powertech Performance",
+      "h1": [
+        "Ihr Fahrzeug, unser Anspruch: Perfekte Autoaufbereitung für Jena"
+      ],
+      "robots": [],
+      "x_robots": ""
+    },
+    {
+      "url": "https://powertech-performance.com/luxus-aufbereitung",
+      "status": 200,
+      "final_url": "https://www.powertech-performance.com/luxus-aufbereitung",
+      "chain": [
+        {
+          "url": "https://powertech-performance.com/luxus-aufbereitung",
+          "status": 308,
+          "location": "https://www.powertech-performance.com/luxus-aufbereitung"
+        }
+      ],
+      "canonical": [
+        "https://powertech-performance.com/luxus-aufbereitung"
+      ],
+      "title": "Keramikversiegelung mit 2 Jahren Garantie in Erfurt | Powertech Performance",
+      "h1": [
+        "Keramikversiegelung mit Garantie – Glanz und Schutz für 2 Jahre. In Erfurt."
+      ],
+      "robots": [],
+      "x_robots": ""
+    },
+    {
+      "url": "https://powertech-performance.com/nordhausen",
+      "status": 200,
+      "final_url": "https://www.powertech-performance.com/nordhausen",
+      "chain": [
+        {
+          "url": "https://powertech-performance.com/nordhausen",
+          "status": 308,
+          "location": "https://www.powertech-performance.com/nordhausen"
+        }
+      ],
+      "canonical": [
+        "https://powertech-performance.com/nordhausen"
+      ],
+      "title": "Autoaufbereitung Nordhausen – Fahrzeugpflege & Werterhalt | Powertech Performance",
+      "h1": [
+        "Ihr Fahrzeug, unser Anspruch: Perfekte Autoaufbereitung für Nordhausen"
+      ],
+      "robots": [],
+      "x_robots": ""
+    },
+    {
+      "url": "https://powertech-performance.com/online-termin-buchen",
+      "status": 200,
+      "final_url": "https://www.powertech-performance.com/online-termin-buchen",
+      "chain": [
+        {
+          "url": "https://powertech-performance.com/online-termin-buchen",
+          "status": 308,
+          "location": "https://www.powertech-performance.com/online-termin-buchen"
+        }
+      ],
+      "canonical": [
+        "https://powertech-performance.com/online-termin-buchen"
+      ],
+      "title": "Online Termin buchen | Powertech Performance",
+      "h1": [
+        "Besichtigungstermin vor Ort an der Halle buchen"
+      ],
+      "robots": [],
+      "x_robots": ""
+    },
+    {
+      "url": "https://powertech-performance.com/pages/agb.html",
+      "status": 200,
+      "final_url": "https://www.powertech-performance.com/pages/agb.html",
+      "chain": [
+        {
+          "url": "https://powertech-performance.com/pages/agb.html",
+          "status": 308,
+          "location": "https://www.powertech-performance.com/pages/agb.html"
+        }
+      ],
+      "canonical": [
+        "https://powertech-performance.com/pages/agb.html"
+      ],
+      "title": "AGB – Powertech Performance",
+      "h1": [
+        "Allgemeine Geschäftsbedingungen"
+      ],
+      "robots": [
+        "noindex"
+      ],
+      "x_robots": ""
+    },
+    {
+      "url": "https://powertech-performance.com/pages/cookie-einstellungen.html",
+      "status": 200,
+      "final_url": "https://www.powertech-performance.com/pages/cookie-einstellungen.html",
+      "chain": [
+        {
+          "url": "https://powertech-performance.com/pages/cookie-einstellungen.html",
+          "status": 308,
+          "location": "https://www.powertech-performance.com/pages/cookie-einstellungen.html"
+        }
+      ],
+      "canonical": [
+        "https://powertech-performance.com/pages/cookie-einstellungen.html"
+      ],
+      "title": "Cookie-Einstellungen – Powertech Performance",
+      "h1": [
+        "Cookie-Einstellungen"
+      ],
+      "robots": [
+        "noindex"
+      ],
+      "x_robots": ""
+    },
+    {
+      "url": "https://powertech-performance.com/pages/datenschutz.html",
+      "status": 200,
+      "final_url": "https://www.powertech-performance.com/pages/datenschutz.html",
+      "chain": [
+        {
+          "url": "https://powertech-performance.com/pages/datenschutz.html",
+          "status": 308,
+          "location": "https://www.powertech-performance.com/pages/datenschutz.html"
+        }
+      ],
+      "canonical": [
+        "https://powertech-performance.com/pages/datenschutz.html"
+      ],
+      "title": "Datenschutzerklärung – Powertech Performance",
+      "h1": [
+        "Datenschutzerklärung"
+      ],
+      "robots": [
+        "noindex"
+      ],
+      "x_robots": ""
+    },
+    {
+      "url": "https://powertech-performance.com/pages/impressum.html",
+      "status": 200,
+      "final_url": "https://www.powertech-performance.com/pages/impressum.html",
+      "chain": [
+        {
+          "url": "https://powertech-performance.com/pages/impressum.html",
+          "status": 308,
+          "location": "https://www.powertech-performance.com/pages/impressum.html"
+        }
+      ],
+      "canonical": [
+        "https://powertech-performance.com/pages/impressum.html"
+      ],
+      "title": "Impressum – Powertech Performance",
+      "h1": [
+        "Impressum"
+      ],
+      "robots": [
+        "noindex"
+      ],
+      "x_robots": ""
+    },
+    {
+      "url": "https://powertech-performance.com/pages/kontakt.html",
+      "status": 200,
+      "final_url": "https://www.powertech-performance.com/pages/kontakt.html",
+      "chain": [
+        {
+          "url": "https://powertech-performance.com/pages/kontakt.html",
+          "status": 308,
+          "location": "https://www.powertech-performance.com/pages/kontakt.html"
+        }
+      ],
+      "canonical": [
+        "https://powertech-performance.com/pages/kontakt.html"
+      ],
+      "title": "Kontakt – Powertech Performance | Autoaufbereitung Erfurt",
+      "h1": [
+        "Kontakt"
+      ],
+      "robots": [],
+      "x_robots": ""
+    },
+    {
+      "url": "https://powertech-performance.com/pages/seitenuebersicht.html",
+      "status": 200,
+      "final_url": "https://www.powertech-performance.com/pages/seitenuebersicht.html",
+      "chain": [
+        {
+          "url": "https://powertech-performance.com/pages/seitenuebersicht.html",
+          "status": 308,
+          "location": "https://www.powertech-performance.com/pages/seitenuebersicht.html"
+        }
+      ],
+      "canonical": [
+        "https://powertech-performance.com/pages/seitenuebersicht.html"
+      ],
+      "title": "Seitenübersicht – Powertech Performance",
+      "h1": [
+        "Seitenübersicht"
+      ],
+      "robots": [
+        "noindex"
+      ],
+      "x_robots": ""
+    },
+    {
+      "url": "https://powertech-performance.com/robots.txt",
+      "status": 200,
+      "final_url": "https://www.powertech-performance.com/robots.txt",
+      "chain": [
+        {
+          "url": "https://powertech-performance.com/robots.txt",
+          "status": 308,
+          "location": "https://www.powertech-performance.com/robots.txt"
+        }
+      ],
+      "canonical": [],
+      "title": "",
+      "h1": [],
+      "robots": [],
+      "x_robots": ""
+    },
+    {
+      "url": "https://powertech-performance.com/sitemap.xml",
+      "status": 200,
+      "final_url": "https://www.powertech-performance.com/sitemap.xml",
+      "chain": [
+        {
+          "url": "https://powertech-performance.com/sitemap.xml",
+          "status": 308,
+          "location": "https://www.powertech-performance.com/sitemap.xml"
+        }
+      ],
+      "canonical": [],
+      "title": "",
+      "h1": [],
+      "robots": [],
+      "x_robots": ""
+    },
+    {
+      "url": "https://powertech-performance.com/suhl",
+      "status": 200,
+      "final_url": "https://www.powertech-performance.com/suhl",
+      "chain": [
+        {
+          "url": "https://powertech-performance.com/suhl",
+          "status": 308,
+          "location": "https://www.powertech-performance.com/suhl"
+        }
+      ],
+      "canonical": [
+        "https://powertech-performance.com/suhl"
+      ],
+      "title": "Autoaufbereitung Suhl – Fahrzeugpflege & Werterhalt | Powertech Performance",
+      "h1": [
+        "Ihr Fahrzeug, unser Anspruch: Perfekte Autoaufbereitung für Suhl"
+      ],
+      "robots": [],
+      "x_robots": ""
+    },
+    {
+      "url": "https://www.powertech-performance.com/",
+      "status": 200,
+      "final_url": "https://www.powertech-performance.com/",
+      "chain": [],
+      "canonical": [
+        "https://powertech-performance.com/"
+      ],
+      "title": "Autoaufbereitung Erfurt – Fahrzeugpflege & Werterhalt | Powertech Performance",
+      "h1": [
+        "Autoaufbereitung mit Tiefenglanz."
+      ],
+      "robots": [],
+      "x_robots": ""
+    },
+    {
+      "url": "https://www.powertech-performance.com/adblue-deaktivieren-vor-nachteile-wahrheit/",
+      "status": 404,
+      "final_url": "https://www.powertech-performance.com/adblue-deaktivieren-vor-nachteile-wahrheit/",
+      "error": "HTTP Error 404: Not Found",
+      "chain": []
+    },
+    {
+      "url": "https://www.powertech-performance.com/adblue-deaktivieren/",
+      "status": 404,
+      "final_url": "https://www.powertech-performance.com/adblue-deaktivieren/",
+      "error": "HTTP Error 404: Not Found",
+      "chain": []
+    },
+    {
+      "url": "https://www.powertech-performance.com/adblue-deaktivierung/",
+      "status": 404,
+      "final_url": "https://www.powertech-performance.com/adblue-deaktivierung/",
+      "error": "HTTP Error 404: Not Found",
+      "chain": []
+    },
+    {
+      "url": "https://www.powertech-performance.com/audi-r8-aufbereitung-erfurt-keramikversiegelung/",
+      "status": 404,
+      "final_url": "https://www.powertech-performance.com/audi-r8-aufbereitung-erfurt-keramikversiegelung/",
+      "error": "HTTP Error 404: Not Found",
+      "chain": []
+    },
+    {
+      "url": "https://www.powertech-performance.com/auto-selber-waschen-erfurt/",
+      "status": 404,
+      "final_url": "https://www.powertech-performance.com/auto-selber-waschen-erfurt/",
+      "error": "HTTP Error 404: Not Found",
+      "chain": []
+    },
+    {
+      "url": "https://www.powertech-performance.com/blog/",
+      "status": 200,
+      "final_url": "https://www.powertech-performance.com/blog/",
+      "chain": [],
+      "canonical": [
+        "https://powertech-performance.com/blog/"
+      ],
+      "title": "Blog – Autoaufbereitung & Fahrzeugpflege | Powertech Performance",
+      "h1": [
+        "Blog"
+      ],
+      "robots": [],
+      "x_robots": ""
+    },
+    {
+      "url": "https://www.powertech-performance.com/blog/1-step-2-step-oder-lackkorrektur-lackaufbereitung-im-vergleich/",
+      "status": 200,
+      "final_url": "https://www.powertech-performance.com/blog/1-step-2-step-oder-lackkorrektur-lackaufbereitung-im-vergleich/",
+      "chain": [],
+      "canonical": [
+        "https://powertech-performance.com/blog/1-step-2-step-oder-lackkorrektur-lackaufbereitung-im-vergleich/"
+      ],
+      "title": "1-Step, 2-Step oder Lackkorrektur? Lackaufbereitung im Vergleich | Powertech Performance",
+      "h1": [
+        "1-Step, 2-Step oder Lackkorrektur? Lackaufbereitung im Vergleich"
+      ],
+      "robots": [],
+      "x_robots": ""
+    },
+    {
+      "url": "https://www.powertech-performance.com/blog/adblue-deaktivieren-vor-nachteile-wahrheit/",
+      "status": 200,
+      "final_url": "https://www.powertech-performance.com/blog/adblue-deaktivieren-vor-nachteile-wahrheit/",
+      "chain": [],
+      "canonical": [
+        "https://powertech-performance.com/blog/adblue-deaktivieren-vor-nachteile-wahrheit/"
+      ],
+      "title": "Adblue deaktivieren vor und nachteile | Powertech Performance",
+      "h1": [
+        "Adblue deaktivieren vor und nachteile"
+      ],
+      "robots": [],
+      "x_robots": ""
+    },
+    {
+      "url": "https://www.powertech-performance.com/blog/aufbereiter-vs-detailer-unterschied/",
+      "status": 200,
+      "final_url": "https://www.powertech-performance.com/blog/aufbereiter-vs-detailer-unterschied/",
+      "chain": [],
+      "canonical": [
+        "https://powertech-performance.com/blog/aufbereiter-vs-detailer-unterschied/"
+      ],
+      "title": "Aufbereiter vs. Detailer: Wo liegt der wahre Unterschied für Ihr Fahrzeug? | Powertech Performance",
+      "h1": [
+        "Aufbereiter vs. Detailer: Wo liegt der wahre Unterschied für Ihr Fahrzeug?"
+      ],
+      "robots": [],
+      "x_robots": ""
+    },
+    {
+      "url": "https://www.powertech-performance.com/blog/auto-selber-waschen-erfurt/",
+      "status": 200,
+      "final_url": "https://www.powertech-performance.com/blog/auto-selber-waschen-erfurt/",
+      "chain": [],
+      "canonical": [
+        "https://powertech-performance.com/blog/auto-selber-waschen-erfurt/"
+      ],
+      "title": "🚗 Auto selber waschen in Erfurt – Hier findest du SB-Waschboxe | Powertech Performance",
+      "h1": [
+        "🚗 Auto selber waschen in Erfurt – Hier findest du SB-Waschboxe"
+      ],
+      "robots": [],
+      "x_robots": ""
+    },
+    {
+      "url": "https://www.powertech-performance.com/blog/boot-aufbereitung-keramikversiegelung-marine/",
+      "status": 200,
+      "final_url": "https://www.powertech-performance.com/blog/boot-aufbereitung-keramikversiegelung-marine/",
+      "chain": [],
+      "canonical": [
+        "https://powertech-performance.com/blog/boot-aufbereitung-keramikversiegelung-marine/"
+      ],
+      "title": "Yacht- & Boot-Versiegelung: Maximaler Schutz gegen Salzwasser & Verwitterung | Powertech Performance",
+      "h1": [
+        "Yacht- & Boot-Versiegelung: Maximaler Schutz gegen Salzwasser & Verwitterung"
+      ],
+      "robots": [],
+      "x_robots": ""
+    },
+    {
+      "url": "https://www.powertech-performance.com/blog/haltbarkeit-keramikversiegelung-lackschutz/",
+      "status": 200,
+      "final_url": "https://www.powertech-performance.com/blog/haltbarkeit-keramikversiegelung-lackschutz/",
+      "chain": [],
+      "canonical": [
+        "https://powertech-performance.com/blog/haltbarkeit-keramikversiegelung-lackschutz/"
+      ],
+      "title": "Haltbarkeit einer Keramikversiegelung: Wie lange hält der Lackschutz wirklich? | Powertech Performance",
+      "h1": [
+        "Haltbarkeit einer Keramikversiegelung: Wie lange hält der Lackschutz wirklich?"
+      ],
+      "robots": [],
+      "x_robots": ""
+    },
+    {
+      "url": "https://www.powertech-performance.com/blog/harte-und-weiche-autolacke-der-geheime-schlssel-zur-perfekten-lackaufbereitung-2/",
+      "status": 200,
+      "final_url": "https://www.powertech-performance.com/blog/harte-und-weiche-autolacke-der-geheime-schlssel-zur-perfekten-lackaufbereitung-2/",
+      "chain": [],
+      "canonical": [
+        "https://powertech-performance.com/blog/harte-und-weiche-autolacke-der-geheime-schlssel-zur-perfekten-lackaufbereitung-2/"
+      ],
+      "title": "Harte und weiche Autolacke: Der geheime Schlüssel zur perfekten Lackaufbereitung | Powertech Performance",
+      "h1": [
+        "Harte und weiche Autolacke: Der geheime Schlüssel zur perfekten Lackaufbereitung"
+      ],
+      "robots": [],
+      "x_robots": ""
+    },
+    {
+      "url": "https://www.powertech-performance.com/blog/harte-und-weiche-autolacke-der-geheime-schlssel-zur-perfekten-lackaufbereitung/",
+      "status": 200,
+      "final_url": "https://www.powertech-performance.com/blog/harte-und-weiche-autolacke-der-geheime-schlssel-zur-perfekten-lackaufbereitung/",
+      "chain": [],
+      "canonical": [
+        "https://powertech-performance.com/blog/harte-und-weiche-autolacke-der-geheime-schlssel-zur-perfekten-lackaufbereitung/"
+      ],
+      "title": "Harte und weiche Autolacke: Der geheime Schlüssel zur perfekten Lackaufbereitung | Powertech Performance",
+      "h1": [
+        "Harte und weiche Autolacke: Der geheime Schlüssel zur perfekten Lackaufbereitung"
+      ],
+      "robots": [],
+      "x_robots": ""
+    },
+    {
+      "url": "https://www.powertech-performance.com/blog/harte-weiche-autolacke-lackaufbereitung/",
+      "status": 200,
+      "final_url": "https://www.powertech-performance.com/blog/harte-weiche-autolacke-lackaufbereitung/",
+      "chain": [],
+      "canonical": [
+        "https://powertech-performance.com/blog/harte-weiche-autolacke-lackaufbereitung/"
+      ],
+      "title": "Harte und weiche Autolacke: Der geheime Schlüssel zur perfekten Lackaufbereitung | Powertech Performance",
+      "h1": [
+        "Harte und weiche Autolacke: Der geheime Schlüssel zur perfekten Lackaufbereitung"
+      ],
+      "robots": [],
+      "x_robots": ""
+    },
+    {
+      "url": "https://www.powertech-performance.com/blog/motorradaufbereitung-keramikversiegelung-experte/",
+      "status": 200,
+      "final_url": "https://www.powertech-performance.com/blog/motorradaufbereitung-keramikversiegelung-experte/",
+      "chain": [],
+      "canonical": [
+        "https://powertech-performance.com/blog/motorradaufbereitung-keramikversiegelung-experte/"
+      ],
+      "title": "Motorradaufbereitung & Keramikschutz | Powertech Performance Benjamin | Powertech Performance",
+      "h1": [
+        "Motorradaufbereitung & Keramikschutz | Powertech Performance Benjamin"
+      ],
+      "robots": [],
+      "x_robots": ""
+    },
+    {
+      "url": "https://www.powertech-performance.com/blog/oldtimer-aufbereitung-erfurt-wertschonende-pflege/",
+      "status": 200,
+      "final_url": "https://www.powertech-performance.com/blog/oldtimer-aufbereitung-erfurt-wertschonende-pflege/",
+      "chain": [],
+      "canonical": [
+        "https://powertech-performance.com/blog/oldtimer-aufbereitung-erfurt-wertschonende-pflege/"
+      ],
+      "title": "Oldtimer Aufbereitung Erfurt | Werterhalt & High-End Pflege | Powertech Performance",
+      "h1": [
+        "Oldtimer Aufbereitung Erfurt | Werterhalt & High-End Pflege"
+      ],
+      "robots": [],
+      "x_robots": ""
+    },
+    {
+      "url": "https://www.powertech-performance.com/blog/wie-lange-dauert-adblue-off/",
+      "status": 200,
+      "final_url": "https://www.powertech-performance.com/blog/wie-lange-dauert-adblue-off/",
+      "chain": [],
+      "canonical": [
+        "https://powertech-performance.com/blog/wie-lange-dauert-adblue-off/"
+      ],
+      "title": "AdBlue Probleme dauerhaft lösen: Ablauf und Dauer der Software-Optimierung | Powertech Performance",
+      "h1": [
+        "AdBlue Probleme dauerhaft lösen: Ablauf und Dauer der Software-Optimierung"
+      ],
+      "robots": [],
+      "x_robots": ""
+    },
+    {
+      "url": "https://www.powertech-performance.com/blog/wie-oft-auto-aufbereiten-lassen.html",
+      "status": 200,
+      "final_url": "https://www.powertech-performance.com/blog/wie-oft-auto-aufbereiten-lassen.html",
+      "chain": [],
+      "canonical": [
+        "https://powertech-performance.com/blog/wie-oft-auto-aufbereiten-lassen.html"
+      ],
+      "title": "Wie oft sollte man sein Auto professionell aufbereiten lassen? | Powertech Performance",
+      "h1": [
+        "Wie oft sollte man sein Auto professionell aufbereiten lassen?"
+      ],
+      "robots": [],
+      "x_robots": ""
+    },
+    {
+      "url": "https://www.powertech-performance.com/boot-aufbereitung-keramikversiegelung-marine/",
+      "status": 404,
+      "final_url": "https://www.powertech-performance.com/boot-aufbereitung-keramikversiegelung-marine/",
+      "error": "HTTP Error 404: Not Found",
+      "chain": []
+    },
+    {
+      "url": "https://www.powertech-performance.com/chiptuning-raum-erfurt/",
+      "status": 404,
+      "final_url": "https://www.powertech-performance.com/chiptuning-raum-erfurt/",
+      "error": "HTTP Error 404: Not Found",
+      "chain": []
+    },
+    {
+      "url": "https://www.powertech-performance.com/chiptuning/",
+      "status": 404,
+      "final_url": "https://www.powertech-performance.com/chiptuning/",
+      "error": "HTTP Error 404: Not Found",
+      "chain": []
+    },
+    {
+      "url": "https://www.powertech-performance.com/fahrzeugaufbereitung-erfurt/",
+      "status": 404,
+      "final_url": "https://www.powertech-performance.com/fahrzeugaufbereitung-erfurt/",
+      "error": "HTTP Error 404: Not Found",
+      "chain": []
+    },
+    {
+      "url": "https://www.powertech-performance.com/gera/",
+      "status": 404,
+      "final_url": "https://www.powertech-performance.com/gera/",
+      "error": "HTTP Error 404: Not Found",
+      "chain": []
+    },
+    {
+      "url": "https://www.powertech-performance.com/gotha/",
+      "status": 404,
+      "final_url": "https://www.powertech-performance.com/gotha/",
+      "error": "HTTP Error 404: Not Found",
+      "chain": []
+    },
+    {
+      "url": "https://www.powertech-performance.com/harte-und-weiche-autolacke-der-geheime-schlssel-zur-perfekten-lackaufbereitung-2/",
+      "status": 404,
+      "final_url": "https://www.powertech-performance.com/harte-und-weiche-autolacke-der-geheime-schlssel-zur-perfekten-lackaufbereitung-2/",
+      "error": "HTTP Error 404: Not Found",
+      "chain": []
+    },
+    {
+      "url": "https://www.powertech-performance.com/keramik-fuer-auto-erfurt-vorteile-haltbarkeit/",
+      "status": 404,
+      "final_url": "https://www.powertech-performance.com/keramik-fuer-auto-erfurt-vorteile-haltbarkeit/",
+      "error": "HTTP Error 404: Not Found",
+      "chain": []
+    },
+    {
+      "url": "https://www.powertech-performance.com/lackierung-oldtimer-erfurt-lackaufbereitung-keramik/",
+      "status": 404,
+      "final_url": "https://www.powertech-performance.com/lackierung-oldtimer-erfurt-lackaufbereitung-keramik/",
+      "error": "HTTP Error 404: Not Found",
+      "chain": []
+    },
+    {
+      "url": "https://www.powertech-performance.com/leasing-rueckgabe-aufbereitung-erfurt/",
+      "status": 404,
+      "final_url": "https://www.powertech-performance.com/leasing-rueckgabe-aufbereitung-erfurt/",
+      "error": "HTTP Error 404: Not Found",
+      "chain": []
+    },
+    {
+      "url": "https://www.powertech-performance.com/nordhausen/",
+      "status": 404,
+      "final_url": "https://www.powertech-performance.com/nordhausen/",
+      "error": "HTTP Error 404: Not Found",
+      "chain": []
+    },
+    {
+      "url": "https://www.powertech-performance.com/oldtimer-aufbereitung-erfurt-wertschonende-pflege/",
+      "status": 404,
+      "final_url": "https://www.powertech-performance.com/oldtimer-aufbereitung-erfurt-wertschonende-pflege/",
+      "error": "HTTP Error 404: Not Found",
+      "chain": []
+    },
+    {
+      "url": "https://www.powertech-performance.com/online-termin-buchen/",
+      "status": 404,
+      "final_url": "https://www.powertech-performance.com/online-termin-buchen/",
+      "error": "HTTP Error 404: Not Found",
+      "chain": []
+    },
+    {
+      "url": "https://www.powertech-performance.com/professionelle-cabrioverdeck-impraegnierung-und-reinigung/",
+      "status": 404,
+      "final_url": "https://www.powertech-performance.com/professionelle-cabrioverdeck-impraegnierung-und-reinigung/",
+      "error": "HTTP Error 404: Not Found",
+      "chain": []
+    },
+    {
+      "url": "https://www.powertech-performance.com/professionelle-keramikversiegelung-erfurt/",
+      "status": 404,
+      "final_url": "https://www.powertech-performance.com/professionelle-keramikversiegelung-erfurt/",
+      "error": "HTTP Error 404: Not Found",
+      "chain": []
+    },
+    {
+      "url": "https://www.powertech-performance.com/profi-keramikversiegelung/",
+      "status": 404,
+      "final_url": "https://www.powertech-performance.com/profi-keramikversiegelung/",
+      "error": "HTTP Error 404: Not Found",
+      "chain": []
+    },
+    {
+      "url": "https://www.powertech-performance.com/softwareoptimierung-dpf-off-erfurt/",
+      "status": 404,
+      "final_url": "https://www.powertech-performance.com/softwareoptimierung-dpf-off-erfurt/",
+      "error": "HTTP Error 404: Not Found",
+      "chain": []
+    },
+    {
+      "url": "https://www.powertech-performance.com/softwareoptimierung-erfurt/",
+      "status": 404,
+      "final_url": "https://www.powertech-performance.com/softwareoptimierung-erfurt/",
+      "error": "HTTP Error 404: Not Found",
+      "chain": []
+    },
+    {
+      "url": "https://www.powertech-performance.com/suhl/",
+      "status": 404,
+      "final_url": "https://www.powertech-performance.com/suhl/",
+      "error": "HTTP Error 404: Not Found",
+      "chain": []
+    }
+  ]
+}

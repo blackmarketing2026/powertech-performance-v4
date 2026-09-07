@@ -1,0 +1,19 @@
+{
+  "content_pages": 61,
+  "html": 62,
+  "seo_rows": 86,
+  "keyword_source_rows": 55,
+  "distinct_source_keywords": 50,
+  "keyword_rows": 57,
+  "new_pages": 2,
+  "risk_groups": 7,
+  "confirmed_ranking_cannibalization": 0,
+  "exact_duplicate_groups": 1,
+  "optimize_existing": 55,
+  "weak_indexable": 52,
+  "existing_link_occurrences": 893,
+  "proposed_links": 44,
+  "source_impressions": 6493,
+  "matched_impressions": 169,
+  "unmatched_impressions": 6324
+}

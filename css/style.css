@@ -65,6 +65,12 @@ body {
 }
 img { max-width: 100%; display: block; }
 a { color: var(--color-primary); text-decoration: none; }
+/* Readable editorial links on the existing dark surfaces; CTA styles stay intact. */
+main p a:not(.btn), .article-body a:not(.btn) {
+  color: var(--color-brand-light);
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
 ul { list-style: none; margin: 0; padding: 0; }
 h1, h2, h3, h4 { line-height: 1.25; margin: 0 0 var(--space-2); color: var(--color-brand); font-weight: 700; }
 h2 { font-size: 2rem; text-align: center; }

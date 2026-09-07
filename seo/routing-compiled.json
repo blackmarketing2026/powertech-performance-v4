@@ -1,0 +1,566 @@
+{
+  "routes": [
+    {
+      "src": "^/landingpage/adblue-deaktivieren$",
+      "headers": {
+        "Location": "/adblue-service"
+      },
+      "status": 308
+    },
+    {
+      "src": "^/landingpage/adblue-deaktivieren(?:/(.*))$",
+      "headers": {
+        "Location": "/adblue-service"
+      },
+      "status": 308
+    },
+    {
+      "src": "^/adblue-service\\.html$",
+      "headers": {
+        "Location": "/adblue-service"
+      },
+      "status": 308
+    },
+    {
+      "src": "^/landingpage/adblue-service$",
+      "headers": {
+        "Location": "/adblue-service"
+      },
+      "status": 308
+    },
+    {
+      "src": "^/landingpage/adblue-service(?:/(.*))$",
+      "headers": {
+        "Location": "/adblue-service"
+      },
+      "status": 308
+    },
+    {
+      "src": "^/ads\\.html$",
+      "headers": {
+        "Location": "/ads"
+      },
+      "status": 308
+    },
+    {
+      "src": "^/landingpage/ads$",
+      "headers": {
+        "Location": "/ads"
+      },
+      "status": 308
+    },
+    {
+      "src": "^/landingpage/ads(?:/(.*))$",
+      "headers": {
+        "Location": "/ads"
+      },
+      "status": 308
+    },
+    {
+      "src": "^/anfrage-danke\\.html$",
+      "headers": {
+        "Location": "/anfrage-danke"
+      },
+      "status": 308
+    },
+    {
+      "src": "^/landingpage/anfrage-danke$",
+      "headers": {
+        "Location": "/anfrage-danke"
+      },
+      "status": 308
+    },
+    {
+      "src": "^/landingpage/anfrage-danke(?:/(.*))$",
+      "headers": {
+        "Location": "/anfrage-danke"
+      },
+      "status": 308
+    },
+    {
+      "src": "^/chiptuning\\.html$",
+      "headers": {
+        "Location": "/chiptuning"
+      },
+      "status": 308
+    },
+    {
+      "src": "^/landingpage/chiptuning$",
+      "headers": {
+        "Location": "/chiptuning"
+      },
+      "status": 308
+    },
+    {
+      "src": "^/landingpage/chiptuning(?:/(.*))$",
+      "headers": {
+        "Location": "/chiptuning"
+      },
+      "status": 308
+    },
+    {
+      "src": "^/eisenach\\.html$",
+      "headers": {
+        "Location": "/eisenach"
+      },
+      "status": 308
+    },
+    {
+      "src": "^/landingpage/eisenach$",
+      "headers": {
+        "Location": "/eisenach"
+      },
+      "status": 308
+    },
+    {
+      "src": "^/landingpage/eisenach(?:/(.*))$",
+      "headers": {
+        "Location": "/eisenach"
+      },
+      "status": 308
+    },
+    {
+      "src": "^/fahrzeugaufbereitung-aus-erfurt\\.html$",
+      "headers": {
+        "Location": "/fahrzeugaufbereitung-aus-erfurt"
+      },
+      "status": 308
+    },
+    {
+      "src": "^/landingpage/fahrzeugaufbereitung-aus-erfurt$",
+      "headers": {
+        "Location": "/fahrzeugaufbereitung-aus-erfurt"
+      },
+      "status": 308
+    },
+    {
+      "src": "^/landingpage/fahrzeugaufbereitung-aus-erfurt(?:/(.*))$",
+      "headers": {
+        "Location": "/fahrzeugaufbereitung-aus-erfurt"
+      },
+      "status": 308
+    },
+    {
+      "src": "^/gera\\.html$",
+      "headers": {
+        "Location": "/gera"
+      },
+      "status": 308
+    },
+    {
+      "src": "^/landingpage/gera$",
+      "headers": {
+        "Location": "/gera"
+      },
+      "status": 308
+    },
+    {
+      "src": "^/landingpage/gera(?:/(.*))$",
+      "headers": {
+        "Location": "/gera"
+      },
+      "status": 308
+    },
+    {
+      "src": "^/glosar\\.html$",
+      "headers": {
+        "Location": "/glosar"
+      },
+      "status": 308
+    },
+    {
+      "src": "^/landingpage/glosar$",
+      "headers": {
+        "Location": "/glosar"
+      },
+      "status": 308
+    },
+    {
+      "src": "^/landingpage/glosar(?:/(.*))$",
+      "headers": {
+        "Location": "/glosar"
+      },
+      "status": 308
+    },
+    {
+      "src": "^/gotha\\.html$",
+      "headers": {
+        "Location": "/gotha"
+      },
+      "status": 308
+    },
+    {
+      "src": "^/landingpage/gotha$",
+      "headers": {
+        "Location": "/gotha"
+      },
+      "status": 308
+    },
+    {
+      "src": "^/landingpage/gotha(?:/(.*))$",
+      "headers": {
+        "Location": "/gotha"
+      },
+      "status": 308
+    },
+    {
+      "src": "^/jena\\.html$",
+      "headers": {
+        "Location": "/jena"
+      },
+      "status": 308
+    },
+    {
+      "src": "^/landingpage/jena$",
+      "headers": {
+        "Location": "/jena"
+      },
+      "status": 308
+    },
+    {
+      "src": "^/landingpage/jena(?:/(.*))$",
+      "headers": {
+        "Location": "/jena"
+      },
+      "status": 308
+    },
+    {
+      "src": "^/luxus-aufbereitung\\.html$",
+      "headers": {
+        "Location": "/luxus-aufbereitung"
+      },
+      "status": 308
+    },
+    {
+      "src": "^/landingpage/luxus-aufbereitung$",
+      "headers": {
+        "Location": "/luxus-aufbereitung"
+      },
+      "status": 308
+    },
+    {
+      "src": "^/landingpage/luxus-aufbereitung(?:/(.*))$",
+      "headers": {
+        "Location": "/luxus-aufbereitung"
+      },
+      "status": 308
+    },
+    {
+      "src": "^/nordhausen\\.html$",
+      "headers": {
+        "Location": "/nordhausen"
+      },
+      "status": 308
+    },
+    {
+      "src": "^/landingpage/nordhausen$",
+      "headers": {
+        "Location": "/nordhausen"
+      },
+      "status": 308
+    },
+    {
+      "src": "^/landingpage/nordhausen(?:/(.*))$",
+      "headers": {
+        "Location": "/nordhausen"
+      },
+      "status": 308
+    },
+    {
+      "src": "^/online-termin-buchen\\.html$",
+      "headers": {
+        "Location": "/online-termin-buchen"
+      },
+      "status": 308
+    },
+    {
+      "src": "^/landingpage/online-termin-buchen$",
+      "headers": {
+        "Location": "/online-termin-buchen"
+      },
+      "status": 308
+    },
+    {
+      "src": "^/landingpage/online-termin-buchen(?:/(.*))$",
+      "headers": {
+        "Location": "/online-termin-buchen"
+      },
+      "status": 308
+    },
+    {
+      "src": "^/suhl\\.html$",
+      "headers": {
+        "Location": "/suhl"
+      },
+      "status": 308
+    },
+    {
+      "src": "^/landingpage/suhl$",
+      "headers": {
+        "Location": "/suhl"
+      },
+      "status": 308
+    },
+    {
+      "src": "^/landingpage/suhl(?:/(.*))$",
+      "headers": {
+        "Location": "/suhl"
+      },
+      "status": 308
+    },
+    {
+      "src": "^/adblue-deaktivieren-vor-nachteile-wahrheit/$",
+      "headers": {
+        "Location": "/blog/adblue-deaktivieren-vor-nachteile-wahrheit/"
+      },
+      "status": 308
+    },
+    {
+      "src": "^/auto-selber-waschen-erfurt/$",
+      "headers": {
+        "Location": "/blog/auto-selber-waschen-erfurt/"
+      },
+      "status": 308
+    },
+    {
+      "src": "^/chiptuning-raum-erfurt/$",
+      "headers": {
+        "Location": "/blog/chiptuning-raum-erfurt/"
+      },
+      "status": 308
+    },
+    {
+      "src": "^/softwareoptimierung-dpf-off-erfurt/$",
+      "headers": {
+        "Location": "/blog/softwareoptimierung-dpf-off-erfurt/"
+      },
+      "status": 308
+    },
+    {
+      "src": "^/adblue-deaktivierung/$",
+      "headers": {
+        "Location": "/blog/adblue-deaktivierung/"
+      },
+      "status": 308
+    },
+    {
+      "src": "^/chiptuning/$",
+      "headers": {
+        "Location": "/chiptuning"
+      },
+      "status": 308
+    },
+    {
+      "src": "^/nordhausen/$",
+      "headers": {
+        "Location": "/nordhausen"
+      },
+      "status": 308
+    },
+    {
+      "src": "^/gotha/$",
+      "headers": {
+        "Location": "/gotha"
+      },
+      "status": 308
+    },
+    {
+      "src": "^/fahrzeugaufbereitung-erfurt/$",
+      "headers": {
+        "Location": "/blog/fahrzeugaufbereitung-erfurt/"
+      },
+      "status": 308
+    },
+    {
+      "src": "^/lackierung-oldtimer-erfurt-lackaufbereitung-keramik/$",
+      "headers": {
+        "Location": "/blog/lackierung-oldtimer-erfurt-lackaufbereitung-keramik/"
+      },
+      "status": 308
+    },
+    {
+      "src": "^/leasing-rueckgabe-aufbereitung-erfurt/$",
+      "headers": {
+        "Location": "/blog/leasing-rueckgabe-aufbereitung-erfurt/"
+      },
+      "status": 308
+    },
+    {
+      "src": "^/softwareoptimierung-erfurt/$",
+      "headers": {
+        "Location": "/blog/softwareoptimierung-erfurt/"
+      },
+      "status": 308
+    },
+    {
+      "src": "^/suhl/$",
+      "headers": {
+        "Location": "/suhl"
+      },
+      "status": 308
+    },
+    {
+      "src": "^/gera/$",
+      "headers": {
+        "Location": "/gera"
+      },
+      "status": 308
+    },
+    {
+      "src": "^/oldtimer-aufbereitung-erfurt-wertschonende-pflege/$",
+      "headers": {
+        "Location": "/blog/oldtimer-aufbereitung-erfurt-wertschonende-pflege/"
+      },
+      "status": 308
+    },
+    {
+      "src": "^/online-termin-buchen/$",
+      "headers": {
+        "Location": "/online-termin-buchen"
+      },
+      "status": 308
+    },
+    {
+      "src": "^/professionelle-keramikversiegelung-erfurt/$",
+      "headers": {
+        "Location": "/blog/professionelle-keramikversiegelung-erfurt/"
+      },
+      "status": 308
+    },
+    {
+      "src": "^/audi-r8-aufbereitung-erfurt-keramikversiegelung/$",
+      "headers": {
+        "Location": "/blog/audi-r8-aufbereitung-erfurt-keramikversiegelung/"
+      },
+      "status": 308
+    },
+    {
+      "src": "^/boot-aufbereitung-keramikversiegelung-marine/$",
+      "headers": {
+        "Location": "/blog/boot-aufbereitung-keramikversiegelung-marine/"
+      },
+      "status": 308
+    },
+    {
+      "src": "^/harte-und-weiche-autolacke-der-geheime-schlssel-zur-perfekten-lackaufbereitung-2/$",
+      "headers": {
+        "Location": "/blog/harte-und-weiche-autolacke-der-geheime-schlssel-zur-perfekten-lackaufbereitung-2/"
+      },
+      "status": 308
+    },
+    {
+      "src": "^/keramik-fuer-auto-erfurt-vorteile-haltbarkeit/$",
+      "headers": {
+        "Location": "/blog/keramik-fuer-auto-erfurt-vorteile-haltbarkeit/"
+      },
+      "status": 308
+    },
+    {
+      "src": "^/professionelle-cabrioverdeck-impraegnierung-und-reinigung/$",
+      "headers": {
+        "Location": "/blog/professionelle-cabrioverdeck-impraegnierung-und-reinigung/"
+      },
+      "status": 308
+    },
+    {
+      "src": "^/profi-keramikversiegelung/$",
+      "headers": {
+        "Location": "/blog/profi-keramikversiegelung/"
+      },
+      "status": 308
+    },
+    {
+      "src": "^/trockeneisreinigung\\.html$",
+      "headers": {
+        "Location": "/trockeneisreinigung"
+      },
+      "status": 308
+    },
+    {
+      "src": "^/trockeneisreinigung/$",
+      "headers": {
+        "Location": "/trockeneisreinigung"
+      },
+      "status": 308
+    },
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "^/adblue-service$",
+      "dest": "/adblue-service.html",
+      "check": true
+    },
+    {
+      "src": "^/ads$",
+      "dest": "/ads.html",
+      "check": true
+    },
+    {
+      "src": "^/anfrage-danke$",
+      "dest": "/anfrage-danke.html",
+      "check": true
+    },
+    {
+      "src": "^/chiptuning$",
+      "dest": "/chiptuning.html",
+      "check": true
+    },
+    {
+      "src": "^/eisenach$",
+      "dest": "/eisenach.html",
+      "check": true
+    },
+    {
+      "src": "^/fahrzeugaufbereitung-aus-erfurt$",
+      "dest": "/fahrzeugaufbereitung-aus-erfurt.html",
+      "check": true
+    },
+    {
+      "src": "^/gera$",
+      "dest": "/gera.html",
+      "check": true
+    },
+    {
+      "src": "^/glosar$",
+      "dest": "/glosar.html",
+      "check": true
+    },
+    {
+      "src": "^/gotha$",
+      "dest": "/gotha.html",
+      "check": true
+    },
+    {
+      "src": "^/jena$",
+      "dest": "/jena.html",
+      "check": true
+    },
+    {
+      "src": "^/luxus-aufbereitung$",
+      "dest": "/luxus-aufbereitung.html",
+      "check": true
+    },
+    {
+      "src": "^/nordhausen$",
+      "dest": "/nordhausen.html",
+      "check": true
+    },
+    {
+      "src": "^/online-termin-buchen$",
+      "dest": "/online-termin-buchen.html",
+      "check": true
+    },
+    {
+      "src": "^/suhl$",
+      "dest": "/suhl.html",
+      "check": true
+    },
+    {
+      "src": "^/trockeneisreinigung$",
+      "dest": "/trockeneisreinigung.html",
+      "check": true
+    }
+  ],
+  "error": null
+}

@@ -1,0 +1,814 @@
+{
+  "state": "lokal umgesetzt; nicht veröffentlicht",
+  "base": "https://www.powertech-performance.com",
+  "changed_pages": {
+    "adblue-service.html": [
+      "Canonical-/Metadaten-Host an das bestehende www-Live-Endziel angepasst",
+      "Title, Description und Themenausrichtung gezielt optimiert; H1 präzisiert"
+    ],
+    "ads.html": [
+      "Canonical-/Metadaten-Host an das bestehende www-Live-Endziel angepasst",
+      "Ergänzenden Beratungs-/Clusterabschnitt eingefügt",
+      "Fehlende H2 vor Leistungskarten ergänzt"
+    ],
+    "anfrage-danke.html": [
+      "Canonical-/Metadaten-Host an das bestehende www-Live-Endziel angepasst",
+      "Defekte Startseiten-Sprunglinks auf vorhandene Ziele korrigiert"
+    ],
+    "blog/1-step-2-step-oder-lackkorrektur-lackaufbereitung-im-vergleich/index.html": [
+      "Canonical-/Metadaten-Host an das bestehende www-Live-Endziel angepasst",
+      "Defekte Startseiten-Sprunglinks auf vorhandene Ziele korrigiert",
+      "Konkrete Information und thematische Inhaltslinks ergänzt",
+      "Sichtbare Breadcrumbs und passende BreadcrumbList ergänzt"
+    ],
+    "blog/1-step-politur-erklaert/index.html": [
+      "Canonical-/Metadaten-Host an das bestehende www-Live-Endziel angepasst",
+      "Defekte Startseiten-Sprunglinks auf vorhandene Ziele korrigiert",
+      "Konkrete Information und thematische Inhaltslinks ergänzt",
+      "Sichtbare Breadcrumbs und passende BreadcrumbList ergänzt"
+    ],
+    "blog/adblue-deaktivieren-vor-nachteile-wahrheit/index.html": [
+      "Canonical-/Metadaten-Host an das bestehende www-Live-Endziel angepasst",
+      "Defekte Startseiten-Sprunglinks auf vorhandene Ziele korrigiert",
+      "Title, Description und Themenausrichtung gezielt optimiert; H1 präzisiert",
+      "Artikelinhalt auf eigenständige, sachliche Nutzerfrage ausgerichtet",
+      "Konkrete Information und thematische Inhaltslinks ergänzt",
+      "Sichtbare Breadcrumbs und passende BreadcrumbList ergänzt"
+    ],
+    "blog/adblue-deaktivierung/index.html": [
+      "Canonical-/Metadaten-Host an das bestehende www-Live-Endziel angepasst",
+      "Defekte Startseiten-Sprunglinks auf vorhandene Ziele korrigiert",
+      "Title, Description und Themenausrichtung gezielt optimiert; H1 präzisiert",
+      "Artikelinhalt auf eigenständige, sachliche Nutzerfrage ausgerichtet",
+      "Konkrete Information und thematische Inhaltslinks ergänzt",
+      "Sichtbare Breadcrumbs und passende BreadcrumbList ergänzt"
+    ],
+    "blog/audi-r8-aufbereitung-erfurt-keramikversiegelung/index.html": [
+      "Canonical-/Metadaten-Host an das bestehende www-Live-Endziel angepasst",
+      "Defekte Startseiten-Sprunglinks auf vorhandene Ziele korrigiert",
+      "Konkrete Information und thematische Inhaltslinks ergänzt",
+      "Sichtbare Breadcrumbs und passende BreadcrumbList ergänzt"
+    ],
+    "blog/aufbereiter-vs-detailer-unterschied/index.html": [
+      "Canonical-/Metadaten-Host an das bestehende www-Live-Endziel angepasst",
+      "Defekte Startseiten-Sprunglinks auf vorhandene Ziele korrigiert",
+      "Konkrete Information und thematische Inhaltslinks ergänzt",
+      "Sichtbare Breadcrumbs und passende BreadcrumbList ergänzt"
+    ],
+    "blog/auto-selber-waschen-erfurt/index.html": [
+      "Canonical-/Metadaten-Host an das bestehende www-Live-Endziel angepasst",
+      "Defekte Startseiten-Sprunglinks auf vorhandene Ziele korrigiert",
+      "Title, Description und Themenausrichtung gezielt optimiert; H1 präzisiert",
+      "Konkrete Information und thematische Inhaltslinks ergänzt",
+      "Sichtbare Breadcrumbs und passende BreadcrumbList ergänzt"
+    ],
+    "blog/blog-keramikversiegelung/index.html": [
+      "Canonical-/Metadaten-Host an das bestehende www-Live-Endziel angepasst",
+      "Defekte Startseiten-Sprunglinks auf vorhandene Ziele korrigiert",
+      "Title, Description und Themenausrichtung gezielt optimiert; H1 präzisiert",
+      "Konkrete Information und thematische Inhaltslinks ergänzt",
+      "Sichtbare Breadcrumbs und passende BreadcrumbList ergänzt"
+    ],
+    "blog/boot-aufbereitung-keramikversiegelung-marine/index.html": [
+      "Canonical-/Metadaten-Host an das bestehende www-Live-Endziel angepasst",
+      "Defekte Startseiten-Sprunglinks auf vorhandene Ziele korrigiert",
+      "Konkrete Information und thematische Inhaltslinks ergänzt",
+      "Sichtbare Breadcrumbs und passende BreadcrumbList ergänzt"
+    ],
+    "blog/chiptuning-raum-erfurt/index.html": [
+      "Canonical-/Metadaten-Host an das bestehende www-Live-Endziel angepasst",
+      "Defekte Startseiten-Sprunglinks auf vorhandene Ziele korrigiert",
+      "Title, Description und Themenausrichtung gezielt optimiert; H1 präzisiert",
+      "Konkrete Information und thematische Inhaltslinks ergänzt",
+      "Sichtbare Breadcrumbs und passende BreadcrumbList ergänzt"
+    ],
+    "blog/chiptuning-raumerfurt/index.html": [
+      "Canonical-/Metadaten-Host an das bestehende www-Live-Endziel angepasst",
+      "Defekte Startseiten-Sprunglinks auf vorhandene Ziele korrigiert",
+      "Title, Description und Themenausrichtung gezielt optimiert; H1 präzisiert",
+      "Artikelinhalt auf eigenständige, sachliche Nutzerfrage ausgerichtet",
+      "Konkrete Information und thematische Inhaltslinks ergänzt",
+      "Sichtbare Breadcrumbs und passende BreadcrumbList ergänzt"
+    ],
+    "blog/fahrzeugaufbereitung-erfurt/index.html": [
+      "Canonical-/Metadaten-Host an das bestehende www-Live-Endziel angepasst",
+      "Defekte Startseiten-Sprunglinks auf vorhandene Ziele korrigiert",
+      "Konkrete Information und thematische Inhaltslinks ergänzt",
+      "Sichtbare Breadcrumbs und passende BreadcrumbList ergänzt"
+    ],
+    "blog/flugzeugaufbereitung-innenreinigung-erfurt/index.html": [
+      "Canonical-/Metadaten-Host an das bestehende www-Live-Endziel angepasst",
+      "Defekte Startseiten-Sprunglinks auf vorhandene Ziele korrigiert",
+      "Doppelten Markennamen im Title entfernt",
+      "Markensuffix aus der H1 entfernt",
+      "Konkrete Information und thematische Inhaltslinks ergänzt",
+      "Sichtbare Breadcrumbs und passende BreadcrumbList ergänzt"
+    ],
+    "blog/haltbarkeit-keramikversiegelung-lackschutz/index.html": [
+      "Canonical-/Metadaten-Host an das bestehende www-Live-Endziel angepasst",
+      "Defekte Startseiten-Sprunglinks auf vorhandene Ziele korrigiert",
+      "Konkrete Information und thematische Inhaltslinks ergänzt",
+      "Sichtbare Breadcrumbs und passende BreadcrumbList ergänzt"
+    ],
+    "blog/harte-und-weiche-autolacke-der-geheime-schlssel-zur-perfekten-lackaufbereitung/index.html": [
+      "Canonical-/Metadaten-Host an das bestehende www-Live-Endziel angepasst",
+      "Defekte Startseiten-Sprunglinks auf vorhandene Ziele korrigiert",
+      "Title, Description und Themenausrichtung gezielt optimiert",
+      "Konkrete Information und thematische Inhaltslinks ergänzt",
+      "Identisches Inhaltsduplikat kanonisch der zentralen Fassung zugeordnet; URL bleibt erreichbar"
+    ],
+    "blog/harte-und-weiche-autolacke-der-geheime-schlssel-zur-perfekten-lackaufbereitung-2/index.html": [
+      "Canonical-/Metadaten-Host an das bestehende www-Live-Endziel angepasst",
+      "Defekte Startseiten-Sprunglinks auf vorhandene Ziele korrigiert",
+      "Title, Description und Themenausrichtung gezielt optimiert",
+      "Konkrete Information und thematische Inhaltslinks ergänzt",
+      "Identisches Inhaltsduplikat kanonisch der zentralen Fassung zugeordnet; URL bleibt erreichbar"
+    ],
+    "blog/harte-weiche-autolacke-lackaufbereitung/index.html": [
+      "Canonical-/Metadaten-Host an das bestehende www-Live-Endziel angepasst",
+      "Defekte Startseiten-Sprunglinks auf vorhandene Ziele korrigiert",
+      "Title, Description und Themenausrichtung gezielt optimiert; H1 präzisiert",
+      "Konkrete Information und thematische Inhaltslinks ergänzt",
+      "Sichtbare Breadcrumbs und passende BreadcrumbList ergänzt"
+    ],
+    "blog/index.html": [
+      "Canonical-/Metadaten-Host an das bestehende www-Live-Endziel angepasst",
+      "Defekte Startseiten-Sprunglinks auf vorhandene Ziele korrigiert",
+      "Artikelteaser an überarbeitete Inhalte angepasst; Leistungscluster zugänglich gemacht"
+    ],
+    "blog/innenreinigung-auto-in-der-naehe/index.html": [
+      "Canonical-/Metadaten-Host an das bestehende www-Live-Endziel angepasst",
+      "Defekte Startseiten-Sprunglinks auf vorhandene Ziele korrigiert",
+      "Title, Description und Themenausrichtung gezielt optimiert; H1 präzisiert",
+      "Konkrete Information und thematische Inhaltslinks ergänzt",
+      "Sichtbare Breadcrumbs und passende BreadcrumbList ergänzt"
+    ],
+    "blog/keramik-fuer-auto-erfurt-vorteile-haltbarkeit/index.html": [
+      "Canonical-/Metadaten-Host an das bestehende www-Live-Endziel angepasst",
+      "Defekte Startseiten-Sprunglinks auf vorhandene Ziele korrigiert",
+      "Title, Description und Themenausrichtung gezielt optimiert; H1 präzisiert",
+      "Konkrete Information und thematische Inhaltslinks ergänzt",
+      "Sichtbare Breadcrumbs und passende BreadcrumbList ergänzt"
+    ],
+    "blog/keramikversiegelung-erfurt-high-end-lackschutz-powertech-performance/index.html": [
+      "Canonical-/Metadaten-Host an das bestehende www-Live-Endziel angepasst",
+      "Defekte Startseiten-Sprunglinks auf vorhandene Ziele korrigiert",
+      "Title, Description und Themenausrichtung gezielt optimiert; H1 präzisiert",
+      "Konkrete Information und thematische Inhaltslinks ergänzt",
+      "Sichtbare Breadcrumbs und passende BreadcrumbList ergänzt"
+    ],
+    "blog/keramikversiegelung-profi-lackschutz/index.html": [
+      "Canonical-/Metadaten-Host an das bestehende www-Live-Endziel angepasst",
+      "Defekte Startseiten-Sprunglinks auf vorhandene Ziele korrigiert",
+      "Title, Description und Themenausrichtung gezielt optimiert; H1 präzisiert",
+      "Konkrete Information und thematische Inhaltslinks ergänzt",
+      "Sichtbare Breadcrumbs und passende BreadcrumbList ergänzt"
+    ],
+    "blog/lackierung-oldtimer-erfurt-lackaufbereitung-keramik/index.html": [
+      "Canonical-/Metadaten-Host an das bestehende www-Live-Endziel angepasst",
+      "Defekte Startseiten-Sprunglinks auf vorhandene Ziele korrigiert",
+      "Konkrete Information und thematische Inhaltslinks ergänzt",
+      "Sichtbare Breadcrumbs und passende BreadcrumbList ergänzt"
+    ],
+    "blog/lackkorrektur-wofuer-gut-werterhalt/index.html": [
+      "Canonical-/Metadaten-Host an das bestehende www-Live-Endziel angepasst",
+      "Defekte Startseiten-Sprunglinks auf vorhandene Ziele korrigiert",
+      "Doppelten Markennamen im Title entfernt",
+      "Markensuffix aus der H1 entfernt",
+      "Konkrete Information und thematische Inhaltslinks ergänzt",
+      "Sichtbare Breadcrumbs und passende BreadcrumbList ergänzt"
+    ],
+    "blog/leasing-rueckgabe-aufbereitung-erfurt/index.html": [
+      "Canonical-/Metadaten-Host an das bestehende www-Live-Endziel angepasst",
+      "Defekte Startseiten-Sprunglinks auf vorhandene Ziele korrigiert",
+      "Title, Description und Themenausrichtung gezielt optimiert; H1 präzisiert",
+      "Konkrete Information und thematische Inhaltslinks ergänzt",
+      "Sichtbare Breadcrumbs und passende BreadcrumbList ergänzt"
+    ],
+    "blog/leasingauto-aufbereiten/index.html": [
+      "Canonical-/Metadaten-Host an das bestehende www-Live-Endziel angepasst",
+      "Defekte Startseiten-Sprunglinks auf vorhandene Ziele korrigiert",
+      "Konkrete Information und thematische Inhaltslinks ergänzt",
+      "Sichtbare Breadcrumbs und passende BreadcrumbList ergänzt"
+    ],
+    "blog/leasingrueckgabe-checkliste/index.html": [
+      "Canonical-/Metadaten-Host an das bestehende www-Live-Endziel angepasst",
+      "Defekte Startseiten-Sprunglinks auf vorhandene Ziele korrigiert",
+      "Title, Description und Themenausrichtung gezielt optimiert; H1 präzisiert",
+      "Konkrete Information und thematische Inhaltslinks ergänzt",
+      "Sichtbare Breadcrumbs und passende BreadcrumbList ergänzt"
+    ],
+    "blog/motorradaufbereitung-keramikversiegelung-experte/index.html": [
+      "Canonical-/Metadaten-Host an das bestehende www-Live-Endziel angepasst",
+      "Defekte Startseiten-Sprunglinks auf vorhandene Ziele korrigiert",
+      "Markensuffix aus der H1 entfernt",
+      "Konkrete Information und thematische Inhaltslinks ergänzt",
+      "Sichtbare Breadcrumbs und passende BreadcrumbList ergänzt"
+    ],
+    "blog/motorwaesche-erfurt-vorteile-kosten/index.html": [
+      "Canonical-/Metadaten-Host an das bestehende www-Live-Endziel angepasst",
+      "Defekte Startseiten-Sprunglinks auf vorhandene Ziele korrigiert",
+      "Title, Description und Themenausrichtung gezielt optimiert; H1 präzisiert",
+      "Konkrete Information und thematische Inhaltslinks ergänzt",
+      "Sichtbare Breadcrumbs und passende BreadcrumbList ergänzt"
+    ],
+    "blog/oldtimer-aufbereitung-erfurt-wertschonende-pflege/index.html": [
+      "Canonical-/Metadaten-Host an das bestehende www-Live-Endziel angepasst",
+      "Defekte Startseiten-Sprunglinks auf vorhandene Ziele korrigiert",
+      "Konkrete Information und thematische Inhaltslinks ergänzt",
+      "Sichtbare Breadcrumbs und passende BreadcrumbList ergänzt"
+    ],
+    "blog/porsche-aufbereitung-erfurt-keramikversiegelung-zertifiziert/index.html": [
+      "Canonical-/Metadaten-Host an das bestehende www-Live-Endziel angepasst",
+      "Defekte Startseiten-Sprunglinks auf vorhandene Ziele korrigiert",
+      "Konkrete Information und thematische Inhaltslinks ergänzt",
+      "Sichtbare Breadcrumbs und passende BreadcrumbList ergänzt"
+    ],
+    "blog/professionelle-cabrioverdeck-impraegnierung-und-reinigung/index.html": [
+      "Canonical-/Metadaten-Host an das bestehende www-Live-Endziel angepasst",
+      "Defekte Startseiten-Sprunglinks auf vorhandene Ziele korrigiert",
+      "Doppelten Markennamen im Title entfernt",
+      "Markensuffix aus der H1 entfernt",
+      "Konkrete Information und thematische Inhaltslinks ergänzt",
+      "Sichtbare Breadcrumbs und passende BreadcrumbList ergänzt"
+    ],
+    "blog/professionelle-innenreinigung-auto-in-der-naehe/index.html": [
+      "Canonical-/Metadaten-Host an das bestehende www-Live-Endziel angepasst",
+      "Defekte Startseiten-Sprunglinks auf vorhandene Ziele korrigiert",
+      "Title, Description und Themenausrichtung gezielt optimiert; H1 präzisiert",
+      "Konkrete Information und thematische Inhaltslinks ergänzt",
+      "Sichtbare Breadcrumbs und passende BreadcrumbList ergänzt"
+    ],
+    "blog/professionelle-keramikversiegelung-erfurt/index.html": [
+      "Canonical-/Metadaten-Host an das bestehende www-Live-Endziel angepasst",
+      "Defekte Startseiten-Sprunglinks auf vorhandene Ziele korrigiert",
+      "Title, Description und Themenausrichtung gezielt optimiert; H1 präzisiert",
+      "Konkrete Information und thematische Inhaltslinks ergänzt",
+      "Sichtbare Breadcrumbs und passende BreadcrumbList ergänzt"
+    ],
+    "blog/profi-keramikversiegelung/index.html": [
+      "Canonical-/Metadaten-Host an das bestehende www-Live-Endziel angepasst",
+      "Defekte Startseiten-Sprunglinks auf vorhandene Ziele korrigiert",
+      "Title, Description und Themenausrichtung gezielt optimiert; H1 präzisiert",
+      "Konkrete Information und thematische Inhaltslinks ergänzt",
+      "Sichtbare Breadcrumbs und passende BreadcrumbList ergänzt"
+    ],
+    "blog/softwareoptimierung-dpf-off-erfurt/index.html": [
+      "Canonical-/Metadaten-Host an das bestehende www-Live-Endziel angepasst",
+      "Defekte Startseiten-Sprunglinks auf vorhandene Ziele korrigiert",
+      "Konkrete Information und thematische Inhaltslinks ergänzt",
+      "Sichtbare Breadcrumbs und passende BreadcrumbList ergänzt"
+    ],
+    "blog/softwareoptimierung-erfurt/index.html": [
+      "Canonical-/Metadaten-Host an das bestehende www-Live-Endziel angepasst",
+      "Defekte Startseiten-Sprunglinks auf vorhandene Ziele korrigiert",
+      "Title, Description und Themenausrichtung gezielt optimiert; H1 präzisiert",
+      "Konkrete Information und thematische Inhaltslinks ergänzt",
+      "Sichtbare Breadcrumbs und passende BreadcrumbList ergänzt"
+    ],
+    "blog/was-kostet-eine-auto-reinigung/index.html": [
+      "Canonical-/Metadaten-Host an das bestehende www-Live-Endziel angepasst",
+      "Defekte Startseiten-Sprunglinks auf vorhandene Ziele korrigiert",
+      "Konkrete Information und thematische Inhaltslinks ergänzt",
+      "Sichtbare Breadcrumbs und passende BreadcrumbList ergänzt"
+    ],
+    "blog/wie-lange-dauert-adblue-off/index.html": [
+      "Canonical-/Metadaten-Host an das bestehende www-Live-Endziel angepasst",
+      "Defekte Startseiten-Sprunglinks auf vorhandene Ziele korrigiert",
+      "Title, Description und Themenausrichtung gezielt optimiert; H1 präzisiert",
+      "Artikelinhalt auf eigenständige, sachliche Nutzerfrage ausgerichtet",
+      "Konkrete Information und thematische Inhaltslinks ergänzt",
+      "Sichtbare Breadcrumbs und passende BreadcrumbList ergänzt"
+    ],
+    "blog/wie-oft-auto-aufbereiten-lassen.html": [
+      "Canonical-/Metadaten-Host an das bestehende www-Live-Endziel angepasst",
+      "Defekte Startseiten-Sprunglinks auf vorhandene Ziele korrigiert",
+      "Title, Description und Themenausrichtung gezielt optimiert",
+      "Konkrete Information und thematische Inhaltslinks ergänzt",
+      "Sichtbare Breadcrumbs und passende BreadcrumbList ergänzt"
+    ],
+    "chiptuning.html": [
+      "Canonical-/Metadaten-Host an das bestehende www-Live-Endziel angepasst",
+      "Defekte Startseiten-Sprunglinks auf vorhandene Ziele korrigiert",
+      "Title, Description und Themenausrichtung gezielt optimiert; H1 präzisiert",
+      "Ergänzenden Beratungs-/Clusterabschnitt eingefügt"
+    ],
+    "eisenach.html": [
+      "Canonical-/Metadaten-Host an das bestehende www-Live-Endziel angepasst",
+      "Title, Description und Themenausrichtung gezielt optimiert; H1 präzisiert",
+      "Ergänzenden Beratungs-/Clusterabschnitt eingefügt",
+      "Fiktiven Vor-Ort-Eindruck korrigiert; eigenständiger lokaler Mehrwert bleibt mangels Ortsdaten offen",
+      "Fehlende H2 vor Leistungskarten ergänzt"
+    ],
+    "fahrzeugaufbereitung-aus-erfurt.html": [
+      "Canonical-/Metadaten-Host an das bestehende www-Live-Endziel angepasst",
+      "Title, Description und Themenausrichtung gezielt optimiert; H1 präzisiert",
+      "Ergänzenden Beratungs-/Clusterabschnitt eingefügt",
+      "Fehlende H2 vor Leistungskarten ergänzt"
+    ],
+    "gera.html": [
+      "Canonical-/Metadaten-Host an das bestehende www-Live-Endziel angepasst",
+      "Title, Description und Themenausrichtung gezielt optimiert; H1 präzisiert",
+      "Ergänzenden Beratungs-/Clusterabschnitt eingefügt",
+      "Fiktiven Vor-Ort-Eindruck korrigiert; eigenständiger lokaler Mehrwert bleibt mangels Ortsdaten offen",
+      "Fehlende H2 vor Leistungskarten ergänzt"
+    ],
+    "glosar.html": [
+      "Canonical-/Metadaten-Host an das bestehende www-Live-Endziel angepasst",
+      "Defekte Startseiten-Sprunglinks auf vorhandene Ziele korrigiert"
+    ],
+    "gotha.html": [
+      "Canonical-/Metadaten-Host an das bestehende www-Live-Endziel angepasst",
+      "Title, Description und Themenausrichtung gezielt optimiert; H1 präzisiert",
+      "Ergänzenden Beratungs-/Clusterabschnitt eingefügt",
+      "Fiktiven Vor-Ort-Eindruck korrigiert; eigenständiger lokaler Mehrwert bleibt mangels Ortsdaten offen",
+      "Fehlende H2 vor Leistungskarten ergänzt"
+    ],
+    "index.html": [
+      "Canonical-/Metadaten-Host an das bestehende www-Live-Endziel angepasst",
+      "Title, Description und Themenausrichtung gezielt optimiert; H1 präzisiert",
+      "Leistungsraster intern verlinkt; KI-Bildvergleich klar gekennzeichnet; Termin-/Glossarzugänge ergänzt"
+    ],
+    "jena.html": [
+      "Canonical-/Metadaten-Host an das bestehende www-Live-Endziel angepasst",
+      "Title, Description und Themenausrichtung gezielt optimiert; H1 präzisiert",
+      "Ergänzenden Beratungs-/Clusterabschnitt eingefügt",
+      "Fiktiven Vor-Ort-Eindruck korrigiert; eigenständiger lokaler Mehrwert bleibt mangels Ortsdaten offen",
+      "Fehlende H2 vor Leistungskarten ergänzt"
+    ],
+    "luxus-aufbereitung.html": [
+      "Canonical-/Metadaten-Host an das bestehende www-Live-Endziel angepasst",
+      "Title, Description und Themenausrichtung gezielt optimiert; H1 präzisiert",
+      "Ergänzenden Beratungs-/Clusterabschnitt eingefügt",
+      "Fehlende H2 vor Leistungskarten ergänzt"
+    ],
+    "nordhausen.html": [
+      "Canonical-/Metadaten-Host an das bestehende www-Live-Endziel angepasst",
+      "Title, Description und Themenausrichtung gezielt optimiert; H1 präzisiert",
+      "Ergänzenden Beratungs-/Clusterabschnitt eingefügt",
+      "Fiktiven Vor-Ort-Eindruck korrigiert; eigenständiger lokaler Mehrwert bleibt mangels Ortsdaten offen",
+      "Fehlende H2 vor Leistungskarten ergänzt"
+    ],
+    "online-termin-buchen.html": [
+      "Canonical-/Metadaten-Host an das bestehende www-Live-Endziel angepasst",
+      "Defekte Startseiten-Sprunglinks auf vorhandene Ziele korrigiert"
+    ],
+    "pages/agb.html": [
+      "Canonical-/Metadaten-Host an das bestehende www-Live-Endziel angepasst"
+    ],
+    "pages/cookie-einstellungen.html": [
+      "Canonical-/Metadaten-Host an das bestehende www-Live-Endziel angepasst"
+    ],
+    "pages/datenschutz.html": [
+      "Canonical-/Metadaten-Host an das bestehende www-Live-Endziel angepasst"
+    ],
+    "pages/impressum.html": [
+      "Canonical-/Metadaten-Host an das bestehende www-Live-Endziel angepasst"
+    ],
+    "pages/kontakt.html": [
+      "Canonical-/Metadaten-Host an das bestehende www-Live-Endziel angepasst",
+      "Defekte Startseiten-Sprunglinks auf vorhandene Ziele korrigiert"
+    ],
+    "pages/seitenuebersicht.html": [
+      "Canonical-/Metadaten-Host an das bestehende www-Live-Endziel angepasst",
+      "Defekte Startseiten-Sprunglinks auf vorhandene Ziele korrigiert"
+    ],
+    "suhl.html": [
+      "Canonical-/Metadaten-Host an das bestehende www-Live-Endziel angepasst",
+      "Title, Description und Themenausrichtung gezielt optimiert; H1 präzisiert",
+      "Ergänzenden Beratungs-/Clusterabschnitt eingefügt",
+      "Fiktiven Vor-Ort-Eindruck korrigiert; eigenständiger lokaler Mehrwert bleibt mangels Ortsdaten offen",
+      "Fehlende H2 vor Leistungskarten ergänzt"
+    ],
+    "trockeneisreinigung.html": [
+      "Title, Description und Themenausrichtung gezielt optimiert; H1 präzisiert",
+      "Artikelinhalt auf eigenständige, sachliche Nutzerfrage ausgerichtet",
+      "Neue eigenständige Leistungsseite aus belegtem Bestandsangebot und kommerzieller Suchintention erstellt"
+    ]
+  },
+  "metadata": {
+    "/": {
+      "keyword": "Autoaufbereitung Erfurt",
+      "intent": "kommerziell / lokal",
+      "cluster": "Autoaufbereitung",
+      "title": "Autoaufbereitung Erfurt – Pflege & Werterhalt",
+      "description": "Autoaufbereitung in Erfurt: Lackkorrektur, Keramikversiegelung, Innenraum- und Trockeneisreinigung. Fahrzeug und Wunschleistung anfragen."
+    },
+    "/adblue-service": {
+      "keyword": "AdBlue Service Erfurt",
+      "intent": "kommerziell / lokal",
+      "cluster": "AdBlue / SCR / DPF",
+      "title": "AdBlue-Service Erfurt – Diagnose & Reparatur",
+      "description": "AdBlue-Warnmeldung oder Start-Countdown? Powertech Performance in Erfurt prüft Diagnose, Reparatur und Rückrüstung. Fahrzeugdaten zur Beratung senden."
+    },
+    "/chiptuning": {
+      "keyword": "Chiptuning Erfurt",
+      "intent": "kommerziell / lokal",
+      "cluster": "Chiptuning",
+      "title": "Chiptuning Erfurt – Fahrzeugbezogene Beratung",
+      "description": "Chiptuning und Softwareoptimierung in Erfurt: Möglichkeiten, Fahrzeugzustand und Voraussetzungen besprechen. Modell und Motorisierung zur Beratung senden."
+    },
+    "/luxus-aufbereitung": {
+      "keyword": "Keramikversiegelung Erfurt",
+      "intent": "kommerziell / lokal",
+      "cluster": "Keramikversiegelung",
+      "title": "Keramikversiegelung Erfurt – Lackschutz & Pflege",
+      "description": "Keramikversiegelung in Erfurt: Lackzustand, Vorbereitung und Pflege passend zum Fahrzeug abstimmen. Informationen zum Leistungsumfang und persönliche Beratung."
+    },
+    "/blog/adblue-deaktivieren-vor-nachteile-wahrheit/": {
+      "keyword": "AdBlue deaktivieren Risiken",
+      "intent": "informativ",
+      "cluster": "AdBlue / SCR / DPF",
+      "title": "AdBlue deaktivieren: Risiken und Alternativen",
+      "description": "AdBlue deaktivieren oder die Ursache reparieren? Rechtliche Grenzen, Fehlermeldungen und sinnvolle nächste Schritte bei AdBlue-Problemen verständlich erklärt."
+    },
+    "/blog/adblue-deaktivierung/": {
+      "keyword": "AdBlue Deaktivierung rückgängig machen",
+      "intent": "informativ",
+      "cluster": "AdBlue / SCR / DPF",
+      "title": "AdBlue-Deaktivierung rückgängig machen: Prüfbedarf",
+      "description": "Bereits veränderte AdBlue-Software? Welche Angaben und Unterlagen bei der Prüfung von Serienstand, vorhandenen Komponenten und einer Rückrüstung helfen."
+    },
+    "/blog/wie-lange-dauert-adblue-off/": {
+      "keyword": "AdBlue Diagnose Dauer",
+      "intent": "informativ",
+      "cluster": "AdBlue / SCR / DPF",
+      "title": "AdBlue-Probleme: Ablauf und Zeitbedarf der Prüfung",
+      "description": "Wie lange dauert die Prüfung eines AdBlue-Problems? Welche Fahrzeugdaten, Fehlerangaben und Vorarbeiten für eine verlässliche Terminplanung benötigt werden."
+    },
+    "/blog/auto-selber-waschen-erfurt/": {
+      "keyword": "Auto selber waschen Erfurt",
+      "intent": "informativ",
+      "cluster": "Autoaufbereitung",
+      "title": "Auto selber waschen in Erfurt: SB-Wäsche & Pflege",
+      "description": "Auto selbst waschen in Erfurt: Hinweise zur Wahl einer SB-Waschbox, zur Vorbereitung und zur Abgrenzung von Autowäsche und professioneller Aufbereitung."
+    },
+    "/blog/motorwaesche-erfurt-vorteile-kosten/": {
+      "keyword": "Motorraumwäsche Erfurt",
+      "intent": "informativ / kommerziell",
+      "cluster": "Motorraumwäsche",
+      "title": "Motorraumwäsche Erfurt: Eignung, Ablauf & Aufwand",
+      "description": "Motorraumwäsche in Erfurt: Fahrzeugzustand, sensible Komponenten und Reinigungsumfang besprechen. Informationen zur Vorbereitung und individuellen Anfrage."
+    },
+    "/blog/leasingrueckgabe-checkliste/": {
+      "keyword": "Leasingrückgabe Checkliste",
+      "intent": "informativ",
+      "cluster": "Leasingrückgabe",
+      "title": "Leasingrückgabe-Checkliste: Fahrzeug vorbereiten",
+      "description": "Checkliste für die Leasingrückgabe: Unterlagen, Fahrzeugzustand, Zubehör und Übergabeprotokoll vorbereiten. Aufbereitung und Reparaturbedarf unterscheiden."
+    },
+    "/blog/leasing-rueckgabe-aufbereitung-erfurt/": {
+      "keyword": "Leasingrückgabe Aufbereitung Erfurt",
+      "intent": "kommerziell / lokal",
+      "cluster": "Leasingrückgabe",
+      "title": "Leasingrückgabe-Aufbereitung in Erfurt",
+      "description": "Fahrzeug vor der Leasingrückgabe aufbereiten lassen: Lack, Innenraum und Pflegebedarf in Erfurt besprechen. Zustand und Rückgabeanforderungen berücksichtigen."
+    },
+    "/blog/wie-oft-auto-aufbereiten-lassen.html": {
+      "keyword": "wie oft Auto aufbereiten lassen",
+      "intent": "informativ",
+      "cluster": "Autoaufbereitung",
+      "title": "Wie oft das Auto aufbereiten lassen?",
+      "description": "Wie oft ist eine Autoaufbereitung sinnvoll? Nutzung, Lackzustand und Innenraum berücksichtigen und regelmäßige Wäsche von intensiver Pflege unterscheiden."
+    },
+    "/blog/innenreinigung-auto-in-der-naehe/": {
+      "keyword": "Innenreinigung Auto Erfurt",
+      "intent": "kommerziell / lokal",
+      "cluster": "Innenraumreinigung",
+      "title": "Innenreinigung Auto Erfurt – Umfang & Anfrage",
+      "description": "Innenraumreinigung in Erfurt: Sitze, Teppiche und Verkleidungen passend zum Fahrzeugzustand pflegen lassen. Umfang besprechen und individuelles Angebot anfragen."
+    },
+    "/blog/professionelle-innenreinigung-auto-in-der-naehe/": {
+      "keyword": "Auto Innenreinigung vorbereiten",
+      "intent": "informativ",
+      "cluster": "Innenraumreinigung",
+      "title": "Auto-Innenreinigung: Termin richtig vorbereiten",
+      "description": "Was vor einer professionellen Auto-Innenreinigung wichtig ist: persönliche Gegenstände, betroffene Materialien und bekannte Flecken für die Beratung vorbereiten."
+    },
+    "/blog/chiptuning-raumerfurt/": {
+      "keyword": "Chiptuning Beratung Fahrzeugdaten",
+      "intent": "informativ",
+      "cluster": "Chiptuning",
+      "title": "Chiptuning-Beratung: Fahrzeugdaten vorbereiten",
+      "description": "Chiptuning-Beratung vorbereiten: Modell, Motorisierung, Softwarestand und bisherige Umbauten zusammenstellen. Technische und formale Voraussetzungen klären."
+    },
+    "/blog/chiptuning-raum-erfurt/": {
+      "keyword": "Chiptuning Risiken und Voraussetzungen",
+      "intent": "informativ",
+      "cluster": "Chiptuning",
+      "title": "Chiptuning: Leistung, Risiken und Nachweise",
+      "description": "Chiptuning einordnen: Leistungswünsche, Fahrzeugzustand, mögliche Risiken und Nachweise vor einer Softwareänderung besprechen. Beratung in Erfurt finden."
+    },
+    "/blog/softwareoptimierung-erfurt/": {
+      "keyword": "Softwareoptimierung Fahrzeug Beratung",
+      "intent": "informativ",
+      "cluster": "Chiptuning",
+      "title": "Softwareoptimierung: Fragen vor einer Änderung",
+      "description": "Softwareoptimierung am Fahrzeug: Ziel, vorhandene Änderungen und Wartungszustand besprechen. Fragen für die Beratung und zum weiteren Vorgehen in Erfurt."
+    },
+    "/blog/professionelle-keramikversiegelung-erfurt/": {
+      "keyword": "Keramikversiegelung Leistungsumfang",
+      "intent": "informativ",
+      "cluster": "Keramikversiegelung",
+      "title": "Keramikversiegelung: Leistungsumfang verstehen",
+      "description": "Keramikversiegelung: Leistungsumfang verstehen. Grundlagen einordnen, Leistungsversprechen prüfen und die passende Beratung zur Keramikversiegelung in Erfurt finden."
+    },
+    "/blog/profi-keramikversiegelung/": {
+      "keyword": "Keramikversiegelung Vorbereitung",
+      "intent": "informativ",
+      "cluster": "Keramikversiegelung",
+      "title": "Keramikversiegelung: Vorbereitung und Verarbeitung",
+      "description": "Keramikversiegelung: Vorbereitung und Verarbeitung. Grundlagen einordnen, Leistungsversprechen prüfen und die passende Beratung zur Keramikversiegelung in Erfurt finden."
+    },
+    "/blog/keramikversiegelung-profi-lackschutz/": {
+      "keyword": "Keramikversiegelung Profi oder selber",
+      "intent": "informativ",
+      "cluster": "Keramikversiegelung",
+      "title": "Keramikversiegelung: Profi oder selbst auftragen?",
+      "description": "Keramikversiegelung: Profi oder selbst auftragen?. Grundlagen einordnen, Leistungsversprechen prüfen und die passende Beratung zur Keramikversiegelung in Erfurt finden."
+    },
+    "/blog/keramikversiegelung-erfurt-high-end-lackschutz-powertech-performance/": {
+      "keyword": "Keramikversiegelung Lackzustand",
+      "intent": "informativ",
+      "cluster": "Keramikversiegelung",
+      "title": "Keramikversiegelung: Lackzustand und Glanz",
+      "description": "Keramikversiegelung: Lackzustand und Glanz. Grundlagen einordnen, Leistungsversprechen prüfen und die passende Beratung zur Keramikversiegelung in Erfurt finden."
+    },
+    "/blog/keramik-fuer-auto-erfurt-vorteile-haltbarkeit/": {
+      "keyword": "Keramik Auto Vorteile",
+      "intent": "informativ",
+      "cluster": "Keramikversiegelung",
+      "title": "Keramik fürs Auto: Nutzen und Pflegebedarf",
+      "description": "Keramik fürs Auto: Nutzen und Pflegebedarf. Grundlagen einordnen, Leistungsversprechen prüfen und die passende Beratung zur Keramikversiegelung in Erfurt finden."
+    },
+    "/blog/blog-keramikversiegelung/": {
+      "keyword": "Was ist Keramikversiegelung",
+      "intent": "informativ",
+      "cluster": "Keramikversiegelung",
+      "title": "Keramikversiegelung fürs Auto einfach erklärt",
+      "description": "Keramikversiegelung fürs Auto einfach erklärt. Grundlagen einordnen, Leistungsversprechen prüfen und die passende Beratung zur Keramikversiegelung in Erfurt finden."
+    },
+    "/blog/harte-weiche-autolacke-lackaufbereitung/": {
+      "keyword": "harte und weiche Autolacke",
+      "intent": "informativ",
+      "cluster": "Lackaufbereitung",
+      "title": "Harte und weiche Autolacke: Lackhärte verstehen",
+      "description": "Harte und weiche Autolacke: Warum der Lackzustand die Auswahl einer Politur beeinflusst und was bei einer professionellen Lackaufbereitung zu beachten ist."
+    },
+    "/blog/harte-und-weiche-autolacke-der-geheime-schlssel-zur-perfekten-lackaufbereitung/": {
+      "keyword": "harte und weiche Autolacke",
+      "intent": "informativ",
+      "cluster": "Lackaufbereitung",
+      "title": "Harte und weiche Autolacke – ältere Artikelfassung",
+      "description": "Diese frühere Artikelfassung bleibt erreichbar. Der zentrale Ratgeber erklärt Lackhärte und die Auswahl passender Verfahren für die Lackaufbereitung."
+    },
+    "/blog/harte-und-weiche-autolacke-der-geheime-schlssel-zur-perfekten-lackaufbereitung-2/": {
+      "keyword": "harte und weiche Autolacke",
+      "intent": "informativ",
+      "cluster": "Lackaufbereitung",
+      "title": "Harte und weiche Autolacke – zweite Artikelfassung",
+      "description": "Diese frühere Artikelfassung bleibt erreichbar. Der zentrale Ratgeber erklärt Lackhärte und die Auswahl passender Verfahren für die Lackaufbereitung."
+    },
+    "/eisenach": {
+      "keyword": "Autoaufbereitung Eisenach",
+      "intent": "kommerziell / Einzugsgebiet",
+      "cluster": "Einzugsgebiet",
+      "title": "Autoaufbereitung für Eisenach – Termin in Erfurt",
+      "description": "Sie kommen aus Eisenach? Powertech Performance bietet Fahrzeugaufbereitung in Erfurt. Fahrzeugzustand und Wunschleistung vor Ihrer Anreise abstimmen."
+    },
+    "/gera": {
+      "keyword": "Autoaufbereitung Gera",
+      "intent": "kommerziell / Einzugsgebiet",
+      "cluster": "Einzugsgebiet",
+      "title": "Autoaufbereitung für Gera – Termin in Erfurt",
+      "description": "Sie kommen aus Gera? Powertech Performance bietet Fahrzeugaufbereitung in Erfurt. Fahrzeugzustand und Wunschleistung vor Ihrer Anreise abstimmen."
+    },
+    "/gotha": {
+      "keyword": "Autoaufbereitung Gotha",
+      "intent": "kommerziell / Einzugsgebiet",
+      "cluster": "Einzugsgebiet",
+      "title": "Autoaufbereitung für Gotha – Termin in Erfurt",
+      "description": "Sie kommen aus Gotha? Powertech Performance bietet Fahrzeugaufbereitung in Erfurt. Fahrzeugzustand und Wunschleistung vor Ihrer Anreise abstimmen."
+    },
+    "/jena": {
+      "keyword": "Autoaufbereitung Jena",
+      "intent": "kommerziell / Einzugsgebiet",
+      "cluster": "Einzugsgebiet",
+      "title": "Autoaufbereitung für Jena – Termin in Erfurt",
+      "description": "Sie kommen aus Jena? Powertech Performance bietet Fahrzeugaufbereitung in Erfurt. Fahrzeugzustand und Wunschleistung vor Ihrer Anreise abstimmen."
+    },
+    "/nordhausen": {
+      "keyword": "Autoaufbereitung Nordhausen",
+      "intent": "kommerziell / Einzugsgebiet",
+      "cluster": "Einzugsgebiet",
+      "title": "Autoaufbereitung für Nordhausen – Termin in Erfurt",
+      "description": "Sie kommen aus Nordhausen? Powertech Performance bietet Fahrzeugaufbereitung in Erfurt. Fahrzeugzustand und Wunschleistung vor Ihrer Anreise abstimmen."
+    },
+    "/suhl": {
+      "keyword": "Autoaufbereitung Suhl",
+      "intent": "kommerziell / Einzugsgebiet",
+      "cluster": "Einzugsgebiet",
+      "title": "Autoaufbereitung für Suhl – Termin in Erfurt",
+      "description": "Sie kommen aus Suhl? Powertech Performance bietet Fahrzeugaufbereitung in Erfurt. Fahrzeugzustand und Wunschleistung vor Ihrer Anreise abstimmen."
+    },
+    "/fahrzeugaufbereitung-aus-erfurt": {
+      "keyword": "Fahrzeugaufbereitung Termin vorbereiten",
+      "intent": "informativ / kommerziell",
+      "cluster": "Autoaufbereitung",
+      "title": "Fahrzeugaufbereitung Erfurt: Termin vorbereiten",
+      "description": "Fahrzeugaufbereitung in Erfurt planen: Zustand, Wunschleistung und Ziel der Pflege vorab besprechen. Hinweise zur Anfrage, Besichtigung und Abholung."
+    },
+    "/trockeneisreinigung": {
+      "keyword": "Trockeneisreinigung Erfurt",
+      "intent": "kommerziell / lokal",
+      "cluster": "Trockeneisreinigung",
+      "title": "Trockeneisreinigung Erfurt – Fahrzeug & Unterboden",
+      "description": "Trockeneisreinigung am Fahrzeug in Erfurt: Unterboden und sensible Bereiche nach Zustandsprüfung reinigen lassen. Fahrzeug und gewünschte Bereiche anfragen."
+    }
+  },
+  "redirect_repairs": [
+    {
+      "source": "/adblue-deaktivieren-vor-nachteile-wahrheit/",
+      "destination": "/blog/adblue-deaktivieren-vor-nachteile-wahrheit/",
+      "permanent": true,
+      "impressions": 6095,
+      "reason": "404 im Export; identischer Artikelslug bzw. reine Slash-Variante eines vorhandenen Ziels"
+    },
+    {
+      "source": "/auto-selber-waschen-erfurt/",
+      "destination": "/blog/auto-selber-waschen-erfurt/",
+      "permanent": true,
+      "impressions": 48,
+      "reason": "404 im Export; identischer Artikelslug bzw. reine Slash-Variante eines vorhandenen Ziels"
+    },
+    {
+      "source": "/chiptuning-raum-erfurt/",
+      "destination": "/blog/chiptuning-raum-erfurt/",
+      "permanent": true,
+      "impressions": 47,
+      "reason": "404 im Export; identischer Artikelslug bzw. reine Slash-Variante eines vorhandenen Ziels"
+    },
+    {
+      "source": "/softwareoptimierung-dpf-off-erfurt/",
+      "destination": "/blog/softwareoptimierung-dpf-off-erfurt/",
+      "permanent": true,
+      "impressions": 33,
+      "reason": "404 im Export; identischer Artikelslug bzw. reine Slash-Variante eines vorhandenen Ziels"
+    },
+    {
+      "source": "/adblue-deaktivierung/",
+      "destination": "/blog/adblue-deaktivierung/",
+      "permanent": true,
+      "impressions": 22,
+      "reason": "404 im Export; identischer Artikelslug bzw. reine Slash-Variante eines vorhandenen Ziels"
+    },
+    {
+      "source": "/chiptuning/",
+      "destination": "/chiptuning",
+      "permanent": true,
+      "impressions": 17,
+      "reason": "404 im Export; identischer Artikelslug bzw. reine Slash-Variante eines vorhandenen Ziels"
+    },
+    {
+      "source": "/nordhausen/",
+      "destination": "/nordhausen",
+      "permanent": true,
+      "impressions": 8,
+      "reason": "404 im Export; identischer Artikelslug bzw. reine Slash-Variante eines vorhandenen Ziels"
+    },
+    {
+      "source": "/gotha/",
+      "destination": "/gotha",
+      "permanent": true,
+      "impressions": 4,
+      "reason": "404 im Export; identischer Artikelslug bzw. reine Slash-Variante eines vorhandenen Ziels"
+    },
+    {
+      "source": "/fahrzeugaufbereitung-erfurt/",
+      "destination": "/blog/fahrzeugaufbereitung-erfurt/",
+      "permanent": true,
+      "impressions": 3,
+      "reason": "404 im Export; identischer Artikelslug bzw. reine Slash-Variante eines vorhandenen Ziels"
+    },
+    {
+      "source": "/lackierung-oldtimer-erfurt-lackaufbereitung-keramik/",
+      "destination": "/blog/lackierung-oldtimer-erfurt-lackaufbereitung-keramik/",
+      "permanent": true,
+      "impressions": 3,
+      "reason": "404 im Export; identischer Artikelslug bzw. reine Slash-Variante eines vorhandenen Ziels"
+    },
+    {
+      "source": "/leasing-rueckgabe-aufbereitung-erfurt/",
+      "destination": "/blog/leasing-rueckgabe-aufbereitung-erfurt/",
+      "permanent": true,
+      "impressions": 3,
+      "reason": "404 im Export; identischer Artikelslug bzw. reine Slash-Variante eines vorhandenen Ziels"
+    },
+    {
+      "source": "/softwareoptimierung-erfurt/",
+      "destination": "/blog/softwareoptimierung-erfurt/",
+      "permanent": true,
+      "impressions": 3,
+      "reason": "404 im Export; identischer Artikelslug bzw. reine Slash-Variante eines vorhandenen Ziels"
+    },
+    {
+      "source": "/suhl/",
+      "destination": "/suhl",
+      "permanent": true,
+      "impressions": 3,
+      "reason": "404 im Export; identischer Artikelslug bzw. reine Slash-Variante eines vorhandenen Ziels"
+    },
+    {
+      "source": "/gera/",
+      "destination": "/gera",
+      "permanent": true,
+      "impressions": 2,
+      "reason": "404 im Export; identischer Artikelslug bzw. reine Slash-Variante eines vorhandenen Ziels"
+    },
+    {
+      "source": "/oldtimer-aufbereitung-erfurt-wertschonende-pflege/",
+      "destination": "/blog/oldtimer-aufbereitung-erfurt-wertschonende-pflege/",
+      "permanent": true,
+      "impressions": 2,
+      "reason": "404 im Export; identischer Artikelslug bzw. reine Slash-Variante eines vorhandenen Ziels"
+    },
+    {
+      "source": "/online-termin-buchen/",
+      "destination": "/online-termin-buchen",
+      "permanent": true,
+      "impressions": 2,
+      "reason": "404 im Export; identischer Artikelslug bzw. reine Slash-Variante eines vorhandenen Ziels"
+    },
+    {
+      "source": "/professionelle-keramikversiegelung-erfurt/",
+      "destination": "/blog/professionelle-keramikversiegelung-erfurt/",
+      "permanent": true,
+      "impressions": 2,
+      "reason": "404 im Export; identischer Artikelslug bzw. reine Slash-Variante eines vorhandenen Ziels"
+    },
+    {
+      "source": "/audi-r8-aufbereitung-erfurt-keramikversiegelung/",
+      "destination": "/blog/audi-r8-aufbereitung-erfurt-keramikversiegelung/",
+      "permanent": true,
+      "impressions": 1,
+      "reason": "404 im Export; identischer Artikelslug bzw. reine Slash-Variante eines vorhandenen Ziels"
+    },
+    {
+      "source": "/boot-aufbereitung-keramikversiegelung-marine/",
+      "destination": "/blog/boot-aufbereitung-keramikversiegelung-marine/",
+      "permanent": true,
+      "impressions": 1,
+      "reason": "404 im Export; identischer Artikelslug bzw. reine Slash-Variante eines vorhandenen Ziels"
+    },
+    {
+      "source": "/harte-und-weiche-autolacke-der-geheime-schlssel-zur-perfekten-lackaufbereitung-2/",
+      "destination": "/blog/harte-und-weiche-autolacke-der-geheime-schlssel-zur-perfekten-lackaufbereitung-2/",
+      "permanent": true,
+      "impressions": 1,
+      "reason": "404 im Export; identischer Artikelslug bzw. reine Slash-Variante eines vorhandenen Ziels"
+    },
+    {
+      "source": "/keramik-fuer-auto-erfurt-vorteile-haltbarkeit/",
+      "destination": "/blog/keramik-fuer-auto-erfurt-vorteile-haltbarkeit/",
+      "permanent": true,
+      "impressions": 1,
+      "reason": "404 im Export; identischer Artikelslug bzw. reine Slash-Variante eines vorhandenen Ziels"
+    },
+    {
+      "source": "/professionelle-cabrioverdeck-impraegnierung-und-reinigung/",
+      "destination": "/blog/professionelle-cabrioverdeck-impraegnierung-und-reinigung/",
+      "permanent": true,
+      "impressions": 1,
+      "reason": "404 im Export; identischer Artikelslug bzw. reine Slash-Variante eines vorhandenen Ziels"
+    },
+    {
+      "source": "/profi-keramikversiegelung/",
+      "destination": "/blog/profi-keramikversiegelung/",
+      "permanent": true,
+      "impressions": 1,
+      "reason": "404 im Export; identischer Artikelslug bzw. reine Slash-Variante eines vorhandenen Ziels"
+    }
+  ],
+  "new_urls": [
+    "/trockeneisreinigung"
+  ],
+  "deferred_new_urls": {
+    "/blog/felgenversiegelung-pflege/": "Kein Nachfragebeleg und keine produktspezifischen Pflegeangaben; kein zusätzlicher generischer Ratgeber."
+  },
+  "canonical_primary": "/blog/harte-weiche-autolacke-lackaufbereitung/",
+  "canonical_aliases": [
+    "/blog/harte-und-weiche-autolacke-der-geheime-schlssel-zur-perfekten-lackaufbereitung/",
+    "/blog/harte-und-weiche-autolacke-der-geheime-schlssel-zur-perfekten-lackaufbereitung-2/"
+  ],
+  "removed_from_sitemap": [
+    "/blog/harte-und-weiche-autolacke-der-geheime-schlssel-zur-perfekten-lackaufbereitung/",
+    "/blog/harte-und-weiche-autolacke-der-geheime-schlssel-zur-perfekten-lackaufbereitung-2/",
+    "/pages/impressum.html",
+    "/pages/datenschutz.html",
+    "/pages/agb.html"
+  ],
+  "decision_needed": {
+    "/adblue-deaktivieren/": "Zielwechsel von Deaktivierungsangebot zu Diagnose/Reparatur nicht rein technisch eindeutig; fachliche Zielentscheidung erforderlich.",
+    "/ads": "Indexierbarkeit bewusst erhalten; separates Ads-/SEO-Ziel benötigt Kampagnenentscheidung."
+  }
+}

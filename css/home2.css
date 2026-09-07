@@ -57,6 +57,14 @@ body.home2-page a {
   text-decoration: none;
 }
 
+/* Make the linked service headings and editorial entrances discoverable. */
+body.home2-page .service-tile h3 a,
+body.home2-page #leistungen p a,
+body.home2-page .contact-intro p a {
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
 body.home2-page h1,
 body.home2-page h2,
 body.home2-page h3,
