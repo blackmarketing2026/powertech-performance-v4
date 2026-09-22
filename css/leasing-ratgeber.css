@@ -346,6 +346,76 @@
   font-size: 0.94rem;
 }
 
+.guide-condition-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-3);
+  margin-top: var(--space-5);
+}
+
+.guide-condition-card {
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: 18px;
+  background: linear-gradient(145deg, rgba(38, 16, 50, 0.96), rgba(28, 14, 40, 0.92));
+  box-shadow: 0 22px 54px rgba(0, 0, 0, 0.2);
+}
+
+.guide-condition-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.guide-condition-card__content { padding: var(--space-3); }
+
+.guide-condition-card__content > span {
+  display: block;
+  margin-bottom: 0.65rem;
+  color: var(--color-brand-light);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.guide-condition-card h3 { margin-bottom: 0.65rem; font-size: 1.22rem; }
+
+.guide-condition-card p {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 0.94rem;
+}
+
+.guide-stonechip-note {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--space-3);
+  align-items: start;
+  margin-top: var(--space-4);
+  padding: var(--space-3);
+  border: 1px solid rgba(222, 204, 233, 0.24);
+  border-left: 3px solid var(--color-brand-light);
+  border-radius: 14px;
+  background: rgba(126, 62, 152, 0.12);
+}
+
+.guide-stonechip-note__icon {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  color: #fff;
+  background: var(--color-brand-dark);
+  font-weight: 900;
+}
+
+.guide-stonechip-note h3 { margin-bottom: 0.4rem; font-size: 1.08rem; }
+.guide-stonechip-note p { margin: 0; color: var(--color-text-muted); }
+
 .guide-split {
   display: grid;
   grid-template-columns: minmax(0, 1.05fr) minmax(330px, 0.95fr);
@@ -715,6 +785,7 @@
   .guide-trust { display: grid; grid-template-columns: 1fr 1fr; }
   .guide-grid { grid-template-columns: 1fr; }
   .guide-card, .guide-card:nth-child(4), .guide-card:nth-child(5) { grid-column: auto; min-height: 0; }
+  .guide-condition-grid { grid-template-columns: 1fr; }
   .guide-timeline { grid-template-columns: 1fr; }
   .guide-step { padding: var(--space-3); }
   .guide-checks { grid-template-columns: 1fr; }
@@ -733,6 +804,7 @@
   .guide-trust { grid-template-columns: 1fr; }
   .guide-image, .guide-image img { min-height: 340px; }
   .guide-image__badge { right: 0.8rem; bottom: 0.8rem; left: 0.8rem; max-width: none; }
+  .guide-stonechip-note { grid-template-columns: 1fr; }
 }
 
 @media (prefers-reduced-motion: reduce) {
