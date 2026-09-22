@@ -76,7 +76,7 @@ Aktueller lokaler Stand. Noch nicht veröffentlicht. Originalanalyse und Live-Sn
 
 ## Bild- und Schema-Inventar
 
-293 img-Elemente; 0 fehlende alt-Attribute. Leere dekorative Alt-Texte werden nicht künstlich mit Keywords gefüllt. Schema, CSS-ARIA-Bilder, H1/H2/H3, Abschnitte und vollständiger Haupttext werden in evidence.json erfasst und in seo-map.csv referenziert.
+294 img-Elemente; 0 fehlende alt-Attribute. Leere dekorative Alt-Texte werden nicht künstlich mit Keywords gefüllt. Schema, CSS-ARIA-Bilder, H1/H2/H3, Abschnitte und vollständiger Haupttext werden in evidence.json erfasst und in seo-map.csv referenziert.
 
 JSON-LD auf 36 Seiten. BreadcrumbList folgt den sichtbaren Artikel-Breadcrumbs; vorhandene AdBlue-Daten wurden auf www angepasst. Die neue Trockeneis-Seite enthält ausschließlich ein belegtes Service-Objekt, keine Bewertungen oder Preisangaben.
 
