@@ -72,7 +72,7 @@ Aktueller lokaler Stand. Noch nicht veröffentlicht. Originalanalyse und Live-Sn
 
 59 HTML-Routen, 50 Sitemap-URLs. 50 indexierbare kanonische Hauptseiten, zwei erreichbare Canonical-Varianten und sechs noindex-Seiten. Keine Inhaltsseite gelöscht. Alle Canonicals zeigen auf den bestehenden www-Host. Die Host-Weiterleitung selbst wurde nicht geändert.
 
-988 interne Link-Vorkommen; 0 fehlende Fragmente und 0 nicht auflösbare interne Ziele. 38 der 44 ursprünglichen Linkvorschläge umgesetzt. Die beiden Links zum zurückgestellten Felgenpflege-Beitrag fehlen bewusst.
+989 interne Link-Vorkommen; 0 fehlende Fragmente und 0 nicht auflösbare interne Ziele. 38 der 44 ursprünglichen Linkvorschläge umgesetzt. Die beiden Links zum zurückgestellten Felgenpflege-Beitrag fehlen bewusst.
 
 ## Bild- und Schema-Inventar
 

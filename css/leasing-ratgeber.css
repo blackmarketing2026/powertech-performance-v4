@@ -675,6 +675,134 @@
   font-size: 0.86rem;
 }
 
+.guide-warranty-section {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 20% 50%, rgba(155, 83, 184, 0.3), transparent 34%),
+    linear-gradient(135deg, #1b0b26 0%, #2a1039 52%, #13091c 100%);
+}
+
+.guide-warranty-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.34;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 42px 42px;
+  pointer-events: none;
+}
+
+.guide-warranty {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(280px, 0.8fr) minmax(0, 1.2fr);
+  gap: clamp(2.5rem, 7vw, 6rem);
+  align-items: center;
+}
+
+.guide-warranty__seal {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: min(100%, 390px);
+  aspect-ratio: 1;
+  margin: 0 auto;
+  padding: 26px;
+  border: 3px solid rgba(246, 240, 248, 0.88);
+  border-radius: 50%;
+  color: #fff;
+  background:
+    radial-gradient(circle at 38% 28%, rgba(222, 204, 233, 0.35), transparent 30%),
+    linear-gradient(145deg, #a25aba, #592671 68%, #351443);
+  box-shadow: 0 0 0 10px rgba(126, 62, 152, 0.22), 0 0 0 12px rgba(222, 204, 233, 0.28), 0 35px 75px rgba(0, 0, 0, 0.38);
+  transform: rotate(-3deg);
+}
+
+.guide-warranty__seal::before,
+.guide-warranty__seal::after {
+  content: "★";
+  position: absolute;
+  top: 50%;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 1.2rem;
+  transform: translateY(-50%);
+}
+
+.guide-warranty__seal::before { left: 22px; }
+.guide-warranty__seal::after { right: 22px; }
+
+.guide-warranty__seal-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  border: 2px dashed rgba(255, 255, 255, 0.52);
+  border-radius: 50%;
+  text-align: center;
+}
+
+.guide-warranty__seal-inner span {
+  max-width: 72%;
+  font-size: clamp(0.68rem, 1.4vw, 0.82rem);
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.guide-warranty__seal-inner strong {
+  margin-top: 0.35rem;
+  font-size: clamp(3.3rem, 7vw, 5.5rem);
+  line-height: 0.95;
+  letter-spacing: -0.07em;
+  text-shadow: 0 7px 20px rgba(0, 0, 0, 0.28);
+}
+
+.guide-warranty__seal-inner em {
+  margin: 0.15rem 0 0.55rem;
+  font-size: clamp(1.25rem, 3vw, 1.8rem);
+  font-style: normal;
+  font-weight: 900;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.guide-warranty__seal-inner b {
+  width: 110%;
+  padding: 0.55rem 1rem;
+  color: #32123f;
+  background: #f6f0f8;
+  font-size: clamp(0.95rem, 2vw, 1.25rem);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+}
+
+.guide-warranty__content > p {
+  max-width: 680px;
+  color: rgba(246, 240, 248, 0.8);
+  font-size: 1.04rem;
+}
+
+.guide-warranty__promise {
+  display: flex;
+  gap: 0.8rem;
+  align-items: flex-start;
+  max-width: 680px;
+  margin: var(--space-4) 0;
+  padding: 1rem 1.1rem;
+  border: 1px solid rgba(222, 204, 233, 0.22);
+  border-radius: 12px;
+  color: rgba(246, 240, 248, 0.82);
+  background: rgba(255, 255, 255, 0.055);
+  font-size: 0.9rem;
+}
+
+.guide-warranty__promise svg { flex: 0 0 auto; color: var(--color-brand-light); }
+
 .guide-cta {
   position: relative;
   overflow: hidden;
@@ -764,11 +892,14 @@
   .guide-hero::before { background-position: 60% center; }
   .guide-card { grid-column: span 3; }
   .guide-card:nth-child(4), .guide-card:nth-child(5) { grid-column: span 3; }
-  .guide-split, .guide-expert { grid-template-columns: 1fr; }
+  .guide-split, .guide-expert, .guide-warranty { grid-template-columns: 1fr; }
   .guide-image { order: -1; min-height: 440px; }
   .guide-image img { min-height: 440px; }
   .guide-expert__portrait { width: min(100%, 420px); }
   .guide-expert__brand { width: min(100%, 500px); min-height: 420px; margin: 0 auto; }
+  .guide-warranty__content { text-align: center; }
+  .guide-warranty__content .guide-heading { text-align: center; }
+  .guide-warranty__content > p, .guide-warranty__promise { margin-right: auto; margin-left: auto; }
 }
 
 @media (max-width: 700px) {
@@ -805,6 +936,9 @@
   .guide-image, .guide-image img { min-height: 340px; }
   .guide-image__badge { right: 0.8rem; bottom: 0.8rem; left: 0.8rem; max-width: none; }
   .guide-stonechip-note { grid-template-columns: 1fr; }
+  .guide-warranty__seal { width: 280px; padding: 19px; }
+  .guide-warranty__seal::before { left: 15px; }
+  .guide-warranty__seal::after { right: 15px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
