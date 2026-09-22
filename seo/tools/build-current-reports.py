@@ -8,6 +8,7 @@ LIVE=json.loads((H/'live-check.json').read_text('utf8'));LR={r['url']:r for r in
 P=E['pages'];by={p['path']:p for p in P};oldby={p['path']:p for p in OLD['pages']}
 def readcsv(p):return list(csv.DictReader(p.open(encoding='utf-8-sig',newline=''),delimiter=';'))
 oldseo={U.urlsplit(r['URL']).path:r for r in readcsv(H/'seo-map.csv') if r['Dateipfad']}
+oldseo.setdefault('/ratgeber/leasingfahrzeug-keramikversiegelung', {'Seitentyp':'Ratgeber'})
 oldkw={U.urlsplit(r['bestehende Zielseite']).path:r for r in readcsv(H/'keyword-map.csv') if r['bestehende Zielseite']}
 proposal=[r for r in readcsv(H/'internal-links.csv') if r['Link-Typ'].startswith('Vorschlag')]
 def dump(name,rows):

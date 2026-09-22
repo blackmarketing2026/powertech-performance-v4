@@ -64,6 +64,7 @@
     {"source": "/trockeneisreinigung/", "destination": "/trockeneisreinigung", "permanent": true}
   ],
   "rewrites": [
+    {"source": "/ratgeber/leasingfahrzeug-keramikversiegelung", "destination": "/ratgeber/leasingfahrzeug-keramikversiegelung/index.html"},
     {"source": "/adblue-service", "destination": "/adblue-service.html"},
     {"source": "/ads", "destination": "/ads.html"},
     {"source": "/anfrage-danke", "destination": "/anfrage-danke.html"},

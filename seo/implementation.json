@@ -346,6 +346,11 @@
       "Fiktiven Vor-Ort-Eindruck korrigiert; eigenständiger lokaler Mehrwert bleibt mangels Ortsdaten offen",
       "Fehlende H2 vor Leistungskarten ergänzt"
     ],
+    "ratgeber/leasingfahrzeug-keramikversiegelung/index.html": [
+      "Neuen eigenständigen Ratgeber zur frühzeitigen Lackpflege von Leasingfahrzeugen erstellt",
+      "Vorhandenes Design, Navigation, Footer, Kontaktwege und Tracking unverändert wiederverwendet",
+      "Article-, FAQPage- und BreadcrumbList-Daten sowie interne Leistungslinks ergänzt"
+    ],
     "trockeneisreinigung.html": [
       "Title, Description und Themenausrichtung gezielt optimiert; H1 präzisiert",
       "Artikelinhalt auf eigenständige, sachliche Nutzerfrage ausgerichtet",
@@ -556,6 +561,13 @@
       "title": "Fahrzeugaufbereitung Erfurt: Termin vorbereiten",
       "description": "Fahrzeugaufbereitung in Erfurt planen: Zustand, Wunschleistung und Ziel der Pflege vorab besprechen. Hinweise zur Anfrage, Besichtigung und Abholung."
     },
+    "/ratgeber/leasingfahrzeug-keramikversiegelung": {
+      "keyword": "Keramikversiegelung für Leasingfahrzeuge",
+      "intent": "informativ / beratungsnah",
+      "cluster": "Leasingrückgabe / Keramikversiegelung",
+      "title": "Leasingfahrzeug schützen: Keramikversiegelung in Erfurt",
+      "description": "Schützen Sie den Lack Ihres Leasingfahrzeugs mit einer professionellen Keramikversiegelung. Werterhalt, leichtere Pflege und Beratung bei Powertech Performance in Erfurt."
+    },
     "/trockeneisreinigung": {
       "keyword": "Trockeneisreinigung Erfurt",
       "intent": "kommerziell / lokal",
@@ -700,7 +712,8 @@
     }
   ],
   "new_urls": [
-    "/trockeneisreinigung"
+    "/trockeneisreinigung",
+    "/ratgeber/leasingfahrzeug-keramikversiegelung"
   ],
   "deferred_new_urls": {
     "/blog/felgenversiegelung-pflege/": "Kein Nachfragebeleg und keine produktspezifischen Pflegeangaben; kein zusätzlicher generischer Ratgeber."
