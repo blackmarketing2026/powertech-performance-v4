@@ -495,6 +495,66 @@
   border-radius: 18px;
 }
 
+.guide-expert__brand {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 480px;
+  padding: var(--space-5) var(--space-4);
+  overflow: hidden;
+  border: 1px solid rgba(222, 204, 233, 0.22);
+  border-radius: 22px;
+  text-align: center;
+  background:
+    radial-gradient(circle at 50% 38%, rgba(126, 62, 152, 0.3), transparent 45%),
+    linear-gradient(145deg, rgba(38, 16, 50, 0.96), rgba(19, 9, 28, 0.98));
+  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.3);
+}
+
+.guide-expert__brand::after {
+  content: "";
+  position: absolute;
+  inset: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  pointer-events: none;
+}
+
+.guide-expert__brand img {
+  position: relative;
+  z-index: 1;
+  width: min(78%, 300px);
+  height: auto;
+  margin: var(--space-3) auto;
+  filter: drop-shadow(0 22px 35px rgba(0, 0, 0, 0.42));
+}
+
+.guide-expert__brand strong {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  font-size: 1.25rem;
+}
+
+.guide-expert__brand > span:last-child {
+  position: relative;
+  z-index: 1;
+  color: var(--color-text-muted);
+  font-size: 0.86rem;
+}
+
+.guide-expert__brand-label {
+  position: relative;
+  z-index: 1;
+  color: var(--color-brand-light);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
 .guide-checks {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -510,6 +570,40 @@
 }
 
 .guide-checks svg { flex: 0 0 auto; margin-top: 0.18rem; color: var(--color-brand-light); }
+
+.guide-appointment {
+  margin-top: var(--space-4);
+  padding: var(--space-3);
+  border: 1px solid rgba(222, 204, 233, 0.22);
+  border-radius: 16px;
+  background: rgba(126, 62, 152, 0.1);
+}
+
+.guide-appointment__eyebrow {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: var(--color-brand-light);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.guide-appointment h3 { margin-bottom: 0.45rem; font-size: 1.35rem; }
+.guide-appointment p { margin-bottom: var(--space-3); color: var(--color-text-muted); font-size: 0.92rem; }
+
+.guide-appointment__actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.7rem;
+}
+
+.guide-appointment__actions .btn {
+  width: 100%;
+  min-height: 48px;
+  padding: 0.7rem 0.85rem;
+  font-size: 0.86rem;
+}
 
 .guide-cta {
   position: relative;
@@ -604,6 +698,7 @@
   .guide-image { order: -1; min-height: 440px; }
   .guide-image img { min-height: 440px; }
   .guide-expert__portrait { width: min(100%, 420px); }
+  .guide-expert__brand { width: min(100%, 500px); min-height: 420px; margin: 0 auto; }
 }
 
 @media (max-width: 700px) {
@@ -630,6 +725,7 @@
   .guide-scenario__shade { background: linear-gradient(0deg, #13091c 0%, #13091c 55%, rgba(19, 9, 28, 0.04) 78%); }
   .guide-scenario__content { width: 100%; margin: 0; padding: 21rem var(--space-3) 4rem; }
   .guide-scenario figcaption { right: var(--space-3); left: var(--space-3); text-align: center; }
+  .guide-appointment__actions { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 460px) {

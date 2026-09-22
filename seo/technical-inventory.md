@@ -57,14 +57,14 @@ Aktueller lokaler Stand. Noch nicht veröffentlicht. Originalanalyse und Live-Sn
 | /jena | 2 | 8 | https://www.powertech-performance.com/jena | ja |
 | /luxus-aufbereitung | 10 | 9 | https://www.powertech-performance.com/luxus-aufbereitung | ja |
 | /nordhausen | 2 | 8 | https://www.powertech-performance.com/nordhausen | ja |
-| /online-termin-buchen | 10 | 7 | https://www.powertech-performance.com/online-termin-buchen | ja |
+| /online-termin-buchen | 11 | 7 | https://www.powertech-performance.com/online-termin-buchen | ja |
 | /pages/agb.html | 1 | 5 | https://www.powertech-performance.com/pages/agb.html | nein |
 | /pages/cookie-einstellungen.html | 57 | 4 | https://www.powertech-performance.com/pages/cookie-einstellungen.html | nein |
 | /pages/datenschutz.html | 57 | 4 | https://www.powertech-performance.com/pages/datenschutz.html | nein |
 | /pages/impressum.html | 57 | 4 | https://www.powertech-performance.com/pages/impressum.html | nein |
 | /pages/kontakt.html | 52 | 7 | https://www.powertech-performance.com/pages/kontakt.html | ja |
 | /pages/seitenuebersicht.html | 55 | 21 | https://www.powertech-performance.com/pages/seitenuebersicht.html | nein |
-| /ratgeber/leasingfahrzeug-keramikversiegelung | 0 | 10 | https://www.powertech-performance.com/ratgeber/leasingfahrzeug-keramikversiegelung | ja |
+| /ratgeber/leasingfahrzeug-keramikversiegelung | 0 | 11 | https://www.powertech-performance.com/ratgeber/leasingfahrzeug-keramikversiegelung | ja |
 | /suhl | 2 | 8 | https://www.powertech-performance.com/suhl | ja |
 | /trockeneisreinigung | 3 | 9 | https://www.powertech-performance.com/trockeneisreinigung | ja |
 
@@ -72,7 +72,7 @@ Aktueller lokaler Stand. Noch nicht veröffentlicht. Originalanalyse und Live-Sn
 
 59 HTML-Routen, 50 Sitemap-URLs. 50 indexierbare kanonische Hauptseiten, zwei erreichbare Canonical-Varianten und sechs noindex-Seiten. Keine Inhaltsseite gelöscht. Alle Canonicals zeigen auf den bestehenden www-Host. Die Host-Weiterleitung selbst wurde nicht geändert.
 
-986 interne Link-Vorkommen; 0 fehlende Fragmente und 0 nicht auflösbare interne Ziele. 38 der 44 ursprünglichen Linkvorschläge umgesetzt. Die beiden Links zum zurückgestellten Felgenpflege-Beitrag fehlen bewusst.
+988 interne Link-Vorkommen; 0 fehlende Fragmente und 0 nicht auflösbare interne Ziele. 38 der 44 ursprünglichen Linkvorschläge umgesetzt. Die beiden Links zum zurückgestellten Felgenpflege-Beitrag fehlen bewusst.
 
 ## Bild- und Schema-Inventar
 
