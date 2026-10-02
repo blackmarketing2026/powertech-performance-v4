@@ -49,3 +49,75 @@
 @media(max-width:900px){.wash-overview,.wash-booking-grid{grid-template-columns:1fr}.wash-process-list{grid-template-columns:repeat(2,minmax(0,1fr))}.wash-feature-photo img{height:430px}}
 @media(max-width:680px){.wash-hero{min-height:590px}.wash-hero-shade{background:linear-gradient(90deg,rgba(5,17,27,.92),rgba(5,22,31,.58)),linear-gradient(0deg,rgba(5,22,31,.65),transparent)}.wash-hero-content{padding-top:4rem;padding-bottom:4rem}.wash-process-list,.wash-benefits,.wash-gallery-grid{grid-template-columns:1fr}.wash-gallery-grid img{height:300px}.wash-form,.wash-booking-info{padding:1.25rem}.wash-calendar{padding:.65rem}.wash-calendar-days button,.wash-calendar-days span{min-height:42px}.wash-progress li span{font-size:.75rem}.wash-slots{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(prefers-reduced-motion:reduce){.wash-bubbles span{animation:none;display:none}.wash-gallery-grid img{transition:none}}
+
+/* Decorative foam stays behind the page content and never receives input. */
+.wash-section,.wash-process,.wash-included,.wash-booking{position:relative;overflow:hidden}
+.wash-section>.container,.wash-process>.container,.wash-included>.container,.wash-gallery>.container,.wash-booking>.container{position:relative;z-index:2}
+.wash-hero::after,.wash-section::before,.wash-process::before,.wash-included::before,.wash-gallery::after,.wash-booking::before{
+  content:'';position:absolute;left:0;right:0;height:52px;pointer-events:none;z-index:1;opacity:.55;
+  background:
+    radial-gradient(circle at 4% 100%,rgba(216,253,255,.68) 0 13px,transparent 14px),
+    radial-gradient(circle at 14% 100%,rgba(216,253,255,.48) 0 23px,transparent 24px),
+    radial-gradient(circle at 29% 100%,rgba(216,253,255,.6) 0 15px,transparent 16px),
+    radial-gradient(circle at 46% 100%,rgba(216,253,255,.42) 0 28px,transparent 29px),
+    radial-gradient(circle at 63% 100%,rgba(216,253,255,.62) 0 18px,transparent 19px),
+    radial-gradient(circle at 79% 100%,rgba(216,253,255,.46) 0 25px,transparent 26px),
+    radial-gradient(circle at 94% 100%,rgba(216,253,255,.6) 0 17px,transparent 18px);
+  animation:wash-foam-breathe 7s ease-in-out infinite alternate
+}
+.wash-hero::after,.wash-gallery::after{bottom:0}
+.wash-section::before,.wash-process::before,.wash-included::before,.wash-booking::before{top:0;transform:rotate(180deg)}
+.wash-process::before,.wash-gallery::after{opacity:.38}
+@keyframes wash-foam-breathe{to{background-position:12px 0,-15px 0,18px 0,-10px 0,14px 0,-17px 0,9px 0;opacity:.8}}
+
+.wash-bubbles{z-index:1}
+.wash-bubbles span{
+  background:radial-gradient(circle at 30% 26%,rgba(255,255,255,.82) 0 4%,rgba(211,251,255,.17) 16%,rgba(94,193,211,.08) 62%,rgba(223,253,255,.3) 100%);
+  border-color:rgba(225,253,255,.67);
+  box-shadow:inset -5px -7px 12px rgba(115,209,229,.18),inset 2px 3px 6px rgba(255,255,255,.24),0 0 18px rgba(118,227,240,.18);
+  opacity:0;animation-name:wash-float-drift;will-change:transform,opacity
+}
+.wash-bubbles span::after{content:'';position:absolute;top:19%;left:22%;width:27%;height:12%;border-radius:50%;background:rgba(255,255,255,.65);filter:blur(1px);transform:rotate(-35deg)}
+.wash-bubbles span:nth-child(7){--x:14%;--s:42px;--t:19s;--d:-13s}
+.wash-bubbles span:nth-child(8){--x:37%;--s:9px;--t:8s;--d:-2s}
+.wash-bubbles span:nth-child(9){--x:46%;--s:20px;--t:13s;--d:-9s}
+.wash-bubbles span:nth-child(10){--x:64%;--s:27px;--t:16s;--d:-5s}
+.wash-bubbles span:nth-child(11){--x:79%;--s:8px;--t:10s;--d:-7s}
+.wash-bubbles span:nth-child(12){--x:92%;--s:29px;--t:14s;--d:-11s}
+@keyframes wash-float-drift{
+  0%{transform:translate3d(0,20px,0) scale(.75);opacity:0}
+  12%{opacity:.72}
+  48%{transform:translate3d(28px,calc(var(--rise,-740px) * .48),0) scale(1);opacity:.58}
+  85%{opacity:.5}
+  100%{transform:translate3d(-16px,var(--rise,-740px),0) scale(1.12);opacity:0}
+}
+.wash-bubbles-side{--rise:-680px}
+.wash-bubbles-side span:nth-child(1){--x:2%;--s:18px;--t:13s;--d:-3s}
+.wash-bubbles-side span:nth-child(2){--x:8%;--s:9px;--t:10s;--d:-7s}
+.wash-bubbles-side span:nth-child(3){--x:15%;--s:30px;--t:18s;--d:-12s}
+.wash-bubbles-side span:nth-child(4){--x:83%;--s:12px;--t:11s;--d:-5s}
+.wash-bubbles-side span:nth-child(5){--x:92%;--s:32px;--t:17s;--d:-10s}
+.wash-bubbles-side span:nth-child(6){--x:97%;--s:16px;--t:14s;--d:-2s}
+
+.wash-feature-photo,.wash-gallery figure{position:relative;isolation:isolate}
+.wash-feature-photo::after,.wash-gallery figure::after{
+  content:'';position:absolute;left:-8%;right:-8%;bottom:43px;height:94px;pointer-events:none;z-index:1;opacity:.65;
+  background:radial-gradient(circle at 8% 100%,rgba(236,254,255,.76) 0 15px,transparent 16px),radial-gradient(circle at 23% 100%,rgba(213,251,255,.7) 0 28px,transparent 29px),radial-gradient(circle at 43% 100%,rgba(239,255,255,.62) 0 18px,transparent 19px),radial-gradient(circle at 67% 100%,rgba(211,250,255,.72) 0 31px,transparent 32px),radial-gradient(circle at 87% 100%,rgba(240,255,255,.68) 0 21px,transparent 22px);
+  animation:wash-photo-foam 6s ease-in-out infinite alternate
+}
+.wash-feature-photo figcaption,.wash-gallery figcaption{position:relative;z-index:2;background:#132936}
+@keyframes wash-photo-foam{to{transform:translate3d(18px,-13px,0);opacity:.85}}
+.wash-feature-photo img{animation:wash-photo-breathe 16s ease-in-out infinite alternate}
+@keyframes wash-photo-breathe{to{transform:scale(1.045)}}
+
+.wash-process-list li,.wash-benefits li{transition:transform .3s ease,border-color .3s ease,box-shadow .3s ease}
+.wash-process-list li{overflow:hidden}
+.wash-process-list li::after{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(110deg,transparent 36%,rgba(224,254,255,.16) 50%,transparent 64%);transform:translateX(-130%);transition:transform .75s ease}
+.wash-process-list li:hover,.wash-benefits li:hover{transform:translateY(-5px);border-color:rgba(177,248,255,.53);box-shadow:0 15px 28px rgba(41,156,179,.13)}
+.wash-process-list li:hover::after{transform:translateX(130%)}
+.wash-process-number{box-shadow:0 0 0 0 rgba(142,237,245,.22);animation:wash-number-pulse 4s ease-in-out infinite}
+.wash-process-list li:nth-child(2) .wash-process-number{animation-delay:1s}.wash-process-list li:nth-child(3) .wash-process-number{animation-delay:2s}.wash-process-list li:nth-child(4) .wash-process-number{animation-delay:3s}
+@keyframes wash-number-pulse{50%{box-shadow:0 0 0 9px rgba(142,237,245,0),0 0 23px rgba(142,237,245,.22)}}
+
+@media(max-width:680px){.wash-bubbles-side span:nth-child(2),.wash-bubbles-side span:nth-child(3),.wash-bubbles-side span:nth-child(4){display:none}.wash-hero .wash-bubbles span:nth-child(7),.wash-hero .wash-bubbles span:nth-child(9),.wash-hero .wash-bubbles span:nth-child(10){display:none}}
+@media(prefers-reduced-motion:reduce){.wash-hero::after,.wash-section::before,.wash-process::before,.wash-included::before,.wash-gallery::after,.wash-booking::before,.wash-feature-photo::after,.wash-gallery figure::after,.wash-feature-photo img,.wash-process-number{animation:none}.wash-process-list li,.wash-benefits li{transition:none}.wash-process-list li:hover,.wash-benefits li:hover{transform:none}.wash-process-list li::after{display:none}}
