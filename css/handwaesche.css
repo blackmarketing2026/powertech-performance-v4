@@ -50,25 +50,9 @@
 @media(max-width:680px){.wash-hero{min-height:590px}.wash-hero-shade{background:linear-gradient(90deg,rgba(5,17,27,.92),rgba(5,22,31,.58)),linear-gradient(0deg,rgba(5,22,31,.65),transparent)}.wash-hero-content{padding-top:4rem;padding-bottom:4rem}.wash-process-list,.wash-benefits,.wash-gallery-grid{grid-template-columns:1fr}.wash-gallery-grid img{height:300px}.wash-form,.wash-booking-info{padding:1.25rem}.wash-calendar{padding:.65rem}.wash-calendar-days button,.wash-calendar-days span{min-height:42px}.wash-progress li span{font-size:.75rem}.wash-slots{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(prefers-reduced-motion:reduce){.wash-bubbles span{animation:none;display:none}.wash-gallery-grid img{transition:none}}
 
-/* Decorative foam stays behind the page content and never receives input. */
+/* Decorative bubbles stay behind the page content and never receive input. */
 .wash-section,.wash-process,.wash-included,.wash-booking{position:relative;overflow:hidden}
 .wash-section>.container,.wash-process>.container,.wash-included>.container,.wash-gallery>.container,.wash-booking>.container{position:relative;z-index:2}
-.wash-hero::after,.wash-section::before,.wash-process::before,.wash-included::before,.wash-gallery::after,.wash-booking::before{
-  content:'';position:absolute;left:0;right:0;height:52px;pointer-events:none;z-index:1;opacity:.55;
-  background:
-    radial-gradient(circle at 4% 100%,rgba(216,253,255,.68) 0 13px,transparent 14px),
-    radial-gradient(circle at 14% 100%,rgba(216,253,255,.48) 0 23px,transparent 24px),
-    radial-gradient(circle at 29% 100%,rgba(216,253,255,.6) 0 15px,transparent 16px),
-    radial-gradient(circle at 46% 100%,rgba(216,253,255,.42) 0 28px,transparent 29px),
-    radial-gradient(circle at 63% 100%,rgba(216,253,255,.62) 0 18px,transparent 19px),
-    radial-gradient(circle at 79% 100%,rgba(216,253,255,.46) 0 25px,transparent 26px),
-    radial-gradient(circle at 94% 100%,rgba(216,253,255,.6) 0 17px,transparent 18px);
-  animation:wash-foam-breathe 7s ease-in-out infinite alternate
-}
-.wash-hero::after,.wash-gallery::after{bottom:0}
-.wash-section::before,.wash-process::before,.wash-included::before,.wash-booking::before{top:0;transform:rotate(180deg)}
-.wash-process::before,.wash-gallery::after{opacity:.38}
-@keyframes wash-foam-breathe{to{background-position:12px 0,-15px 0,18px 0,-10px 0,14px 0,-17px 0,9px 0;opacity:.8}}
 
 .wash-bubbles{z-index:1}
 .wash-bubbles span{
@@ -119,5 +103,12 @@
 .wash-process-list li:nth-child(2) .wash-process-number{animation-delay:1s}.wash-process-list li:nth-child(3) .wash-process-number{animation-delay:2s}.wash-process-list li:nth-child(4) .wash-process-number{animation-delay:3s}
 @keyframes wash-number-pulse{50%{box-shadow:0 0 0 9px rgba(142,237,245,0),0 0 23px rgba(142,237,245,.22)}}
 
+/* Short lived foam clusters follow the mouse or appear at a touch point. */
+.wash-pointer-foam{position:fixed;inset:0;z-index:90;overflow:hidden;pointer-events:none}
+.wash-pointer-bubble{position:absolute;left:var(--x);top:var(--y);width:var(--size);height:var(--size);border:1px solid rgba(234,254,255,.88);border-radius:50%;opacity:0;background:radial-gradient(circle at 28% 24%,rgba(255,255,255,.95) 0 5%,rgba(238,254,255,.5) 12%,rgba(168,229,240,.14) 47%,rgba(230,253,255,.42) 80%,rgba(255,255,255,.7) 100%);box-shadow:inset -5px -6px 12px rgba(74,169,193,.24),inset 3px 3px 6px rgba(255,255,255,.7),0 0 12px rgba(206,250,255,.35);animation:wash-pointer-rise var(--duration) ease-out forwards;will-change:transform,opacity}
+.wash-pointer-bubble::after{content:'';position:absolute;left:21%;top:17%;width:29%;height:12%;border-radius:50%;background:rgba(255,255,255,.8);transform:rotate(-35deg)}
+.wash-pointer-bubble.is-foam{border-color:rgba(255,255,255,.65);background:radial-gradient(circle at 32% 28%,#fff,rgba(238,253,255,.9) 43%,rgba(165,225,238,.65) 100%);box-shadow:0 0 12px rgba(226,253,255,.56)}
+@keyframes wash-pointer-rise{0%{opacity:0;transform:translate3d(-50%,-50%,0) scale(.45)}14%{opacity:.94}65%{opacity:.8}100%{opacity:0;transform:translate3d(calc(-50% + var(--dx)),calc(-50% + var(--dy)),0) scale(1.18)}}
+
 @media(max-width:680px){.wash-bubbles-side span:nth-child(2),.wash-bubbles-side span:nth-child(3),.wash-bubbles-side span:nth-child(4){display:none}.wash-hero .wash-bubbles span:nth-child(7),.wash-hero .wash-bubbles span:nth-child(9),.wash-hero .wash-bubbles span:nth-child(10){display:none}}
-@media(prefers-reduced-motion:reduce){.wash-hero::after,.wash-section::before,.wash-process::before,.wash-included::before,.wash-gallery::after,.wash-booking::before,.wash-feature-photo::after,.wash-gallery figure::after,.wash-feature-photo img,.wash-process-number{animation:none}.wash-process-list li,.wash-benefits li{transition:none}.wash-process-list li:hover,.wash-benefits li:hover{transform:none}.wash-process-list li::after{display:none}}
+@media(prefers-reduced-motion:reduce){.wash-pointer-foam{display:none}.wash-feature-photo::after,.wash-gallery figure::after,.wash-feature-photo img,.wash-process-number{animation:none}.wash-process-list li,.wash-benefits li{transition:none}.wash-process-list li:hover,.wash-benefits li:hover{transform:none}.wash-process-list li::after{display:none}}
