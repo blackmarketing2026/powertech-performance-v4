@@ -79,6 +79,7 @@
     {"source": "/online-termin-buchen", "destination": "/online-termin-buchen.html"},
     {"source": "/suhl", "destination": "/suhl.html"},
     {"source": "/trockeneisreinigung", "destination": "/trockeneisreinigung.html"},
+    {"source": "/graffiti-entfernung-trockeneis", "destination": "/graffiti-entfernung-trockeneis.html"},
     {"source": "/auto-handwaesche-erfurt", "destination": "/auto-handwaesche-erfurt.html"}
   ]
 }
