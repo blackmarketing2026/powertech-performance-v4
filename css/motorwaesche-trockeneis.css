@@ -1,0 +1,64 @@
+.motor-hero { position: relative; min-height: 650px; display: flex; align-items: center; overflow: hidden; background: #100e17; }
+.motor-hero-image { position: absolute; inset: 0; background: url('/images/motorraum-trockeneis-hero.webp') center 45% / cover no-repeat; }
+.motor-hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(15,8,22,.98) 0%, rgba(15,8,22,.9) 30%, rgba(15,8,22,.38) 67%, rgba(15,8,22,.1) 100%); }
+.motor-hero-content { position: relative; z-index: 1; width: 100%; padding-top: 95px; padding-bottom: 105px; }
+.motor-hero-content > * { max-width: 690px; }
+.motor-eyebrow { color: #d3b6e2; text-transform: uppercase; letter-spacing: .17em; font-size: .78rem; font-weight: 700; margin-bottom: 1.25rem; }
+.motor-hero h1 { font-size: clamp(2.7rem, 5.3vw, 5rem); line-height: 1.07; letter-spacing: -.045em; margin-bottom: 1.5rem; }
+.motor-hero h1 span { color: #c58ede; }
+.motor-lead { font-size: clamp(1.06rem, 1.5vw, 1.3rem); line-height: 1.6; color: #eee5f2; }
+.motor-hero-actions { display: flex; align-items: center; gap: 1.7rem; margin-top: 2rem; }
+.motor-price { font-size: 2.2rem; font-weight: 800; line-height: 1; color: #fff; }
+.motor-price small { display: block; font-size: .78rem; color: #d3b6e2; text-transform: uppercase; letter-spacing: .12em; margin-top: .45rem; }
+.motor-hero-note { font-size: .86rem; color: #cabbd2; margin-top: 1.45rem; }
+.motor-benefits, .motor-offer { padding-top: 5.5rem; padding-bottom: 5.5rem; }
+.motor-benefits .motor-eyebrow, .motor-offer .motor-eyebrow { text-align: center; }
+.motor-benefits h2 { max-width: 720px; margin: 0 auto 2.6rem; }
+.motor-card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+.motor-card { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: 18px; padding: 2rem; }
+.motor-card-number { display: block; color: #ad71c8; font-size: .85rem; font-weight: 800; letter-spacing: .15em; margin-bottom: 1.4rem; }
+.motor-card h3 { font-size: 1.42rem; }
+.motor-card p { color: #d7c9dd; margin: 0; }
+.motor-story { padding-top: 5rem; padding-bottom: 5rem; }
+.motor-story-grid { display: grid; grid-template-columns: 1.05fr 1fr; gap: 4rem; align-items: center; }
+.motor-story-photo { position: relative; border-radius: 18px; overflow: hidden; box-shadow: 0 24px 60px rgba(0,0,0,.28); }
+.motor-story-photo img { width: 100%; height: 460px; object-fit: cover; }
+.motor-story-photo span { position: absolute; bottom: 1rem; left: 1rem; background: rgba(19,9,28,.85); border: 1px solid rgba(255,255,255,.2); border-radius: 99px; padding: .35rem .8rem; font-size: .76rem; }
+.motor-story-copy h2, .motor-offer h2, .motor-contact h2 { text-align: left; font-size: clamp(2rem, 3vw, 3rem); }
+.motor-story-copy p, .motor-offer p, .motor-contact p { color: #d7c9dd; }
+.motor-text-link { color: #e0b7f4; font-weight: 700; text-decoration: underline; text-underline-offset: .25em; }
+.motor-offer-grid { display: grid; grid-template-columns: 1fr 340px; gap: 5rem; align-items: center; max-width: 1030px; }
+.motor-offer-grid .motor-eyebrow { text-align: left; }
+.motor-offer-price { display: grid; gap: .75rem; justify-items: center; padding: 2.3rem; text-align: center; background: linear-gradient(145deg, #341843, #23112f); border: 1px solid #9d65bb; border-radius: 22px; }
+.motor-offer-price span { color: #e8d6ef; font-weight: 700; }
+.motor-offer-price strong { font-size: 4.3rem; line-height: 1; color: #fff; }
+.motor-offer-price em { font-style: normal; font-weight: 700; color: #d5a5eb; text-transform: uppercase; letter-spacing: .14em; font-size: .78rem; }
+.motor-offer-price .btn { margin-top: .7rem; width: 100%; }
+.motor-contact { padding-top: 5rem; padding-bottom: 6rem; scroll-margin-top: 85px; }
+.motor-contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; max-width: 1050px; }
+.motor-contact-address { border-left: 3px solid #9d65bb; padding-left: 1rem; margin-top: 2rem; font-weight: 700; }
+.motor-form-wrap { background: var(--color-surface); border: 1px solid var(--color-border); padding: 2rem; border-radius: 18px; }
+.motor-form-wrap .contact-form { padding: 0; box-shadow: none; background: none; }
+.motor-form-wrap .form-row label { position: static; display: block; width: auto; height: auto; overflow: visible; clip: auto; color: var(--color-text); font-weight: 700; margin-bottom: .4rem; }
+.motor-form-wrap .form-row input { background: #1a0c24; color: #fff; }
+.motor-form-wrap .form-row input::placeholder { color: #ad9bb9; }
+.motor-privacy { font-size: .78rem; line-height: 1.5; margin: 1rem 0 0; }
+.motor-form-wrap .form-status[data-state="success"] { color: #7ae28d; }
+.motor-form-wrap .form-status[data-state="error"] { color: #ff9696; }
+.motor-form-wrap .honeypot label { position: absolute; width: 1px; height: 1px; overflow: hidden; }
+@media (max-width: 800px) {
+  .motor-hero { min-height: 610px; }
+  .motor-hero-image { background-position: 60% center; }
+  .motor-hero::after { background: linear-gradient(90deg, rgba(15,8,22,.96), rgba(15,8,22,.57)), linear-gradient(0deg, rgba(15,8,22,.65), transparent 80%); }
+  .motor-card-grid { grid-template-columns: 1fr; }
+  .motor-story-grid, .motor-offer-grid, .motor-contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .motor-story-photo img { height: 340px; }
+  .motor-offer-price { max-width: 440px; width: 100%; margin: auto; }
+}
+@media (max-width: 520px) {
+  .motor-hero-content { padding-top: 80px; padding-bottom: 75px; }
+  .motor-hero-actions { align-items: flex-start; flex-direction: column; gap: 1.1rem; }
+  .motor-benefits, .motor-story, .motor-offer, .motor-contact { padding-top: 3.7rem; padding-bottom: 3.7rem; }
+  .motor-story-photo img { height: 260px; }
+  .motor-form-wrap { padding: 1.25rem; }
+}

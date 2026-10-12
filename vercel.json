@@ -61,7 +61,9 @@
     {"source": "/professionelle-cabrioverdeck-impraegnierung-und-reinigung/", "destination": "/blog/professionelle-cabrioverdeck-impraegnierung-und-reinigung/", "permanent": true},
     {"source": "/profi-keramikversiegelung/", "destination": "/blog/profi-keramikversiegelung/", "permanent": true},
     {"source": "/trockeneisreinigung.html", "destination": "/trockeneisreinigung", "permanent": true},
-    {"source": "/trockeneisreinigung/", "destination": "/trockeneisreinigung", "permanent": true}
+    {"source": "/trockeneisreinigung/", "destination": "/trockeneisreinigung", "permanent": true},
+    {"source": "/motorwaesche-trockeneis.html", "destination": "/motorwaesche-trockeneis", "permanent": true},
+    {"source": "/motorwaesche-trockeneis/", "destination": "/motorwaesche-trockeneis", "permanent": true}
   ],
   "rewrites": [
     {"source": "/ratgeber/leasingfahrzeug-keramikversiegelung", "destination": "/ratgeber/leasingfahrzeug-keramikversiegelung/index.html"},
@@ -80,6 +82,7 @@
     {"source": "/suhl", "destination": "/suhl.html"},
     {"source": "/trockeneisreinigung", "destination": "/trockeneisreinigung.html"},
     {"source": "/graffiti-entfernung-trockeneis", "destination": "/graffiti-entfernung-trockeneis.html"},
-    {"source": "/auto-handwaesche-erfurt", "destination": "/auto-handwaesche-erfurt.html"}
+    {"source": "/auto-handwaesche-erfurt", "destination": "/auto-handwaesche-erfurt.html"},
+    {"source": "/motorwaesche-trockeneis", "destination": "/motorwaesche-trockeneis.html"}
   ]
 }

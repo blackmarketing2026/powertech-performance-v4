@@ -605,7 +605,7 @@ body.home2-page h3 {
 .service-5 { background-position: 50% 50%; }
 .service-6 { background-position: 100% 50%; }
 .service-7 { background-position: 0% 100%; }
-.service-8 { background-position: 50% 100%; }
+.service-8 { background-image: url("/images/motorraum-trockeneis-detail.webp"); background-position: center; background-size: cover; }
 .service-9 { background-position: 100% 100%; }
 
 .service-tile h3 {
