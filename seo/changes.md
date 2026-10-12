@@ -10,6 +10,7 @@ Auf ausdrückliche Nutzeranweisung wurde `/autoaufbereitung` als ausführliche L
 - Angebotsbelege: ausdrückliche Nutzerliste vom 12.10.2026 sowie bestehende Leistungsangaben und Benjamin-Foto auf der Start- und Leistungsseite. Die Motorraumreinigung verweist ausschließlich auf das bestätigte Trockeneis-Angebot. Andere Preise werden nicht erfunden.
 - Eingehende Inhaltslinks: Startseiten-Leistungsabschnitt und vorhandener Fahrzeugaufbereitungs-Ratgeber. Ausgehende Inhaltslinks: Innenreinigung, Polierstufen, Lackversiegelung, Motorraumreinigung, Datenschutz. Priorität P1.
 - URL, Canonical, Rewrite und Sitemap sind auf `/autoaufbereitung` ausgerichtet. `seo-map.csv` und `keyword-map.csv` bleiben bis zum nächsten bewusst aktualisierten Scan historische Bestandszuordnungen und enthalten noch keinen Messwert für diese Seite.
+- Fünf vom Nutzer gelieferte Fotos fertig aufbereiteter Kundenfahrzeuge wurden als WebP konvertiert und als Referenzgalerie auf der Leistungsseite eingebunden. Drei später erneut gesendete JPGs waren bytegleiche Dubletten und wurden nicht zusätzlich eingebunden.
 
 ## Motorwäsche mit Trockeneis (12.10.2026, lokal)
 

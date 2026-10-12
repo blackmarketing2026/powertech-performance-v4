@@ -12,8 +12,8 @@
 .ap-intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
 .ap-intro h2, .ap-about h2, .ap-contact h2 { text-align: left; font-size: clamp(2rem, 3.6vw, 3.5rem); letter-spacing: -.035em; }
 .ap-intro-grid > div:last-child { color: #dfd2e6; font-size: 1.06rem; }
-.ap-services .ap-eyebrow, .ap-process .ap-eyebrow, .ap-faq .ap-eyebrow { text-align: center; }
-.ap-services h2, .ap-process h2, .ap-faq h2 { max-width: 800px; margin: 0 auto 1.3rem; font-size: clamp(2.2rem, 3.5vw, 3.45rem); }
+.ap-services .ap-eyebrow, .ap-gallery .ap-eyebrow, .ap-process .ap-eyebrow, .ap-faq .ap-eyebrow { text-align: center; }
+.ap-services h2, .ap-gallery h2, .ap-process h2, .ap-faq h2 { max-width: 800px; margin: 0 auto 1.3rem; font-size: clamp(2.2rem, 3.5vw, 3.45rem); }
 .ap-section-lead { color: #cdbbd8; text-align: center; max-width: 720px; margin: 0 auto 2.8rem; }
 .ap-service-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.2rem; }
 .ap-service-card { min-width: 0; display: grid; grid-template-columns: 38% 62%; overflow: hidden; background: #261333; border: 1px solid rgba(218,181,235,.16); border-radius: 18px; transition: transform .2s ease, border-color .2s ease; }
@@ -26,6 +26,12 @@
 .ap-service-card h3 { font-size: 1.55rem; margin-bottom: .85rem; }
 .ap-service-card p { color: #d9cce1; margin-bottom: .8rem; }
 .ap-service-card a { color: #e3bcf4; font-weight: 700; text-decoration: underline; text-underline-offset: .2em; }
+.ap-gallery-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; }
+.ap-gallery-grid figure { position: relative; min-width: 0; margin: 0; overflow: hidden; border-radius: 18px; background: #261333; border: 1px solid rgba(218,181,235,.16); }
+.ap-gallery-grid figure:first-child, .ap-gallery-grid figure:nth-child(n+4) { grid-column: span 2; }
+.ap-gallery-grid img { display: block; width: 100%; height: 360px; object-fit: cover; }
+.ap-gallery-grid figure:nth-child(n+4) img { height: 300px; }
+.ap-gallery-grid figcaption { position: absolute; inset: auto 0 0; padding: 2.5rem 1rem .9rem; background: linear-gradient(transparent, rgba(13,8,19,.85)); color: #fff; font-weight: 700; }
 .ap-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.7rem; margin-top: 3rem; }
 .ap-steps > div { padding: 1.5rem 1rem 0; border-top: 2px solid #ae79c9; }
 .ap-steps span { color: #ba8bce; font-size: .85rem; font-weight: 800; letter-spacing: .15em; }
@@ -69,10 +75,17 @@
   .ap-hero::after { background: linear-gradient(90deg, rgba(13,8,19,.94), rgba(13,8,19,.55)), linear-gradient(0deg, rgba(13,8,19,.55), transparent 70%); }
   .ap-intro-grid, .ap-about-grid, .ap-contact-grid, .ap-steps { grid-template-columns: 1fr; }
   .ap-about figure img { height: 360px; }
+  .ap-gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .ap-gallery-grid figure:first-child, .ap-gallery-grid figure:nth-child(n+4) { grid-column: span 2; }
+  .ap-gallery-grid img { height: 360px; }
+  .ap-gallery-grid figure:nth-child(n+4) img { height: 300px; }
 }
 @media (max-width: 550px) {
   .ap-hero-content { padding-top: 5rem; padding-bottom: 5rem; }
   .ap-service-grid { grid-template-columns: 1fr; }
   .ap-service-card > div { padding: 1.5rem; }
   .ap-form-wrap { padding: 1.3rem; }
+  .ap-gallery-grid { grid-template-columns: 1fr; }
+  .ap-gallery-grid figure, .ap-gallery-grid figure:first-child, .ap-gallery-grid figure:nth-child(n+4) { grid-column: auto; }
+  .ap-gallery-grid img, .ap-gallery-grid figure:nth-child(n+4) img { height: auto; max-height: 480px; object-fit: contain; }
 }
