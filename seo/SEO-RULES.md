@@ -29,7 +29,7 @@ Ein primäres Ziel pro **Suchintention** festlegen; mehrere unterschiedliche Inf
 
 | Cluster | Primäres Arbeitsziel | Abgrenzung |
 |---|---|---|
-| Autoaufbereitung Erfurt | `/` | Angebot/Orientierung; `/ads` auf Kampagnenrolle prüfen, Tracking unverändert. |
+| Autoaufbereitung Erfurt | `/autoaufbereitung` | Ausdrückliche Nutzeranweisung vom 12.10.2026: bestehende Leistungsseite neu erstellen; `/` bleibt Überblick und verlinkt zum Detailangebot. `/ads` auf Kampagnenrolle prüfen, Tracking unverändert. |
 | Fahrzeugsoftware | `/adblue-service` | Ausschließlich AdBlue-Deaktivierung und AGR On-Off; kein Chiptuning. |
 | AdBlue / SCR | `/adblue-service` | Bestätigtes Angebot: AdBlue-Deaktivierung und AGR On-Off; Voraussetzungen und bestehende Nutzungshinweise beachten. |
 | Keramikversiegelung | `/luxus-aufbereitung` | Angebot; Haltbarkeit als eigener Informationsbeitrag. |
