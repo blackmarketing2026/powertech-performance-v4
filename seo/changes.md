@@ -11,6 +11,7 @@ Auf ausdrückliche Nutzeranweisung wurde `/autoaufbereitung` als ausführliche L
 - Eingehende Inhaltslinks: Startseiten-Leistungsabschnitt und vorhandener Fahrzeugaufbereitungs-Ratgeber. Ausgehende Inhaltslinks: Innenreinigung, Polierstufen, Lackversiegelung, Motorraumreinigung, Datenschutz. Priorität P1.
 - URL, Canonical, Rewrite und Sitemap sind auf `/autoaufbereitung` ausgerichtet. `seo-map.csv` und `keyword-map.csv` bleiben bis zum nächsten bewusst aktualisierten Scan historische Bestandszuordnungen und enthalten noch keinen Messwert für diese Seite.
 - Fünf vom Nutzer gelieferte Fotos fertig aufbereiteter Kundenfahrzeuge wurden als WebP konvertiert und als Referenzgalerie auf der Leistungsseite eingebunden. Drei später erneut gesendete JPGs waren bytegleiche Dubletten und wurden nicht zusätzlich eingebunden.
+- Für alle sechs Leistungsbereiche wurden eigene KI-Illustrationen im dunklen Violettschema erzeugt, als WebP optimiert und auf `/autoaufbereitung` anstelle der zuvor wiederverwendeten Bilder eingebunden. Die echten Kundenfotos in der Referenzgalerie bleiben davon getrennt.
 
 ## Motorwäsche mit Trockeneis (12.10.2026, lokal)
 
