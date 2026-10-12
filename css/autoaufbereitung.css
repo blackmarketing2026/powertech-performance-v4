@@ -103,6 +103,7 @@
   .ap-gallery-grid figure:nth-child(n+4) img { height: 300px; }
 }
 @media (max-width: 550px) {
+  .ap-hero h1 { font-size: clamp(2rem, 8.6vw, 2.6rem); }
   .ap-hero-content { padding-top: 5rem; padding-bottom: 5rem; }
   .ap-service-grid { grid-template-columns: 1fr; }
   .ap-service-card > div { padding: 1.5rem; }
