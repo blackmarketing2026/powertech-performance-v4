@@ -2,12 +2,12 @@
 
 ## Motorwäsche mit Trockeneis (12.10.2026, lokal)
 
-Neue Leistungs-Landingpage unter `/motorwaesche-trockeneis` mit Canonical, Vercel-Rewrite, Sitemap-Eintrag, zwei eigens erstellten und als KI-Illustrationen gekennzeichneten Bildern sowie Anfrageformular. Das bestehende Motorraum-Ratgeber-URL bleibt erhalten und beantwortet nun die Informationsfrage zur Eignung der Methode. Die allgemeine Trockeneis-Seite behandelt weiterhin Fahrzeug und Unterboden; der Festpreis gilt nur für den Motorraum.
+Neue Leistungs-Landingpage unter `/motorwaesche-trockeneis` mit Canonical, Vercel-Rewrite, Sitemap-Eintrag, vier eigens erstellten und als KI-Illustrationen gekennzeichneten Bildern sowie Anfrageformular mit Name, Fahrzeugmodell, Telefon und E-Mail. Das bestehende Motorraum-Ratgeber-URL bleibt erhalten und beantwortet nun die Informationsfrage zur Eignung der Methode. Die allgemeine Trockeneis-Seite behandelt weiterhin Fahrzeug und Unterboden; der Festpreis gilt nur für den Motorraum.
 
 - Hauptkeyword-Hypothese: „Motorwäsche mit Trockeneis Erfurt“; keine gemessenen Suchanfragen oder Rankings. Nebenbegriffe „Motorreinigung“ und „Motorraumreinigung“ beschreiben dieselbe Leistung und erhalten keine eigenen URLs.
 - Nutzerfrage: Wie wird der Motorraum ohne Waschwasser gereinigt, welche Bauteile werden geprüft, was kostet es und wie kann ich anfragen?
-- H1: „Motorwäsche mit Trockeneis. Motorraum wie neu.“ H2: Vorteile der Methode, Eignung und Ablauf, Festpreis, Anfrage.
-- Angebotsbeleg: ausdrückliche Nutzerangabe vom 12.10.2026 zu ausschließlich Trockeneis und 150 € Festpreis. Die zwei neuen Bilder sind illustrative Darstellungen, keine dokumentierten Kundenfahrzeuge. Die bestehende technische Quellenverknüpfung zur Methode auf `/trockeneisreinigung` bleibt erhalten.
+- H1: „Motorwäsche mit Trockeneis. Motorraum wie neu.“ H2: Vorteile der Methode, Vergleich zur Nasswäsche, Eignung und Ablauf, Festpreis, Ergebnis, FAQ, Anfrage.
+- Angebotsbeleg: ausdrückliche Nutzerangabe vom 12.10.2026 zu ausschließlich Trockeneis, 150 € Festpreis und Buchung eines Termins innerhalb von zwei Tagen. Die vier Bilder sind illustrative Darstellungen, keine dokumentierten Kundenfahrzeuge. Die bestehende technische Quellenverknüpfung zur Methode auf `/trockeneisreinigung` bleibt erhalten.
 - Eingehende Links: Startseiten-Leistungskachel, allgemeine Trockeneis-Seite und Motorraum-Ratgeber. Ausgehende Inhaltslinks: Motorraum-Ratgeber und Datenschutzerklärung. Priorität P1 für diese beauftragte Angebotsseite.
 - Veröffentlichung: lokal umgesetzt; Live-Status und Suchleistung nicht gemessen. `seo-map.csv` und `keyword-map.csv` stammen aus dem vorherigen Scan und sind für die neue URL noch nicht neu erzeugt.
 
