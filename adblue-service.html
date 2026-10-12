@@ -656,20 +656,18 @@
     <a href="https://wa.me/491737373574?text=Hallo%20Powertech%20Performance%2C%20ich%20habe%20eine%20Frage%20zu%20meinem%20AdBlue-System." class="btn btn-whatsapp" target="_blank" rel="noopener">WhatsApp</a>
   </div>
 
+  <script src="/js/tracking.js"></script>
   <script src="/js/main.js"></script>
   <script>
   (function () {
-    window.dataLayer = window.dataLayer || [];
+    // phone_click und whatsapp_click erfasst /js/tracking.js global.
+    function track(eventName, params) {
+      if (typeof window.trackEvent === 'function') window.trackEvent(eventName, params);
+    }
 
     document.addEventListener('click', function (event) {
-      var telLink = event.target.closest('a[href^="tel:"]');
-      if (telLink) window.dataLayer.push({ event: 'phone_click', link_url: telLink.getAttribute('href') });
-
-      var waLink = event.target.closest('a[href*="wa.me"]');
-      if (waLink) window.dataLayer.push({ event: 'whatsapp_click', link_url: waLink.getAttribute('href') });
-
       var mainCta = event.target.closest('[data-cta="main"]');
-      if (mainCta) window.dataLayer.push({ event: 'main_cta_click', link_url: mainCta.getAttribute('href') || null });
+      if (mainCta) track('main_cta_click', { link_url: mainCta.getAttribute('href') || null });
     });
 
     var form = document.getElementById('adblue-form');
@@ -682,7 +680,7 @@
     form.addEventListener('focusin', function () {
       if (formStarted) return;
       formStarted = true;
-      window.dataLayer.push({ event: 'form_start' });
+      track('form_start', { form_id: form.id });
     });
 
     function setStatus(state, text) {
@@ -754,7 +752,7 @@
         })
         .then(function () {
           setStatus('success', 'Vielen Dank für deine Anfrage. Powertech Performance prüft deine Angaben und meldet sich persönlich bei dir.');
-          window.dataLayer.push({ event: 'form_submit' });
+          if (typeof window.trackFormSuccess === 'function') window.trackFormSuccess(form, 'kontakt');
           form.reset();
         })
         .catch(function () {

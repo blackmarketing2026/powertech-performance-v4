@@ -212,6 +212,7 @@
       });
       const result = await response.json().catch(() => ({}));
       if (!response.ok) throw new Error(result.error || 'Versand fehlgeschlagen.');
+      if (typeof window.trackFormSuccess === 'function') window.trackFormSuccess(form, 'termin');
       form.reset();
       renderCalendar();
       renderSlots();

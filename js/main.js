@@ -54,6 +54,7 @@ function initLeadForms() {
         }
 
         setFormStatus(statusEl, 'success', 'Danke! Ihre Anfrage wurde gesendet — wir melden uns zeitnah.');
+        if (typeof window.trackFormSuccess === 'function') window.trackFormSuccess(form);
         form.reset();
       } catch (err) {
         setFormStatus(statusEl, 'error', err.message || 'Versand fehlgeschlagen. Bitte versuchen Sie es später erneut oder rufen Sie uns an.');
