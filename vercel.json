@@ -63,7 +63,9 @@
     {"source": "/trockeneisreinigung.html", "destination": "/trockeneisreinigung", "permanent": true},
     {"source": "/trockeneisreinigung/", "destination": "/trockeneisreinigung", "permanent": true},
     {"source": "/motorwaesche-trockeneis.html", "destination": "/motorwaesche-trockeneis", "permanent": true},
-    {"source": "/motorwaesche-trockeneis/", "destination": "/motorwaesche-trockeneis", "permanent": true}
+    {"source": "/motorwaesche-trockeneis/", "destination": "/motorwaesche-trockeneis", "permanent": true},
+    {"source": "/autoaufbereitung.html", "destination": "/autoaufbereitung", "permanent": true},
+    {"source": "/autoaufbereitung/", "destination": "/autoaufbereitung", "permanent": true}
   ],
   "rewrites": [
     {"source": "/ratgeber/leasingfahrzeug-keramikversiegelung", "destination": "/ratgeber/leasingfahrzeug-keramikversiegelung/index.html"},
@@ -83,6 +85,7 @@
     {"source": "/trockeneisreinigung", "destination": "/trockeneisreinigung.html"},
     {"source": "/graffiti-entfernung-trockeneis", "destination": "/graffiti-entfernung-trockeneis.html"},
     {"source": "/auto-handwaesche-erfurt", "destination": "/auto-handwaesche-erfurt.html"},
-    {"source": "/motorwaesche-trockeneis", "destination": "/motorwaesche-trockeneis.html"}
+    {"source": "/motorwaesche-trockeneis", "destination": "/motorwaesche-trockeneis.html"},
+    {"source": "/autoaufbereitung", "destination": "/autoaufbereitung.html"}
   ]
 }

@@ -1,5 +1,16 @@
 # Aktueller Leistungsumfang und Entfernung von Chiptuning
 
+## Autoaufbereitung als eigene Leistungsseite (12.10.2026, lokal)
+
+Auf ausdrückliche Nutzeranweisung wurde `/autoaufbereitung` als ausführliche Leistungsseite ergänzt. Die Startseite bleibt bestehen und behält ihre Canonical-URL; es gibt keine Umbenennung oder Weiterleitung. Der bisherige Keyword-Map-Eintrag mit `/` als redaktionellem Arbeitsziel stammt aus der früheren Analyse. Ohne Query-URL-Zeitreihe ist keine Ranking-Wirkung oder Gewinnerseite belegt. Die neue Seite bündelt die angefragte kommerzielle Leistungsübersicht, während die Startseite die breitere Einstiegsrolle behält.
+
+- Hauptkeyword-Hypothese: „Autoaufbereitung“; „Fahrzeugaufbereitung“ und „Kfz-Aufbereitung“ sind Varianten derselben kommerziellen Suchintention und erhalten keine zusätzlichen URLs.
+- Nutzerfrage: Welche Arbeiten bietet Powertech für Innenraum, Lack, Felgen und Motorraum an, wer führt sie aus und wie kann ich anfragen?
+- H1: „Autoaufbereitung, die zum Fahrzeug passt.“ H2: Überblick, Leistungen, Ablauf, Benjamin/Powertech, FAQ, Kontakt.
+- Angebotsbelege: ausdrückliche Nutzerliste vom 12.10.2026 sowie bestehende Leistungsangaben und Benjamin-Foto auf der Start- und Leistungsseite. Die Motorraumreinigung verweist ausschließlich auf das bestätigte Trockeneis-Angebot. Andere Preise werden nicht erfunden.
+- Eingehende Inhaltslinks: Startseiten-Leistungsabschnitt und vorhandener Fahrzeugaufbereitungs-Ratgeber. Ausgehende Inhaltslinks: Innenreinigung, Polierstufen, Lackversiegelung, Motorraumreinigung, Datenschutz. Priorität P1.
+- URL, Canonical, Rewrite und Sitemap sind auf `/autoaufbereitung` ausgerichtet. `seo-map.csv` und `keyword-map.csv` bleiben bis zum nächsten bewusst aktualisierten Scan historische Bestandszuordnungen und enthalten noch keinen Messwert für diese Seite.
+
 ## Motorwäsche mit Trockeneis (12.10.2026, lokal)
 
 Neue Leistungs-Landingpage unter `/motorwaesche-trockeneis` mit Canonical, Vercel-Rewrite, Sitemap-Eintrag, vier eigens erstellten und als KI-Illustrationen gekennzeichneten Bildern sowie Anfrageformular mit Name, Fahrzeugmodell, Telefon und E-Mail. Das bestehende Motorraum-Ratgeber-URL bleibt erhalten und beantwortet nun die Informationsfrage zur Eignung der Methode. Die allgemeine Trockeneis-Seite behandelt weiterhin Fahrzeug und Unterboden; der Festpreis gilt nur für den Motorraum.

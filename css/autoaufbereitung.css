@@ -1,0 +1,78 @@
+.ap-section { padding: 6rem 0; scroll-margin-top: 80px; }
+.ap-eyebrow { color: #d4a8e9; text-transform: uppercase; letter-spacing: .16em; font-size: .75rem; font-weight: 800; margin-bottom: 1rem; }
+.ap-hero { position: relative; min-height: 660px; display: flex; align-items: center; background: #100b18; overflow: hidden; }
+.ap-hero-image { position: absolute; inset: 0; background: url('/images/home2-slider-after.png') center / cover no-repeat; }
+.ap-hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(13,8,19,.96) 0%, rgba(13,8,19,.84) 33%, rgba(13,8,19,.35) 69%, rgba(13,8,19,.1) 100%); }
+.ap-hero-content { position: relative; z-index: 1; width: 100%; padding-top: 6rem; padding-bottom: 6rem; }
+.ap-hero-content > * { max-width: 650px; }
+.ap-hero h1 { font-size: clamp(3rem, 5.6vw, 5.7rem); line-height: 1.02; letter-spacing: -.055em; margin: 0 0 1.5rem; }
+.ap-hero-content > p:not(.ap-eyebrow):not(.ap-hero-note) { color: #eee3f2; font-size: 1.2rem; line-height: 1.6; }
+.ap-actions, .ap-contact-actions { display: flex; gap: .8rem; flex-wrap: wrap; margin-top: 2rem; }
+.ap-hero-note { color: #cab9d3; font-size: .88rem; margin-top: 1.3rem; }
+.ap-intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+.ap-intro h2, .ap-about h2, .ap-contact h2 { text-align: left; font-size: clamp(2rem, 3.6vw, 3.5rem); letter-spacing: -.035em; }
+.ap-intro-grid > div:last-child { color: #dfd2e6; font-size: 1.06rem; }
+.ap-services .ap-eyebrow, .ap-process .ap-eyebrow, .ap-faq .ap-eyebrow { text-align: center; }
+.ap-services h2, .ap-process h2, .ap-faq h2 { max-width: 800px; margin: 0 auto 1.3rem; font-size: clamp(2.2rem, 3.5vw, 3.45rem); }
+.ap-section-lead { color: #cdbbd8; text-align: center; max-width: 720px; margin: 0 auto 2.8rem; }
+.ap-service-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.2rem; }
+.ap-service-card { min-width: 0; display: grid; grid-template-columns: 38% 62%; overflow: hidden; background: #261333; border: 1px solid rgba(218,181,235,.16); border-radius: 18px; transition: transform .2s ease, border-color .2s ease; }
+.ap-service-card:hover { transform: translateY(-3px); border-color: rgba(218,181,235,.48); }
+.ap-service-card-wide { grid-column: span 2; grid-template-columns: 38% 62%; }
+.ap-service-card > img { width: 100%; height: 100%; min-height: 290px; object-fit: contain; padding: 1rem; background: radial-gradient(circle at center, #3f2452, #1c0e28 72%); }
+.ap-service-card-wide:last-child > img { object-fit: cover; padding: 0; }
+.ap-service-card > div { padding: 2rem; align-self: center; }
+.ap-service-card span { display: block; color: #c897df; text-transform: uppercase; letter-spacing: .13em; font-size: .74rem; font-weight: 800; margin-bottom: .7rem; }
+.ap-service-card h3 { font-size: 1.55rem; margin-bottom: .85rem; }
+.ap-service-card p { color: #d9cce1; margin-bottom: .8rem; }
+.ap-service-card a { color: #e3bcf4; font-weight: 700; text-decoration: underline; text-underline-offset: .2em; }
+.ap-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.7rem; margin-top: 3rem; }
+.ap-steps > div { padding: 1.5rem 1rem 0; border-top: 2px solid #ae79c9; }
+.ap-steps span { color: #ba8bce; font-size: .85rem; font-weight: 800; letter-spacing: .15em; }
+.ap-steps h3 { margin-top: .8rem; }
+.ap-steps p { color: #d9cce1; }
+.ap-about-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: 5rem; align-items: center; }
+.ap-about figure { margin: 0; background: #261333; border-radius: 22px; overflow: hidden; box-shadow: 0 22px 55px rgba(0,0,0,.24); }
+.ap-about figure img { width: 100%; height: 500px; object-fit: cover; }
+.ap-about figcaption { color: #cdbbd8; padding: .7rem 1rem; font-size: .78rem; }
+.ap-about-grid > div p:not(.ap-eyebrow) { color: #d9cce1; }
+.ap-about .btn { margin-top: .7rem; }
+.ap-faq-inner { max-width: 900px; }
+.ap-faq-list { display: grid; gap: .8rem; margin-top: 2.6rem; }
+.ap-faq-list details { padding: 1.15rem 1.4rem; background: #261333; border: 1px solid rgba(218,181,235,.18); border-radius: 13px; }
+.ap-faq-list details[open] { border-color: #a272bd; }
+.ap-faq-list summary { cursor: pointer; color: #f6f0f8; font-weight: 700; font-size: 1.04rem; }
+.ap-faq-list p { color: #d9cce1; margin: .9rem 0 0; }
+.ap-contact-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 5rem; align-items: start; }
+.ap-contact-copy > p:not(.ap-eyebrow) { color: #d9cce1; }
+.ap-contact-actions .btn { white-space: nowrap; }
+.ap-address { border-left: 3px solid #a272bd; padding-left: 1rem; margin-top: 2.2rem; font-weight: 700; }
+.ap-form-wrap { padding: 2rem; background: #261333; border: 1px solid rgba(218,181,235,.22); border-radius: 20px; }
+.ap-form-wrap .form-row label { position: static; display: block; width: auto; height: auto; overflow: visible; clip: auto; color: #f6f0f8; font-weight: 700; margin-bottom: .4rem; }
+.ap-form-wrap .form-row input, .ap-form-wrap .form-row textarea, .ap-form-wrap .form-row select { width: 100%; background: #1a0c24; color: #fff; border: 1px solid var(--color-border); border-radius: 10px; padding: .9rem 1.1rem; font: inherit; }
+.ap-form-wrap .form-row select:invalid { color: #ad9bb9; }
+.ap-form-wrap .form-row input::placeholder, .ap-form-wrap .form-row textarea::placeholder { color: #ad9bb9; }
+.ap-form-wrap .form-row input:focus, .ap-form-wrap .form-row textarea:focus, .ap-form-wrap .form-row select:focus { outline: 2px solid #a272bd; outline-offset: 1px; }
+.ap-form-wrap .honeypot label { position: absolute; width: 1px; height: 1px; overflow: hidden; }
+.ap-form-wrap .form-status[data-state="success"] { color: #7ae28d; }
+.ap-form-wrap .form-status[data-state="error"] { color: #ff9696; }
+.ap-privacy { color: #bfaeca; font-size: .78rem; margin: 1rem 0 0; }
+@media (max-width: 900px) {
+  .ap-intro-grid, .ap-about-grid, .ap-contact-grid { gap: 2.5rem; }
+  .ap-service-card, .ap-service-card-wide { grid-column: span 1; grid-template-columns: 1fr; }
+  .ap-service-card > img { height: 240px; min-height: 0; }
+}
+@media (max-width: 700px) {
+  .ap-section { padding: 4rem 0; }
+  .ap-hero { min-height: 620px; }
+  .ap-hero-image { background-position: 57% center; }
+  .ap-hero::after { background: linear-gradient(90deg, rgba(13,8,19,.94), rgba(13,8,19,.55)), linear-gradient(0deg, rgba(13,8,19,.55), transparent 70%); }
+  .ap-intro-grid, .ap-about-grid, .ap-contact-grid, .ap-steps { grid-template-columns: 1fr; }
+  .ap-about figure img { height: 360px; }
+}
+@media (max-width: 550px) {
+  .ap-hero-content { padding-top: 5rem; padding-bottom: 5rem; }
+  .ap-service-grid { grid-template-columns: 1fr; }
+  .ap-service-card > div { padding: 1.5rem; }
+  .ap-form-wrap { padding: 1.3rem; }
+}
