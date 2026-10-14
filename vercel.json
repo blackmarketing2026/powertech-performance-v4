@@ -86,6 +86,7 @@
     {"source": "/graffiti-entfernung-trockeneis", "destination": "/graffiti-entfernung-trockeneis.html"},
     {"source": "/auto-handwaesche-erfurt", "destination": "/auto-handwaesche-erfurt.html"},
     {"source": "/motorwaesche-trockeneis", "destination": "/motorwaesche-trockeneis.html"},
+    {"source": "/leasingrueckgabe-termin/", "destination": "/leasingrueckgabe-termin.html"},
     {"source": "/autoaufbereitung", "destination": "/autoaufbereitung.html"}
   ]
 }
