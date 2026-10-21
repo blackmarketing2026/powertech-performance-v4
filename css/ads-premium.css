@@ -55,6 +55,15 @@
 .ads-feature-service { padding: 18px 0 17px; border-top: 1px solid #d9d2d8; }
 .ads-feature-service h3 { margin: 0 0 4px; font-size: 20px; font-weight: 600; letter-spacing: -.02em; }
 .ads-feature-service p { margin: 0; color: #736c75; font-size: 15px; line-height: 1.55; }
+.ads-gallery { padding: 0 0 125px; }
+.ads-gallery-heading { display: flex; align-items: end; justify-content: space-between; gap: 42px; margin-bottom: 34px; }
+.ads-gallery-heading h2 { margin: 15px 0 0; text-align: left; font-size: clamp(39px, 4vw, 58px); font-weight: 500; line-height: 1.12; letter-spacing: -.05em; }
+.ads-gallery-heading > p { max-width: 350px; margin: 0 0 5px; color: #6a626b; font-size: 16px; line-height: 1.55; }
+.ads-gallery-grid { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 12px; }
+.ads-gallery-grid figure { grid-column: span 2; margin: 0; aspect-ratio: 1.55; overflow: hidden; background: #e8e3e4; }
+.ads-gallery-grid figure:nth-child(-n+2) { grid-column: span 3; }
+.ads-gallery-grid img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.ads-gallery-note { margin: 18px 0 0; color: #817984; font-size: 11px; line-height: 1.5; }
 .ads-approach { padding: 90px 0; background: #eee8ed; }
 .ads-approach-grid { display: grid; grid-template-columns: 1fr .8fr; gap: 100px; align-items: end; }
 .ads-approach h2 { max-width: 680px; margin: 15px 0 0; text-align: left; font-family: Georgia, 'Times New Roman', serif; font-size: clamp(42px, 4.3vw, 63px); font-weight: 400; font-style: italic; line-height: 1.15; letter-spacing: -.05em; }
@@ -117,6 +126,12 @@
   .ads-feature-image { aspect-ratio: 1.15; }
   .ads-feature-content h2 { font-size: 37px; }
   .ads-feature-content > p:not(.ads-kicker) { margin-bottom: 21px; font-size: 16px; }
+  .ads-gallery { padding-bottom: 85px; }
+  .ads-gallery-heading { display: block; margin-bottom: 24px; }
+  .ads-gallery-heading h2 { font-size: 39px; }
+  .ads-gallery-heading > p { margin-top: 14px; font-size: 15px; }
+  .ads-gallery-grid { grid-template-columns: 1fr; gap: 12px; }
+  .ads-gallery-grid figure, .ads-gallery-grid figure:nth-child(-n+2) { grid-column: auto; aspect-ratio: 1.55; }
   .ads-approach { padding: 72px 0; }
   .ads-approach-grid { grid-template-columns: 1fr; gap: 20px; }
   .ads-approach h2 { font-size: 43px; }
