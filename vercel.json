@@ -1,5 +1,7 @@
 {
   "redirects": [
+    {"source": "/ads2/", "destination": "/ads2", "permanent": true},
+    {"source": "/ads2.html", "destination": "/ads2", "permanent": true},
     {"source": "/landingpage/adblue-deaktivieren", "destination": "/adblue-service", "permanent": true},
     {"source": "/landingpage/adblue-deaktivieren/(.*)", "destination": "/adblue-service", "permanent": true},
     {"source": "/adblue-service.html", "destination": "/adblue-service", "permanent": true},
@@ -71,6 +73,7 @@
     {"source": "/ratgeber/leasingfahrzeug-keramikversiegelung", "destination": "/ratgeber/leasingfahrzeug-keramikversiegelung/index.html"},
     {"source": "/adblue-service", "destination": "/adblue-service.html"},
     {"source": "/ads", "destination": "/ads.html"},
+    {"source": "/ads2", "destination": "/ads2.html"},
     {"source": "/anfrage-danke", "destination": "/anfrage-danke.html"},
     {"source": "/eisenach", "destination": "/eisenach.html"},
     {"source": "/fahrzeugaufbereitung-aus-erfurt", "destination": "/fahrzeugaufbereitung-aus-erfurt.html"},
