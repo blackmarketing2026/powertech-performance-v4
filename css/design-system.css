@@ -64,6 +64,9 @@ summary:focus-visible { outline: 3px solid #9d6cb4; outline-offset: 4px; }
 .site-footer a, .ads-footer a { color: var(--pt-text); }
 .site-footer .footer-copy, .site-footer .footer-nav a, .site-footer .footer-disclosure { color: var(--pt-muted); }
 .site-footer .footer-nav a:hover { color: var(--pt-action); }
+.sitemap-directory { max-width: var(--pt-width); grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-bottom: 44px; }
+.sitemap-directory li { min-width: 0; background: #fff; }
+.sitemap-directory a { overflow-wrap: anywhere; }
 .hero:not(.home2-page .hero) { background-image: none !important; background-color: #fff; }
 .hero:not(.home2-page .hero) h1, .hero:not(.home2-page .hero) .hero-sub { color: var(--pt-heading); }
 .cta-band { background: var(--pt-section); }
@@ -234,6 +237,7 @@ body:not(.home2-page):not(.ads-page):not(.ap-page) main > section .form-status[d
   .ads-page .ads-about-grid, .home2-page .home-about-grid { gap: 32px; }
 }
 @media (max-width: 700px) {
+  .sitemap-directory { grid-template-columns: 1fr; }
   .ads-page .ads-hero-inner, .ap-page .ap-hero-content, .home2-page .hero { padding-block: 42px 56px; }
   .ads-page .ads-hero-grid, .ap-page .ap-hero-grid, .home2-page .home-hero-grid, .ads-page .ads-about-grid, .home2-page .home-about-grid { grid-template-columns: 1fr; gap: 24px; }
   .ads-page .ads-hero-heading, .ap-page .ap-hero-heading, .home2-page .home-hero-heading { margin-bottom: 24px; }
