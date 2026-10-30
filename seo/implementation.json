@@ -357,7 +357,7 @@
       "Neue eigenständige Leistungsseite aus belegtem Bestandsangebot und kommerzieller Suchintention erstellt"
     ],
     "adblue-diagnose-erfurt.html": [
-      "31.10.2026: Ausdrückliche Nutzeranweisung: AdBlue-/NOx-Auskodierung, Fahrzeugtypen, kostenloses Angebot, Betriebserlaubnis-Hinweis; helles bestehendes Design-System. Lokal umgesetzt, nicht veröffentlicht."
+      "31.10.2026: Ausdrückliche Nutzeranweisung: AdBlue-/NOx-Auskodierung, Fahrzeugtypen, kostenloses Angebot, Betriebserlaubnis-Hinweis; helles bestehendes Design-System. Auf origin/main gepusht; öffentliches HTML mit neuem Angebot, Design und Rechtshinweis per HTTP 200 geprüft."
     ]
   },
   "metadata": {

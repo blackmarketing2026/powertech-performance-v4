@@ -41,4 +41,6 @@ Auf ausdrücklichen Nutzerwunsch vom 31.10.2026: vor jeder Arbeit lesen und nach
 
 - Nutzer hat mit „bitte pushen“ den Upload des aktuellen Stands auf GitHub ausdrücklich autorisiert.
 - Umfang: Website-Commit `a37aedb` und Projektdokumentation (`AGENTS.md`, `MEMORY.md`). Vorhandene Desktop-/Mobilprüfungen bestanden; keine erneute Inhaltsänderung. `git diff --check` vor Push bestanden.
-- Ziel: `origin/main`. Push-Ergebnis und öffentliche Prüfung werden nach Ausführung hier ergänzt.
+- Erfolgreich auf `origin/main` gepusht: Website-Commit `a37aedb` und Dokumentations-Commit `56a1c34`.
+- Öffentliche Prüfung nach kurzer Bereitstellungszeit bestanden: `/adblue-diagnose-erfurt/` antwortet mit HTTP 200 und enthält das neue NOx-Angebot, `/css/adblue.css` sowie den hervorgehobenen Betriebserlaubnis-Hinweis. Die neue Version ist damit öffentlich ausgeliefert. Keine Formular-Testanfrage versendet; keine zusätzliche Live-Browserprüfung durchgeführt.
+- Die früheren Angaben „nicht veröffentlicht“ oben beschreiben den damaligen Stand und sind durch diesen Veröffentlichungseintrag überholt.
