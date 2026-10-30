@@ -92,6 +92,9 @@ BLOG_ROOT_ALIASES = [
 
 # Einzelne Pfade
 EXACT = {
+    "/glanz-erfurt": "/keramikversiegelung/",
+    "/glanz-erfurt/": "/keramikversiegelung/",
+    "/glanz-erfurt/index.html": "/keramikversiegelung/",
     "/ads2": "/ads",
     "/ads2/": "/ads",
     "/ads2.html": "/ads",

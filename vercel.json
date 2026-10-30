@@ -1,5 +1,8 @@
 {
   "redirects": [
+    {"source": "/glanz-erfurt", "destination": "/keramikversiegelung/", "permanent": true},
+    {"source": "/glanz-erfurt/", "destination": "/keramikversiegelung/", "permanent": true},
+    {"source": "/glanz-erfurt/index.html", "destination": "/keramikversiegelung/", "permanent": true},
     {"source": "/ads2", "destination": "/ads", "permanent": true},
     {"source": "/ads2/", "destination": "/ads", "permanent": true},
     {"source": "/ads2.html", "destination": "/ads", "permanent": true},

@@ -4,9 +4,9 @@ import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig(() => ({
-  base: "/glanz-erfurt/",
+  base: "/keramikversiegelung/",
   build: {
-    outDir: "../glanz-erfurt",
+    outDir: "../keramikversiegelung",
     emptyOutDir: true,
   },
   server: {
