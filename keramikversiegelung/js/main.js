@@ -17,7 +17,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
   initLeadForms();
   initCookieConsent();
+  initBlogPromotion();
 });
+
+function initBlogPromotion() {
+  if (!/^\/(blog|ratgeber)\//.test(window.location.pathname)) return;
+  const style = document.createElement('link');
+  style.rel = 'stylesheet';
+  style.href = '/css/blog-promo.css';
+  style.addEventListener('load', () => {
+    const script = document.createElement('script');
+    script.src = '/js/blog-promo.js';
+    document.body.appendChild(script);
+  }, { once: true });
+  document.head.appendChild(style);
+}
 
 // ---------------------------------------------------------
 // Lead-Formulare (Kontaktformulare, Quiz-Ergebnisformulare, ...)

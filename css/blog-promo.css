@@ -1,0 +1,53 @@
+/* Keramik offer on blog and guide pages; scoped to avoid article layout changes. */
+.pt-offer,
+.pt-offer-dialog {
+  --offer-ink: hsl(283 30% 15%);
+  --offer-purple: hsl(283 20% 45%);
+  --offer-border: hsl(300 12% 88%);
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+.pt-offer {
+  min-width: 0;
+  overflow: hidden;
+  background: #fff;
+  color: var(--offer-ink);
+  border: 1px solid var(--offer-border);
+  border-radius: 14px;
+  box-shadow: 0 14px 40px rgba(45, 25, 60, .12);
+}
+.pt-offer__visual { position: relative; min-height: 150px; overflow: hidden; background: hsl(300 15% 92%); }
+.pt-offer__visual::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(36,20,44,.12), transparent 65%); pointer-events: none; }
+.pt-offer__photo { display: block; width: 100%; height: 100%; min-height: 150px; object-fit: cover; }
+.pt-offer__logo { position: absolute; z-index: 1; top: 12px; left: 12px; width: 58px; height: 53px; object-fit: contain; padding: 5px; border-radius: 10px; background: rgba(255,255,255,.88); }
+.pt-offer__content { padding: 24px; }
+.pt-offer__eyebrow { display: block; margin-bottom: 10px; color: var(--offer-purple); font-size: .7rem; font-weight: 800; letter-spacing: .11em; text-transform: uppercase; }
+.pt-offer h2 { margin: 0 0 12px; color: var(--offer-ink); font-size: clamp(1.55rem, 2.4vw, 2.15rem); line-height: 1.15; letter-spacing: -.035em; text-align: left; }
+.pt-offer p { margin: 0 0 20px; color: hsl(283 10% 35%); font-size: .96rem; line-height: 1.55; }
+.pt-offer__button { display: inline-flex; align-items: center; justify-content: space-between; gap: 18px; min-height: 48px; padding: 11px 16px; border-radius: 10px; background: var(--offer-purple); color: #fff !important; font-size: .9rem; font-weight: 750; line-height: 1.25; text-decoration: none !important; }
+.pt-offer__button:hover { background: hsl(283 25% 35%); color: #fff !important; }
+.pt-offer__button:focus-visible, .pt-offer-dialog__close:focus-visible { outline: 3px solid hsl(283 25% 55%); outline-offset: 3px; }
+.pt-offer--sidebar .pt-offer__content { padding: 20px; }
+.pt-offer--sidebar h2 { font-size: 1.65rem; }
+.pt-offer--sidebar .pt-offer__button { width: 100%; }
+.pt-offer--mobile { display: none; }
+.pt-offer--inline { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); align-items: stretch; width: min(1120px, calc(100% - 48px)); margin: 36px auto; }
+.pt-offer--inline .pt-offer__content { align-self: center; padding: clamp(24px, 4vw, 48px); }
+.pt-offer-dialog { position: fixed; inset: 0; width: min(720px, calc(100% - 32px)); max-width: none; max-height: min(90vh, 800px); margin: auto; padding: 0; border: 0; border-radius: 16px; background: transparent; color: var(--offer-ink); overflow: visible; }
+.pt-offer-dialog::backdrop { background: rgba(18, 10, 24, .72); }
+.pt-offer-dialog .pt-offer { box-shadow: 0 30px 80px rgba(18, 10, 24, .28); }
+.pt-offer-dialog .pt-offer__visual { height: 250px; }
+.pt-offer-dialog .pt-offer__content { padding: clamp(24px, 4vw, 42px); }
+.pt-offer-dialog .pt-offer h2 { font-size: clamp(2rem, 4vw, 3rem); max-width: 560px; }
+.pt-offer-dialog .pt-offer p { max-width: 560px; }
+.pt-offer-dialog__close { position: absolute; z-index: 3; top: 12px; right: 12px; display: grid; place-items: center; width: 42px; height: 42px; padding: 0; border: 1px solid var(--offer-border); border-radius: 50%; background: rgba(255,255,255,.96); color: var(--offer-ink); font: inherit; font-size: 28px; line-height: 1; cursor: pointer; }
+@media (max-width: 760px) {
+  .pt-offer--sidebar { display: none; }
+  .pt-offer--mobile { display: block; margin: 24px 0; }
+  .pt-offer--inline { grid-template-columns: 1fr; width: min(100% - 32px, 560px); margin: 24px auto; }
+  .pt-offer--inline .pt-offer__visual { height: 180px; }
+  .pt-offer-dialog { max-height: calc(100dvh - 32px); overflow-y: auto; }
+  .pt-offer-dialog .pt-offer__visual { height: 170px; }
+  .pt-offer-dialog .pt-offer__content { padding: 24px; }
+  .pt-offer-dialog .pt-offer h2 { font-size: 1.8rem; }
+}
+@media (prefers-reduced-motion: reduce) { .pt-offer-dialog, .pt-offer { scroll-behavior: auto; } }

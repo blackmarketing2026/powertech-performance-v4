@@ -3,6 +3,7 @@ import { MapPin, Phone, Mail, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Contact = () => {
+  const offerActive = new URLSearchParams(window.location.search).get("aktion") === "keramik20";
   const [status, setStatus] = useState("");
   const [sending, setSending] = useState(false);
 
@@ -48,6 +49,7 @@ const Contact = () => {
             <div className="space-y-3"><Button asChild className="w-full" size="lg"><a href="/online-termin-buchen/">Besichtigungstermin buchen</a></Button><Button asChild className="w-full bg-[#25D366] hover:bg-[#20BA5A] text-white" size="lg"><a href="https://wa.me/491737373574" target="_blank" rel="noopener noreferrer"><MessageCircle className="w-5 h-5 mr-2" />WhatsApp: +49 173 7373574</a></Button></div>
           </div>
           <form className="bg-card rounded-xl shadow-lg border border-border overflow-hidden p-6 space-y-4" onSubmit={handleSubmit} data-form-name="Keramikversiegelung Glanz Erfurt">
+            {offerActive && <><p className="rounded-lg bg-primary/10 p-3 text-sm font-semibold text-primary">20-%-Aktion für Keramikversiegelung ausgewählt. Wir berücksichtigen sie bei Ihrer Anfrage.</p><input type="hidden" name="aktion" value="20 % Rabatt auf Keramikversiegelung" /></>}
             <div className="hidden" aria-hidden="true"><label htmlFor="glanz-website">Website</label><input id="glanz-website" name="website" tabIndex={-1} autoComplete="off" /></div>
             <div><label className="block font-semibold mb-2" htmlFor="glanz-name">Name *</label><input className="w-full rounded-lg border border-input bg-background p-3" id="glanz-name" name="name" autoComplete="name" required /></div>
             <div><label className="block font-semibold mb-2" htmlFor="glanz-email">E-Mail *</label><input className="w-full rounded-lg border border-input bg-background p-3" id="glanz-email" name="email" type="email" autoComplete="email" required /></div>
