@@ -31,6 +31,11 @@ function initLeadForms() {
   forms.forEach((form) => {
     form.addEventListener('submit', async (event) => {
       event.preventDefault();
+      if (form.dataset.submitting === 'true') return;
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
 
       const statusEl = form.querySelector('[data-form-status]');
       const submitBtn = form.querySelector('button[type="submit"]');
@@ -38,6 +43,7 @@ function initLeadForms() {
       const payload = Object.fromEntries(formData.entries());
       payload.formName = form.dataset.formName || 'Formular';
 
+      form.dataset.submitting = 'true';
       setFormStatus(statusEl, 'sending', 'Wird gesendet…');
       if (submitBtn) submitBtn.disabled = true;
 
@@ -59,6 +65,7 @@ function initLeadForms() {
       } catch (err) {
         setFormStatus(statusEl, 'error', err.message || 'Versand fehlgeschlagen. Bitte versuchen Sie es später erneut oder rufen Sie uns an.');
       } finally {
+        delete form.dataset.submitting;
         if (submitBtn) submitBtn.disabled = false;
       }
     });

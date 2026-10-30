@@ -12,7 +12,7 @@
 .ap-about-grid a:not(.btn), .ap-faq-list a { color: #e3bcf4; text-decoration: underline; text-underline-offset: .2em; }
 .ap-eyebrow { color: #d4a8e9; text-transform: uppercase; letter-spacing: .16em; font-size: .75rem; font-weight: 800; margin-bottom: 1rem; }
 .ap-hero { position: relative; min-height: 660px; display: flex; align-items: center; background: #100b18; overflow: hidden; }
-.ap-hero-image { position: absolute; inset: 0; background: url('/images/home2-slider-after.png') center / cover no-repeat; }
+.ap-hero-image { position: absolute; inset: 0; background: url('/images/home2-slider-after.webp') center / cover no-repeat; }
 .ap-hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(13,8,19,.96) 0%, rgba(13,8,19,.84) 33%, rgba(13,8,19,.35) 69%, rgba(13,8,19,.1) 100%); }
 .ap-hero-content { position: relative; z-index: 1; width: 100%; padding-top: 6rem; padding-bottom: 6rem; }
 .ap-hero-content > * { max-width: 650px; }
@@ -119,3 +119,14 @@
   .ap-gallery-grid figure, .ap-gallery-grid figure:first-child, .ap-gallery-grid figure:nth-child(n+4) { grid-column: auto; }
   .ap-gallery-grid img, .ap-gallery-grid figure:nth-child(n+4) img { height: auto; max-height: 480px; object-fit: contain; }
 }
+
+/* Faktenleiste und Listen für Leistungsseiten (SEO-Überarbeitung 10/2026) */
+.ap-facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin: 0; }
+.ap-facts > div { padding: 1.3rem 1.4rem; background: #261333; border: 1px solid rgba(218,181,235,.18); border-radius: 16px; }
+.ap-facts dt { color: #c897df; text-transform: uppercase; letter-spacing: .13em; font-size: .74rem; font-weight: 800; margin-bottom: .5rem; }
+.ap-facts dd { margin: 0; color: #f6f0f8; font-weight: 700; }
+.ap-facts dd small { display: block; color: #cdbbd8; font-weight: 400; margin-top: .35rem; }
+.ap-list { margin: .4rem 0 1.2rem; padding-left: 1.2rem; color: #d9cce1; }
+.ap-list li { margin-bottom: .45rem; }
+.ap-text-links a, .ap-intro-grid a, .ap-reasons a, .ap-steps a { color: #e3bcf4; font-weight: 700; text-decoration: underline; text-underline-offset: .2em; }
+@media (max-width: 900px) { .ap-facts { grid-template-columns: 1fr; } }

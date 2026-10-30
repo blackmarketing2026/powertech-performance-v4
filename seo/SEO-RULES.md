@@ -2,9 +2,9 @@
 
 ## Verbindliche Leistungskorrektur
 
-Kein Chiptuning, keine Stage-1/2-Leistungssteigerung, keine allgemeine Kennfeldoptimierung. Fahrzeugsoftware ausschließlich AdBlue-Deaktivierung und AGR On-Off; Autoaufbereitung bleibt bestehen. `business-policy.json` hat Vorrang vor historischen Empfehlungen. Die fünf dokumentierten Seiten sind ausdrücklich gelöscht und dürfen nicht wiederhergestellt werden.
+Kein Chiptuning, keine Stage-1/2-Leistungssteigerung, keine allgemeine Kennfeldoptimierung. Seit 12.10.2026 auch keine AdBlue-/SCR-Deaktivierung und kein AGR On-Off; angeboten wird nur AdBlue-/SCR-Diagnose mit Reparaturberatung und Rückrüstungsprüfung. Autoaufbereitung ist das Kerngeschäft. `business-policy.json` hat Vorrang vor historischen Empfehlungen. Die fünf dokumentierten Seiten sind ausdrücklich gelöscht und dürfen nicht wiederhergestellt werden.
 
-Stand: 07.09.2026 nach lokaler Umsetzung, noch nicht veröffentlicht. Diese Regeln gelten für weitere SEO-Arbeiten. Aktuelle Nutzeranweisungen haben Vorrang. Die Ausgangsanalyse bleibt unter `history/2026-09-07-analysis/` erhalten.
+Stand: 07.09.2026, fortgeschrieben am 12.10.2026 (URL-Schema mit Slash, Zusammenlegungen, Leistungsumfang; siehe `seo-audit.md`). Bei Widersprüchen zu älteren Absätzen gilt `seo-audit.md` und `AGENTS.md`. Diese Regeln gelten für weitere SEO-Arbeiten. Aktuelle Nutzeranweisungen haben Vorrang. Die Ausgangsanalyse bleibt unter `history/2026-09-07-analysis/` erhalten.
 
 ## Bestand und Architektur
 
@@ -30,17 +30,17 @@ Ein primäres Ziel pro **Suchintention** festlegen; mehrere unterschiedliche Inf
 | Cluster | Primäres Arbeitsziel | Abgrenzung |
 |---|---|---|
 | Autoaufbereitung Erfurt | `/autoaufbereitung` | Ausdrückliche Nutzeranweisung vom 12.10.2026: bestehende Leistungsseite neu erstellen; `/` bleibt Überblick und verlinkt zum Detailangebot. `/ads` auf Kampagnenrolle prüfen, Tracking unverändert. |
-| Fahrzeugsoftware | `/adblue-service` | Ausschließlich AdBlue-Deaktivierung und AGR On-Off; kein Chiptuning. |
-| AdBlue / SCR | `/adblue-service` | Bestätigtes Angebot: AdBlue-Deaktivierung und AGR On-Off; Voraussetzungen und bestehende Nutzungshinweise beachten. |
-| Keramikversiegelung | `/luxus-aufbereitung` | Angebot; Haltbarkeit als eigener Informationsbeitrag. |
-| Innenreinigung | `/blog/innenreinigung-auto-in-der-naehe/` | Vorläufig vorhandene Zielseite; Kostenbeitrag hat eigene Informationsintention. |
+| Fahrzeugsoftware | `/adblue-diagnose-erfurt/` | Nur Diagnose, Reparaturberatung, Rückrüstung; keine Deaktivierung, kein Chiptuning. |
+| AdBlue / SCR | `/blog/adblue-deaktivieren-vor-nachteile-wahrheit/` (Info), `/adblue-diagnose-erfurt/` (Leistung) | Rein informativ zu Nachteilen, TÜV, Strafe, Rechtslage; CTA zur Diagnose. |
+| Keramikversiegelung | `/keramikversiegelung-erfurt/` | Leistung; Ratgeber `/blog/keramikversiegelung-haltbarkeit/`. |
+| Innenreinigung | `/innenraumreinigung-erfurt/` | Leistung; Kostenbeitrag hat eigene Informationsintention. |
 | Lackhärte | `/blog/harte-weiche-autolacke-lackaufbereitung/` | Kanonische Hauptfassung; die zwei langen Slugs bleiben erreichbar und referenzieren diese per Canonical. Google-Auswahl noch nicht bestätigt. |
-| Lackkorrektur | `/blog/lackkorrektur-wofuer-gut-werterhalt/` | Nutzen; Politurvergleich als vertiefende Frage. |
-| Leasingaufbereitung | `/blog/leasing-rueckgabe-aufbereitung-erfurt/` | Leistungsberatung; Checkliste bleibt Hilfsinhalt. |
+| Lackkorrektur | `/lackaufbereitung-erfurt/` | Leistung; Ratgeber zu Nutzen, Polierstufen und Lackhärte verlinken dorthin. |
+| Leasingaufbereitung | `/leasingrueckgabe-aufbereitung-erfurt/` | Leistung; Checkliste und „Lohnt sich das?“ bleiben Ratgeber. |
 | Motorraumwäsche | `/blog/motorwaesche-erfurt-vorteile-kosten/` | Bestehende Seite vor Ausbau des Clusters verbessern. |
 | Trockeneisreinigung | `/trockeneisreinigung` | Fahrzeugbezug belegt; keine automatische Ausweitung auf Industrie. |
 | Felgenpflege | derzeit `/#leistungen` | Ratgeber mangels ausreichender Such-/Produktdaten nicht erstellt; erst mit belegter eigener Informationsfrage neu bewerten. |
-| Einzugsgebiet | `/` plus sechs bestehende Stadtseiten | Kundenherkunft, keine behaupteten Niederlassungen. |
+| Einzugsgebiet | `/einzugsgebiet/` | Die sechs identischen Stadtseiten wurden am 12.10.2026 zusammengelegt (301). Eigene Stadtseiten nur mit echten, stadtspezifischen Inhalten. |
 
 ## Neue Seiten
 

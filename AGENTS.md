@@ -12,4 +12,10 @@ nebenbei verändern.
 
 ## Verbindlicher Leistungsumfang
 
-Powertech bietet KEIN Chiptuning, keine Stage-1/2-Leistungssteigerung und keine allgemeine Kennfeldoptimierung an. Im Bereich Fahrzeugsoftware sind ausschließlich AdBlue-Deaktivierung und AGR On-Off bestätigt. Autoaufbereitung und Fahrzeugpflege bleiben bestehen. Keine Chiptuning-Seiten, Links, Keywords oder Angebote wieder anlegen, auch nicht aufgrund historischer SEO-Dateien. DPF-Off ist kein bestätigtes Angebot. Maßgeblich: `seo/business-policy.json`. Die fünf dort dokumentierten Seiten wurden ausdrücklich zur Löschung freigegeben. Originalexporte und historische Audits sind nur Belege, keine aktuellen Leistungsangaben. Bestehende rechtliche Hinweise, Tracking und Formulare erhalten.
+Powertech bietet KEIN Chiptuning, keine Stage-1/2-Leistungssteigerung und keine allgemeine Kennfeldoptimierung an. Keine Chiptuning-Seiten, Links, Keywords oder Angebote wieder anlegen, auch nicht aufgrund historischer SEO-Dateien.
+
+Abgassysteme: Seit der Nutzerfreigabe vom 12.10.2026 bietet Powertech KEINE AdBlue-/SCR-Deaktivierung, kein AGR On-Off und kein DPF-Off an (in Deutschland für Straßenfahrzeuge unzulässig, § 19 Abs. 2 StVZO). Zulässig und angeboten: AdBlue-/SCR-Diagnose, Klärung des Reparaturwegs und Prüfung einer Rückrüstung auf Serienstand (`/adblue-diagnose-erfurt/`). AdBlue-Inhalte bleiben rein informativ, ohne Anleitung. Autoaufbereitung und Fahrzeugpflege sind das Kerngeschäft. Maßgeblich: `seo/business-policy.json`. Originalexporte und historische Audits sind nur Belege, keine aktuellen Leistungsangaben. Bestehende rechtliche Hinweise, Tracking und Formulare erhalten.
+
+## URL-Schema
+
+Einheitlich `https://www.powertech-performance.com/pfad/` mit Slash. Ausnahmen: `/ads` und `/anfrage-danke` (Ads-/Conversion-URLs) sowie Dateien unter `/pages/*.html`. Redirects und Rewrites werden aus `seo/tools/urlmap.py` mit `python seo/tools/build-routing.py` erzeugt, die Sitemap mit `python seo/tools/build-sitemap.py`. `vercel.json` nicht von Hand bearbeiten. Stand und Begründungen: `seo-audit.md`.

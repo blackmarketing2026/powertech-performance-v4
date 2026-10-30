@@ -1,16 +1,19 @@
 {
-  "date": "2026-09-07T20:30:36.497165+00:00",
+  "date": "2026-10-12",
   "scope": "Fahrzeugsoftware; Autoaufbereitung bleibt bestehen",
   "allowed_software_services": [
-    "AdBlue-Deaktivierung",
-    "AGR On-Off"
+    "AdBlue-/SCR-Diagnose",
+    "Klärung des Reparaturwegs",
+    "Prüfung einer Rückrüstung auf Serienstand"
   ],
   "not_offered": [
     "Chiptuning",
     "Stage 1/2",
     "Leistungssteigerung",
     "allgemeine Kennfeldoptimierung",
-    "DPF-Off"
+    "DPF-Off",
+    "AdBlue-/SCR-Deaktivierung",
+    "AGR On-Off"
   ],
   "removed_urls": {
     "/chiptuning": "chiptuning.html",
@@ -64,6 +67,7 @@
       }
     ]
   },
-  "publication": "Auf origin/main gepusht (a367a14); Live-Abnahme noch ausstehend",
-  "instruction": "Explizite Nutzeranweisung: alle Chiptuning-Seiten löschen; nicht wieder anlegen oder bewerben."
+  "publication": "Änderungen vom 12.10.2026 lokal, noch nicht veröffentlicht",
+  "instruction": "Explizite Nutzeranweisung: alle Chiptuning-Seiten löschen; nicht wieder anlegen oder bewerben.",
+  "decision_2026_10_12": "Ausdrückliche Nutzerfreigabe des SEO-Audits (seo-audit.md, E1/E2): kein Chiptuning; AdBlue-Deaktivierung und AGR On-Off werden nicht mehr angeboten. /adblue-service -> /adblue-diagnose-erfurt/ (301/308)."
 }

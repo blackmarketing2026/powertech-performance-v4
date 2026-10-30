@@ -1,0 +1,67 @@
+.sl-page {
+  --color-bg: #f8f7f4;
+  --color-bg-alt: #f0ecee;
+  --color-surface: #fff;
+  --color-text: #27232b;
+  --color-text-muted: #675f69;
+  --color-brand: #27232b;
+  --color-border: #ddd6dc;
+  --color-primary: #673b7b;
+  --color-primary-dark: #4f2b61;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: #27232b;
+  background: #f8f7f4;
+}
+.sl-page h1 { color: #27232b; }
+.sl-wrap { width: min(100% - 48px, 1160px); margin-inline: auto; }
+.sl-header { border-bottom: 1px solid #e7e1e5; background: #f8f7f4; }
+.sl-header-inner { min-height: 86px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.sl-brand { display: inline-flex; align-items: center; gap: 11px; color: #2e2533; line-height: 1; font-size: 16px; font-weight: 700; letter-spacing: .15em; }
+.sl-brand img { width: 49px; height: 45px; object-fit: contain; }
+.sl-brand small { display: block; margin-top: 6px; color: #775782; font-size: 9px; letter-spacing: .35em; }
+.sl-header-location { color: #7d6b83; font-size: 12px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
+.sl-main { flex: 1; display: flex; align-items: center; padding: 90px 0 105px; }
+.sl-content { max-width: 1160px; }
+.sl-eyebrow { margin-bottom: 25px; color: #673b7b; font-size: 12px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; }
+.sl-eyebrow span { padding-inline: 9px; color: #a28aaa; }
+.sl-content h1 { max-width: 980px; margin: 0 0 24px; font-size: clamp(52px, 6.3vw, 91px); font-weight: 500; line-height: 1.06; letter-spacing: -.065em; }
+.sl-whatsapp .sl-content h1 { max-width: 860px; }
+.sl-copy { max-width: 610px; margin: 0; color: #655e67; font-size: clamp(18px, 1.7vw, 22px); line-height: 1.6; }
+.sl-actions { display: flex; flex-wrap: wrap; align-items: stretch; gap: 14px; max-width: 670px; margin-top: 39px; }
+.sl-button { display: inline-flex; align-items: center; justify-content: space-between; gap: 27px; min-height: 64px; padding: 15px 25px; border: 1px solid #673b7b; border-radius: 2px; font: inherit; font-size: 16px; font-weight: 700; text-decoration: none; transition: background .2s, color .2s; }
+.sl-button-primary { color: #fff; background: #673b7b; }
+.sl-button-primary:hover { color: #fff; background: #4f2b61; }
+.sl-button-secondary { color: #5e356f; background: transparent; }
+.sl-button-secondary:hover { color: #fff; background: #673b7b; }
+.sl-button-wide { min-width: 300px; }
+.sl-button-call { width: 100%; min-height: 112px; color: #fff; background: #673b7b; font-size: clamp(25px, 3vw, 39px); font-weight: 600; letter-spacing: -.035em; }
+.sl-button-call strong { font-size: 16px; font-weight: 700; letter-spacing: 0; }
+.sl-button-call:hover { color: #fff; background: #4f2b61; }
+.sl-signoff { margin: 65px 0 0; padding-top: 20px; border-top: 1px solid #d9d0d7; color: #857a86; font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+.sl-footer { padding: 25px 0 20px; background: #eee8ed; color: #68606a; font-size: 13px; }
+.sl-footer-inner { display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+.sl-footer nav { display: flex; flex-wrap: wrap; gap: 22px; }
+.sl-footer a { color: #5b4a60; }
+.sl-footer a:hover { text-decoration: underline; }
+.sl-disclosure { margin: 16px auto 0; color: #8a818b; font-size: 11px; }
+.sl-page :focus-visible { outline: 2px solid #8b51a3; outline-offset: 3px; }
+@media (max-width: 680px) {
+  .sl-header-inner { min-height: 74px; }
+  .sl-brand { gap: 8px; font-size: 12px; letter-spacing: .1em; }
+  .sl-brand img { width: 41px; height: 38px; }
+  .sl-brand small { font-size: 7px; letter-spacing: .25em; }
+  .sl-header-location { font-size: 10px; }
+  .sl-main { align-items: flex-start; padding: 95px 0 100px; }
+  .sl-eyebrow { margin-bottom: 19px; font-size: 10px; }
+  .sl-content h1 { font-size: clamp(45px, 11vw, 64px); }
+  .sl-copy { font-size: 17px; }
+  .sl-actions { margin-top: 30px; }
+  .sl-button { width: 100%; }
+  .sl-button-call { min-height: 94px; font-size: clamp(24px, 7vw, 32px); }
+  .sl-button-call strong { font-size: 14px; }
+  .sl-signoff { margin-top: 65px; line-height: 1.6; }
+  .sl-footer-inner { align-items: flex-start; flex-direction: column; }
+  .sl-footer nav { gap: 12px 20px; }
+}

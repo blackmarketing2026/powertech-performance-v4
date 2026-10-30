@@ -19,7 +19,7 @@
   background:
     linear-gradient(90deg, rgba(19, 9, 28, 0.98) 0%, rgba(19, 9, 28, 0.92) 43%, rgba(19, 9, 28, 0.25) 100%),
     linear-gradient(0deg, #13091c 0%, transparent 32%),
-    url('/images/hero-bg.png') center/cover no-repeat;
+    url('/images/hero-bg.webp') center/cover no-repeat;
 }
 
 .guide-hero::after {
@@ -955,7 +955,7 @@
   .guide-hero::before {
     background:
       linear-gradient(0deg, #13091c 0%, rgba(19, 9, 28, 0.82) 50%, rgba(19, 9, 28, 0.65) 100%),
-      url('/images/hero-bg.png') 63% center/cover no-repeat;
+      url('/images/hero-bg.webp') 63% center/cover no-repeat;
   }
   .guide-hero__inner { padding-top: var(--space-4); padding-bottom: var(--space-5); }
   .guide-breadcrumb { margin-bottom: var(--space-4); }
