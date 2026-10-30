@@ -102,3 +102,8 @@ CSV-Format: UTF-8 mit BOM, Semikolon, korrekt gequotete Felder. JSON enthält di
 Google beschreibt Canonical-Signale als Hinweise; die endgültige Auswahl liegt bei Google: [Canonicalization](https://developers.google.com/search/docs/crawling-indexing/canonicalization). Eine robots-Sperre kann das Auslesen von noindex verhindern: [Noindex](https://developers.google.com/search/docs/crawling-indexing/block-indexing). Interne Erreichbarkeit und konsistente URLs: [SEO für Entwickler](https://developers.google.com/search/docs/fundamentals/get-started-developers). Abgerufen am 07.09.2026.
 
 Bei vorhandenem `business-policy.json` wendet der Reportgenerator abschließend `apply-business-policy.py` an. Es verwirft alte Chiptuning-Empfehlungen. Aktuelle Prüfung: `python seo/tools/validate.py` delegiert auf die Entfernungskontrolle. Der alte Statusgenerator darf den neuen Stand nicht überschreiben.
+
+
+## Seitenbezogene Nutzeranweisung vom 31.10.2026
+
+Für `/adblue-diagnose-erfurt/` ersetzt die aktuelle ausdrückliche Nutzeranweisung die bisherige Beschränkung auf Diagnose: AdBlue-System- und NOx-Sensor-Auskodierung für PKW, Transporter, Camper und Wohnmobile, kostenloses Angebot, klarer Hinweis auf Erlöschen der Betriebserlaubnis und Verbot des Betriebs im öffentlichen Straßenverkehr. Details: `business-policy.json` (im Verzeichnis `seo/`), `page_override_2026_10_31`. Keine Erweiterung auf AGR, DPF oder Chiptuning. Bestehende URL und technische Kontakt-/Tracking-Integration erhalten.

@@ -19,3 +19,8 @@ Abgassysteme: Seit der Nutzerfreigabe vom 12.10.2026 bietet Powertech KEINE AdBl
 ## URL-Schema
 
 Einheitlich `https://www.powertech-performance.com/pfad/` mit Slash. Ausnahmen: `/ads` und `/anfrage-danke` (Ads-/Conversion-URLs) sowie Dateien unter `/pages/*.html`. Redirects und Rewrites werden aus `seo/tools/urlmap.py` mit `python seo/tools/build-routing.py` erzeugt, die Sitemap mit `python seo/tools/build-sitemap.py`. `vercel.json` nicht von Hand bearbeiten. Stand und Begründungen: `seo-audit.md`.
+
+
+## Seitenbezogene Nutzeranweisung vom 31.10.2026
+
+Für `/adblue-diagnose-erfurt/` ersetzt die aktuelle ausdrückliche Nutzeranweisung die bisherige Beschränkung auf Diagnose: AdBlue-System- und NOx-Sensor-Auskodierung für PKW, Transporter, Camper und Wohnmobile, kostenloses Angebot, klarer Hinweis auf Erlöschen der Betriebserlaubnis und Verbot des Betriebs im öffentlichen Straßenverkehr. Details: `business-policy.json` (im Verzeichnis `seo/`), `page_override_2026_10_31`. Keine Erweiterung auf AGR, DPF oder Chiptuning. Bestehende URL und technische Kontakt-/Tracking-Integration erhalten.
