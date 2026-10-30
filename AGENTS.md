@@ -1,3 +1,7 @@
+# Projektgedächtnis
+
+Auf ausdrücklichen Nutzerwunsch vom 31.10.2026 vor jeder Arbeit `MEMORY.md` lesen. Nach abgeschlossenen Arbeiten dort Datum, Änderungen, Entscheidungen, relevante Prüfungen, lokale Commits, Veröffentlichungsstand und offene Punkte festhalten. Keine Geheimnisse oder Zugangsdaten speichern. Aktuelle Nutzeranweisungen haben Vorrang vor älteren Gedächtniseinträgen.
+
 # SEO-Arbeiten
 
 Vor SEO-, Content-, Metadaten-, internen Link- oder Routing-Änderungen zuerst
