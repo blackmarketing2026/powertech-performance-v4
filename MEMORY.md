@@ -75,3 +75,14 @@ Auf ausdrücklichen Nutzerwunsch vom 31.10.2026: vor jeder Arbeit lesen und nach
 
 - Nutzer hat den Push ausdrücklich freigegeben und um einen Bericht über alle geänderten Seiten sowie die Anpassung der Regeln an das neue Briefing gebeten. `AGENTS.md` und `seo/SEO-RULES.md` priorisieren passende Anfragen für Autoaufbereitung und Leasingrückgabe, belegte Angebote und die getrennte Bewertung von Sichtbarkeit und Anfragen. Die Startseite bleibt für dieses Paket unverändert.
 - Commits `a573ac2`, `39eeec1` und `818c39c` auf `origin/main` gepusht. Öffentliche GET-Prüfung nach Bereitstellung: `/autoaufbereitung/`, `/leasingrueckgabe-aufbereitung-erfurt/` und `/css/autoaufbereitung.css` HTTP 200 mit den jeweiligen Änderungen. Kein Live-Formularversand getestet. Die offenen Search-Console- und Betriebsdaten sowie die spätere Erfolgsmessung bleiben bestehen.
+
+## 04.11.2026 – Ideen für zusätzliche SEO-Seiten
+
+- Nutzer wünscht zunächst Ideen, keine Umsetzung. Bestehenden Seitenbestand, Suchdaten vom 03.08.–02.11.2026 und beispielhafte lokale Suchergebnisse berücksichtigt. Schwerpunkte als Hypothesen: Verkaufsaufbereitung, Tierhaare, Gerüche und nachvollziehbare Kundenprojekte; Kosten- und Leasingfragen zunächst mit vorhandenen Seiten abgleichen. Einzelne Suchanfragen mit wenigen Impressionen belegen kein Suchvolumen oder regionale Nachfrage. Fachliche Betriebsdaten und echte Beispiele sind für neue Seiten erforderlich.
+- Keine Website-, Routing- oder Trackingänderung, kein Commit oder Push. Offen: Nutzerentscheidung zu Ideen, Betriebsdetails, Search-Console-Indexierungsprüfung und Erfolgsmessung.
+
+## 04.11.2026 – Vier neue Themen zur Fahrzeugaufbereitung
+
+- Nutzer beauftragte die Umsetzung der vorgeschlagenen Ideen. Er bestätigte Firmenfahrzeug-Anfragen über Kontaktformular, Telefon und WhatsApp mit persönlicher Abstimmung durch Benjamin; echte Vorher-nachher-Bilder und Falldaten sind aktuell nicht vorhanden.
+- Vier neue Ratgeberseiten in `blog/`: `autoaufbereitung-vor-verkauf-erfurt`, `tierhaare-auto-entfernen-erfurt`, `geruch-im-auto-innenraumreinigung-erfurt` und `firmenfahrzeuge-autoaufbereitung-erfurt`. Passende Links in Ratgeberübersicht, Autoaufbereitungs- und Innenraumleistungsseite; Sitemap mit vorgesehenem Generator erstellt. Inhalte und Zuordnung in `seo/ideen-umsetzung-2026-11-04.md` dokumentiert. Kein Vorher-nachher-Projekt erfunden; bleibt offen.
+- Geprüft: je eine H1, Canonical, parsebares JSON-LD, Sitemap und Kontaktlink; alle vier neuen Seiten lokal bei 1440, 390 und 320 Pixeln ohne Überlauf oder JavaScript-Seitenfehler, externe Ressourcen blockiert. Vorhandene Formulare und Skripte auf geänderten Bestandsseiten unverändert, Startseite unverändert. Keine Testanfrage gesendet. `git diff --check` geprüft. Kein Push für dieses neue Paket beauftragt; Veröffentlichung steht aus. Bereits vorhandene Änderung an `seo/validation-results.json` und unversionierte Hilfsdaten nicht Bestandteil.
