@@ -44,3 +44,11 @@ Auf ausdrücklichen Nutzerwunsch vom 31.10.2026: vor jeder Arbeit lesen und nach
 - Erfolgreich auf `origin/main` gepusht: Website-Commit `a37aedb` und Dokumentations-Commit `56a1c34`.
 - Öffentliche Prüfung nach kurzer Bereitstellungszeit bestanden: `/adblue-diagnose-erfurt/` antwortet mit HTTP 200 und enthält das neue NOx-Angebot, `/css/adblue.css` sowie den hervorgehobenen Betriebserlaubnis-Hinweis. Die neue Version ist damit öffentlich ausgeliefert. Keine Formular-Testanfrage versendet; keine zusätzliche Live-Browserprüfung durchgeführt.
 - Die früheren Angaben „nicht veröffentlicht“ oben beschreiben den damaligen Stand und sind durch diesen Veröffentlichungseintrag überholt.
+
+## 04.11.2026 – Du-Ansprache auf der gesamten Website
+
+- Aktuelle ausdrückliche Nutzerentscheidung: Alle öffentlich sichtbaren Texte einschließlich Angebotsseiten, Blog, Cookie-Hinweisen und Rechtstexten verwenden die Du-Form. Die Regel steht nun auch in `AGENTS.md`. Grammatische Bezüge auf Dinge oder Dritte mit „Sie“ bleiben erhalten.
+- 51 HTML-Dateien sowie `js/main.js` und `js/blog-promo.js` redaktionell umgestellt. Formulare, Tracking, URLs und Angebote nicht funktional verändert. Die bereits auf GitHub vorhandene AdBlue-Seite wurde für die reine Anspracheänderung als Ausgangsstand übernommen.
+- Geprüft: direkte Anreden in HTML-Texten und Attributen, JSON-LD, Linkziele, Formularfelder, ausführbare Skriptblöcke, JavaScript-Syntax, `git diff --check` sowie Browser-Stichproben bei schmaler Breite. Keine Testanfragen versendet.
+- `python seo/tools/validate.py` meldete Fehler aus der älteren Funktionsbaseline und fehlender Routing-Vorschau; der fokussierte Strukturvergleich gegen `origin/main` zeigte keine veränderten Formulare, ausführbaren Skripte oder Linkziele.
+- Über die verbundene GitHub-App auf `main` veröffentlicht: Commit `d916722c56f41d1027315b732305aff17a0a2941`. Öffentliche GET-Stichproben für Startseite, Autoaufbereitung, Datenschutz und einen Blogartikel antworteten mit HTTP 200 und zeigten die Du-Ansprache. Kein lokaler Commit für dieses Paket.
