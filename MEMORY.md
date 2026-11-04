@@ -90,3 +90,8 @@ Auf ausdrücklichen Nutzerwunsch vom 31.10.2026: vor jeder Arbeit lesen und nach
 ## 04.11.2026 – Vier neue Ratgeber veröffentlicht
 
 - Nutzer hat den Push ausdrücklich freigegeben. Commit `365dc33` auf `origin/main` gepusht. Nach Bereitstellung antworteten alle vier neuen Blog-URLs öffentlich mit HTTP 200 und Canonical-Auszeichnung. Keine öffentliche Formular-Testanfrage und keine Live-Browserprüfung durchgeführt; Google-Indexierung und Rankingwirkung bleiben offen. Vorher-nachher-Falldaten fehlen weiterhin.
+
+## 04.11.2026 – Bilder für die vier Aufbereitungsratgeber
+
+- Auf Nutzerwunsch vier individuelle KI-generierte Motive zu Verkaufsaufbereitung, Tierhaaren, Gerüchen und Firmenfahrzeugen erstellt, als WebP unter `images/blog/` eingebunden und auf den vier entsprechenden Artikelseiten sichtbar als KI-generierte Symbolbilder gekennzeichnet. Keine echten Kundenreferenzen oder Vorher-nachher-Ergebnisse behauptet.
+- Lokale Prüfung: Bilder geladen, Alternativtexte und Bildunterschriften vorhanden; alle vier Seiten bei 1440, 390 und 320 Pixeln ohne Seitenüberlauf oder JavaScript-Seitenfehler. Mobile Sichtprüfung exemplarisch; Skripte unverändert; `git diff --check` bestanden. Keine Formular-Testanfrage. Änderungen lokal, nicht gepusht oder veröffentlicht. Bereits bestehende Änderung an `seo/validation-results.json` und unversionierte Hilfsdaten unberührt.
