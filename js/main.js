@@ -73,11 +73,11 @@ function initLeadForms() {
           throw new Error(result.error || 'Versand fehlgeschlagen.');
         }
 
-        setFormStatus(statusEl, 'success', 'Danke! Ihre Anfrage wurde gesendet — wir melden uns zeitnah.');
+        setFormStatus(statusEl, 'success', 'Danke! Deine Anfrage wurde gesendet — wir melden uns zeitnah.');
         if (typeof window.trackFormSuccess === 'function') window.trackFormSuccess(form);
         form.reset();
       } catch (err) {
-        setFormStatus(statusEl, 'error', err.message || 'Versand fehlgeschlagen. Bitte versuchen Sie es später erneut oder rufen Sie uns an.');
+        setFormStatus(statusEl, 'error', err.message || 'Versand fehlgeschlagen. Bitte versuche es später erneut oder ruf uns an.');
       } finally {
         delete form.dataset.submitting;
         if (submitBtn) submitBtn.disabled = false;
@@ -331,7 +331,7 @@ function initCookiePreferencesPage(stored, prefill) {
     const banner = document.getElementById('cookie-banner');
     if (banner) banner.classList.remove('is-visible');
     if (statusEl) {
-      statusEl.textContent = 'Ihre Auswahl wurde gespeichert.';
+      statusEl.textContent = 'Deine Auswahl wurde gespeichert.';
       statusEl.hidden = false;
     }
   }

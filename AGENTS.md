@@ -4,6 +4,10 @@ Auf ausdrücklichen Nutzerwunsch vom 31.10.2026 vor jeder Arbeit `MEMORY.md` les
 
 # SEO-Arbeiten
 
+## Ansprache
+
+Alle öffentlich sichtbaren Website-Texte, einschließlich Formulare, Blog, Cookie-Hinweise und Rechtstexte, sprechen Besucher in der Du-Form an. Grammatische Bezüge auf Dritte bleiben davon unberührt.
+
 Vor SEO-, Content-, Metadaten-, internen Link- oder Routing-Änderungen zuerst
 `seo/SEO-RULES.md` lesen. Den aktuellen Bestand in `seo/seo-map.csv` und die
 Zuordnung in `seo/keyword-map.csv` berücksichtigen. Messwerte und Hypothesen

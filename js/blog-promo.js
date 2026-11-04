@@ -15,7 +15,7 @@
       <div class="pt-offer__content">
         <span class="pt-offer__eyebrow">Aktuelles Angebot · Powertech Erfurt</span>
         <h2${titleId ? ` id="${titleId}"` : ''}>20 % Rabatt auf Keramikversiegelung</h2>
-        <p>Glanz und Lackschutz passend zu Ihrem Fahrzeug. Fragen Sie jetzt Ihr persönliches Angebot an.</p>
+        <p>Glanz und Lackschutz passend zu deinem Fahrzeug. Frag jetzt dein persönliches Angebot an.</p>
         <a class="pt-offer__button" href="${target}">Kostenloses Angebot anfragen <span aria-hidden="true">↗</span></a>
       </div>`;
     return card;
