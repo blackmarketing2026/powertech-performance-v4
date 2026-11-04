@@ -4,6 +4,10 @@ Auf ausdrücklichen Nutzerwunsch vom 31.10.2026 vor jeder Arbeit `MEMORY.md` les
 
 # SEO-Arbeiten
 
+## Ziel und Prioritäten seit 04.11.2026
+
+SEO soll passende Anfragen für Autoaufbereitung und Fahrzeugpflege in Erfurt fördern; die Aufbereitung vor der Leasingrückgabe und für Leasingrückläufer ist ein wichtiger Anlass neben anderen. Bestehende Leistungsseiten und hilfreiche Ratgeber anhand tatsächlicher Suchdaten, belegter Leistungen und verständlicher Anfragewege gezielt verbessern. Suchklicks und Rankings nicht mit Anfragen oder Aufträgen gleichsetzen; Wirkung nach Veröffentlichung anhand vergleichbarer Zeiträume prüfen. Preise, Kundenergebnisse und Garantien nicht erfinden. Die Startseite für das am 04.11.2026 beauftragte SEO-Paket nicht verändern; spätere ausdrückliche Nutzeranweisungen gelten für ihren jeweiligen Auftrag.
+
 ## Ansprache
 
 Alle öffentlich sichtbaren Website-Texte, einschließlich Formulare, Blog, Cookie-Hinweise und Rechtstexte, sprechen Besucher in der Du-Form an. Grammatische Bezüge auf Dritte bleiben davon unberührt.

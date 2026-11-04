@@ -1,5 +1,9 @@
 # Verbindliche SEO-Grundlage für Powertech Performance
 
+## SEO-Briefing vom 04.11.2026
+
+Priorität haben passende Anfragen für die Autoaufbereitung in Erfurt, insbesondere auch zur Vorbereitung von Leasingrückgaben und Leasingrückläufern. Bestehende Leistungsseiten und thematisch passende Ratgeber sollen konkrete Fragen zu Umfang, Kosten und Anfrage beantworten und auf belegte Angebote verweisen. SEO-Sichtbarkeit, Klicks und tatsächliche Anfragen getrennt auswerten; weder Ranking noch Nachzahlungen bei Leasingrückgabe garantieren. Für das am 04.11.2026 beauftragte Maßnahmenpaket bleibt die Startseite unverändert. Weitere Regeln und spätere ausdrückliche Nutzeranweisungen gelten fort.
+
 ## Verbindliche Leistungskorrektur
 
 Kein Chiptuning, keine Stage-1/2-Leistungssteigerung, keine allgemeine Kennfeldoptimierung. Seit 12.10.2026 auch keine AdBlue-/SCR-Deaktivierung und kein AGR On-Off; angeboten wird nur AdBlue-/SCR-Diagnose mit Reparaturberatung und Rückrüstungsprüfung. Autoaufbereitung ist das Kerngeschäft. `business-policy.json` hat Vorrang vor historischen Empfehlungen. Die fünf dokumentierten Seiten sind ausdrücklich gelöscht und dürfen nicht wiederhergestellt werden.
