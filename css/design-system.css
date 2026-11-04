@@ -151,6 +151,12 @@ body.home2-page { --night:var(--pt-bg); --plum:var(--pt-section); --ink:var(--pt
 .home2-page .phone-proof-list span, .home2-page .phone-control { color:var(--pt-heading); background:#fff; border-color:var(--pt-border); }
 .home2-page .phone-testimonial-dot { background:var(--pt-lilac); }
 .home2-page .phone-testimonial-dot.is-active { background:var(--pt-action); }
+.home2-page .home-reference-gallery { margin-top:clamp(48px,7vw,88px); }
+.home2-page .home-reference-gallery > p:not(.kicker) { max-width:720px; color:var(--pt-text); }
+.home2-page .home-reference-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; margin-top:28px; }
+.home2-page .home-reference-grid figure { margin:0; overflow:hidden; background:#fff; border:1px solid var(--pt-border); border-radius:12px; }
+.home2-page .home-reference-grid img { display:block; width:100%; height:260px; object-fit:cover; }
+.home2-page .home-reference-grid figcaption { padding:14px 18px; color:var(--pt-heading); font-weight:700; }
 .home2-page .kicker, .home2-page .steps span { color:var(--pt-heading); }
 .home2-page .home-about-grid { display:grid; grid-template-columns:.9fr 1.1fr; gap:64px; align-items:center; }
 .home2-page .home-about img { width:100%; border-radius:12px; }
@@ -225,7 +231,9 @@ body.home2-page { --night:var(--pt-bg); --plum:var(--pt-section); --ink:var(--pt
   .ap-page .ap-service-grid { grid-template-columns:1fr; }
   .ap-page .ap-hero-grid .lead-form { grid-template-columns:1fr; }
   .home2-page .home-about-grid { gap:26px; }
+  .home2-page .home-reference-grid { grid-template-columns:1fr; }
 }
 @media (prefers-reduced-motion:reduce) {
   *,*::before,*::after { scroll-behavior:auto!important; animation-duration:.01ms!important; transition-duration:.01ms!important; }
 }
+
