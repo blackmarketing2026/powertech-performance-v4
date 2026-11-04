@@ -3,7 +3,7 @@
 .ap-header-phone:hover { text-decoration: underline; text-underline-offset: .2em; }
 .ap-page .header-cta { padding: .85rem 1.1rem; }
 .ap-section { padding: 6rem 0; scroll-margin-top: 80px; }
-.ap-breadcrumb { display: flex; align-items: center; gap: .7rem; padding-top: 1.1rem; padding-bottom: 1.1rem; color: #cdbbd8; font-size: .85rem; }
+.ap-breadcrumb { display: flex; flex-wrap: wrap; align-items: center; gap: .7rem; padding-top: 1.1rem; padding-bottom: 1.1rem; color: #cdbbd8; font-size: .85rem; }
 .ap-breadcrumb a { color: #e3bcf4; text-decoration: underline; text-underline-offset: .2em; }
 .ap-process-cta { text-align: center; margin: 2.5rem 0 0; }
 .ap-reasons h3 { margin: 1.4rem 0 .4rem; font-size: 1.3rem; }

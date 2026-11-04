@@ -2,6 +2,14 @@ Aktuelle Leistungskorrektur: 5 Chiptuning-/Leistungsoptimierungsseiten ausdrück
 
 # Datenanalyse und aktueller Datenstand
 
+## Ergänzung 04.11.2026: Google-Suche und Aufbereitung
+
+Search-Console-Export vom 04.11.2026, Suchtyp Web, Zeitraum 03.08.–02.11.2026; Original-ZIP in Downloads, SHA-256 `0f603549508902fe77095d9ce2d96a198fa37c209f4f510c50124bc9f94cc010`. Das Diagramm enthält 1.459 Klicks und 38.401 Impressionen; der Suchanfragenexport enthält 1.000 Zeilen und ist nicht vollständig. „fahrzeugaufbereitung erfurt“: 606 Impressionen, 4 Klicks, durchschnittliche Position 10,38; „autoaufbereitung erfurt“: 195, 2, 11,17; „leasingrückgabe aufbereitung“: 76, 0, 16,8. Dies sind Query-Werte, keine Werte einer bestimmten Seite; Positionen sind Zeitraumdurchschnitte, keine garantierten aktuellen Platzierungen. Der Export verknüpft Suchanfrage und Seite nicht und belegt keine Kannibalisierung oder Anfragen.
+
+Die URL `/autoaufbereitung/` hatte 22 Impressionen und keine Klicks. Die Leasing-Leistungsseite erscheint nicht als eigene Zeile; der frühere Pfad `/blog/leasing-rueckgabe-aufbereitung-erfurt/` hatte 183 Impressionen und zwei Klicks und leitete bei der Prüfung auf die Leistungsseite weiter. Historische Werte bleiben beim Quellpfad. Die Indexierungsübersicht zeigt Kategorien ohne einzelne URLs; der Sitemap-Quelltext belegt keine erfolgreiche Verarbeitung in Search Console. Unternehmensprofil- und Anfragezahlen fehlen.
+
+Lokale Maßnahmen: verständlicher Einstieg und zusätzlicher kontextbezogener Link von `/autoaufbereitung/` zur bestehenden `/leasingrueckgabe-aufbereitung-erfurt/`; dort beschädigte Zeichen korrigiert sowie Kosten, Anfrageablauf und Grenzen erläutert. Keine Änderung an Startseite, URLs, Formularen oder Tracking. Nach Veröffentlichung URL-Prüfung und gefilterte Query-/Seitenvergleiche über ausreichend lange Zeiträume durchführen; Wirkung und Indexierung sind offen.
+
 Stand: 07.09.2026. Originaldateien unverändert. Website-Optimierung lokal umgesetzt, noch nicht veröffentlicht. Vollständiger Ausgangsbericht: [archivierte Datenanalyse](history/2026-09-07-analysis/data-analysis.md).
 
 ## Originaldateien
