@@ -95,3 +95,7 @@ Auf ausdrücklichen Nutzerwunsch vom 31.10.2026: vor jeder Arbeit lesen und nach
 
 - Auf Nutzerwunsch vier individuelle KI-generierte Motive zu Verkaufsaufbereitung, Tierhaaren, Gerüchen und Firmenfahrzeugen erstellt, als WebP unter `images/blog/` eingebunden und auf den vier entsprechenden Artikelseiten sichtbar als KI-generierte Symbolbilder gekennzeichnet. Keine echten Kundenreferenzen oder Vorher-nachher-Ergebnisse behauptet.
 - Lokale Prüfung: Bilder geladen, Alternativtexte und Bildunterschriften vorhanden; alle vier Seiten bei 1440, 390 und 320 Pixeln ohne Seitenüberlauf oder JavaScript-Seitenfehler. Mobile Sichtprüfung exemplarisch; Skripte unverändert; `git diff --check` bestanden. Keine Formular-Testanfrage. Änderungen lokal, nicht gepusht oder veröffentlicht. Bereits bestehende Änderung an `seo/validation-results.json` und unversionierte Hilfsdaten unberührt.
+
+## 04.11.2026 – Beitragsbilder veröffentlicht
+
+- Nutzer gab den Push ausdrücklich frei. Commit `07468d4` auf `origin/main` gepusht. Nach Bereitstellung antworteten alle vier öffentlichen Ratgeberseiten mit HTTP 200 und enthielten die neuen Bildpfade; alle vier WebP-Dateien antworteten mit HTTP 200 und Bild-Content-Type. Keine zusätzliche öffentliche Sichtprüfung oder Testanfrage durchgeführt.
