@@ -11,8 +11,9 @@ const Contact = () => {
     event.preventDefault();
     if (sending) return;
     const form = event.currentTarget;
-    if (!form.reportValidity()) return;
+    if (form.dataset.submitting === "true" || !form.reportValidity()) return;
     const payload = Object.fromEntries(new FormData(form).entries());
+    form.dataset.submitting = "true";
     setSending(true);
     setStatus("Wird gesendet …");
     try {
@@ -24,12 +25,13 @@ const Contact = () => {
       const result = await response.json().catch(() => ({}));
       if (!response.ok) throw new Error(result.error || "Versand fehlgeschlagen.");
       const tracker = (window as Window & { trackFormSuccess?: (form: HTMLFormElement) => void }).trackFormSuccess;
-      if (typeof tracker === "function") tracker(form);
+      if (result.sent === true && typeof tracker === "function") tracker(form);
       form.reset();
       setStatus("Danke! Ihre Anfrage wurde gesendet. Wir melden uns zeitnah.");
     } catch (error) {
       setStatus(error instanceof Error ? error.message : "Versand fehlgeschlagen. Bitte versuchen Sie es erneut.");
     } finally {
+      delete form.dataset.submitting;
       setSending(false);
     }
   };

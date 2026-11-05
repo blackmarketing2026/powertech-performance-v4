@@ -539,6 +539,7 @@
 
     form.addEventListener('submit', function (event) {
       event.preventDefault();
+      if (form.dataset.submitting === 'true') return;
 
       if (!validate()) {
         setStatus('error', 'Bitte fülle alle Pflichtfelder aus.');
@@ -553,6 +554,7 @@
       payload.formName = 'AdBlue-Anfrage';
 
       setStatus('sending', 'Wird gesendet…');
+      form.dataset.submitting = 'true';
       if (submitBtn) submitBtn.disabled = true;
 
       fetch('/api/send-lead', {
@@ -575,6 +577,7 @@
           setStatus('error', 'Deine Anfrage konnte nicht gesendet werden. Bitte versuche es erneut oder kontaktiere uns direkt per WhatsApp unter 01737373574.');
         })
         .finally(function () {
+          delete form.dataset.submitting;
           if (submitBtn) submitBtn.disabled = false;
         });
     });

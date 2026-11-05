@@ -80,7 +80,7 @@
   // Nur nach bestaetigtem Versand aufrufen; keine Formulardaten uebertragen.
   function trackFormSuccess(form) {
     try {
-      if (!form) return;
+      if (!form || !window.ptpConsent || !window.ptpConsent.canTrackAds()) return;
       const honeypot = form.querySelector('[name="website"]');
       if (honeypot && honeypot.value) return;
       window.dataLayer.push({ event: 'form_completed' });

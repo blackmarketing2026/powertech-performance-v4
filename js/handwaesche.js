@@ -186,6 +186,7 @@
 
   form.addEventListener('submit', async (event) => {
     event.preventDefault();
+    if (form.dataset.submitting === 'true') return;
     if (!validateStep(0)) { setStep(0); showStatus('error', 'Bitte wähle erneut einen gültigen Wunschtag.'); return; }
     if (!validateStep(1)) { setStep(1); showStatus('error', 'Bitte prüfe Startzeit und Fahrzeug.'); return; }
     if (!validateStep(2)) return;
@@ -197,6 +198,7 @@
     const phone = String(data.get('phone')).trim();
     const vehicle = String(data.get('vehicle')).trim();
     const year = String(data.get('year')).trim();
+    form.dataset.submitting = 'true';
     submit.disabled = true;
     showStatus('sending', 'Anfrage wird gesendet …');
     try {
@@ -221,6 +223,7 @@
     } catch (error) {
       showStatus('error', error.message || 'Versand fehlgeschlagen. Bitte ruf uns an.');
     } finally {
+      delete form.dataset.submitting;
       submit.disabled = false;
     }
   });
