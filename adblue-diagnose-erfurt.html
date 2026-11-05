@@ -26,32 +26,11 @@
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://www.powertech-performance.com/"}, {"@type": "ListItem", "position": 2, "name": "AdBlue- & NOx-Auskodierung", "item": "https://www.powertech-performance.com/adblue-diagnose-erfurt/"}]}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Was wird bei AdBlue- und NOx-Auskodierung angefragt?", "acceptedAnswer": {"@type": "Answer", "text": "Es geht um die softwareseitige Deaktivierung des AdBlue-/SCR-Systems oder der emissionsrelevanten NOx-Sensorüberwachung. Ob eine Bearbeitung möglich ist, muss für das konkrete Fahrzeug geprüft werden."}}, {"@type": "Question", "name": "Für welche Fahrzeuge kann ich ein Angebot anfragen?", "acceptedAnswer": {"@type": "Answer", "text": "Für Diesel-PKW, Transporter, Camper und Wohnmobile bis Baujahr 2021. Bitte sende Hersteller, Modell, Baujahr und Motorisierung. Die Fahrzeugklasse allein ist keine Zusage zur Umsetzbarkeit."}}, {"@type": "Question", "name": "Erlischt durch die Auskodierung die Betriebserlaubnis?", "acceptedAnswer": {"@type": "Answer", "text": "Ja. Wird die emissionsrelevante Abgasreinigung durch die Auskodierung unwirksam und das Abgasverhalten verschlechtert, erlischt die Betriebserlaubnis nach § 19 Abs. 2 Satz 2 Nr. 3 StVZO. Das Fahrzeug darf anschließend nicht im öffentlichen Straßenverkehr betrieben werden."}}, {"@type": "Question", "name": "Ist die Auskodierung eine zulässige Reparatur für Straßenfahrzeuge?", "acceptedAnswer": {"@type": "Answer", "text": "Nein. Ein rechtlicher Hinweis oder eine Kundenbestätigung ersetzt keine Betriebserlaubnis und macht die Auskodierung für den öffentlichen Straßenverkehr nicht zulässig."}}, {"@type": "Question", "name": "Was kostet die Auskodierung?", "acceptedAnswer": {"@type": "Answer", "text": "Die Kosten hängen vom Fahrzeug und dem gewünschten Umfang ab. Du kannst kostenlos und unverbindlich ein individuelles Angebot anfragen. Ein fester Preis wird erst nach Prüfung deiner Angaben genannt."}}, {"@type": "Question", "name": "Welche Angaben braucht ihr für das Angebot?", "acceptedAnswer": {"@type": "Answer", "text": "Hersteller, Modell, Baujahr und Motorisierung sowie die gewünschte Auskodierung: AdBlue-System, NOx-Sensorüberwachung oder beides. Vorhandene Fehlermeldungen und bisherige Arbeiten helfen bei der Einordnung."}}]}</script>
 
-  <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){ dataLayer.push(arguments); }
-  gtag('consent', 'default', {
-    'analytics_storage': 'denied',
-    'ad_storage': 'denied',
-    'ad_user_data': 'denied',
-    'ad_personalization': 'denied',
-    'wait_for_update': 500
-  });
-  </script>
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-5PQPZTPC');</script>
-  <!-- End Google Tag Manager -->
+  <script src="/js/consent.js"></script>
   <link rel="stylesheet" href="/css/design-system.css">
   <link rel="stylesheet" href="/css/adblue.css">
 </head>
 <body class="adblue-page has-sticky-mobile-actions">
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5PQPZTPC"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
 
   <header class="site-header">
     <div class="container header-inner">
@@ -443,8 +422,8 @@
           <p id="cookie-banner-desc">Wir verwenden Cookies, um Anfragen zuverlässig zu messen und unsere Website sowie Werbung zu verbessern. Du entscheidest selbst, welche Cookies du erlaubst. Deine Auswahl kannst du jederzeit ändern.</p>
         </div>
         <div class="cookie-actions">
-          <button type="button" class="btn btn-primary" id="cookie-accept-all">Alle akzeptieren</button>
-          <button type="button" class="btn btn-secondary" id="cookie-necessary-only">Nur notwendige</button>
+          <button type="button" class="btn btn-primary" id="cookie-accept-all">Alles akzeptieren</button>
+          <button type="button" class="btn btn-secondary" id="cookie-necessary-only">Alles ablehnen</button>
         </div>
         <button type="button" class="cookie-advanced-link" data-cookie-advanced-toggle aria-expanded="false" aria-controls="cookie-advanced-panel">Einstellungen</button>
       </div>
@@ -463,17 +442,10 @@
           </div>
           <div class="cookie-category">
             <label class="cookie-category-toggle">
-              <input type="checkbox" id="consent-analytics">
-              <span>Statistik</span>
-            </label>
-            <p>Google Analytics &amp; Microsoft Clarity – helfen uns zu verstehen, wie Besucher die Website nutzen, um sie zu verbessern.</p>
-          </div>
-          <div class="cookie-category">
-            <label class="cookie-category-toggle">
               <input type="checkbox" id="consent-marketing">
               <span>Marketing</span>
             </label>
-            <p>Google Ads Remarketing – zeigt dir interessenbezogene Werbung auf anderen Websites, nachdem du unsere Seite besucht hast.</p>
+            <p>Google Ads misst Anfragen und kann Werbung anhand deiner Einwilligung personalisieren.</p>
           </div>
           <div class="cookie-category">
             <label class="cookie-category-toggle">
@@ -485,8 +457,8 @@
         </div>
         <div class="cookie-actions">
           <button type="button" class="btn btn-outline" id="cookie-save-selection">Auswahl speichern</button>
-          <button type="button" class="btn btn-primary" id="cookie-settings-accept-all">Alle akzeptieren</button>
-          <button type="button" class="btn btn-secondary" id="cookie-settings-necessary-only">Nur notwendige</button>
+          <button type="button" class="btn btn-primary" id="cookie-settings-accept-all">Alles akzeptieren</button>
+          <button type="button" class="btn btn-secondary" id="cookie-settings-necessary-only">Alles ablehnen</button>
         </div>
         <button type="button" class="cookie-advanced-back" data-cookie-back>Zurück</button>
         <p class="cookie-banner-footnote"><a href="/pages/impressum.html">Impressum</a></p>
@@ -591,11 +563,12 @@
         .then(function (response) {
           return response.json().catch(function () { return {}; }).then(function (result) {
             if (!response.ok) throw new Error(result.error || 'Versand fehlgeschlagen.');
+            return result;
           });
         })
-        .then(function () {
+        .then(function (result) {
           setStatus('success', 'Vielen Dank für deine Anfrage. Powertech Performance prüft deine Angaben und meldet sich persönlich bei dir.');
-          if (typeof window.trackFormSuccess === 'function') window.trackFormSuccess(form, 'kontakt');
+          if (result.sent === true && typeof window.trackFormSuccess === 'function') window.trackFormSuccess(form, 'kontakt');
           form.reset();
         })
         .catch(function () {

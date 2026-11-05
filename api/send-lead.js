@@ -22,7 +22,7 @@ module.exports = async (req, res) => {
 
   // Honeypot-Feld — Bots füllen verstecktes Feld aus, echte Nutzer nicht.
   if (body.website) {
-    res.status(200).json({ ok: true });
+    res.status(200).json({ ok: true, sent: false });
     return;
   }
 
@@ -66,7 +66,7 @@ module.exports = async (req, res) => {
       text: `Formular: ${formName || 'unbekannt'}\n\n${lines}`,
       html: buildLeadEmailHtml({ fields, formName }),
     });
-    res.status(200).json({ ok: true });
+    res.status(200).json({ ok: true, sent: true });
   } catch (err) {
     console.error('Mailversand fehlgeschlagen:', err);
     res.status(500).json({ error: 'Versand fehlgeschlagen. Bitte später erneut versuchen.' });

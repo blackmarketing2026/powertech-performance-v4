@@ -4,37 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cookie-Einstellungen – Powertech Performance</title>
-  <meta name="description" content="Verwalte deine Cookie-Einwilligung für Powertech Performance: Notwendig, Statistik, Marketing und externe Medien.">
+  <meta name="description" content="Verwalte deine Cookie-Einwilligung für Powertech Performance: Notwendig, Marketing und externe Medien.">
   <meta name="robots" content="noindex">
   <link rel="canonical" href="https://www.powertech-performance.com/pages/cookie-einstellungen.html">
   <link rel="icon" href="/images/logo-klein.png" type="image/png">
   <link rel="stylesheet" href="/css/style.css">
 
-  <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){ dataLayer.push(arguments); }
-  gtag('consent', 'default', {
-    'analytics_storage': 'denied',
-    'ad_storage': 'denied',
-    'ad_user_data': 'denied',
-    'ad_personalization': 'denied',
-    'wait_for_update': 500
-  });
-  </script>
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-5PQPZTPC');</script>
-  <!-- End Google Tag Manager -->
+  <script src="/js/consent.js"></script>
   <link rel="stylesheet" href="/css/design-system.css">
 </head>
 <body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5PQPZTPC"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
 
   <header class="site-header">
     <div class="container header-inner">
@@ -58,17 +37,10 @@
           </div>
           <div class="cookie-category">
             <label class="cookie-category-toggle">
-              <input type="checkbox" id="cookie-page-analytics">
-              <span>Statistik</span>
-            </label>
-            <p>Google Analytics &amp; Microsoft Clarity – helfen uns zu verstehen, wie Besucher die Website nutzen, um sie zu verbessern.</p>
-          </div>
-          <div class="cookie-category">
-            <label class="cookie-category-toggle">
               <input type="checkbox" id="cookie-page-marketing">
               <span>Marketing</span>
             </label>
-            <p>Google Ads Remarketing – zeigt dir interessenbezogene Werbung auf anderen Websites, nachdem du unsere Seite besucht hast.</p>
+            <p>Google Ads misst Anfragen und kann Werbung anhand deiner Einwilligung personalisieren.</p>
           </div>
           <div class="cookie-category">
             <label class="cookie-category-toggle">
@@ -81,8 +53,8 @@
 
         <div class="cookie-actions">
           <button type="button" class="btn btn-outline" id="cookie-page-save">Auswahl speichern</button>
-          <button type="button" class="btn btn-primary" id="cookie-page-accept-all">Alle akzeptieren</button>
-          <button type="button" class="btn btn-secondary" id="cookie-page-necessary-only">Nur notwendige</button>
+          <button type="button" class="btn btn-primary" id="cookie-page-accept-all">Alles akzeptieren</button>
+          <button type="button" class="btn btn-secondary" id="cookie-page-necessary-only">Alles ablehnen</button>
         </div>
 
         <p class="cookie-status" id="cookie-page-status" hidden></p>

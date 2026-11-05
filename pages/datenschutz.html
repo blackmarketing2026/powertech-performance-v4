@@ -9,31 +9,10 @@
   <link rel="icon" href="/images/logo-klein.png" type="image/png">
   <link rel="stylesheet" href="/css/style.css">
 
-  <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){ dataLayer.push(arguments); }
-  gtag('consent', 'default', {
-    'analytics_storage': 'denied',
-    'ad_storage': 'denied',
-    'ad_user_data': 'denied',
-    'ad_personalization': 'denied',
-    'wait_for_update': 500
-  });
-  </script>
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-5PQPZTPC');</script>
-  <!-- End Google Tag Manager -->
+  <script src="/js/consent.js"></script>
   <link rel="stylesheet" href="/css/design-system.css">
 </head>
 <body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5PQPZTPC"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
 
   <header class="site-header">
     <div class="container header-inner">
@@ -160,7 +139,7 @@
           <li><strong>Statistik:</strong> Google Analytics und Microsoft Clarity (siehe Abschnitt 5). Wird nur mit deiner Einwilligung aktiviert.</li>
           <li><strong>Marketing:</strong> Google Ads Remarketing (siehe Abschnitt 5). Wird nur mit deiner Einwilligung aktiviert.</li>
         </ul>
-        <p>„Alle ablehnen“ ist im Cookie-Banner genauso leicht erreichbar wie „Alle akzeptieren“. Vor deiner Entscheidung werden keine Statistik- oder Marketing-Cookies gesetzt. Du kannst deine Auswahl jederzeit über den Link „Cookie-Einstellungen“ im Footer unserer Website ändern.</p>
+        <p>„Alle ablehnen“ ist im Cookie-Banner genauso leicht erreichbar wie „Alles akzeptieren“. Vor deiner Entscheidung werden keine Statistik- oder Marketing-Cookies gesetzt. Du kannst deine Auswahl jederzeit über den Link „Cookie-Einstellungen“ im Footer unserer Website ändern.</p>
         <p>Technisch setzen wir hierfür den <strong>Google Consent Mode v2</strong> ein: Bis zu deiner Entscheidung ist die Datenübermittlung an Google-Dienste (Analytics, Ads) standardmäßig auf „abgelehnt“ gesetzt. Erst nach erteilter Einwilligung wird die Übermittlung für die jeweils gewählte Kategorie freigegeben. Microsoft Clarity wird technisch unabhängig davon erst nach erteilter Statistik-Einwilligung überhaupt geladen.</p>
 
         <h3>Server-Log-Dateien</h3>
@@ -272,8 +251,8 @@
           <p id="cookie-banner-desc">Wir verwenden Cookies, um Anfragen zuverlässig zu messen und unsere Website sowie Werbung zu verbessern. Du entscheidest selbst, welche Cookies du erlaubst. Deine Auswahl kannst du jederzeit ändern.</p>
         </div>
         <div class="cookie-actions">
-          <button type="button" class="btn btn-primary" id="cookie-accept-all">Alle akzeptieren</button>
-          <button type="button" class="btn btn-secondary" id="cookie-necessary-only">Nur notwendige</button>
+          <button type="button" class="btn btn-primary" id="cookie-accept-all">Alles akzeptieren</button>
+          <button type="button" class="btn btn-secondary" id="cookie-necessary-only">Alles ablehnen</button>
         </div>
         <button type="button" class="cookie-advanced-link" data-cookie-advanced-toggle aria-expanded="false" aria-controls="cookie-advanced-panel">Einstellungen</button>
       </div>
@@ -292,17 +271,10 @@
           </div>
           <div class="cookie-category">
             <label class="cookie-category-toggle">
-              <input type="checkbox" id="consent-analytics">
-              <span>Statistik</span>
-            </label>
-            <p>Google Analytics &amp; Microsoft Clarity – helfen uns zu verstehen, wie Besucher die Website nutzen, um sie zu verbessern.</p>
-          </div>
-          <div class="cookie-category">
-            <label class="cookie-category-toggle">
               <input type="checkbox" id="consent-marketing">
               <span>Marketing</span>
             </label>
-            <p>Google Ads Remarketing – zeigt dir interessenbezogene Werbung auf anderen Websites, nachdem du unsere Seite besucht hast.</p>
+            <p>Google Ads misst Anfragen und kann Werbung anhand deiner Einwilligung personalisieren.</p>
           </div>
           <div class="cookie-category">
             <label class="cookie-category-toggle">
@@ -314,8 +286,8 @@
         </div>
         <div class="cookie-actions">
           <button type="button" class="btn btn-outline" id="cookie-save-selection">Auswahl speichern</button>
-          <button type="button" class="btn btn-primary" id="cookie-settings-accept-all">Alle akzeptieren</button>
-          <button type="button" class="btn btn-secondary" id="cookie-settings-necessary-only">Nur notwendige</button>
+          <button type="button" class="btn btn-primary" id="cookie-settings-accept-all">Alles akzeptieren</button>
+          <button type="button" class="btn btn-secondary" id="cookie-settings-necessary-only">Alles ablehnen</button>
         </div>
         <button type="button" class="cookie-advanced-back" data-cookie-back>Zurück</button>
         <p class="cookie-banner-footnote"><a href="/pages/impressum.html">Impressum</a></p>

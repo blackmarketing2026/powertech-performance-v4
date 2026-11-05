@@ -74,7 +74,7 @@ function initLeadForms() {
         }
 
         setFormStatus(statusEl, 'success', 'Danke! Deine Anfrage wurde gesendet — wir melden uns zeitnah.');
-        if (typeof window.trackFormSuccess === 'function') window.trackFormSuccess(form);
+        if (result.sent === true && typeof window.trackFormSuccess === 'function') window.trackFormSuccess(form);
         form.reset();
       } catch (err) {
         setFormStatus(statusEl, 'error', err.message || 'Versand fehlgeschlagen. Bitte versuche es später erneut oder ruf uns an.');
@@ -93,26 +93,12 @@ function setFormStatus(statusEl, state, text) {
 }
 
 // ---------------------------------------------------------
-// Cookie-Consent (TTDSG/DSGVO, Google Consent Mode v2)
-//
-// Kategorien: "necessary" (immer an), "analytics" (Google Analytics,
-// Microsoft Clarity), "marketing" (Google Ads Remarketing), "external"
-// (externe Medien/Einbettungen, z. B. Karten oder Videos Dritter).
-// "Nur notwendige" und "Alle akzeptieren" sind gleichwertig erreichbar,
-// keine vorausgewählten optionalen Kategorien. Einwilligung wird
-// 12 Monate lokal gespeichert und bei jedem Seitenaufruf geprüft.
-//
-// CONSENT_VERSION wird erhöht, sobald sich der Umfang der abgefragten
-// Kategorien ändert (z. B. neue Kategorie "external" in Version 2).
-// Gespeicherte Einwilligungen einer älteren Version gelten als
-// ungültig, damit Nutzer die neuen Kategorien aktiv bestätigen —
-// bereits gewählte Werte für bestehende Kategorien gehen dabei nicht
-// verloren, da sie beim erneuten Öffnen weiterhin vorbelegt werden.
+// Cookie-Consent: Marketing und externe Medien sind optional.
+// Aeltere Entscheidungen werden bei geaendertem Umfang neu abgefragt.
 // ---------------------------------------------------------
 const COOKIE_CONSENT_KEY = 'ptp_cookie_consent';
 const COOKIE_CONSENT_MAX_AGE_DAYS = 365;
-const CONSENT_VERSION = 2;
-const CLARITY_PROJECT_ID = 'XXXXXXXXXX'; // TODO: echte Clarity-Projekt-ID eintragen
+const CONSENT_VERSION = 3;
 
 function getStoredConsent() {
   try {
@@ -136,13 +122,13 @@ function getValidStoredConsent() {
   const stored = getStoredConsent();
   if (!stored) return { valid: null, prefill: null };
   if (stored.version === CONSENT_VERSION) return { valid: stored, prefill: stored };
-  return { valid: null, prefill: stored };
+  return { valid: null, prefill: null };
 }
 
 function storeConsent({ analytics, marketing, external }) {
   const data = {
     necessary: true,
-    analytics: !!analytics,
+    analytics: false,
     marketing: !!marketing,
     external: !!external,
     version: CONSENT_VERSION,
@@ -157,28 +143,8 @@ function storeConsent({ analytics, marketing, external }) {
 }
 
 function applyConsent(data) {
-  if (typeof window.gtag === 'function') {
-    window.gtag('consent', 'update', {
-      analytics_storage: data.analytics ? 'granted' : 'denied',
-      ad_storage: data.marketing ? 'granted' : 'denied',
-      ad_user_data: data.marketing ? 'granted' : 'denied',
-      ad_personalization: data.marketing ? 'granted' : 'denied',
-    });
-  }
+  if (window.ptpConsent) window.ptpConsent.update(data);
   window.__consentExternalMedia = !!data.external;
-  if (data.analytics) loadClarity();
-}
-
-// Microsoft Clarity nutzt kein Google Consent Mode — Script wird
-// deshalb nur bei erteilter Statistik-Einwilligung nachgeladen.
-function loadClarity() {
-  if (window.__clarityLoaded || CLARITY_PROJECT_ID.startsWith('XXX')) return;
-  window.__clarityLoaded = true;
-  (function (c, l, a, r, i, t, y) {
-    c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments); };
-    t = l.createElement(r); t.async = 1; t.src = 'https://www.clarity.ms/tag/' + i;
-    y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
-  })(window, document, 'clarity', 'script', CLARITY_PROJECT_ID);
 }
 
 function setCategoryCheckboxes(root, data) {
@@ -200,7 +166,7 @@ function readCategoryCheckboxes(root) {
 
 function initCookieConsent() {
   const { valid, prefill } = getValidStoredConsent();
-  if (valid) applyConsent(valid);
+  // Gespeicherte Auswahl wurde bereits im Head angewendet.
 
   initCookieBanner(valid, prefill);
   initCookiePreferencesPage(valid, prefill);
@@ -289,8 +255,8 @@ function initCookieBanner(stored, prefill) {
   });
 
   function acceptAll() {
-    setCategoryCheckboxes(banner, { analytics: true, marketing: true, external: true });
-    applyConsent(storeConsent({ analytics: true, marketing: true, external: true }));
+    setCategoryCheckboxes(banner, { analytics: false, marketing: true, external: true });
+    applyConsent(storeConsent({ analytics: false, marketing: true, external: true }));
     setBannerVisible(banner, false);
   }
 
@@ -344,8 +310,8 @@ function initCookiePreferencesPage(stored, prefill) {
 
   if (acceptBtn) {
     acceptBtn.addEventListener('click', () => {
-      setCategoryCheckboxes(page, { analytics: true, marketing: true, external: true });
-      afterSave(storeConsent({ analytics: true, marketing: true, external: true }));
+      setCategoryCheckboxes(page, { analytics: false, marketing: true, external: true });
+      afterSave(storeConsent({ analytics: false, marketing: true, external: true }));
     });
   }
 

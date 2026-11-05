@@ -1,22 +1,7 @@
 <!doctype html>
 <html lang="de">
   <head>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){ dataLayer.push(arguments); }
-      gtag('consent', 'default', {
-        ad_storage: 'denied', analytics_storage: 'denied', ad_user_data: 'denied',
-        ad_personalization: 'denied', functionality_storage: 'granted',
-        security_storage: 'granted', wait_for_update: 500
-      });
-    </script>
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-5PQPZTPC');</script>
-    <!-- End Google Tag Manager -->
+    <script src="/js/consent.js"></script>
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -41,12 +26,9 @@
   </head>
 
   <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5PQPZTPC"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
 
     <div id="root"></div>
+    <p style="text-align:center"><a href="/pages/cookie-einstellungen.html">Cookie-Einstellungen</a></p>
   <div class="cookie-banner" id="cookie-banner" role="dialog" aria-live="polite" aria-labelledby="cookie-banner-title" aria-describedby="cookie-banner-desc">
     <div class="cookie-banner-inner">
       <div class="cookie-banner-simple" data-cookie-simple>
@@ -55,8 +37,8 @@
           <p id="cookie-banner-desc">Wir verwenden Cookies, um Anfragen zuverlässig zu messen und unsere Website sowie Werbung zu verbessern. Du entscheidest selbst, welche Cookies du erlaubst. Deine Auswahl kannst du jederzeit ändern.</p>
         </div>
         <div class="cookie-actions">
-          <button type="button" class="btn btn-primary" id="cookie-accept-all">Alle akzeptieren</button>
-          <button type="button" class="btn btn-muted" id="cookie-necessary-only">Nur notwendige</button>
+          <button type="button" class="btn btn-primary" id="cookie-accept-all">Alles akzeptieren</button>
+          <button type="button" class="btn btn-muted" id="cookie-necessary-only">Alles ablehnen</button>
         </div>
         <button type="button" class="cookie-advanced-link" data-cookie-advanced-toggle aria-expanded="false" aria-controls="cookie-advanced-panel">Einstellungen</button>
       </div>
@@ -75,13 +57,6 @@
           </div>
           <div class="cookie-category">
             <label class="cookie-category-toggle">
-              <input type="checkbox" id="consent-analytics">
-              <span>Statistik</span>
-            </label>
-            <p>Hilft uns zu verstehen, wie Besucher die Website nutzen.</p>
-          </div>
-          <div class="cookie-category">
-            <label class="cookie-category-toggle">
               <input type="checkbox" id="consent-marketing">
               <span>Marketing</span>
             </label>
@@ -97,8 +72,8 @@
         </div>
         <div class="cookie-actions">
           <button type="button" class="btn btn-ghost-dark" id="cookie-save-selection">Auswahl speichern</button>
-          <button type="button" class="btn btn-primary" id="cookie-settings-accept-all">Alle akzeptieren</button>
-          <button type="button" class="btn btn-muted" id="cookie-settings-necessary-only">Nur notwendige</button>
+          <button type="button" class="btn btn-primary" id="cookie-settings-accept-all">Alles akzeptieren</button>
+          <button type="button" class="btn btn-muted" id="cookie-settings-necessary-only">Alles ablehnen</button>
         </div>
         <button type="button" class="cookie-advanced-back" data-cookie-back>Zurück</button>
         <p class="cookie-banner-footnote"><a href="/pages/impressum.html">Impressum</a></p>
@@ -106,7 +81,7 @@
     </div>
   </div>
 
-    <script src="/keramikversiegelung/js/tracking.js" defer></script>
-    <script src="/keramikversiegelung/js/main.js" defer></script>
+    <script src="/js/tracking.js" defer></script>
+    <script src="/js/main.js" defer></script>
   </body>
 </html>

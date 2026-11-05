@@ -99,3 +99,17 @@ Auf ausdrücklichen Nutzerwunsch vom 31.10.2026: vor jeder Arbeit lesen und nach
 ## 04.11.2026 – Beitragsbilder veröffentlicht
 
 - Nutzer gab den Push ausdrücklich frei. Commit `07468d4` auf `origin/main` gepusht. Nach Bereitstellung antworteten alle vier öffentlichen Ratgeberseiten mit HTTP 200 und enthielten die neuen Bildpfade; alle vier WebP-Dateien antworteten mit HTTP 200 und Bild-Content-Type. Keine zusätzliche öffentliche Sichtprüfung oder Testanfrage durchgeführt.
+
+## 04.11.2026 – Sitemap geprüft
+
+- Auf Nachfrage die öffentliche `sitemap.xml` per HTTP geprüft: Status 200, XML lesbar, alle vier neuen Ratgeber-URLs jeweils einmal enthalten. Bereits bei Erstellung ergänzt und veröffentlicht; keine Sitemap-Änderung, kein Commit oder Push nötig. Die Verarbeitung durch Google und die Indexierung sind damit nicht nachgewiesen.
+
+## 05.11.2026 ? Google Ads Consent und Formularereignis
+
+- Nutzerauftrag: Consent Mode v2, Basic als Standard, Advanced lokal vorbereitet; kein Commit, Push oder Deployment. 55 ausgelieferte HTML-Seiten auf gemeinsamen Consent-Initialisierer umgestellt, unbedingten GTM-noscript entfernt, vorhandenes Banner und Einstellungsseite angepasst. GTM-Container GTM-5PQPZTPC; Statistik-Kategorie entfernt, da kein aktives direktes Statistik-Tool im Projekt nachweisbar. Fruehere Einwilligungen werden neu abgefragt.
+- Formularereignis form_completed enthaelt keine Formulardaten und wird nach erfolgreicher Versandantwort ausgeloest; API unterscheidet echte SMTP-Bestaetigung und Honeypot. Vor Einwilligung entstandene Ereignisse werden in Basic vor dem Laden des Containers verworfen. Advanced ist nur als lokale Konfiguration vorbereitet.
+- Geprueft: JavaScript-Syntax, simulierte Consent-Zustaende inklusive Widerruf und Wiederaufruf sowie simulierte erfolgreiche/fehlgeschlagene Formularantworten; git diff --check. Kein echter SMTP-Versand, keine Netzwerk- oder Tag-Assistant-Pruefung und kein Zugriff auf die Containerkonfiguration. GTM-Tags, Conversion-ID/Label, doppelte Trigger, weitere Tags und Datenschutzhinweise muessen vor Veroeffentlichung geprueft werden. Kein Commit, Push oder Deployment. Bereits vorhandene lokale Aenderungen bleiben erhalten.
+
+## 05.11.2026 - Push des Consent-Pakets
+
+- Nutzer hat den Push freigegeben. Vorab JavaScript-Syntax, simulierte Consent- und Formularantworten, 55 HTML-Einbindungen und JSON-LD sowie git diff --check geprueft. GTM-Konfiguration, Tag Assistant, echter Formularversand und Datenschutzhinweise bleiben offen. Unabhaengige lokale SEO-Validierungsdaten und Hilfsdateien nicht im Paket.
