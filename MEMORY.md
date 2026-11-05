@@ -113,3 +113,5 @@ Auf ausdrücklichen Nutzerwunsch vom 31.10.2026: vor jeder Arbeit lesen und nach
 ## 05.11.2026 - Push des Consent-Pakets
 
 - Nutzer hat den Push freigegeben. Vorab JavaScript-Syntax, simulierte Consent- und Formularantworten, 55 HTML-Einbindungen und JSON-LD sowie git diff --check geprueft. GTM-Konfiguration, Tag Assistant, echter Formularversand und Datenschutzhinweise bleiben offen. Unabhaengige lokale SEO-Validierungsdaten und Hilfsdateien nicht im Paket.
+
+- Website-Commit c251cb7 auf origin/main gepusht. Oeffentliche HTTP-Pruefung: Startseite, Verkaufsaufbereitungs-Ratgeber und /js/consent.js Status 200 mit neuer Consent-Einbindung beziehungsweise Basic-Konfiguration. Kein Live-Formularversand und keine Tag-Assistant- oder GTM-Containerpruefung. Conversion-Trigger, Ads-ID/Label, moegliche Doppelzaehlung und Datenschutzhinweise bleiben offen.
