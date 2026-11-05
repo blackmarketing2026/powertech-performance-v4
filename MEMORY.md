@@ -125,3 +125,12 @@ Auf ausdrücklichen Nutzerwunsch vom 31.10.2026: vor jeder Arbeit lesen und nach
 ## 05.11.2026 - Formulartracking veroeffentlicht
 
 - Nutzer hat den Push freigegeben. Commit 94c3ddd mit Consent-Pruefung und Schutz vor doppeltem Formularversand auf origin/main gepusht. Syntax und git diff --check bestanden; vorherige Browserpruefung mit simulierten Antworten bleibt massgeblich. Oeffentliche HTTP-Pruefung der drei geaenderten Skripte mit Cacheparameter erfolgreich. Keine echte Testanfrage; GTM-Vorschau und tatsaechliche Ads-Conversion bleiben offen. Unabhaengige lokale SEO-Validierung und Hilfsdateien nicht im Commit.
+
+## 05.11.2026 - Advanced Consent Vercel-Vorschau
+
+- Auf Nutzerwunsch isolierte Kopie von HEAD erstellt und nur dort js/consent.js auf Advanced gestellt; Produktionsstandard und Projektdatei bleiben Basic. Vorschau https://powertech-performance-v4-cz8vnqytx-stefve.vercel.app ist READY und mit Vercel-Authentifizierung geschuetzt; Advanced-Skript ueber geschuetzten Abruf bestaetigt. Kein Push und kein Produktionsdeployment. Ein erster Upload aus dem Arbeitsverzeichnis wurde vor Fertigstellung abgebrochen; es entstand laut Deploymentliste keine weitere neue Vorschau.
+- Lokale Chromium-Tests mit simuliertem GTM und API: bei Ablehnung Consent bei Containerstart und Formularabschluss viermal denied; bei Zustimmung bei frischem Containerstart denied und beim Formularabschluss drei Ads-Signale granted, analytics denied. Je ein Event ohne Nutzdaten; Fehler und Honeypot erzeugen kein zusaetzliches Event. Gespeicherte Auswahl vor Containerstart wiederhergestellt, GTM einmal je Seitenaufruf. Keine echte Testanfrage, kein Test tatsaechlicher Ads-Signale. GTM-Tags und Datenschutzpruefung bleiben offen.
+
+## 05.11.2026 - Advanced Consent fuer Produktion freigegeben
+
+- Nutzer hat nach der Vorschau die ausdrueckliche Umstellung fuer Produktion beauftragt. `js/consent.js` auf Advanced gesetzt; zuvor in isolierter Vorschau mit simulierten GTM- und Formularantworten fuer Zustimmung, Ablehnung und gespeicherte Auswahl geprueft. JavaScript-Syntax und git diff --check bestanden. GTM-Containerkonfiguration, cookielose Ads-Signale und Datenschutzhinweise bleiben zu pruefen; keine echte Formularanfrage. Unabhaengige lokale SEO-Validierungsdatei und Hilfsdaten nicht Bestandteil.

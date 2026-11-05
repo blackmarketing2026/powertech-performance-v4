@@ -1,6 +1,6 @@
 (function () {
-  // Nur für lokale Tests auf 'advanced' setzen. Basic ist der Standard.
-  const GOOGLE_CONSENT_MODE = 'basic';
+  // Advanced ist aktiv; fuer Basic auf 'basic' umstellen.
+  const GOOGLE_CONSENT_MODE = 'advanced';
   const KEY = 'ptp_cookie_consent';
   const VERSION = 3;
   const MAX_AGE = 365 * 24 * 60 * 60 * 1000;
